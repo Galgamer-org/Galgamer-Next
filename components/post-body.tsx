@@ -1,7 +1,8 @@
 import markdownStyles from './markdown-styles.module.css'
+import { ReactNode } from 'react'
 
 type Props = {
-  content: string
+  content: ReactNode
 }
 
 const PostBody = ({ content }: Props) => {
@@ -9,7 +10,7 @@ const PostBody = ({ content }: Props) => {
     <div className="max-w-2xl mx-auto">
       <div
         className={markdownStyles['markdown']}
-        dangerouslySetInnerHTML={{ __html: content }}
+        children={content}
       />
     </div>
   )

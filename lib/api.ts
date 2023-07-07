@@ -1,6 +1,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
+import PostType from '../interfaces/post'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
@@ -17,7 +18,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   type Items = {
     [key: string]: string
   }
-
+  //console.log(data)
   const items: Items = {}
 
   // Ensure only the minimal needed data is exposed
@@ -34,7 +35,23 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     }
   })
 
-  return items
+  const result: PostType = {
+    slug: items['slug'],
+    title: items['title'],
+    author: {
+      name: data['author']['name'],
+      picture: data['author']['picture']
+    },
+    date: items['date'],
+    coverImage: items['coverImage'],
+    excerpt: items['excerpt'],
+    ogImage: {
+      url: items['coverImage']
+    },
+    content: items['content']
+  }
+
+  return result
 }
 
 export function getAllPosts(fields: string[] = []) {
