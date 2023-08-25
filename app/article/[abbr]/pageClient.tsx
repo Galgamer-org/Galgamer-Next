@@ -4,9 +4,7 @@ import Container from '../../../components/container'
 import PostBody from '../../../components/post-body'
 import Header from '../../../components/header'
 import PostHeader from '../../../components/post-header'
-import Layout from '../../../components/layout'
 import PostTitle from '../../../components/post-title'
-import Head from 'next/head'
 import { CMS_NAME } from '../../../lib/constants'
 import markdownToHtml from '../../../lib/markdownToHtml'
 import type PostType from '../../../interfaces/post'
@@ -24,16 +22,12 @@ export default function ArticlePage({ post, morePosts, preview }: Props) {
     }
     const content = markdownToHtml(post.content)
     return (
-        <Layout preview={preview}>
             <Container>
                 <Header />
 
                     <>
                         <article className="mb-32">
-                            <Head>
-                                <title>{title}</title>
-                                <meta property="og:image" content={post.ogImage.url} />
-                            </Head>
+
                             <PostHeader
                                 title={post.title}
                                 coverImage={post.coverImage}
@@ -45,6 +39,5 @@ export default function ArticlePage({ post, morePosts, preview }: Props) {
                     </>
 
             </Container>
-        </Layout>
     )
 }
