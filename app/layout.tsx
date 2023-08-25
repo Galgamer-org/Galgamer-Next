@@ -1,5 +1,5 @@
 'use client'
-import '../styles/index.css'
+import '../styles/main.css'
 
 // persistant element across pages
 export default function RootLayout({
