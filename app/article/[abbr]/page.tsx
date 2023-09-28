@@ -1,12 +1,13 @@
-import { getPostBySlug, getAllPosts } from '../../../lib/api'
+import { getPostBySlug, getAllPosts, getPostByAbbrlink } from '../../../lib/api'
 import ArticlePage from './pageClient'
+
 
 //export const dynamicParams = false;
 export async function generateStaticParams() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(['slug', 'abbrlink'])
   let result =  posts.map((post) => {
     return {
-        abbr: post.slug,
+        abbr: post.abbrlink.toString(),
     }
   })
   //console.log(result)
@@ -14,14 +15,16 @@ export async function generateStaticParams() {
 }
 
 export default async function Article({params}){
-  const post = getPostBySlug(params.abbr, [
+  const post = getPostByAbbrlink(params.abbr, [
     'title',
     'date',
     'slug',
     'author',
     'content',
     'ogImage',
-    'coverImage',
+    'index_img',
+    'excerpt',
+    'abbrlink'
   ])
   return <ArticlePage
     post={post}
@@ -32,7 +35,7 @@ export default async function Article({params}){
 type Params = {
   params: {
     slug: string
+    abbr: number
   }
 }
-
 

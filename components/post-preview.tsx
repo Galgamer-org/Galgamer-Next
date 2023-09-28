@@ -6,7 +6,7 @@ import type Author from '../interfaces/author'
 
 type Props = {
   title: string
-  coverImage: string
+  index_img: string
   date: string
   excerpt: string
   author: Author
@@ -15,7 +15,7 @@ type Props = {
 
 const PostPreview = ({
   title,
-  coverImage,
+  index_img,
   date,
   excerpt,
   author,
@@ -24,7 +24,7 @@ const PostPreview = ({
   return (
     <div>
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
+        <CoverImage slug={slug} title={title} src={index_img} />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link

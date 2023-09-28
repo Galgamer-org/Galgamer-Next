@@ -1,5 +1,4 @@
 'use client'
-import ErrorPage from 'next/error'
 import Container from '../../../components/container'
 import PostBody from '../../../components/post-body'
 import Header from '../../../components/header'
@@ -8,6 +7,8 @@ import PostTitle from '../../../components/post-title'
 import { CMS_NAME } from '../../../lib/constants'
 import markdownToHtml from '../../../lib/markdownToHtml'
 import type PostType from '../../../interfaces/post'
+import ErrorPage from 'next/error'
+
 
 type Props = {
     post: PostType
@@ -17,27 +18,27 @@ type Props = {
 
 export default function ArticlePage({ post, morePosts, preview }: Props) {
     const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`
-    if ( !post?.slug) {
+    if (!post?.slug) {
         return <ErrorPage statusCode={404} />
     }
     const content = markdownToHtml(post.content)
     return (
-            <Container>
-                <Header />
+        <Container>
+            <Header />
 
-                    <>
-                        <article className="mb-32">
+            <>
+                <article className="mb-32">
 
-                            <PostHeader
-                                title={post.title}
-                                coverImage={post.coverImage}
-                                date={post.date}
-                                author={post.author}
-                            />
-                            <PostBody content={content} />
-                        </article>
-                    </>
+                    <PostHeader
+                        title={post.title}
+                        index_img={post.index_img}
+                        date={post.date}
+                        author={post.author}
+                    />
+                    <PostBody content={content} />
+                </article>
+            </>
 
-            </Container>
+        </Container>
     )
 }
