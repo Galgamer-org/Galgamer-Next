@@ -1,5 +1,6 @@
 import { getPostBySlug, getAllPosts, getPostByAbbrlink } from '../../../lib/api'
 import ArticlePage from './pageClient'
+import markdownToHtml from '../../../lib/markdownToHtml'
 
 
 //export const dynamicParams = false;
@@ -26,16 +27,14 @@ export default async function Article({params}){
     'excerpt',
     'abbrlink'
   ])
+
+  const content = markdownToHtml(post.content)
   return <ArticlePage
     post={post}
     morePosts={[]}
+    content={content}
   ></ArticlePage>
 }
 
-type Params = {
-  params: {
-    slug: string
-    abbr: number
-  }
-}
+
 

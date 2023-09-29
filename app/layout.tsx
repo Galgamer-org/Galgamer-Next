@@ -7,7 +7,6 @@ import Container from '../components/container'
 import { Container as BsContainer } from "react-bootstrap"
 
 type Props = {
-  preview?: boolean
   children: React.ReactNode
 }
 
@@ -15,7 +14,6 @@ type Props = {
 export default function RootLayout({
     // Layouts must accept a children prop.
     // This will be populated with nested layouts or pages
-    preview,
     children,
   }: Props) {
     
@@ -23,11 +21,10 @@ export default function RootLayout({
     return (
       <html lang="en">
       <body>
-
-      <Alert preview={preview} />
-      <main>{children}</main>
-
-          <Footer />
+      <main>
+        {children}
+      </main>
+      <Footer />
       </body>
     </html>
     )

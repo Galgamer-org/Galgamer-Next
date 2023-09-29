@@ -97,13 +97,17 @@
 
 .markdown-body img {
   border-style: none;
-  max-width: 100%;
+  max-width: 93%;
+  min-width: 70%;
   box-sizing: content-box;
   margin: 1.5rem auto;
   display: block;
   box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
   border-radius: 3px;
-  background-color: transparent
+  background-color: transparent;
+  width: auto;
+  height: auto;
+
 }
 
 
@@ -320,6 +324,7 @@
 .markdown-body p {
   margin-top: 0;
   margin-bottom: 10px;
+  /* white-space: pre-wrap; */
 }
 
 .markdown-body blockquote {

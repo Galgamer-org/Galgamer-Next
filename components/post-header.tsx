@@ -7,7 +7,7 @@ import type Author from '../interfaces/author'
 type Props = {
   title: string
   index_img: string
-  date: string
+  date: Date
   author: Author
 }
 
@@ -26,7 +26,7 @@ const PostHeader = ({ title, index_img, date, author }: Props) => {
           <Avatar name={author.name} picture={author.picture} />
         </div>
         <div className="mb-6 text-lg">
-          <DateFormatter dateString={date} />
+          <DateFormatter dateObj={date} />
         </div>
       </div>
     </>

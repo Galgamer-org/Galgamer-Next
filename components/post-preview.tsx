@@ -7,10 +7,11 @@ import type Author from '../interfaces/author'
 type Props = {
   title: string
   index_img: string
-  date: string
+  date: Date
   excerpt: string
   author: Author
   slug: string
+  abbr: number
 }
 
 const PostPreview = ({
@@ -20,23 +21,23 @@ const PostPreview = ({
   excerpt,
   author,
   slug,
+  abbr,
 }: Props) => {
   return (
     <div>
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={index_img} />
+        <CoverImage slug={slug} title={title} src={index_img} abbr={abbr}/>
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link
-          as={`/article/${slug}`}
-          href="/article/[slug]"
+          href={`/article/${abbr}`}
           className="hover:underline"
         >
           {title}
         </Link>
       </h3>
       <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
+        <DateFormatter dateObj={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />

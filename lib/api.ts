@@ -5,23 +5,9 @@ import PostType from '../interfaces/post'
 import { el } from 'date-fns/locale'
 
 const postsDirectory = join(process.cwd(), '_posts')
-const assetDirectory = join('/assets', 'blog-images')
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory)
-}
-
-function getNomalizedImagePath(path: string, directory: string | null) {
-  if (!path) {
-    return null;
-  }
-
-
-  if (path.startsWith('../image/')) {
-    return join(assetDirectory, path.replace('../image/', ''))
-  }else {
-    return path;
-  }
 }
 
 
@@ -57,7 +43,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
       picture: ''//data['author']['picture']
     },
     date: items['date'],
-    index_img: getNomalizedImagePath(items['index_img'], items['asset_directory']),
+    index_img: items['index_img'],
     excerpt: items['excerpt'],
     ogImage: {
       url: items['index_img']
@@ -65,7 +51,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     content: items['content'],
     abbrlink: items['abbrlink'],
   }
-  console.log(result)
+  //console.log(result)
 
   return result
 }
