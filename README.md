@@ -1,63 +1,38 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+# Brand new Galgamer website with Next.js
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+## 調試
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
+    1. 安裝 Node.js
+    2. 安裝 pnpm
+    3. 安裝依賴：`pnpm install`
+    4. 啟動開發服務器：`pnpm dev`
 
-The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
+使用之前，可以先從原本的 Hexo 倉庫複製 md 文件到 _post 文件夾裏面，複製文章對應的整個圖片文件夾到 public/assets/blog-images 裏面
+原 md 裏面的 ../image/圖片文件夾 會在 Next 裏面自動轉換，不用擔心
 
-To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
+## 部署
 
-## Demo
+    1. 編譯：`pnpm build`，這個命令將進行靜態導出
+    2. 啓動服務器：`pnpm start`
 
-[https://next-blog-starter.vercel.app/](https://next-blog-starter.vercel.app/)
 
-## Deploy your own
+## 目標
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/blog-starter)
+先實現基本的功能，錦上添花的之後再說
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter&project-name=blog-starter&repository-name=blog-starter)
+    - 按照原 Hexo 的風格編寫網站首頁，一篇 Featured 文章在最頂上，其餘文章按照時間排序
+    - 想辦法設計一個好看的 Galgamer Logo
+    - 頂部導航欄和底部的 footer 欄，支持手機版介面
+    - 設計一個好看的文章頁面，PC 端想在最左邊顯示作者的簡介大頭貼等
+    - 儘量支持原 Hexo 的模板語法，但是那個 HTML 的 template 真的有點搞不懂
+    - CSS 的設計儘量兼容原來的主題，至少那些文章 MD 裏面內嵌的通過修改 CSS 變量來修改主題顏色或者背景圖片的功能能夠正常使用
 
-### Related examples
+    - tag 頁面，分類頁面，歸檔頁面，作者牆頁面，404 頁面，Galgame 金曲頁面等等
+    - 支持夜間模式切換
+    - 拿不準的可以參考一下 blog.skk.moe
+    - 支持原來的谷歌字體
+    - 使用 Next.js 的 Metadata API 來生成 meta 標籤
 
-- [WordPress](/examples/cms-wordpress)
-- [DatoCMS](/examples/cms-datocms)
-- [Sanity](/examples/cms-sanity)
-- [TakeShape](/examples/cms-takeshape)
-- [Prismic](/examples/cms-prismic)
-- [Contentful](/examples/cms-contentful)
-- [Strapi](/examples/cms-strapi)
-- [Agility CMS](/examples/cms-agilitycms)
-- [Cosmic](/examples/cms-cosmic)
-- [ButterCMS](/examples/cms-buttercms)
-- [Storyblok](/examples/cms-storyblok)
-- [GraphCMS](/examples/cms-graphcms)
-- [Kontent](/examples/cms-kontent)
-- [Umbraco Heartcore](/examples/cms-umbraco-heartcore)
-- [Builder.io](/examples/cms-builder-io)
-- [TinaCMS](/examples/cms-tina/)
-- [Enterspeed](/examples/cms-enterspeed)
+    - 實現一個接口，能讓在 MD 裏面調用 Next.js 的函數或者 API 等（我不是很清楚怎麼搞）
 
-## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example blog-starter blog-starter-app
-```
-
-```bash
-yarn create next-app --example blog-starter blog-starter-app
-```
-
-```bash
-pnpm create next-app --example blog-starter blog-starter-app
-```
-
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-# Notes
-
-`blog-starter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
