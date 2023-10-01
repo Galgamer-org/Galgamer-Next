@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "target": "es2022",
+    "module": "ESNext",
     "jsx": "preserve",
     "strict": false,
     "esModuleInterop": true,
