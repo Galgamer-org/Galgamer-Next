@@ -95,7 +95,7 @@
   top: -0.5em;
 }
 
-.markdown-body img {
+.markdown-body .articleImage {
   border-style: none;
   max-width: 93%;
   min-width: 70%;
@@ -105,8 +105,8 @@
   box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
   border-radius: 3px;
   background-color: transparent;
-  width: auto;
-  height: auto;
+  /* width: auto;*/
+  height: auto; 
 
 }
 
