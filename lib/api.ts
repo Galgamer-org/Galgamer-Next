@@ -10,8 +10,19 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory)
 }
 
+const fields = [
+  'title',
+  'date',
+  'slug',
+  'author',
+  'content',
+  'ogImage',
+  'index_img',
+  'excerpt',
+  'abbrlink'
+];
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
+export function getPostBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -56,19 +67,19 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   return result
 }
 
-export function getAllPosts(fields: string[] = []) {
+export function getAllPosts() {
   const slugs = getPostSlugs()
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
+    .map((slug) => getPostBySlug(slug))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   return posts
 }
 
-export function getPostByAbbrlink(abbrlink: number, fields: string[] = []) {
+export function getPostByAbbrlink(abbrlink: number) {
   const slugs = getPostSlugs()
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
+    .map((slug) => getPostBySlug(slug))
     .filter((post) => post.abbrlink == abbrlink)
   return posts[0]
 }

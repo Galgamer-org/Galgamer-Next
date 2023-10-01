@@ -3,19 +3,11 @@ import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
-import { CMS_NAME } from '../lib/constants'
 import Post from '../interfaces/post'
+import styles from '@/styles/index.module.css'
 
 export default function Index(){
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'index_img',
-    'excerpt',
-    'abbrlink'
-  ])
+  const allPosts = getAllPosts()
   return <IndexPage allPosts={allPosts}></IndexPage>
 }
 

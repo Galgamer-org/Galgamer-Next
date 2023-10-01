@@ -1,6 +1,8 @@
 import cn from 'classnames'
 import Link from 'next/link'
+import SmartImage from './smart-image'
 import Image from 'next/image'
+
 
 type Props = {
   title: string
@@ -9,16 +11,14 @@ type Props = {
   abbr?: number
 }
 
-const CoverImage = ({ title, src, slug, abbr }: Props) => {
+export default function CoverImage ({ title, src, slug, abbr }: Props) {
   const image = (
-    <Image
+    <SmartImage
       src={src}
       alt={`Cover Image for ${title}`}
       className={cn('shadow-sm w-full', {
         'hover:shadow-lg transition-shadow duration-200': slug,
       })}
-      width={1300}
-      height={630}
     />
   )
   return (
@@ -34,4 +34,4 @@ const CoverImage = ({ title, src, slug, abbr }: Props) => {
   )
 }
 
-export default CoverImage
+
