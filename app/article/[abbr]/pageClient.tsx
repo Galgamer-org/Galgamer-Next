@@ -1,7 +1,6 @@
 'use client'
 import Container from '../../../components-layout/container'
 import PostBody from '../../../components/post-body'
-import Header from '../../../components/header'
 import PostHeader from '../../../components/post-header'
 import { CMS_NAME } from '../../../lib/constants'
 import type PostType from '../../../interfaces/post'
@@ -24,7 +23,6 @@ export default function ArticlePage({ post, morePosts, preview, content }: Props
     
     return (
         <Container>
-            <Header />
 
             <>
                 <article className="mb-32">

@@ -1,4 +1,3 @@
-'use client'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.css'
 import Alert from '../components/alert'
