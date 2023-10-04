@@ -1,7 +1,7 @@
 import Container from './container'
 import { EXAMPLE_PATH } from '../lib/constants'
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className="bg-neutral-50 border-t border-neutral-200">
       <Container>
@@ -29,4 +29,3 @@ const Footer = () => {
   )
 }
 
-export default Footer

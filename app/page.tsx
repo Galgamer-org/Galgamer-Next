@@ -1,5 +1,5 @@
 import { getAllPosts } from '../lib/api'
-import Container from '../components/container'
+import Container from '../components-layout/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'

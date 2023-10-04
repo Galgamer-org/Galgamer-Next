@@ -1,5 +1,5 @@
 'use client'
-import Container from '../../../components/container'
+import Container from '../../../components-layout/container'
 import PostBody from '../../../components/post-body'
 import Header from '../../../components/header'
 import PostHeader from '../../../components/post-header'
