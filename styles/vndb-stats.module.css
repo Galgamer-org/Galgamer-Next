@@ -1,0 +1,28 @@
+.vndbWrapper {
+    min-width: 300px;
+    border-radius: 25px;
+    background-color: #351c5d;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    overflow: hidden;
+}
+
+.infoContainer{
+    background: transparent;
+}
+
+.dataContainer{
+    background: transparent;
+}
+
+.rating{
+    background: transparent;
+}
+
+.details{
+    background: transparent;
+}
+
+.releases{
+    background: transparent;
+}

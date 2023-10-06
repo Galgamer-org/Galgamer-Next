@@ -7,7 +7,7 @@ import Link from 'next/link'
 import ClientScript from '../components/client-script'
 import { DetailedHTMLProps, ObjectHTMLAttributes } from 'react'
 import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
-import { ca } from 'date-fns/locale'
+import VndbStats from '../components/vndb-stats'
 import BsGallery from '../components/bs-gallery'
 
 import markdownStyles from '/styles/github-markdown-light.module.css'
@@ -68,6 +68,11 @@ function checkTemplate(markdown: string) : string{
       case 'endgallery':
         const newEndGallery = `</object>`;
         markdown = markdown.replace(replaceTarget, newEndGallery);
+        break;
+
+      case 'vndb':
+        const newVndb = `<object type="vndb" data='${templateParams}'></object>`;
+        markdown = markdown.replace(replaceTarget, newVndb);
         break;
       
       default:  // unsupported template
@@ -153,6 +158,11 @@ function Template(props: TemplateProps): ReactNode {
           return <SmartImage key={index} src={image} alt={`gallery ${galleryId} image ${index}`} />
         })
       } />;
+
+    case 'vndb':
+      const params3 = JSON.parse(data);
+      const vndbId = params3[0];
+      return <VndbStats vndbId={vndbId} />
 
     default:
       return <></>;
