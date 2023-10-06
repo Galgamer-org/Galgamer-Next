@@ -40,6 +40,8 @@ export default async function SmartImage(props:imageProps) {
                 probeResult = await probe(createReadStream(realSrc));
             }
         }else {
+            realSrc = encodeURI(realSrc);
+            //console.log(`probe ${realSrc}`);
             probeResult = await probe(realSrc);
         }
     } else {

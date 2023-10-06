@@ -16,7 +16,6 @@ function getNomalizedImagePath(path: string, directory?: string): string {
         return '';
     }
     
-
     if (path.startsWith('../image/')) {
         return join(assetDirectory || '', path.replace('../image/', ''))
     } else {
@@ -28,7 +27,6 @@ export default function imageLoader({ src, width, quality }: props) {
     //console.log(src)
     const width2 = width * 2;
     // meaningless...
-
 
     return getNomalizedImagePath(src);
 }

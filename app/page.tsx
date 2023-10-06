@@ -1,4 +1,4 @@
-import { getAllPosts } from '../lib/api'
+import { getAllPosts, isTechnicalReport } from '../lib/api'
 import Container from '../components-layout/container'
 import Intro from '../components/intro'
 import Post from '../interfaces/post'
@@ -14,15 +14,6 @@ import style from '@/styles/index.module.css'
 import { Col, Row } from 'react-bootstrap'
 
 
-export default function Index() {
-  const allPosts = getAllPosts()
-  return <IndexPage allPosts={allPosts}></IndexPage>
-}
-
-type Props = {
-  allPosts: Post[]
-}
-
 type heroProps = {
   title: string
   index_img: string
@@ -33,9 +24,13 @@ type heroProps = {
   abbr: number
 }
 
-function IndexPage({ allPosts }: Props) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+export default function Index() {
+  const allPosts = getAllPosts();
+
+  const heroPost = allPosts[0];
+  const recommandedGames = allPosts.filter(post => !isTechnicalReport(post));
+  const technicalReport = allPosts.filter(post => isTechnicalReport(post));
+
   return (
     <>
       <Container>
@@ -51,8 +46,14 @@ function IndexPage({ allPosts }: Props) {
             abbr={heroPost.abbrlink}
           />
         )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} limit={6} title='遊戲推薦' />}
-
+        {
+          recommandedGames.length > 0 &&
+          <MoreStories posts={recommandedGames} limit={6} title='遊戲推薦' jumpUrl='/channel/recommanded-games'/>
+        }
+        {
+          technicalReport.length > 0 &&
+          <MoreStories posts={technicalReport} limit={6} title='技術報告' jumpUrl='/channel/technical-report'/>
+        }
       </Container>
 
     </>
@@ -120,6 +121,7 @@ function MoreStories({
         <div className={cn('d-inline-block')}>
           <Link className="text-lg font-bold" href={jumpUrl || '/article'}>
             View all 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" focusable="false" role="presentation" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m18 8 4 4-4 4M2 12h20" vector-effect="non-scaling-stroke"></path></svg>
           </Link>
         </div>
       </div>

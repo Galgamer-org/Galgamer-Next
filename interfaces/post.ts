@@ -14,6 +14,8 @@ type PostType = {
   content: string
   asset_directory?: string | null
   abbrlink: number
+  tags: string[]
+  keywords: string
 }
 
 export default PostType
