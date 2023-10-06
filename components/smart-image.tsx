@@ -6,9 +6,7 @@ import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import { join } from 'path'
 import probe from 'probe-image-size'
 import { createReadStream, existsSync } from 'fs'
-
-const assetDirectory = join(process.cwd() ,'public/assets', 'blog-images')
-
+import { getNomalizedImagePath } from '../lib/image-loader'
 
 type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref"> & ReactMarkdownProps) | Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">
 
@@ -20,7 +18,7 @@ export default async function SmartImage(props:imageProps) {
     let isLocal = false;
     if(!(src.startsWith('http'))) {
         realSrc = getNomalizedImagePath(src);
-        isLocal = true;
+        //isLocal = true;
     }
 
     let probeResult: probe.ProbeResult;
@@ -40,8 +38,8 @@ export default async function SmartImage(props:imageProps) {
                 probeResult = await probe(createReadStream(realSrc));
             }
         }else {
-            realSrc = encodeURI(realSrc);
-            //console.log(`probe ${realSrc}`);
+            //realSrc = encodeURI(realSrc);
+            console.log(`probe ${realSrc}`);
             probeResult = await probe(realSrc);
         }
     } else {
@@ -74,16 +72,3 @@ export default async function SmartImage(props:imageProps) {
 
 }
 
-
-function getNomalizedImagePath(path: string, directory?: string): string {
-    if (!path) {
-        return '';
-    }
-    
-
-    if (path.startsWith('../image/')) {
-        return join(assetDirectory || '', path.replace('../image/', ''))
-    } else {
-        return path;
-    }
-}

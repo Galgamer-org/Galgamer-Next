@@ -51,20 +51,20 @@ export function getPostBySlug(slug: string) {
   const result: PostType = {
     slug: items['slug'],
     title: items['title'],
-    tags: items['tags'],
+    tags: items['tags'] ? items['tags'] : [],
     author: {
       name: '桐遠暮羽',//data['author']['name'],
       picture: ''//data['author']['picture']
     },
     date: items['date'],
-    index_img: items['index_img'],
-    excerpt: items['excerpt'],
+    index_img: items['index_img'] ? items['index_img'] : '',
+    excerpt: items['excerpt'] ? items['excerpt'] : '',
     ogImage: {
       url: items['index_img']
     },
     content: items['content'],
     abbrlink: items['abbrlink'],
-    keywords: items['keywords']
+    keywords: items['keywords'] ? items['keywords'] : ''
   };
   //console.log(result)
 

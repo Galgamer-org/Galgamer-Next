@@ -1,8 +1,7 @@
-'use client'
 import { join } from 'path'
 
 const assetDirectory = join('/assets', 'blog-images')
-const onlineDirectory = join('https://galgamer.moe', 'image')
+const onlineDirectory = new URL('https://galgamer.moe/image/').toString()
 
 type props = {
     src: string
@@ -11,13 +10,13 @@ type props = {
 }
 
 
-function getNomalizedImagePath(path: string, directory?: string): string {
+export function getNomalizedImagePath(path: string, directory?: string): string {
     if (!path) {
         return '';
     }
     
     if (path.startsWith('../image/')) {
-        return join(onlineDirectory || '', path.replace('../image/', ''))
+        return new URL(path.replace('../image/', onlineDirectory)).toString();
     } else {
         return path;
     }
