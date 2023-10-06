@@ -1,11 +1,10 @@
-import { Container as BsContainer } from "react-bootstrap"
 
 type Props = {
   children?: React.ReactNode
 }
 
 export default function Container({ children }: Props) {
-  return <BsContainer className="container mx-auto px-5">{children}</BsContainer>
+  return <div className="container-xxl mx-auto px-1 px-md-2 px-lg-5">{children}</div>
 }
 
 

@@ -1,3 +1,11 @@
 .heropost {
     display: flex;
 }
+
+.heroCoverImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease-in-out;
+}

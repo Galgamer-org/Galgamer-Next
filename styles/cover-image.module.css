@@ -1,0 +1,13 @@
+.coverImage {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.coverImage:hover {
+    /* -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); */
+
+    /* become dark when hover, using filter */
+    filter: brightness(0.9);
+}

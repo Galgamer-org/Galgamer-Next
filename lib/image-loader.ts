@@ -26,5 +26,9 @@ function getNomalizedImagePath(path: string, directory?: string): string {
 
 export default function imageLoader({ src, width, quality }: props) {
     //console.log(src)
-    return getNomalizedImagePath(src)
+    const width2 = width * 2;
+    // meaningless...
+
+
+    return getNomalizedImagePath(src);
 }
