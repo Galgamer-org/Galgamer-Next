@@ -121,7 +121,7 @@ function MoreStories({
         <div className={cn('d-inline-block')}>
           <Link className="text-lg font-bold" href={jumpUrl || '/article'}>
             View all 
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" focusable="false" role="presentation" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m18 8 4 4-4 4M2 12h20" vector-effect="non-scaling-stroke"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" focusable="false" role="presentation" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="m18 8 4 4-4 4M2 12h20" vectorEffect="non-scaling-stroke"></path></svg>
           </Link>
         </div>
       </div>

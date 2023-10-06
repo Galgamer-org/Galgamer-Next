@@ -2,7 +2,7 @@
 import { join } from 'path'
 
 const assetDirectory = join('/assets', 'blog-images')
-
+const onlineDirectory = join('https://galgamer.moe', 'image')
 
 type props = {
     src: string
@@ -17,7 +17,7 @@ function getNomalizedImagePath(path: string, directory?: string): string {
     }
     
     if (path.startsWith('../image/')) {
-        return join(assetDirectory || '', path.replace('../image/', ''))
+        return join(onlineDirectory || '', path.replace('../image/', ''))
     } else {
         return path;
     }

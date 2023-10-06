@@ -20,7 +20,7 @@ excerpt: '普通的 JK 普通地魅力四射，但是魅力能射殺人的 才�
 
 <style>
   :root {
-    --my-bg-url: url('');
+    --my-bg-url: url("");
   }
   body {
     background-image: var(--my-bg-url);
@@ -51,7 +51,7 @@ excerpt: '普通的 JK 普通地魅力四射，但是魅力能射殺人的 才�
 </style>
 
 
-`作者：桐羽（簡稱桐遠暮羽）`
+`作者：桐羽（簡稱桐遠暮羽）`  
 <code id="mail"></code>
 
 
@@ -419,7 +419,7 @@ ul.closetimg > li.active { /* 抄襲 */
             <div class="name-text"> 青梅竹馬 </div>
             <div class="name-comment font-italic"> 彩瀬 逢桜 </div>
           </div>
-          <a class="d-md-none position-absolute change-cloth btn btn-info mb-0" target-id="aisaCloset" style="bottom: 10px; left: 10px; z-index: 2;">👚 換衣服</a>
+          <button class="d-md-none position-absolute change-cloth btn btn-info mb-0" target-id="aisaCloset" style="bottom: 10px; left: 10px; z-index: 2;">👚 換衣服</button>
           <div class="closet-list"><!-- 換裝區域 -->
             <!-- <img onclick="return false;" src="../image/SousakuKanojo/chars/1/0.png"/> -->
             <ul class="closetimg" id="aisaCloset">
@@ -446,7 +446,7 @@ ul.closetimg > li.active { /* 抄襲 */
               <strong>就讀於：</strong>&emsp;小說科 - 和你同班<br>
               <strong>筆名：　</strong>&emsp;這重要嗎？
             </p>
-            <a class="change-cloth btn btn-info mb-0" target-id="aisaCloset">👚 換衣服</a>
+            <button class="change-cloth btn btn-info mb-0" target-id="aisaCloset">👚 換衣服</button>
           </div>
         </div>
         <div class="col-12 col-xl-10 char-desc aisa card shadow mx-lg-3 my-2">
@@ -516,7 +516,7 @@ ul.closetimg > li.active { /* 抄襲 */
               <div class="name-text"> 桐葉 </div>
               <div class="name-comment font-italic"> 同級生 </div>
             </div>
-            <a class="d-md-none position-absolute change-cloth btn btn-info mb-0" target-id="kiriCloset" style="bottom: 10px; left: 10px; z-index: 2;">👚 換衣服</a>
+            <button class="d-md-none position-absolute change-cloth btn btn-info mb-0" target-id="kiriCloset" style="bottom: 10px; left: 10px; z-index: 2;">👚 換衣服</button>
             <div class="closet-list"><!-- 換裝區域 -->
               <!-- <img onclick="return false;" src="../image/SousakuKanojo/chars/1/0.png"/> -->
               <ul class="closetimg" id="kiriCloset">
@@ -543,7 +543,7 @@ ul.closetimg > li.active { /* 抄襲 */
                 <strong>就讀於：</strong>&emsp;聲優科<br>
                 <strong>還是：　</strong>&emsp;你的二次元偶像！
               </p>
-              <a class="change-cloth btn btn-info mb-0" target-id="kiriCloset">👚 換衣服</a>
+              <button class="change-cloth btn btn-info mb-0" target-id="kiriCloset">👚 換衣服</button>
             </div>
           </div>
           <div class="col-12 col-xl-10 char-desc kiri card shadow mx-lg-3 my-2">
@@ -612,7 +612,7 @@ ul.closetimg > li.active { /* 抄襲 */
               <div class="name-text"> 妹妹【偽】 </div>
               <div class="name-comment font-italic"> Yumemi </div>
             </div>
-            <a class="d-md-none position-absolute change-cloth btn btn-info mb-0" target-id="yumeCloset" style="bottom: 10px; left: 10px; z-index: 2;">👚 換衣服</a>
+            <button class="d-md-none position-absolute change-cloth btn btn-info mb-0" target-id="yumeCloset" style="bottom: 10px; left: 10px; z-index: 2;">👚 換衣服</button>
             <div class="closet-list"><!-- 換裝區域 -->
               <!-- <img onclick="return false;" src="../image/SousakuKanojo/chars/1/0.png"/> -->
               <ul class="closetimg" id="yumeCloset">
@@ -638,7 +638,7 @@ ul.closetimg > li.active { /* 抄襲 */
               <p class="card-text">
                 <strong>就讀於：</strong>&emsp;家裡蹲
               </p>
-              <a class="change-cloth btn btn-info mb-0" target-id="yumeCloset">👚 換衣服</a>
+              <button class="change-cloth btn btn-info mb-0" target-id="yumeCloset">👚 換衣服</button>
             </div>
           </div>
           <div class="col-12 col-xl-10 char-desc yume card shadow mx-lg-3 my-2">
@@ -704,7 +704,7 @@ ul.closetimg > li.active { /* 抄襲 */
               <div class="name-text"> 學姐 </div>
               <div class="name-comment font-italic"> Elena </div>
             </div>
-            <a class="d-md-none position-absolute change-cloth btn btn-info mb-0" target-id="erenaCloset" style="bottom: 10px; left: 10px; z-index: 2;">👚 換衣服</a>
+            <button class="d-md-none position-absolute change-cloth btn btn-info mb-0" target-id="erenaCloset" style="bottom: 10px; left: 10px; z-index: 2;">👚 換衣服</button>
             <div class="closet-list"><!-- 換裝區域 -->
               <!-- <img onclick="return false;" src="../image/SousakuKanojo/chars/1/0.png"/> -->
               <ul class="closetimg" id="erenaCloset">
@@ -731,7 +731,7 @@ ul.closetimg > li.active { /* 抄襲 */
                 <strong>就讀於：</strong>&emsp;小說科<br>
                 <strong>筆名：　</strong>&emsp;抖淫蕩碧池
               </p>
-              <a class="change-cloth btn btn-info mb-0" target-id="erenaCloset">👚 換衣服</a>
+              <button class="change-cloth btn btn-info mb-0" target-id="erenaCloset">👚 換衣服</button>
             </div>
           </div>
           <div class="col-12 col-xl-10 char-desc erena card shadow mx-lg-3 my-2">
@@ -955,7 +955,7 @@ changeBtns.forEach(function(aBtn){
     let mTargetID = aBtn.getAttribute('target-id');
     let mTarget = document.getElementById(mTargetID);
     let theLis = mTarget.querySelectorAll('li');
-    let liCount = theLis.length;s
+    let liCount = theLis.length;
     for (let index = 0; index < liCount; index++) {
       const aLi = theLis[index];
       if(aLi.classList.contains('active')){
