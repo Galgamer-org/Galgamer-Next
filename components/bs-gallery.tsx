@@ -15,13 +15,13 @@ export default function BsGallery(props: Props) {
     const { images, id } = props;
 
     return (
-        <Carousel id={id} className={styles.bsGallery}>
+        <Carousel id={`carousel-${id}`} className={styles.bsGallery}>
             {
-                images.map((image, index) => 
-                        <Carousel.Item key={index}>
-                            {image}
-                        </Carousel.Item>
-                    )
+                images.map((image, index) =>
+                    <Carousel.Item key={index}>
+                        {image}
+                    </Carousel.Item>
+                )
             }
         </Carousel>
     )

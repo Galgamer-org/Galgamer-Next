@@ -102,7 +102,7 @@ export default function markdownToHtml(markdown: string) : ReactNode{
       },
       script(props){
           return <ClientScript 
-            children={props.children.toString().split('\n')}
+            children={props.children}
           />
           //return <script dangerouslySetInnerHTML={{__html: props.children}} />;
       },

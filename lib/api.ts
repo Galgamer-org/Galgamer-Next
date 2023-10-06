@@ -64,7 +64,7 @@ export function getPostBySlug(slug: string) {
     },
     content: items['content'],
     abbrlink: items['abbrlink'],
-    keywords: items['keywords'] ? items['keywords'] : ''
+    keywords: (items['keywords'] ? items['keywords'] : '').split(',').map((keyword) => keyword.trim())
   };
   //console.log(result)
 
@@ -85,7 +85,7 @@ export function isTechnicalReport(post: PostType) {
   const technicalKeywords = ['技術報告', '技术报告', '笔记', '筆記', '漢化'];
   // check against keywords and tags
   // keywords is separated by comma
-  const keywords = post.keywords.split(',').map((keyword) => keyword.trim());
+  const keywords = post.keywords;
   for (let i = 0; i < keywords.length; i++) {
     if (technicalKeywords.includes(keywords[i])) {
       result = true;

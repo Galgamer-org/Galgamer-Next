@@ -37,6 +37,7 @@ excerpt: '這是武道少女 Yuki 解開發生在學校、世界和自己身上�
 }
 .ar8x3{
   aspect-ratio: 8/3;
+  object-fit: cover;
 }
 body {
     background: var(--bg-url) no-repeat fixed center;

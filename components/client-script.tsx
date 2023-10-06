@@ -1,15 +1,21 @@
 'use client'
 
-import { use, useEffect } from "react";
+import { ReactNode, useEffect } from "react";
+import Script from "next/script";
 
 // a client side script that will be executed on the client side
 
 type Props = {
-    children: string[]
+    children: ReactNode & ReactNode[];
+    src?: string;
 }
 
 export default function ClientScript(props: Props){
-    const {children} = props;
+    const { children, src } = props;
+    
+    const inline = children ? children.toString().split('\n') : [];
+    
+    //console.log(inline);
     useEffect(() => {
 
         // eval(children.join('\n'));
@@ -23,9 +29,14 @@ export default function ClientScript(props: Props){
         // if(document.getElementById('client-script' + id_hash) == null){
         //     document.body.appendChild(script);
         // }
-
-        (0, eval)(`with (window) {${children.join('\n')}}`)
+        if(!inline.length) return;
+        const result = inline.join('\n');
+        (0, eval)(`with (window) {${result}}`);
 
     }, []);
+
+    if(src){
+        return <Script src={src} />
+    }
     return <></>
 }

@@ -35,25 +35,31 @@ export default function Index() {
     <>
       <Container>
         <Intro />
-        {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            index_img={heroPost.index_img}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-            abbr={heroPost.abbrlink}
-          />
-        )}
-        {
-          recommandedGames.length > 0 &&
-          <MoreStories posts={recommandedGames} limit={6} title='遊戲推薦' jumpUrl='/channel/recommanded-games'/>
-        }
-        {
-          technicalReport.length > 0 &&
-          <MoreStories posts={technicalReport} limit={6} title='技術報告' jumpUrl='/channel/technical-report'/>
-        }
+        <section>
+          {heroPost && (
+            <HeroPost
+              title={heroPost.title}
+              index_img={heroPost.index_img}
+              date={heroPost.date}
+              author={heroPost.author}
+              slug={heroPost.slug}
+              excerpt={heroPost.excerpt}
+              abbr={heroPost.abbrlink}
+            />
+          )}
+        </section>
+        <section>
+          {
+            recommandedGames.length > 0 &&
+            <MoreStories posts={recommandedGames} limit={6} title='遊戲推薦' jumpUrl='/channel/recommanded-games'/>
+          }
+        </section>
+        <section>
+          {
+            technicalReport.length > 0 &&
+            <MoreStories posts={technicalReport} limit={6} title='技術報告' jumpUrl='/channel/technical-report'/>
+          }
+        </section>
       </Container>
 
     </>

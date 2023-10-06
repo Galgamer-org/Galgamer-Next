@@ -14,22 +14,22 @@ type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, H
 export default async function SmartImage(props:imageProps) {
     let {src, alt, className, style} = props;
     // check if src is a local file
-    let realSrc = src;
     let isLocal = false;
-    if(!(src.startsWith('http'))) {
-        realSrc = getNomalizedImagePath(src);
-        //isLocal = true;
+    if( !(src.startsWith('http') || src.startsWith('../image')) ) {
+        isLocal = true;
     }
 
     let probeResult: probe.ProbeResult;
 
     let hasSize = probeResult?.width && probeResult?.height;
 
-
+    const realSrc = getNomalizedImagePath(encodeURI(decodeURI(src)));
     if (!hasSize) {
         // get image size
         if(isLocal) {
             // check file exist
+            
+
             if(!existsSync(realSrc)) {
                 console.error(`file ${realSrc} not exist`);
                 probeResult = null;
@@ -39,8 +39,13 @@ export default async function SmartImage(props:imageProps) {
             }
         }else {
             //realSrc = encodeURI(realSrc);
-            console.log(`probe ${realSrc}`);
-            probeResult = await probe(realSrc);
+            try {
+                probeResult = await probe(realSrc);
+            } catch (error) {
+                console.error(`probe error: ${realSrc} : ${error}`);
+                probeResult = null;
+            }
+            
         }
     } else {
         probeResult = {
@@ -51,7 +56,7 @@ export default async function SmartImage(props:imageProps) {
             mime: 'image/jpeg',
             wUnits: 'px',
             hUnits: 'px',
-            url: realSrc,
+            url: src,
         }
     }
 
