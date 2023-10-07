@@ -31,8 +31,16 @@ export default function ClientScript(props: Props){
         // }
         if(!inline.length) return;
         const result = inline.join('\n');
-        (0, eval)(`with (window) {${result}}`);
-
+        try {
+            (0, eval)(`with (window) {${result}}`);
+        } catch (error) {
+            console.error(error);
+        }
+        
+        // refresh the page when exit
+        return () => {
+            //window.location.reload();
+        }
     }, []);
 
     if(src){

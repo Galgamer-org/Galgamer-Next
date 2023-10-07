@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.css'
+import '../styles/s3fonts-woff-woff2.css'
+import '../styles/fonts.css'
 import Footer from '../components-layout/footer'
 import Header from '../components-layout/Header'
 
@@ -17,7 +19,7 @@ export default function RootLayout({
     
 
     return (
-      <html lang="en">
+      <html lang="zh-Hant">
       <body>
         <Header />
         <main>

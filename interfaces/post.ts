@@ -1,10 +1,10 @@
-import type Author from './author'
+import type Member from './member'
 
 type PostType = {
   slug: string
   title: string
   date: Date
-  author: Author | null
+  author: Member | null
   excerpt: string
   banner_img?: string
   index_img: string

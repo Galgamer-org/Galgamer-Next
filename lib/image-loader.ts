@@ -1,7 +1,6 @@
 import { join } from 'path'
+import { onlineDirectory } from './constants'
 
-const assetDirectory = join('/assets', 'blog-images')
-const onlineDirectory = new URL('https://galgamer.moe/image/').toString()
 
 type props = {
     src: string
@@ -17,6 +16,8 @@ export function getNomalizedImagePath(path: string, directory?: string): string 
     
     if (path.startsWith('../image/')) {
         return new URL(path.replace('../image/', onlineDirectory)).toString();
+    } else if (path.startsWith('http')) {
+        return path;
     } else {
         return path;
     }

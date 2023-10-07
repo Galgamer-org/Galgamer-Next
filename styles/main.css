@@ -1,5 +1,79 @@
+:root {
+  --color-mode: 'light';
+  --body-bg-color: #eee;
+  /* 中央版面背景色: 0; */
+  --board-bg-color: #fff;
+  /* 文字顏色: 0; */
+  --text-color: #405b55;
+  /* 二級文字顏色: 0; */
+  --sec-text-color: #484646;
+  /* 文章正文顏色: 0; */
+  --post-text-color: #13201f;
+  /* 文章標題顏色: 0; */
+  --post-heading-color: #1a202c;
+  /* 鼠標指向的文章連結顏色: 0; */
+  --post-link-color: #0366d6;
+  /* 頁面頂端連結 和文章連結 鼠標指向顏色: 0; */
+  --link-hover-color: #90b44b;
+  --link-hover-bg-color: #f8f9fa;
+  /* 頂欄顏色: 0; */
+  --navbar-bg-color: #66bab7;
+  /* 頂欄文字顏色: 0; */
+  --navbar-text-color: #fff;
+  --scrollbar-color: #c4c6c9;
+  --scrollbar-hover-color: #a6a6a6
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+      --color-mode:'dark'
+  }
+
+  :root:not([data-user-color-scheme]) {
+      --body-bg-color: #1c1c1c;
+      --board-bg-color: #333333;
+      --text-color: #e3e3e3;
+      --sec-text-color: #bfbfbf;
+      --post-text-color: #e3e3e3;
+      --post-heading-color: #d1d1d1;
+      --post-link-color: #1589e9;
+      --link-hover-color: #a5dee4;
+      --link-hover-bg-color: #364151;
+      --navbar-bg-color: #fcfaf2;
+      --navbar-text-color: #9b9a95;
+      --scrollbar-color: #687582;
+      --scrollbar-hover-color: #9da8b3
+  }
+
+}
+
+[data-user-color-scheme=dark] {
+  --body-bg-color: #1c1c1c;
+  --board-bg-color: #333333;
+  --text-color: #e3e3e3;
+  --sec-text-color: #bfbfbf;
+  --post-text-color: #e3e3e3;
+  --post-heading-color: #d1d1d1;
+  --post-link-color: #1589e9;
+  --link-hover-color: #a5dee4;
+  --link-hover-bg-color: #364151;
+  --navbar-bg-color: #fcfaf2;
+  --navbar-text-color: #9b9a95;
+  --scrollbar-color: #687582;
+  --scrollbar-hover-color: #9da8b3
+} */
+
+body {
+  transition: color .2s ease-in-out,background-color .2s ease-in-out;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
 .smart-image {
   /* max-width: 95%; */
   height: auto;
   /* width: auto; */
 }
+

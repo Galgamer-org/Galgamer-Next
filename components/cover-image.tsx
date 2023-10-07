@@ -18,11 +18,11 @@ export default function CoverImage ({ title, src, slug, abbr, className }: Props
     <SmartImage
       src={src}
       alt={`Cover Image for ${title}`}
-      className={cn('shadow w-100 rounded', style.coverImage)}
+      className={cn('shadow w-100 rounded', style.coverImage, className)}
     />
   )
   return (
-    <div className="sm:mx-0">
+    <>
       {abbr ? (
         <Link href={`/article/${abbr}`}  aria-label={title}>
           {image}
@@ -30,7 +30,7 @@ export default function CoverImage ({ title, src, slug, abbr, className }: Props
       ) : (
         image
       )}
-    </div>
+    </>
   )
 }
 

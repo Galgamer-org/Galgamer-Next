@@ -7,8 +7,14 @@ import { join } from 'path'
 import probe from 'probe-image-size'
 import { createReadStream, existsSync } from 'fs'
 import { getNomalizedImagePath } from '../lib/image-loader'
+import { onlineDirectory, rootDirectory } from '../lib/constants'
 
 type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref"> & ReactMarkdownProps) | Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">
+
+const blackListDomains = [
+    'zhimg.com',
+    'pinyuncloud.com'
+];
 
 
 export default async function SmartImage(props:imageProps) {
@@ -23,26 +29,37 @@ export default async function SmartImage(props:imageProps) {
 
     let hasSize = probeResult?.width && probeResult?.height;
 
-    const realSrc = getNomalizedImagePath(encodeURI(decodeURI(src)));
+    const probeSrc = getProbePath(src);
     if (!hasSize) {
         // get image size
         if(isLocal) {
             // check file exist
             
 
-            if(!existsSync(realSrc)) {
-                console.error(`file ${realSrc} not exist`);
+            if(!existsSync(probeSrc)) {
+                console.error(`file ${probeSrc} not exist`);
                 probeResult = null;
             }
             else{
-                probeResult = await probe(createReadStream(realSrc));
+                probeResult = await probe(createReadStream(probeSrc));
             }
         }else {
-            //realSrc = encodeURI(realSrc);
+            //probeSrc = encodeURI(probeSrc);
             try {
-                probeResult = await probe(realSrc);
+                // check black list
+                let blackListed = false;
+                blackListDomains.forEach(domain => {
+                    if(probeSrc.includes(domain)){
+                        blackListed = true;
+                    }
+                });
+                if(blackListed) {
+                    throw new Error(`black listed domain: ${probeSrc}`);
+                }
+
+                probeResult = await probe(probeSrc);
             } catch (error) {
-                console.error(`probe error: ${realSrc} : ${error}`);
+                console.error(`probe error: ${probeSrc} : ${error}`);
                 probeResult = null;
             }
             
@@ -77,3 +94,21 @@ export default async function SmartImage(props:imageProps) {
 
 }
 
+
+
+function getProbePath(path: string) {
+    if (!path) {
+        return '';
+    }
+    
+    if (path.startsWith('../image/')) {
+        let result = new URL(path.replace('../image/', onlineDirectory)).toString();
+        return encodeURI(decodeURI(result));
+
+    } else if (path.startsWith('http')) {
+        return encodeURI(decodeURI(path));
+
+    } else {
+        return join(rootDirectory, path);
+    }
+}

@@ -65,7 +65,7 @@ export default function Channel({params}: { params: { name: string }}) {
         <Container className={cn(style.postArea)}>
           <Row className={cn('my-3 px-1 px-md-2 px-xl-4')}>
           {posts.map((post) => (
-            <Col className={cn('col-12 col-md-6 col-xl-4 d-flex align-items-center')} key={post.slug}>
+            <Col className={cn('col-12 col-md-6 col-xl-4 d-flex')} key={post.slug}>
               <PostPreview
                 title={post.title}
                 index_img={post.index_img}

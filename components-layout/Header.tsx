@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
+import cn from 'classnames'
+import style from 'styles/header.module.css'
 
 const SiteLogo = '/img/logo.png'
 
@@ -12,11 +14,12 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header id="header">
-      <Navbar className='navbar navbar-light bg-light' expand="lg">
+    <header className={style.header}>
+      <Navbar className={cn(style.navbar, 'navbar')} expand="lg">
         <Container>
           <Link href='/' className='navbar-brand'>
-            <Image src={SiteLogo} width="90" height="90" alt="Galgamer Logo" />
+            {/* <Image src={SiteLogo} width="90" height="90" alt="Galgamer Logo" /> */}
+            <span className={cn(style.navbarText, '')}><em>Galgamer</em></span>
           </Link>
 
           <Navbar.Toggle aria-controls="navbarNav">
@@ -32,19 +35,19 @@ export default function Header() {
               // onSelect={(selectedKey) => {alert(selectedKey)}}
             >
               <Nav.Item as="li">
-                <Nav.Link as={Link} href="/" className='nav-link'>Home</Nav.Link>
+                <Nav.Link as={Link} href="/" className={cn(style.navbarText, '')}>Home</Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link as={Link} href="/tag" className='nav-link'>Tag</Nav.Link>
+                <Nav.Link as={Link} href="/tag" className={cn(style.navbarText, '')}>Tag</Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link as={Link} href="/categories" className='nav-link'>Categories</Nav.Link>
+                <Nav.Link as={Link} href="/categories" className={cn(style.navbarText, '')}>Categories</Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link as={Link} href="/members" className='nav-link'>Members</Nav.Link>
+                <Nav.Link as={Link} href="/members" className={cn(style.navbarText, '')}>Members</Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link as={Link} href="/music" className='nav-link'>Music</Nav.Link>
+                <Nav.Link as={Link} href="/music" className={cn(style.navbarText, '')}>Music</Nav.Link>
               </Nav.Item>
             </Nav>
 

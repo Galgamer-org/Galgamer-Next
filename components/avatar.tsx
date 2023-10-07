@@ -1,15 +1,25 @@
+import Member from "interfaces/member"
+import Image from "next/image"
+import style from "styles/avatar.module.css"
+import cn from 'classnames'
+import { Col } from "react-bootstrap"
+import SmartImage from "./smart-image"
+
 type Props = {
-  name: string
-  picture: string
+  member: Member
 }
 
-const Avatar = ({ name, picture }: Props) => {
+export default function Avatar ({ member }: Props) {
+  const { name, photo, bio, url } = member;
   return (
-    <div className="flex items-center">
-      <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
-      <div className="text-xl font-bold">{name}</div>
+    <div className={cn(style.container ,"d-flex align-items-center")}>
+      <div className={cn(style.photoContainer ,"mr-2")}>
+        <SmartImage src={photo} alt={`${name}'s profile photo`} className={cn(style.avatar, "rounded-full")} />
+      </div>
+      
+      <div className={cn(style.name ,"font-weight-bold mx-2")}>
+        {name}
+      </div>
     </div>
   )
 }
-
-export default Avatar

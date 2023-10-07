@@ -4,6 +4,9 @@ import matter from 'gray-matter'
 import PostType from '../interfaces/post'
 import { el } from 'date-fns/locale'
 
+import { getMember } from '_feed/members'
+import { get } from 'http'
+
 const postsDirectory = join(process.cwd(), '_posts');
 
 export function getPostSlugs() {
@@ -52,10 +55,7 @@ export function getPostBySlug(slug: string) {
     slug: items['slug'],
     title: items['title'],
     tags: items['tags'] ? items['tags'] : [],
-    author: {
-      name: '桐遠暮羽',//data['author']['name'],
-      picture: ''//data['author']['picture']
-    },
+    author: getMember(items['author']),
     date: items['date'],
     index_img: items['index_img'] ? items['index_img'] : '',
     excerpt: items['excerpt'] ? items['excerpt'] : '',
