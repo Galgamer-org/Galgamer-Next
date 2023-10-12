@@ -63,12 +63,21 @@
   --scrollbar-hover-color: #9da8b3
 } */
 
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   transition: color .2s ease-in-out,background-color .2s ease-in-out;
   background-color: var(--body-bg-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .smart-image {
@@ -77,3 +86,14 @@ body {
   /* width: auto; */
 }
 
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.o-hidden {
+  overflow: hidden;
+}

@@ -5,10 +5,15 @@ import '../styles/fonts.css'
 import Footer from '../components-layout/footer'
 import Header from '../components-layout/Header'
 
-
 type Props = {
   children: React.ReactNode
 }
+import { Metadata } from 'next';
+
+export const metadata : Metadata = {
+  title: 'Galgamer',
+  description: 'Galgamer Home Page',
+};
 
 // persistant element across pages
 export default function RootLayout({
@@ -22,7 +27,7 @@ export default function RootLayout({
       <html lang="zh-Hant">
       <body>
         <Header />
-        <main>
+        <main className='main-container'>
           {children}
         </main>
         <Footer />

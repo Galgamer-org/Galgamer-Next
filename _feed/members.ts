@@ -25,7 +25,7 @@ const Members: Member[] = [
     },
     {
         name: "Patchouli Knowledge",
-        photo: "/assets/members/Patchouli.jpg",
+        photo: "/assets/members/patchouli.jpg",
     }
 ];
 

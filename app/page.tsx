@@ -31,11 +31,13 @@ export default function Index() {
       )}
 
       <Container>
+
+
         {
           recommandedGames.length > 0 &&
           <MoreStories posts={recommandedGames} limit={6} title='遊戲推薦' jumpUrl='/channel/recommanded-games' />
         }
-
+          
         {
           technicalReport.length > 0 &&
           <MoreStories posts={technicalReport} limit={6} title='技術報告' jumpUrl='/channel/technical-report' />
@@ -54,7 +56,7 @@ function HeroPost({
 
 
   return (
-    <section className={cn(style.featuredContainer, 'container-fluid')}>
+    <section className={cn(style.featuredContainer, 'container-fluid mt-3')}>
       <h2 className={cn(style.featuredTitle, 'h1')}><em>Featured.</em></h2>
       <div className={cn(style.postContainer, '')}>
         <div className={cn(style.coverImageContainer, '')}>
@@ -113,9 +115,11 @@ function MoreStories({
           </Link>
         </div>
       </div>
-      <Row className={cn('my-3 px-1 px-md-2 px-xl-4')}>
+      <Row className={cn('my-3 px-1 px-md-2 px-xl-4 o-hidden')}>
         {posts.slice(0, limit || posts.length).map((post) => (
+
           <Col className={cn('col-12 col-md-6 col-xl-4')} key={post.slug}>
+
             <PostPreview
               title={post.title}
               index_img={post.index_img}
