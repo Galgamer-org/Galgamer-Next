@@ -6,12 +6,9 @@ import path from "path";
 
 export default async function VndbStats({ vndbId }: { vndbId: string }) {
 
-
-
-
     let basicInfo = null;
-    let releaseInfo = null;
-    let basic_info = null;
+    let releaseInfo : Record<string, any>[];
+    let basic_info : Record<string, any>;
     let zh_has_patch = new Array();
 
     const vndbAPI = async (apiUrl: string, requestData: Record<string, any>) => {
@@ -79,11 +76,11 @@ export default async function VndbStats({ vndbId }: { vndbId: string }) {
 
     }
 
-    const length_time = function (min : number ) {
+    const length_time = function (min: number) {
         return ((min / 60) + "小时 " + (min % 60) + "min")
     }
 
-    const languages_flag = function (languages : any,  language : String) {
+    const languages_flag = function (languages: any, language: String) {
         let result = null;
         for (const element of languages) {
             if (element === language) {
@@ -95,12 +92,12 @@ export default async function VndbStats({ vndbId }: { vndbId: string }) {
         return result
 
     }
-    const devstatu = function (stau : number ) {
+    const devstatu = function (stau: number) {
         switch (stau) {
             case 0: return "已发布";
             case 1: return "制作中";
             case 2: return "已跑路";
-            default : return "火星了";
+            default: return "火星了";
         }
     }
 
@@ -118,7 +115,8 @@ export default async function VndbStats({ vndbId }: { vndbId: string }) {
         console.log(releaseInfo);
         console.log("===================releaseinfo==================");
 
-        basic_info = {
+        basic_info =
+        {
             "游戏名": basicInfo.title,
             "原语言": basicInfo.olang,
             "游戏状态": devstatu(basicInfo.devstatus),
@@ -186,13 +184,13 @@ export default async function VndbStats({ vndbId }: { vndbId: string }) {
                 <Col className={cn(style.rating, "col-12 col-md-6")}>汉化补丁</Col>
                 {zh_has_patch.map(patch => (
                     <div>
-                          {Object.entries(patch).map(([key,value]) => (
-                                <tr key={key}>
-                                    <td>{key}</td>
-                                    {/* <td>{Array.isArray(value) ? value.join(" ") : value}</td> */}
-                                    <td>{value === null ? "未知" : value}</td>
-                                </tr>
-                            ))}
+                        {Object.entries(patch).map(([key, value]) => (
+                            <tr key={key}>
+                                <td>{key}</td>
+                                {/* <td>{Array.isArray(value) ? value.join(" ") : value}</td> */}
+                                {/* <td>{value === null ? "未知" : value}</td> */}
+                            </tr>
+                        ))}
                     </div>
                 ))}
 
