@@ -1,7 +1,7 @@
 'use client'
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'next/image';
-import SmartImage from './smart-image';
+import SmartImage from '../components/smart-image';
 import { ReactNode } from 'react';
 import styles from '../styles/bs-gallery.module.css';
 

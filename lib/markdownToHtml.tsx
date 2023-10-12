@@ -7,10 +7,13 @@ import Link from 'next/link'
 import ClientScript from '../components/client-script'
 import { DetailedHTMLProps, ObjectHTMLAttributes } from 'react'
 import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
-import VndbStats from '../components/vndb-stats'
-import BsGallery from '../components/bs-gallery'
+import VndbStats from '../components-widget/vndb-stats'
+import BsGallery from '../components-widget/bs-gallery'
 
 import markdownStyles from '/styles/github-markdown-light.module.css'
+import TGChannel from 'components-widget/tg-channel'
+import SteamWidget from 'components-widget/steam-widget'
+import SteamPlayer from 'components-widget/steam-player'
 
 
 
@@ -56,9 +59,15 @@ function checkTemplate(markdown: string) : string{
         const newTGChannel = `<object type="telegram_channel" data='${templateParams}'></object>`;
         markdown = markdown.replace(replaceTarget, newTGChannel);
         break;
+
       case 'steam_widget':
-        const newSteamWidget = `<iframe src="https://store.steampowered.com/widget/${params[0]}/" frameborder="0" width="100%" height="200px" loading="lazy"></iframe>`;
+        const newSteamWidget = `<object type="steam_widget" data='${templateParams}'></object>`;
         markdown = markdown.replace(replaceTarget, newSteamWidget);
+        break;
+
+      case 'steam_player':
+        const newSteamPlayer = `<object type="steam_player" data='${templateParams}'></object>`;
+        markdown = markdown.replace(replaceTarget, newSteamPlayer);
         break;
 
       case 'gallery':
@@ -139,7 +148,7 @@ function Template(props: TemplateProps): ReactNode {
   switch(type) {
     case 'telegram_channel':
       const params = JSON.parse(data);
-      return <a href={`tg://resolve?domain=${params[1] ? params[1] : 'KiritouKureha'}&post=${params[0]}`}>🔗前往 Telegram 頻道</a>
+      return <TGChannel channelName={params[1]} msg={params[0]} />;
 
     case 'gallery':
       const params2 = JSON.parse(data);
@@ -163,6 +172,17 @@ function Template(props: TemplateProps): ReactNode {
       const params3 = JSON.parse(data);
       const vndbId = params3[0];
       return <VndbStats vndbId={vndbId} />
+
+    case 'steam_widget':
+      const param4 = JSON.parse(data);
+      const gameId = param4[0];
+      return <SteamWidget gameId={gameId} />
+
+    case 'steam_player':
+      const param5 = JSON.parse(data);
+      const playId = param5[0];
+      return <SteamPlayer playId={playId} />
+
 
     default:
       return <></>;
