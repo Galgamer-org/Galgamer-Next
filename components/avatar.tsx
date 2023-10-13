@@ -10,7 +10,7 @@ type Props = {
 }
 
 export default function Avatar ({ member }: Props) {
-  const { name, photo, bio, url } = member;
+  const { name, photo, bio, } = member;
   return (
     <div className={cn(style.container ,"d-flex align-items-center")}>
       <div className={cn(style.photoContainer ,"mr-2")}>

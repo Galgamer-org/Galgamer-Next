@@ -2,7 +2,7 @@
   --color-mode: 'light';
   --body-bg-color: #eee;
   /* 中央版面背景色: 0; */
-  --board-bg-color: #fff;
+  --board-bg-color: #fffd;
   /* 文字顏色: 0; */
   --text-color: #405b55;
   /* 二級文字顏色: 0; */
@@ -21,7 +21,10 @@
   /* 頂欄文字顏色: 0; */
   --navbar-text-color: #fff;
   --scrollbar-color: #c4c6c9;
-  --scrollbar-hover-color: #a6a6a6
+  --scrollbar-hover-color: #a6a6a6;
+
+  --large-board-border-radius: 16px;
+  --small-board-border-radius: 10px;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -70,7 +73,7 @@ html {
 }
 
 body {
-  transition: color .2s ease-in-out,background-color .2s ease-in-out;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
   background-color: var(--body-bg-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
@@ -78,6 +81,11 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+
+  background-image: 
+  repeating-radial-gradient( circle at -50% 150%, transparent 0, #e5f7f4 50px ), 
+  repeating-linear-gradient( #44ebf755, var(--navbar-bg-color) );
+  background-attachment: fixed;
 }
 
 .smart-image {
@@ -96,4 +104,27 @@ header {
 
 .o-hidden {
   overflow: hidden;
+}
+
+body a {
+  color: var(--text-color);
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+body a:hover {
+  color: var(--link-hover-color);
+}
+
+.container-board {
+  position: relative;
+  background-color: var(--board-bg-color);
+  /* overflow: hidden; */
+  border-radius: var(--large-board-border-radius);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
 }

@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../styles/main.css'
 import '../styles/s3fonts-woff-woff2.css'
 import '../styles/fonts.css'
@@ -13,6 +14,13 @@ import { Metadata } from 'next';
 export const metadata : Metadata = {
   title: 'Galgamer',
   description: 'Galgamer Home Page',
+  openGraph: {
+    type: 'website',
+    locale: 'zh_TW',
+    url: 'https://galgamer.moe',
+    title: 'Galgamer',
+    description: 'Galgamer Home Page',
+  },
 };
 
 // persistant element across pages

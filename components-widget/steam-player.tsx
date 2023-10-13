@@ -47,7 +47,7 @@ export default function SteamPlayer({ playId }:{ playId: string }) {
                 ref={videoRef} controls preload={'metadata'} width={'100%'} 
                 poster={`https://${cdn}/steam/apps/${playId}/movie.293x165.jpg`} 
                 onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
-                className="shadow rounded"
+                className="box-shadow rounded"
             >
                 {quality === '480P' ? _480pSources : HDsources}
             <p>To view this video please enable JavaScript</p>

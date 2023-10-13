@@ -1,5 +1,6 @@
 // 封裝了一個 next.js 的 Image 元件，以便根據情況對圖片大小進行探測，按需返回 img 或者 Image
 
+
 import Image from 'next/image'
 import { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
 import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
@@ -7,6 +8,7 @@ import { join } from 'path'
 import probe from 'probe-image-size'
 import { createReadStream, existsSync } from 'fs'
 import { getNomalizedImagePath } from '../lib/image-loader'
+import imageLoader from '../lib/image-loader'
 import { onlineDirectory, rootDirectory } from '../lib/constants'
 
 type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref"> & ReactMarkdownProps) | Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">

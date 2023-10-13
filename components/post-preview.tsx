@@ -24,24 +24,25 @@ const PostPreview = ({
   abbr,
 }: Props) => {
   return (
-    <div className="mb-3 w-100">
+    <div className="mb-4 w-100">
       <div className="mb-3">
         <CoverImage slug={slug} title={title} src={index_img} abbr={abbr}/>
       </div>
-      <div className='my-1'>
+      <div className='my-2'>
         <Avatar member={author} />
       </div>
-      <h3 className="mb-1 ">
+      <h3 className="my-2 h5">
         <Link
           href={`/article/${abbr}`}
-          className="text-decoration-none"
+          className="text-decoration-none preview-title"
         >
           <strong>{title}</strong>
         </Link>
       </h3>
 
-      <p className="text-lg leading-relaxed my-1">{excerpt}</p>
+      <p className="text-lg leading-relaxed my-2">{excerpt}</p>
       <div className="text-lg my-1">
+        <i className="bi-calendar-week-fill me-2"></i>
         <DateFormatter dateObj={date} />
       </div>
     </div>

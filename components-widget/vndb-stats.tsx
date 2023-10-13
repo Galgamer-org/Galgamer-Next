@@ -157,7 +157,7 @@ export default async function VndbStats({ vndbId }: { vndbId: string }) {
 
     // 然後插入你的信息 
     return (
-        <div className={cn(style.vndbWrapper, "shadow")}>
+        <div className={cn(style.vndbWrapper, "box-shadow")}>
             <Row className={style.infoContainer}>
                 <div>
                     <table>

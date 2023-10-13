@@ -5,6 +5,7 @@
     object-fit: cover;
     aspect-ratio: 16/10;
     width: 100%;
+    border-radius: var(--small-board-border-radius);
 }
 
 .coverImage:hover {
@@ -15,3 +16,12 @@
     /* become dark when hover, using filter */
     filter: brightness(0.9);
 }
+
+@media screen and (max-width: 768px) {
+    .coverImage {
+
+        aspect-ratio: 16/8;
+
+    }
+}
+    

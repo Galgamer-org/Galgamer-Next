@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header className={style.header}>
-      <Navbar className={cn(style.navbar, 'navbar')} expand="lg">
+      <Navbar className={cn(style.navbar, 'navbar box-shadow')} expand="lg">
         <Container>
           <Link href='/' className='navbar-brand'>
             {/* <Image src={SiteLogo} width="90" height="90" alt="Galgamer Logo" /> */}
@@ -35,19 +35,34 @@ export default function Header() {
               // onSelect={(selectedKey) => {alert(selectedKey)}}
             >
               <Nav.Item as="li">
-                <Nav.Link as={Link} href="/" className={cn(style.navbarText, '')}>Home</Nav.Link>
+                <Nav.Link as={Link} href="/" className={cn(style.navbarText, '')}>
+                  <i className="bi-house-door-fill me-1"></i>
+                  Home
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link as={Link} href="/tag" className={cn(style.navbarText, '')}>Tag</Nav.Link>
+                <Nav.Link as={Link} href="/tag" className={cn(style.navbarText, '')}>
+                  <i className="bi-tag-fill me-1"></i>
+                  Tag
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link as={Link} href="/categories" className={cn(style.navbarText, '')}>Categories</Nav.Link>
+                <Nav.Link as={Link} href="/categories" className={cn(style.navbarText, '')}>
+                  <i className="bi-inboxes-fill me-1"></i>
+                  Categories
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link as={Link} href="/members" className={cn(style.navbarText, '')}>Members</Nav.Link>
+                <Nav.Link as={Link} href="/members" className={cn(style.navbarText, '')}>
+                  <i className="bi-person-fill me-1"></i>
+                  Members
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link as={Link} href="/music" className={cn(style.navbarText, '')}>Music</Nav.Link>
+                <Nav.Link as={Link} href="/music" className={cn(style.navbarText, '')}>
+                  <i className="bi-music-note-beamed me-1"></i>
+                  Music
+                </Nav.Link>
               </Nav.Item>
             </Nav>
 

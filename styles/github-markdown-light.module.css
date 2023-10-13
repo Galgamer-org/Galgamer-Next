@@ -102,15 +102,22 @@
   box-sizing: content-box;
   margin: 1.5rem auto;
   display: block;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
-  border-radius: 3px;
+  /* box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15); */
+  border-radius: var(--small-board-border-radius);
   background-color: transparent;
   /* width: auto;*/
   height: auto; 
 
 }
 
-
+.markdown-body .articleImageCaption {
+  font-size: .8rem;
+  color: var(--post-text-color);
+  opacity: .65;
+  line-height: 1;
+  margin: -.75rem auto 2rem;
+  text-align: center;
+}
 
 .markdown-body code,
 .markdown-body kbd,

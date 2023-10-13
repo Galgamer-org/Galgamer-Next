@@ -107,7 +107,11 @@ export default function markdownToHtml(markdown: string) : ReactNode{
       h1: 'h2',
       img(props){
           const {className, ...others} = props;
-          return <SmartImage className={`${className} ${markdownStyles.articleImage}`} {...others} />
+          return <>
+            <SmartImage className={`box-shadow ${className} ${markdownStyles.articleImage}`} {...others} />
+            <p className={markdownStyles.articleImageCaption} >{props.alt}</p>
+          </>
+          
       },
       script(props){
           return <ClientScript 
