@@ -1,0 +1,145 @@
+{
+  "v751": {
+    "socre_votes": [
+      { "score": 10, "count": 1512 },
+      { "score": 9, "count": 2409 },
+      { "score": 8, "count": 1555 },
+      { "score": 7, "count": 721 },
+      { "score": 6, "count": 254 },
+      { "score": 5, "count": 125 },
+      { "score": 4, "count": 53 },
+      { "score": 3, "count": 31 },
+      { "score": 2, "count": 22 },
+      { "score": 1, "count": 23 }
+    ],
+    "length_votes": [
+      { "length": 4, "count": 1 },
+      { "length": 29, "count": 1 },
+      { "length": 30, "count": 1 },
+      { "length": 33, "count": 1 },
+      { "length": 34, "count": 1 },
+      { "length": 38, "count": 2 },
+      { "length": 40, "count": 2 },
+      { "length": 41, "count": 2 },
+      { "length": 42, "count": 1 },
+      { "length": 43, "count": 1 },
+      { "length": 44, "count": 1 },
+      { "length": 45, "count": 2 },
+      { "length": 46, "count": 2 },
+      { "length": 48, "count": 2 },
+      { "length": 50, "count": 7 },
+      { "length": 51, "count": 1 },
+      { "length": 52, "count": 2 },
+      { "length": 54, "count": 1 },
+      { "length": 55, "count": 2 },
+      { "length": 56, "count": 1 },
+      { "length": 57, "count": 3 },
+      { "length": 58, "count": 1 },
+      { "length": 60, "count": 7 },
+      { "length": 61, "count": 1 },
+      { "length": 62, "count": 3 },
+      { "length": 63, "count": 1 },
+      { "length": 64, "count": 2 },
+      { "length": 65, "count": 2 },
+      { "length": 67, "count": 1 },
+      { "length": 68, "count": 3 },
+      { "length": 69, "count": 1 },
+      { "length": 70, "count": 4 },
+      { "length": 71, "count": 2 },
+      { "length": 73, "count": 1 },
+      { "length": 75, "count": 5 },
+      { "length": 77, "count": 3 },
+      { "length": 78, "count": 3 },
+      { "length": 79, "count": 1 },
+      { "length": 80, "count": 7 },
+      { "length": 81, "count": 1 },
+      { "length": 82, "count": 1 },
+      { "length": 83, "count": 1 },
+      { "length": 84, "count": 4 },
+      { "length": 85, "count": 4 },
+      { "length": 86, "count": 1 },
+      { "length": 87, "count": 2 },
+      { "length": 90, "count": 6 },
+      { "length": 92, "count": 1 },
+      { "length": 93, "count": 1 },
+      { "length": 94, "count": 2 },
+      { "length": 95, "count": 1 },
+      { "length": 96, "count": 1 },
+      { "length": 97, "count": 1 },
+      { "length": 98, "count": 1 },
+      { "length": 100, "count": 7 },
+      { "length": 101, "count": 2 },
+      { "length": 102, "count": 3 },
+      { "length": 103, "count": 1 },
+      { "length": 104, "count": 1 },
+      { "length": 106, "count": 1 },
+      { "length": 107, "count": 1 },
+      { "length": 110, "count": 1 },
+      { "length": 116, "count": 1 },
+      { "length": 120, "count": 3 },
+      { "length": 122, "count": 1 },
+      { "length": 125, "count": 1 },
+      { "length": 127, "count": 1 },
+      { "length": 128, "count": 1 },
+      { "length": 129, "count": 1 },
+      { "length": 131, "count": 1 },
+      { "length": 137, "count": 1 },
+      { "length": 141, "count": 1 },
+      { "length": 158, "count": 1 },
+      { "length": 300, "count": 1 }
+    ],
+    "translations": [
+      {
+        "id": "r9455",
+        "website": "http://bbs.sumisora.org/read.php?tid=10966339",
+        "official": false,
+        "notes": "v 1.4",
+        "title": "Rewrite"
+      },
+      {
+        "id": "r20676",
+        "website": "http://tieba.baidu.com/p/1535247813",
+        "official": false,
+        "notes": "Updated V2 patch here - http://tieba.baidu.com/p/1661899420.",
+        "title": "Rewrite"
+      },
+      {
+        "id": "r52539",
+        "website": "https://tieba.baidu.com/p/5213094625",
+        "official": false,
+        "notes": "Save data of this patch is compatible with Japanese version.",
+        "title": "Rewrite+"
+      },
+      {
+        "id": "r86190",
+        "website": "https://tieba.baidu.com/p/7663668997",
+        "official": false,
+        "notes": "Ports the translation from the Simplified Chinese fan translation patch (r52539) to the Steam version (r46419).",
+        "title": "Rewrite+ Steam Edition"
+      }
+    ],
+    "relations": [
+      {
+        "id": "v751",
+        "vid": "v8020",
+        "relation": "fan",
+        "titles": [{ "lang": "ja", "title": "Rewrite Harvest festa!" }]
+      },
+      {
+        "id": "v751",
+        "vid": "v19611",
+        "relation": "side",
+        "titles": [
+          { "lang": "ja", "title": "Rewrite オカ研活動記録外伝" },
+          { "lang": "zh-Hans", "title": "Rewrite 超自研活动记录外传" }
+        ]
+      },
+      {
+        "id": "v751",
+        "vid": "v21644",
+        "relation": "side",
+        "titles": [{ "lang": "ja", "title": "Rewrite: Cradles Tale" }]
+      }
+    ]
+  }
+}
