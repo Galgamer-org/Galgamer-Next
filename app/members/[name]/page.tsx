@@ -14,6 +14,8 @@ export async function generateStaticParams() {
 }
 
 
+
+
 export default function Member({ params }) {
     const name = params.name;
     const member_info = getMember(name);

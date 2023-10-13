@@ -1,32 +1,25 @@
-import * as fs from 'fs';
-// const fetch = await import('node-fetch');
+const fs = require("fs");
 
 
-type VndbData = {
-  score_votes: any;
-  length_votes: any;
-  translations: any;
-  relations: any[] | null;
+
+const clearJsonFile = (filename) => {
+  fs.writeFileSync(filename, JSON.stringify({}, null, 2), "utf8");
+  console.log("Cleared");
 };
 
-const clearJsonFile = (filename: string): void => {
-  fs.writeFileSync(filename, JSON.stringify({}, null, 2), 'utf8');
-  console.log('Cleared');
-};
-
-const saveDataToJsonFile = (filename: string, objectName: string, data: any): void => {
-  let existingData: Record<string, any> = {};
+const saveDataToJsonFile = (filename, objectName, data) => {
+  let existingData = {};
   try {
-    existingData = JSON.parse(fs.readFileSync(filename, 'utf8'));
+    existingData = JSON.parse(fs.readFileSync(filename, "utf8"));
   } catch (error) {}
 
   existingData[objectName] = data;
 
-  fs.writeFileSync(filename, JSON.stringify(existingData), 'utf8');
+  fs.writeFileSync(filename, JSON.stringify(existingData  ), "utf8");
   console.log(`Data saved for object ${objectName}`);
 };
 
-const queryMethod = async (url: string, options: RequestInit): Promise<any> => {
+const queryMethod = async (url, options) => {
   try {
     const response = await fetch(url, options);
     if (!response.ok) {
@@ -38,34 +31,32 @@ const queryMethod = async (url: string, options: RequestInit): Promise<any> => {
   }
 };
 
-const connectMethod = async (query: string): Promise<VndbData> => {
+const connectMethod = async (query) => {
   const start_time = performance.now();
 
   try {
     const connection_data = await queryMethod(
-      'https://query.vndb.org/api/connections',
+      "https://query.vndb.org/api/connections",
       {
-        method: 'GET',
+        method: "GET",
       }
     );
-
     const headers = {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     };
 
     const batchRequestBody = {
       connectionId: connection_data[0].id,
-      name: '',
+      name: "",
       batchText: query,
-      selectedText: '',
+      selectedText: "",
       chart: {
-        chartType: '',
+        chartType: "",
         fields: {},
       },
     };
-
-    const batch_data = await queryMethod('https://query.vndb.org/api/batches', {
-      method: 'POST',
+    const batch_data = await queryMethod("https://query.vndb.org/api/batches", {
+      method: "POST",
       headers,
       body: JSON.stringify(batchRequestBody),
     });
@@ -73,7 +64,7 @@ const connectMethod = async (query: string): Promise<VndbData> => {
     const batch_result_data = await queryMethod(
       `https://query.vndb.org/api/batches/${batch_data.id}`,
       {
-        method: 'GET',
+        method: "GET",
         headers,
       }
     );
@@ -81,27 +72,27 @@ const connectMethod = async (query: string): Promise<VndbData> => {
     const vndbData = await queryMethod(
       `https://query.vndb.org/api/statements/${batch_data.statements[0].id}/results`,
       {
-        method: 'GET',
+        method: "GET",
         headers,
       }
     );
 
     const end_time = performance.now();
 
-    console.log('Connection Data:', connection_data);
-    console.log('Batch Data:', batch_data);
-    console.log('Votes Data:', vndbData);
-    console.log('Request Time:', end_time - start_time);
+    console.log("Connection Data:", connection_data);
+    console.log("Batch Data:", batch_data);
+    console.log("Votes Data:", vndbData);
+    console.log("Request Time:", end_time - start_time);
 
     return vndbData;
   } catch (error) {
-    console.error('An error occurred:', error);
+    console.error("An error occurred:", error);
     // 如果出现异常，重新执行 connectMethod
     return connectMethod(query);
   }
 };
 
-const vndbDataQuery = async (vndbId : string,data_file:string): Promise<void> => {
+const main = async (vndbId = "v751") => {
   
   const queryInfo = `select target, (
     with score_votes(score, count) as (
@@ -164,21 +155,29 @@ const vndbDataQuery = async (vndbId : string,data_file:string): Promise<void> =>
 
   try {
     const data = await connectMethod(queryInfo);
-    const result: VndbData = {
-      score_votes: data[0][1].score_votes,
-      length_votes: data[0][1].length_votes,
-      translations: data[0][1].translations,
-      relations: data[0][1]?.relations?.length > 50 ? null : data[0][1].relations,
-    };
-    console.log('----------------------');
+    const result = {
+        "socre_votes":data[0][1].score_votes,
+        "length_votes":data[0][1].length_votes,
+        "translations":data[0][1].translations,
+        "relations": data[0][1].relations.length > 50 ? null : data[0][1].relations
+      
+    }
+    console.log(data[0][1]);
+    console.log(data[0][1].score_votes);
+    console.log(data[0][1].relations);
+    console.log(data[0][1].translations);
+    console.log("----------------------");
     console.log(result);
 
-    saveDataToJsonFile(data_file, vndbId, result);
+
+    saveDataToJsonFile("./data/vndbInfo.json", vndbId, result);
   } catch (error) {
-    console.error('An error occurred:', error);
+    console.error("An error occurred:", error);
   }
 
+  
 };
 
-export default vndbDataQuery;
-export {clearJsonFile} ;
+main();
+
+

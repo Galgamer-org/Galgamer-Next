@@ -23,6 +23,7 @@ const Members: MemberList = {
     'sora': {
         name: "sora",
         photo: "/assets/members/sora.jpg",
+        bio: "天无二日，花徒めと是我心中唯一的太阳"
     },
     'Patchouli Knowledge': {
         name: "Patchouli Knowledge",
