@@ -38,7 +38,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var dataQuery_1 = require("./dataQuery");
 var dataQuery_2 = require("./dataQuery");
-var data_file = './data/vndbInfo.json';
+var data_file = './vndbInfo.json';
 var vndb_id_queue = ['v751', 'v36'];
 var update = function (vndbIdQueue, file) { return __awaiter(void 0, void 0, void 0, function () {
     var count, vndbId;

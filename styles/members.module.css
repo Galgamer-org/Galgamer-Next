@@ -8,7 +8,7 @@
     width: 80%;
     float: left;
     margin-left: 10%;
-    /* background-color: aquamarine; */
+     /*background-color: aquamarine;*/
 }
 
 .banner{
@@ -42,4 +42,5 @@
 }
 .card_bio{
     font-size: 20px;
+
 }

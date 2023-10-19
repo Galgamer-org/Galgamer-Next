@@ -1,7 +1,7 @@
 import vndbDataQuery from './dataQuery';
 import { clearJsonFile } from './dataQuery';
 
-const data_file = './data/vndbInfo.json';
+const data_file = './vndbInfo.json';
 const vndb_id_queue: string[] = ['v751', 'v36'];
 
 const update = async (vndbIdQueue: string[],file : string) => {

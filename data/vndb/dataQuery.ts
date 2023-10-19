@@ -3,6 +3,7 @@ import * as fs from 'fs';
 
 
 type VndbData = {
+  basic_info:any
   score_votes: any;
   length_votes: any;
   translations: any;
@@ -102,69 +103,92 @@ const connectMethod = async (query: string): Promise<VndbData> => {
 };
 
 const vndbDataQuery = async (vndbId : string,data_file:string): Promise<void> => {
-  
-  const queryInfo = `select target, (
-    with score_votes(score, count) as (
-      select vote/10, count(*)
-      from ulist_vns
-      where vid::text = target
-        and vote is not null
-      group by vote/10
-      order by vote/10 desc
-    ), length_votes(length, count) as (
-      select length / 60, count(*)
-      from vn_length_votes
-      where vid::text = target
-        and length is not null
-      group by length / 60
-      order by length / 60
-    ), translations as (
-      select releases.id, releases.website, releases.official, releases.notes, releases.title
-        from releases_vn
-        join releases on (releases.id = releases_vn.id)
-        where vid::text = target
-          and exists(
-            select from releases_lang
-            where releases_lang.id = releases_vn.id
-              and releases_lang.lang::text like 'zh%')
-    ), relations(id, vid, relation, titles) as (
-      with recursive cte(id, vid, relation) as (
-        select
-          r.id,
-          r.vid,
-          r.relation
-        from vn_relations r
-        where id::text = target
-          and r.official
-        union
-        select
-          r.id,
-          r.vid,
-          r.relation
-        from cte
-        join vn_relations r on (r.id = cte.vid)
-        where r.official
-          and r.vid::text <> target
-      ) select
-        cte.id,
-        cte.vid,
-        cte.relation,
-        (
-          with sources(lang, title) as (select lang, title from vn_titles where vn_titles.id=cte.vid)
-          select json_agg(sources) from sources
-        ) from cte
-    ) select json_build_object(
-      'score_votes', (select json_agg(score_votes) from score_votes),
-      'length_votes', (select json_agg(length_votes) from length_votes),
-      'translations', (select json_agg(translations) from translations),
-      'relations', (select json_agg(relations) from relations)
-    )
-  ) from json_array_elements_text('["${vndbId}"]') target`
+
+  const queryInfo = `SELECT target, (
+  with score_votes(score, count) as (
+    select vote/10, count(*)
+    from ulist_vns
+    where vid::text = target
+      and vote is not null
+    group by vote/10
+    order by vote/10 desc
+  ), 
+  vn_data AS (
+    SELECT *
+    FROM vn
+    WHERE id::text = target
+  ),
+  length_votes(length, count) as (
+    select length / 60, count(*)
+    from vn_length_votes
+    where vid::text = target
+      and length is not null
+    group by length / 60
+    order by length / 60
+  ),
+  translations as (
+    select
+      releases.id,
+      releases.website,
+      releases.official,
+      releases.notes,
+      releases.title,
+      releases.released,
+      (with info as (
+        select p.* from releases_producers r join producers p on (p.id = r.pid) where r.id = releases.id
+      ) select json_agg(info) from info) as producers
+    from releases_vn
+    join releases on (releases.id = releases_vn.id)
+    where vid::text = target
+      and exists (
+        select from releases_lang
+        where releases_lang.id = releases_vn.id
+          and releases_lang.lang::text like 'zh%'
+      )
+  ),
+  relations(id, vid, relation, titles) as (
+    with recursive cte(id, vid, relation) as (
+      select
+        r.id,
+        r.vid,
+        r.relation
+      from vn_relations r
+      where id::text = target
+        and r.official
+      union
+      select
+        r.id,
+        r.vid,
+        r.relation
+      from cte
+      join vn_relations r on (r.id = cte.vid)
+      where r.official
+        and r.vid::text <> target
+    ) select
+      cte.id,
+      cte.vid,
+      cte.relation,
+      (
+        with sources(lang, title) as (select lang, title from vn_titles where vn_titles.id=cte.vid)
+        select json_agg(sources) from sources
+      ) from cte
+  ) 
+  SELECT json_build_object(
+    'score_votes', (select json_agg(score_votes) from score_votes),
+    'basicInfo', (select row_to_json(vn_data) from vn_data),
+    'length_votes', (select json_agg(length_votes) from length_votes),
+    'translations', (select json_agg(translations) from translations),
+    'relations', (select json_agg(relations) from relations)
+  )
+)
+FROM json_array_elements_text('["${vndbId}"]') target;`
 
 
   try {
     const data = await connectMethod(queryInfo);
+    console.log(queryInfo);
     const result: VndbData = {
+      basic_info : data[0][1].basicInfo,
       score_votes: data[0][1].score_votes,
       length_votes: data[0][1].length_votes,
       translations: data[0][1].translations,
