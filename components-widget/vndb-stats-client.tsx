@@ -36,7 +36,7 @@ export function ScoreVotesHistogramChart({id}) {
     useEffect(() => {
         const currentData = vndbData[id];
         const scoreVotesData = currentData.score_votes;
-        const container = document.getElementById('scoreVotesPieChart');
+        const container = document.getElementById('ScoreVotesHistogramChart');
         if (container) {
             if (count === 0) {
                 drawVoteHistogram(scoreVotesData, color_histogram, container);
@@ -45,6 +45,6 @@ export function ScoreVotesHistogramChart({id}) {
         }
     }, [id]);
 
-    return <div id="scoreVotesPieChart" className={`${style.ScoreVotesHistogramChart} `}  />;
+    return <div id="ScoreVotesHistogramChart" className={`${style.ScoreVotesHistogramChart} `}  />;
 }
 

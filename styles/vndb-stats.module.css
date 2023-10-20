@@ -27,20 +27,15 @@
     background: transparent;
 }
 .ScoreVotesPieChart{
-    float: left;
 }
 .ScoreVotesHistogramChart{
-    float: left;
 }
 .ScoreVotesInfo{
-    float: left;
     padding: 100px 0;
 }
 .ScoreVotes{
-    float: left;
 }
 .Title{
-    width: 100%;
     margin-top: 0;
     margin-bottom: 0.5rem;
     font-weight: 500;
@@ -53,15 +48,12 @@
 
 }
 .ZhPatchInfo{
-    float: left;
-    width: 50%;
     height:250px
 }
 .Patch{
     font-size: 12px;
-    margin-top: 8px
+    margin-top: 5px
 }
 .BasicInfoData{
-    float: left;
     height:250px
 }
