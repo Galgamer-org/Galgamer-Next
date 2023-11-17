@@ -1,34 +1,33 @@
 .member{
     /* background-color: azure; */
-    float: left;
+}
+.default_center{
+    align-content: center;
+    text-align: center;
 }
 .body{
     margin-top: 200px;
     height: auto;
-    width: 80%;
-    float: left;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
      /*background-color: aquamarine;*/
 }
 
 .banner{
     width: 100%;
-    background-color: rgb(90, 110, 221);
-    height: 100px;
+    background-color: rgba(226, 156, 4, 0.42);
     position: fixed;
 }
 .banner_name{
     height: 50px;
-    float: left;
     text-align: center;
 }
 .card{
-    float: left;
     height: 300px;
     width: 300px;
     text-align: center;
-    margin-top: 200px;
-    margin-left: 100px;
+    margin-bottom: 150px;
+    margin-left: 50px;
 }
 .photo{
     background-color: aquamarine;
