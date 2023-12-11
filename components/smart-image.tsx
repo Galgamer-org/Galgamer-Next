@@ -24,7 +24,7 @@ export default async function SmartImage(props:imageProps) {
     let {src, alt, className, style} = props;
     // check if src is a local file
     let isLocal = false;
-    if( !(src.startsWith('http') || src.startsWith('../image')) ) {
+    if( !(src.startsWith('http')) ) {
         isLocal = true;
     }
 
@@ -105,8 +105,9 @@ function getProbePath(path: string) {
     }
     
     if (path.startsWith('../image/')) {
-        let result = new URL(path.replace('../image/', onlineDirectory)).toString();
-        return encodeURI(decodeURI(result));
+        return path.replace('..', rootDirectory);
+        // let result = new URL(path.replace('../image/', onlineDirectory)).toString();
+        // return encodeURI(decodeURI(result));
 
     } else if (path.startsWith('http')) {
         return encodeURI(decodeURI(path));

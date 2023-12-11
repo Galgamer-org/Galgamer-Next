@@ -592,7 +592,9 @@ magnet:?xt=urn:btih:406fa9b40857064f5b1c35395ae017ad733a3eb9
     </div>
   </div>
 
-
+  <script>
+    tachieSwitch({`"${name}"`});
+  </script>
 
 </div>
 

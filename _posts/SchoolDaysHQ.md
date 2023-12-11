@@ -247,7 +247,7 @@ ED <a href='/music/?id=9' target='_blank'>🔗️あなたが…いない</a>（
 
 **中文版：**
 
-[🔗️OneDrive 網盤](https://dl.galgamer.eu.org/SchoolDaysHQ_R0050_%E5%AF%86%E7%A2%BC_%E2%91%A8.rar)
+(目前無法提供)
 
 **英文版：**
 

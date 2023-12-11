@@ -14,7 +14,10 @@ author: '-spoken-'
 abbrlink: 36313
 date: 2021-12-31 10:56:28
 banner_img:
+hidden: true
 ---
+
+<!--- 涉嫌抄襲，在修改之前先暫時 hidden --->
 
 <img alt="封面图" src="https://cdn.jsdelivr.net/npm/galgame-oss@1.0.18/c%E7%8C%AB1/main.jpg.webp"  height="100%"/>
 

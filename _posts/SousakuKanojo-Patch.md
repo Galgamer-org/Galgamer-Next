@@ -212,9 +212,7 @@ Galgamer 團隊
 </div>
 
 <div class="m-2">
-  <button type="button" class="btn btn-primary" onclick="checkBox()">
-    確定
-  </button>
+  <button type="button" class="btn btn-primary" onclick="checkBox();">確定</button>
 </div>
 
 <div id="downloadArea" class="d-none">
@@ -311,5 +309,4 @@ function checkBox(){
     downloadArea.classList.add("d-none");
   }
 }
-console.log("loading：" + url);
 </script>

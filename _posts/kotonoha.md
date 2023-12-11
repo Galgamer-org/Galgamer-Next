@@ -19,9 +19,6 @@ abbrlink: 13854
 
 ![Cover](../image/kotonoha/cover.png)
 
-
-{% vndb v751 %}
-
 | 資訊一覽     |                 |
 | :----------- | :------------------------------------ |
 | **開發商**   | sukera sparo |

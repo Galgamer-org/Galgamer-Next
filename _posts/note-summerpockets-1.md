@@ -4,7 +4,6 @@ date: 2023-9-23 00:30:00
 keywords: 'Summer Pockets, 聖地, 旅遊'
 banner_img: '../image/sprb-trip-1/banner.webp'
 index_img: '../image/sprb-trip-1/cover.jpg'
-asset_directory: 'sprb-trip-1'
 tags:
   - 筆記
 abbrlink: 20024

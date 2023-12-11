@@ -2,6 +2,8 @@ import { ReactNode } from 'react'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
+import remarkBreaks from 'remark-breaks'
+import { visit } from 'unist-util-visit'
 import SmartImage from '../components/smart-image'
 import Link from 'next/link'
 import ClientScript from '../components/client-script'
@@ -17,16 +19,18 @@ import SteamPlayer from 'components-widget/steam-player'
 
 
 
-function checkNewLine(markdown: string) : string{
+function checkNewLine(markdown: string): string {
+  // replaced by remark plugin
+  return markdown;
   // if a line is followed by a new line with non-zero length, add two spaces at the end of the line
   // check \r\n
   markdown = markdown.replace(/\r\n/g, '\n');
   const lines = markdown.split('\n');
   const newLines = [];
-  for(let i = 0; i < lines.length; i++) {
-    if(i < lines.length - 1 && lines[i + 1].length > 0 && lines[i].length > 0) {
+  for (let i = 0; i < lines.length; i++) {
+    if (i < lines.length - 1 && lines[i + 1].length > 0 && lines[i].length > 0) {
       newLines.push(lines[i] + '  ');
-    }else {
+    } else {
       newLines.push(lines[i]);
     }
   }
@@ -35,26 +39,26 @@ function checkNewLine(markdown: string) : string{
   return newLines.join('\n');
 }
 
-function checkTemplate(markdown: string) : string{
+function checkTemplate(markdown: string): string {
   // search for {% template_name param1 param2 ... paramN %} in markdown and replace it with <object type="template_name" data="[param1, param2, ..., paramN]"></object>
 
   const templateRegex = /{%\s(\w+)\s((?:\w+\s*)*)%}/g;
   const matches = markdown.matchAll(templateRegex);
   const newMatches = [];
-  for(const match of matches) {
+  for (const match of matches) {
     newMatches.push(match);
   }
 
 
-  for(let i = newMatches.length - 1; i >= 0; i--) {
+  for (let i = newMatches.length - 1; i >= 0; i--) {
     const match = newMatches[i];
     const replaceTarget = match[0];
     const templateName = match[1].toLowerCase();
     const params = match[2].split(' ').filter(param => param.length > 0);
-    
+
     const templateParams = JSON.stringify(params);
 
-    switch(templateName) {
+    switch (templateName) {
       case 'telegram_channel':
         const newTGChannel = `<object type="telegram_channel" data='${templateParams}'></object>`;
         markdown = markdown.replace(replaceTarget, newTGChannel);
@@ -83,7 +87,7 @@ function checkTemplate(markdown: string) : string{
         const newVndb = `<object type="vndb" data='${templateParams}'></object>`;
         markdown = markdown.replace(replaceTarget, newVndb);
         break;
-      
+
       default:  // unsupported template
         markdown = markdown.replace(replaceTarget, `{% unsupported_template ${templateName} ${templateParams} %}}`);
         break;
@@ -94,48 +98,48 @@ function checkTemplate(markdown: string) : string{
 }
 
 
-export default function markdownToHtml(markdown: string) : ReactNode{
+export default function markdownToHtml(markdown: string): ReactNode {
 
   // markdown string pre-processing
   markdown = checkTemplate(markdown);
   markdown = checkNewLine(markdown);
 
-  return <Markdown 
-    remarkPlugins={[[remarkGfm, {}]]}
+  return <Markdown
+    remarkPlugins={[[remarkGfm, {}], [remarkBreaks, {}], [astCheck, {}]]}
     rehypePlugins={[rehypeRaw]}
     components={{
       h1: 'h2',
-      img(props){
-          const {className, ...others} = props;
-          return <>
-            <SmartImage className={`box-shadow ${className} ${markdownStyles.articleImage}`} {...others} />
-            <p className={markdownStyles.articleImageCaption} >{props.alt}</p>
-          </>
-          
+      img(props) {
+        const { className, ...others } = props;
+        return <>
+          <SmartImage className={`box-shadow ${className} ${markdownStyles.articleImage}`} {...others} />
+          <p className={markdownStyles.articleImageCaption} >{props.alt}</p>
+        </>
+
       },
-      script(props){
-          return <ClientScript 
-            children={props.children}
-          />
-          //return <script dangerouslySetInnerHTML={{__html: props.children}} />;
+      script(props) {
+        return <ClientScript
+          children={props.children}
+        />
+        //return <script dangerouslySetInnerHTML={{__html: props.children}} />;
       },
-      button(props){
-          const {className, ...others} = props;
-          return <div dangerouslySetInnerHTML={{
-            __html: `<button class="${className}" ${Object.keys(others).map(key => `${key}="${others[key]}"`).join(' ')}>${props.children}
+      button(props) {
+        const { className, ...others } = props;
+        return <div dangerouslySetInnerHTML={{
+          __html: `<button class="${className}" ${Object.keys(others).map(key => `${key}="${others[key]}"`).join(' ')}>${props.children}
             </button>`
-          }}></div>;
+        }}></div>;
       },
-      a(props){
-          const {href, ...others} = props;
-          return <Link href={href} {...others} />;
+      a(props) {
+        const { href, ...others } = props;
+        return <Link href={href} {...others} />;
       },
-      style(props){
-          //console.log(props.children);
-          const {children, ...others} = props;
-          return <style {...others} dangerouslySetInnerHTML={{__html: props.children}}  ></style>;
+      style(props) {
+        //console.log(props.children);
+        const { children, ...others } = props;
+        return <style {...others} dangerouslySetInnerHTML={{ __html: props.children }}  ></style>;
       },
-      object(props){
+      object(props) {
         return <Template {...props} />
       }
     }}
@@ -148,8 +152,8 @@ export default function markdownToHtml(markdown: string) : ReactNode{
 type TemplateProps = Omit<DetailedHTMLProps<ObjectHTMLAttributes<HTMLObjectElement>, HTMLObjectElement>, "ref"> & ReactMarkdownProps | Omit<DetailedHTMLProps<ObjectHTMLAttributes<HTMLObjectElement>, HTMLObjectElement>, "ref">
 
 function Template(props: TemplateProps): ReactNode {
-  const {data, type, ...others} = props;
-  switch(type) {
+  const { data, type, ...others } = props;
+  switch (type) {
     case 'telegram_channel':
       const params = JSON.parse(data);
       return <TGChannel channelName={params[1]} msg={params[0]} />;
@@ -159,9 +163,9 @@ function Template(props: TemplateProps): ReactNode {
       const galleryId = params2[0];
       const galleryImages = others.children.toString().split('\n').filter((child: string) => child.length > 0);
       const newGalleryImages = [];
-      for(let i = 0; i < galleryImages.length; i++) {
+      for (let i = 0; i < galleryImages.length; i++) {
         galleryImages[i] = galleryImages[i].trim();
-        if(galleryImages[i]) {
+        if (galleryImages[i]) {
           newGalleryImages.push(galleryImages[i]);
         }
       }
@@ -191,4 +195,21 @@ function Template(props: TemplateProps): ReactNode {
     default:
       return <></>;
   }
+}
+
+
+function astCheck() {
+  return astInspect;
+}
+
+function astInspect(tree, file) {
+  visit(tree, 'image', nodeInspect);
+}
+
+function nodeInspect(node, index, parent) {
+  // console.log(node);
+  // console.log(index);
+  // console.log(parent);
+  //delete this node
+  //parent.children.splice(index, 1);
 }

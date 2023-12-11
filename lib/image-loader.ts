@@ -10,12 +10,13 @@ type props = {
 
 
 export function getNomalizedImagePath(path: string, directory?: string): string {
+    //console.log(path);
     if (!path) {
         return '';
     }
     
     if (path.startsWith('../image/')) {
-        return new URL(path.replace('../image/', onlineDirectory)).toString();
+        return path.replace('..', '');
     } else if (path.startsWith('http')) {
         return path;
     } else {

@@ -13,21 +13,21 @@ type MemberList = Record<string, Member>;
 const Members: MemberList = {
     '桐遠暮羽': {
         name: "桐遠暮羽",
-        photo: "/assets/members/kiriha.webp",
+        photo: "/member-icon/kiriha.webp",
         bio: "Developer",
     },
     'SacalWiki': {
         name: "SacalWiki",
-        photo: "/assets/members/SacalWiki.jpg",
+        photo: "/member-icon/SacalWiki.jpg",
     },
     'sora': {
         name: "sora",
-        photo: "/assets/members/sora.jpg",
+        photo: "/member-icon/sora.jpg",
         bio: "天无二日，花徒めと是我心中唯一的太阳"
     },
     'Patchouli Knowledge': {
         name: "Patchouli Knowledge",
-        photo: "/assets/members/patchouli.jpg",
+        photo: "/member-icon/patchouli.jpg",
     }
 };
 
@@ -44,7 +44,7 @@ export function getMember(name: string): Member {
         //console.error(`Member ${name} not found`);
         result = {
             name: name,
-            photo: "/assets/members/default.jpeg",
+            photo: "/member-icon/default.jpeg",
         };
     }
     return result;
