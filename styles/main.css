@@ -1,28 +1,4 @@
 :root {
-  --color-mode: 'light';
-  --body-bg-color: #eee;
-  /* 中央版面背景色: 0; */
-  --board-bg-color: #fffd;
-  /* 文字顏色: 0; */
-  --text-color: #405b55;
-  /* 二級文字顏色: 0; */
-  --sec-text-color: #484646;
-  /* 文章正文顏色: 0; */
-  --post-text-color: #13201f;
-  /* 文章標題顏色: 0; */
-  --post-heading-color: #1a202c;
-  /* 鼠標指向的文章連結顏色: 0; */
-  --post-link-color: #0366d6;
-  /* 頁面頂端連結 和文章連結 鼠標指向顏色: 0; */
-  --link-hover-color: #90b44b;
-  --link-hover-bg-color: #f8f9fa;
-  /* 頂欄顏色: 0; */
-  --navbar-bg-color: #66bab7;
-  /* 頂欄文字顏色: 0; */
-  --navbar-text-color: #fff;
-  --scrollbar-color: #c4c6c9;
-  --scrollbar-hover-color: #a6a6a6;
-
   --large-board-border-radius: 16px;
   --small-board-border-radius: 10px;
 }

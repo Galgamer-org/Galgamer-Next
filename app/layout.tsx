@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import '@/styles/colors.css'
 import '../styles/main.css'
 import '../styles/s3fonts-woff-woff2.css'
 import '../styles/fonts.css'

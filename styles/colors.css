@@ -1,0 +1,67 @@
+/* color schemes for light and dark theme */
+
+:root {
+    color-scheme: light dark;
+}
+
+/* light theme */
+
+:root {
+    --text-color: #454545;
+    --holo-text-color: #ffffff;
+    --h2-after-square-color: #999be3;
+    --bg-box-color: #ffffff;
+    --header-bg-color: #ffffff;
+    --nav-link-active-color: #6051bc;
+    --a-link-color: #6051bc;
+    --footer-bg-color: #fcfcfc;
+    --html-bg-color: #ffffff;
+    --bg-circle-color: #9babf3;
+    --modal-bg-color: #ffffff;
+    --link-box-hover-color: #e2e0e8;
+    --footer-bg-color: #fffd;
+
+    --body-bg-color: #eee;
+    /* 中央版面背景色: 0; */
+    --board-bg-color: #fffd;
+    /* 文字顏色: 0; */
+    --text-color: #405b55;
+    /* 二級文字顏色: 0; */
+    --sec-text-color: #484646;
+    /* 文章正文顏色: 0; */
+    --post-text-color: #13201f;
+    /* 文章標題顏色: 0; */
+    --post-heading-color: #1a202c;
+    /* 鼠標指向的文章連結顏色: 0; */
+    --post-link-color: #0366d6;
+    /* 頁面頂端連結 和文章連結 鼠標指向顏色: 0; */
+    --link-hover-color: #90b44b;
+    --link-hover-bg-color: #f8f9fa;
+    /* 頂欄顏色: 0; */
+    --navbar-bg-color: #66bab7;
+    /* 頂欄文字顏色: 0; */
+    --navbar-text-color: #fff;
+    --scrollbar-color: #c4c6c9;
+    --scrollbar-hover-color: #a6a6a6;
+}
+
+/* dark theme */
+/* dark wine red style */
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #eaeaea;
+        --holo-text-color: #000000;
+        --h2-after-square-color: rgb(74, 77, 118);
+        --bg-box-color: #27272e;
+        --header-bg-color: #383843;
+        --nav-link-active-color: rgb(179, 184, 235);
+        --a-link-color: rgb(179, 184, 235);
+        --footer-bg-color: #2e2e36;
+        --html-bg-color: #000000;
+        --bg-circle-color: rgb(65, 59, 110);
+        --modal-bg-color: #2e2e36;
+        --link-box-hover-color: rgb(122, 120, 135);
+        --footer-bg-color: #fcfcfc;
+    }
+} */

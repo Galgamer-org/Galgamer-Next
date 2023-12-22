@@ -1,23 +1,100 @@
-import Container from './container'
+import Container from 'react-bootstrap/Container'
+import style from 'styles/footer.module.css'
+import cn from 'classnames'
+import { Row, Col } from 'react-bootstrap'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-[2.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
+    <footer id={style.footer} className={cn('box-shadow')}>
+      <Container className={cn('p-4 mt-5')}>
+        <Row className={cn('py-3', style.footerRow)}>
 
+          {/* LOGO */}
+          <div className={cn(style.ourLinks, 'col-lg-3')}>
+            <div className={cn(style.footerLogo, 'font-serif')}><em>Galgamer</em>🌸</div>
+            <ul>
+              <li>
+                Galgame 社區 & 交流群，由熱愛美少女的群友們組成。
+              </li>
+              <li>
+                由 Galgamer 編輯部負責維護。
+              </li>
+              <li>
+                <strong>© 2017 - {new Date().getFullYear()}</strong> Galgamer
+              </li>
+            </ul>
           </div>
-        </div>
+          <div className={cn(style.ourLinks, 'my-2 col-6 col-lg-3 offset-lg-1')}>
+            <h5>
+              社區
+            </h5>
+            <ul>
+              <li className={cn(style.ourLinksItem)}>
+                <a href="https://t.me/Galgamer_channel" target="_blank" rel="noopener noreferrer">
+                  <i className="bi-telegram"></i> Galgame 頻道
+                </a>
+              </li>
+              <li className={cn(style.ourLinksItem)}>
+                <a href="https://t.me/Galgamer" target="_blank" rel="noopener noreferrer">
+                  <i className="bi-telegram"></i> Galgame 交流群
+                </a>
+              </li>
+              {/* discord */}
+              <li className={cn(style.ourLinksItem)}>
+                <a href="https://discord.gg/7z2P3q8" target="_blank" rel="noopener noreferrer">
+                  <i className="bi-discord"></i> Galgamer
+                </a>
+              </li>
+              {/* github */}
+              <li className={cn(style.ourLinksItem)}>
+                <a href="https://github.com/galgamer-org" target="_blank" rel="noopener noreferrer">
+                  <i className="bi-github"></i> Galgamer
+                </a>
+              </li>
+              {/* twitter */}
+              <li className={cn(style.ourLinksItem)}>
+                <a href="https://X.com/galgame_channel" target="_blank" rel="noopener noreferrer">
+                  <i className="bi-twitter-x"></i> Galgame 頻道
+                </a>
+              </li>
+              {/* spotify */}
+              <li className={cn(style.ourLinksItem)}>
+                <a href="https://open.spotify.com/playlist/0vsMmem2b14ohrKzOmUVtd" target="_blank" rel="noopener noreferrer">
+                  <i className="bi-spotify"></i> 憂愁
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className={cn(style.ourLinks, 'my-2 col-6 col-lg-3')}>
+            <h5>
+              信息
+            </h5>
+            <ul>
+              <li className={cn(style.ourLinksItem)}>
+                <Link href="/terms">
+                  條款
+                </Link>
+              </li>
+              <li className={cn(style.ourLinksItem)}>
+                <Link href="/legal">
+                  法律聲明
+                </Link>
+              </li>
+              <li className={cn(style.ourLinksItem)}>
+                <Link href="/privacy">
+                  隱私權
+                </Link>
+              </li>
+              <li className={cn(style.ourLinksItem)}>
+                <Link href="/status">
+                  網路不正常？
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </Row>
+
       </Container>
     </footer>
   )
