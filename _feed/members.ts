@@ -18,16 +18,27 @@ const Members: MemberList = {
     },
     'SacalWiki': {
         name: "SacalWiki",
-        photo: "/member-icon/SacalWiki.jpg",
+        // photo: "/member-icon/SacalWiki.jpg",
+        photo: "/member-icon/kiriha.webp",
     },
     'sora': {
         name: "sora",
-        photo: "/member-icon/sora.jpg",
-        bio: "天无二日，花徒めと是我心中唯一的太阳"
+        // photo: "/member-icon/sora.jpg",
+        photo: "/member-icon/kiriha.webp",
+        bio: "天无二日，花徒めと是我心中唯一的太阳",
     },
     'Patchouli Knowledge': {
         name: "Patchouli Knowledge",
         photo: "/member-icon/patchouli.jpg",
+        bio: "",
+
+    },
+
+    'kaban':{
+        name: "kaban",
+        // photo: "/member-icon/kaban.webp",
+        photo: "/member-icon/kiriha.webp",
+        bio: "",
     }
 };
 

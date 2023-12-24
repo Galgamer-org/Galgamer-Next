@@ -1,66 +1,81 @@
 import Members from "_feed/members";
 import members_css from "styles/members.module.css";
 import cn from 'classnames';
-import { Col, Row } from 'react-bootstrap';
+import {Col, Row} from 'react-bootstrap';
 import Member from "interfaces/member";
 
-function Card({ member }: { member: Member }) {
+function Body() {
     return (
-        <div className={`${members_css.card}`}>
-            <a href={`/members/${member.name}`}>
-                <img src={member.photo} className={members_css.photo} ></img>
-            </a>
-            <p className={members_css.card_name}>{member.name} </p>
-            <p className={members_css.card_bio}>{member.bio}</p>
+        <div className={`${members_css.Body}`}>
+            <Row>
+                <PageInfo/>
+            </Row>
+                <MembersBody/>
         </div>
-    );
+    )
 }
 
 function MembersBody() {
     return (
-        <div className={members_css.body}>
-            <Row className={cn('col-12 col-md-12 col-xl-12 ')}>
-            {
-                Object.values(Members).map((value: Member, index) => (
-                    <Col className={cn('col-12 col-md-4 col-xl-3')}>
-                    <Card key={index} member={value} />
+        <div className={members_css.MembersBody}>
+            <Row>
+                {Object.values(Members).map((value: Member, index) => (
+                    <Col key={index} className={cn('col-2 col-md-2 col-xl-3')}>
+                        <MemberCard member={value} />
                     </Col>
-                ))
-            }
+                ))}
             </Row>
         </div>
     );
 }
-function BannerBlock({ member }: { member: Member }) {
-    return <div className={`${members_css.banner_name} `}>
-        <p>{member.name}</p>
-    </div>
+
+
+function MemberCard({ member }: { member: Member }) {
+    return (
+        <div className={members_css.Card}>
+            <Row>
+                <Col md={4}>
+                    <div className={members_css.MembersPhoto}>
+                        <a href={`/members/${member.name}`}>
+                        <img src={member.photo} className={members_css.CardAvatar} alt="Member Avatar" />
+                        </a>
+                    </div>
+                </Col>
+                <Col md={8} >
+                    <div className={members_css.MembersDetails}>
+                        <p className={members_css.MembersName}>{member.name}</p>
+                        <p>{member.bio}</p>
+                    </div>
+                </Col>
+            </Row>
+        </div>
+    );
 }
 
-function Banner() {
-    return <div className={members_css.banner}>
-        <Row className={cn('col-12 col-md-12 col-xl-12 ')}>
-        <p className={members_css.default_center}>Member</p>
-        {
-            Object.values(Members).map((value: Member, index) => (
-                <Col className={cn('col-12 col-md-1 col-xl-1')}>
-                <BannerBlock key={index} member={value} />
-                </Col>
-            ))
-        }
-        </Row>
-    </div>;
+
+function PageInfo() {
+    return (
+        <div>
+            <Row >
+                <div className={members_css.InfoTitle}>
+                    Members
+                </div>
+            </Row>
+            <Row>
+                <div className={members_css.InfoText}>
+                    <p>
+                        这里是编辑部的成员列表页面，点击图片即可进入其个人主页(施工中)
+                    </p>
+                </div>
+            </Row>
+        </div>
+    )
 }
 
 export default function Member() {
     return (
         <div>
-            <Row>
-            <Banner />
-            </Row>
-            <Row>
-            <MembersBody />
-            </Row>
+            <Body/>
         </div>
     );
 }

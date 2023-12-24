@@ -1,45 +1,50 @@
-.member{
-    /* background-color: azure; */
-}
-.default_center{
-    align-content: center;
-    text-align: center;
-}
-.body{
-    margin-top: 200px;
-    height: auto;
-    width: 90%;
-    margin-left: 5%;
-     /*background-color: aquamarine;*/
-}
+.Body{
+    max-width: 1256px;
+    width : 70%;
+    margin: 0 auto;
+    position: relative;
+    background-color: var(--board-bg-color);
+    border-radius: var(--large-board-border-radius);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    min-height : 65vh;
 
-.banner{
-    width: 100%;
-    background-color: rgba(226, 156, 4, 0.42);
-    position: fixed;
-}
-.banner_name{
-    height: 50px;
-    text-align: center;
-}
-.card{
-    height: 300px;
-    width: 300px;
-    text-align: center;
-    margin-bottom: 150px;
-    margin-left: 50px;
-}
-.photo{
-    background-color: aquamarine;
-    width: 300px;
-    height: 300px;
-}
-.card_name{
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
 
 }
-.card_bio{
-    font-size: 20px;
+.CardAvatar:hover {
+    filter: brightness(0.5);
+}
+.CardAvatar{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: filter 0.5s ease;
+}
+.Card{
+    padding: 1.5em;
+    border-radius: 0.5em;
 
+}
+.MembersBody{
+    padding: 1.5em;
+    border-radius: 0.5em;
+}
+.MembersPhoto{
+
+}
+.MembersDetails{
+    font-size: 1rem;
+}
+.MembersName{
+    font-size: 1.2em;
+}
+.InfoText{
+    font-size: 1.5rem;
+    padding: 1.5em;
+}
+.InfoTitle{
+    width: 40%;
+    text-align: center;
+    font-size: 2.0em;
 }
