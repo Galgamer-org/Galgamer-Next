@@ -10,6 +10,7 @@ import { createReadStream, existsSync } from 'fs'
 import { getNomalizedImagePath } from '../lib/image-loader'
 import imageLoader from '../lib/image-loader'
 import { onlineDirectory, rootDirectory } from '../lib/constants'
+import is from 'date-fns/esm/locale/is/index.js'
 
 type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref"> & ReactMarkdownProps) | Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">
 
@@ -19,6 +20,8 @@ const blackListDomains = [
     'elemecdn'
 ];
 
+const useOnlineImage = true;
+
 
 export default async function SmartImage(props:imageProps) {
     let {src, alt, className, style} = props;
@@ -26,6 +29,9 @@ export default async function SmartImage(props:imageProps) {
     let isLocal = false;
     if( !(src.startsWith('http')) ) {
         isLocal = true;
+    }
+    if (useOnlineImage && src.startsWith('../image/')) {
+        isLocal = false;
     }
 
     let probeResult: probe.ProbeResult;
@@ -105,9 +111,12 @@ function getProbePath(path: string) {
     }
     
     if (path.startsWith('../image/')) {
-        //return path.replace('..', rootDirectory);
-        let result = new URL(path.replace('../image/', onlineDirectory)).toString();
-        return encodeURI(decodeURI(result));
+        if (useOnlineImage){
+            let result = new URL(path.replace('../image/', onlineDirectory)).toString();
+            return encodeURI(decodeURI(result));
+        }else{
+            return path.replace('..', rootDirectory);
+        }
 
     } else if (path.startsWith('http')) {
         return encodeURI(decodeURI(path));
