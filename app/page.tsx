@@ -30,7 +30,7 @@ export default function Index() {
         />
       )}
 
-      <Container className='px-0'>
+      <Container className='px-2'>
 
 
         {

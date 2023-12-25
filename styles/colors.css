@@ -36,7 +36,7 @@
     --post-link-color: #0366d6;
     /* 頁面頂端連結 和文章連結 鼠標指向顏色: 0; */
     --link-hover-color: #90b44b;
-    --link-hover-bg-color: #f8f9fa;
+    --link-hover-bg-color: #f8f9fa88;
     /* 頂欄顏色: 0; */
     --navbar-bg-color: #66bab7;
     /* 頂欄文字顏色: 0; */

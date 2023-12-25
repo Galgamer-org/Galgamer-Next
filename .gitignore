@@ -33,6 +33,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-public/assets/blog-images/
-public/image/終之空/cg_04.webp
 public/image/

@@ -105,9 +105,9 @@ function getProbePath(path: string) {
     }
     
     if (path.startsWith('../image/')) {
-        return path.replace('..', rootDirectory);
-        // let result = new URL(path.replace('../image/', onlineDirectory)).toString();
-        // return encodeURI(decodeURI(result));
+        //return path.replace('..', rootDirectory);
+        let result = new URL(path.replace('../image/', onlineDirectory)).toString();
+        return encodeURI(decodeURI(result));
 
     } else if (path.startsWith('http')) {
         return encodeURI(decodeURI(path));

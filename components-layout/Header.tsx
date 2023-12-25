@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import cn from 'classnames'
 import style from 'styles/header.module.css'
+import Logo from 'components/logo'
 
 const SiteLogo = '/img/logo.png'
 
@@ -17,9 +18,9 @@ export default function Header() {
     <header className={style.header}>
       <Navbar className={cn(style.navbar, 'navbar box-shadow')} expand="lg">
         <Container>
-          <Link href='/' className='navbar-brand'>
+          <Link href='/' className={cn(style.navbarBrand, 'navbar-brand font-serif')}>
             {/* <Image src={SiteLogo} width="90" height="90" alt="Galgamer Logo" /> */}
-            <span className={cn(style.navbarText, '')}><em>Galgamer</em></span>
+            <span className={cn(style.navbarText, '')}><Logo /><em>Galgamer</em></span>
           </Link>
 
           <Navbar.Toggle aria-controls="navbarNav">
@@ -30,7 +31,7 @@ export default function Header() {
               defaultActiveKey='/'
               activeKey={pathname}
               as="ul"
-              className='navbar-nav'
+              className={cn('ms-auto', style.navbarNav)}
               //onSelect={(selectedKey) => {setSelection(selectedKey ? selectedKey : "/")}}
               // onSelect={(selectedKey) => {alert(selectedKey)}}
             >

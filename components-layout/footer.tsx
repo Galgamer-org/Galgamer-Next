@@ -3,6 +3,8 @@ import style from 'styles/footer.module.css'
 import cn from 'classnames'
 import { Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
+import Logo from 'components/logo'
+
 
 export default function Footer() {
   return (
@@ -12,7 +14,7 @@ export default function Footer() {
 
           {/* LOGO */}
           <div className={cn(style.ourLinks, 'col-lg-3')}>
-            <div className={cn(style.footerLogo, 'font-serif')}><em>Galgamer</em>🌸</div>
+            <div className={cn(style.footerLogo, 'font-serif')}><Logo /><em>Galgamer</em></div>
             <ul>
               <li>
                 Galgame 社區 & 交流群，由熱愛美少女的群友們組成。
