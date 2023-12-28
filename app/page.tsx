@@ -121,7 +121,7 @@ function MoreStories({
   }) {
   return (
     <section className={style.bookmarkContainer}>
-      <div className={cn(style.bookmark, 'box-shadow p-2 ms-4 ms-md-5 ')}>
+      <div className={cn(style.bookmark, 'box-shadow p-2 ms-4 ms-md-5')}>
         <div className={cn('d-flex o-hidden align-items-center h-100', style.sectionTitle)}>
           <div className={cn('ms-2')}>
             <h2 className={cn('text-decoration-none fw-bold fst-italic h3')}>
