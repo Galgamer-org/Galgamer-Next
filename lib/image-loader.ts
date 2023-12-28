@@ -8,6 +8,9 @@ type props = {
     quality?: number
 }
 
+const useOnlineImage = true;
+// also modify useOnlineImage in smart-image
+
 
 export function getNomalizedImagePath(path: string, directory?: string): string {
     //console.log(path);
@@ -16,7 +19,13 @@ export function getNomalizedImagePath(path: string, directory?: string): string 
     }
     
     if (path.startsWith('../image/')) {
-        return path.replace('..', '');
+        if (useOnlineImage){
+            let result = new URL(path.replace('../image/', onlineDirectory)).toString();
+            return encodeURI(decodeURI(result));
+        }else{
+            return path.replace('..', '');
+        }
+
     } else if (path.startsWith('http')) {
         return path;
     } else {

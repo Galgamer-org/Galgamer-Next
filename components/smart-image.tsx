@@ -17,10 +17,11 @@ type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, H
 const blackListDomains = [
     'zhimg.com',
     'pinyuncloud.com',
-    'elemecdn'
+    //'elemecdn'
 ];
 
 const useOnlineImage = true;
+// also modify useOnlineImage in image-loader
 
 
 export default async function SmartImage(props:imageProps) {
@@ -68,7 +69,7 @@ export default async function SmartImage(props:imageProps) {
 
                 probeResult = await probe(probeSrc);
             } catch (error) {
-                console.error(`probe error: ${probeSrc} : ${error}`);
+                console.error(`probe error: ${probeSrc} : ${error.errors || error.message}`);
                 probeResult = null;
             }
             
