@@ -13,7 +13,7 @@ const channels = [
     description: 'Picked for you',
     details: 'Galgamer 群友親自體驗，親自爲你推薦！',
     cssClass: 'gamePostArea',
-    isTechnicalReport: true,
+    isTechnicalReport: false,
   },
   {
     name: 'technical-report',

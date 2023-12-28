@@ -16,6 +16,7 @@ type PostType = {
   abbrlink: number
   tags: string[]
   keywords: string[]
+  hidden?: boolean
 }
 
 export default PostType

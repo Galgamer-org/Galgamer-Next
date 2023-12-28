@@ -24,7 +24,8 @@ const fields = [
   'excerpt',
   'abbrlink',
   'tags',
-  'keywords'
+  'keywords',
+  'hidden'
 ];
 
 export function getPostBySlug(slug: string) {
@@ -64,7 +65,8 @@ export function getPostBySlug(slug: string) {
     },
     content: items['content'],
     abbrlink: items['abbrlink'],
-    keywords: (items['keywords'] ? items['keywords'] : '').split(',').map((keyword) => keyword.trim())
+    keywords: (items['keywords'] ? items['keywords'] : '').split(',').map((keyword) => keyword.trim()),
+    hidden: items['hidden'] ? items['hidden'] : false
   };
   //console.log(result)
 
@@ -76,7 +78,7 @@ export function getAllPosts() {
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
     // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1)).filter((post) => !post.hidden);
   return posts;
 }
 

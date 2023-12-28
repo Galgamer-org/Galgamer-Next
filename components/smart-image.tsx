@@ -17,7 +17,7 @@ type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, H
 const blackListDomains = [
     'zhimg.com',
     'pinyuncloud.com',
-    //'elemecdn'
+    'elemecdn'
 ];
 
 const useOnlineImage = true;
