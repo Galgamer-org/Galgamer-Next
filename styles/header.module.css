@@ -7,8 +7,17 @@
 
 .navbarText {
     color: var(--navbar-text-color)!important;
-    font-size: 1.5rem;
     /* font-size: 125%; */
+}
+
+.offcanvasTitle {
+    color: var(--navbar-text-color)!important;
+    font-size: 1.5rem;
+    padding: 8px;
+}
+
+.offcanvasTitle > span {
+    font-size: 1.5rem;
 }
 
 .navbarBrand, .navbarBrand * {
@@ -28,7 +37,7 @@
     background-color: var(--link-hover-bg-color);
 }
 
-.navbarNav > * > a, .offcanvasTitle {
+.navbarNav > * > a {
     padding: 8px;
 } 
 
