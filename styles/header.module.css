@@ -7,26 +7,35 @@
 
 .navbarText {
     color: var(--navbar-text-color)!important;
+    font-size: 1.5rem;
     /* font-size: 125%; */
 }
 
 .navbarBrand, .navbarBrand * {
     color: var(--navbar-text-color)!important;
     font-size: 1.5rem;
-    cursor: pointer;
 }
 
-.navbarNav > li {
+.navbarNav > * {
     letter-spacing: .05em;
     font-size: 16px;
-    margin-left: 8px;
+    margin-right: 8px;
     border-radius: 5px;
     transition: background-color .1s ease-in-out;
-    cursor: pointer;
 }
 
-.navbarNav > li:hover {
+.navbarNav > *:hover {
     background-color: var(--link-hover-bg-color);
+}
+
+.navbarNav > * > a, .offcanvasTitle {
+    padding: 8px;
+} 
+
+.navbarToggle {
+    color: var(--navbar-text-color)!important;
+    border: none!important;
+
 }
 
 .logo {
@@ -44,4 +53,14 @@
 	mask-size: contain;
 	-webkit-mask-repeat: no-repeat;
 	mask-repeat: no-repeat;
+}
+
+.navLeftSpace {
+    width: 2.25rem;
+}
+
+
+.navbarOffcanvas {
+    background-color: var(--navbar-bg-color)!important;
+    color: var(--navbar-text-color);
 }
