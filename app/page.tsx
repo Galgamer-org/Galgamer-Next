@@ -8,7 +8,7 @@ import CoverImage from '../components/cover-image'
 import Link from 'next/link'
 import type Author from '../interfaces/member'
 import cn from 'classnames'
-
+import Links from '../components/Links'
 import style from 'styles/index.module.css'
 import { Col, Row } from 'react-bootstrap'
 
@@ -54,9 +54,13 @@ export default function Index() {
             icon='bi-file-earmark-code'
           />
         }
+
+        <Links />
+
       </Container>
 
     </>
+
   )
 }
 

@@ -10,7 +10,7 @@ function Body() {
             <Row>
                 <PageInfo/>
             </Row>
-                <MembersBody/>
+            <MembersBody/>
         </div>
     )
 }
@@ -20,7 +20,7 @@ function MembersBody() {
         <div className={members_css.MembersBody}>
             <Row>
                 {Object.values(Members).map((value: Member, index) => (
-                    <Col key={index} className={cn('col-2 col-md-2 col-xl-3')}>
+                    <Col key={index} className={cn('col-12 col-md-6 col-xl-3')}>
                         <MemberCard member={value} />
                     </Col>
                 ))}
@@ -34,14 +34,14 @@ function MemberCard({ member }: { member: Member }) {
     return (
         <div className={members_css.Card}>
             <Row>
-                <Col md={4}>
+                <Col md={4} sm={3}>
                     <div className={members_css.MembersPhoto}>
                         <a href={`/members/${member.name}`}>
-                        <img src={member.photo} className={members_css.CardAvatar} alt="Member Avatar" />
+                            <img src={member.photo} className={members_css.CardAvatar} alt="Member Avatar" />
                         </a>
                     </div>
                 </Col>
-                <Col md={8} >
+                <Col md={8} sm={9}>
                     <div className={members_css.MembersDetails}>
                         <p className={members_css.MembersName}>{member.name}</p>
                         <p>{member.bio}</p>
