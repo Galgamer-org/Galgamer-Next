@@ -76,15 +76,15 @@ type link = {
 
 function LinksUnit({ avatar, href, title, info }: link) {
     return (
-        <div className={`col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3`}>
+        <div className={`col-xs-12 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3`}>
             <a href={href}  className={styles.link} >
                 <Row>
-                    <Col md={3} sm={2}>
+                    <Col md={3} sm={2} xs={2}>
                         <div className={styles.linkAvatar}>
                             <img src={avatar} alt={title} />
                         </div>
                     </Col>
-                    <Col md={9} sm={10}>
+                    <Col md={9} sm={10} xs={10}>
                         <div className={styles.linkTitle}>{title}</div>
                         <div className={styles.linkInfo}>{info}</div>
                     </Col>
@@ -98,12 +98,12 @@ function LinksBody() {
         <div className={styles.linksBoard}>
             <div className={styles.TitleBox}>
                 <Row>
-                <Col md={2} sm={2} >
+                <Col md={2} sm={2} xs={2} >
                 <div className={styles.TitleBoxIco}>
                     <i className={cn(" bi-link-45deg", "me-2", styles.linkIcon)}></i>
                 </div>
                 </Col>
-                <Col md={6} sm={6} >
+                <Col md={6} sm={6} xs={6}>
                 <h3 className={styles.LinksBodyTitle}>友情連結</h3>
                 </Col>
                 </Row>
