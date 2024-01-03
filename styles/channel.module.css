@@ -1,6 +1,13 @@
 .banner {
     min-height: 300px;
     background-color: var(--channel-board-bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner .bgMasked {
+    position: absolute;
+    z-index: -1;
 }
 
 .techPostArea {
@@ -12,10 +19,25 @@
 }
 
 .gamePostArea {
-    --channel-board-bg-color: rgb(255, 232, 232);
-    --channel-board-bg-color-grad: rgb(188, 109, 109);
+    --channel-board-bg-color: rgb(255, 235, 232);
+    --channel-board-bg-color-grad: rgb(239, 189, 189);
     --channel-board-bg-color-dark: #f5e6e6bb;
 
+}
+
+.gamePostArea .banner {
+    background-image: 
+        linear-gradient(110deg, var(--channel-board-bg-color) 45% , #00000000 70%),
+        
+        linear-gradient(110deg, var(--channel-board-bg-color) 50%, var(--channel-board-bg-color-grad) 90%);
+}
+
+.gamePostArea .bgMasked {
+    background-color: #781257;
+    mask-image: url('/site-assets/for-you.webp');
+    mask-repeat: no-repeat;
+    mask-size: auto 100%;
+    mask-position: bottom 0px right calc(min(0px, 100% * 0.3 - 20px));
 }
 
 .techPostArea > .banner {
@@ -25,3 +47,4 @@
         linear-gradient(110deg, var(--channel-board-bg-color) 50%, var(--channel-board-bg-color-grad) 90%);
 
 }
+

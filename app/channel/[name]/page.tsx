@@ -50,10 +50,10 @@ export default function Channel({ params }: { params: { name: string } }) {
     <Container className='px-2'>
       <section className={cn(style[channel.cssClass])}>
         <div
-          className={cn(style.banner, 'container-board mx-auto my-4 px-3 px-md-4 box-shadow d-flex align-items-center')}
+          className={cn(style.banner, 'container-board mx-auto my-4 box-shadow d-flex align-items-center')}
         >
-
-          <div className={cn('w-100')}>
+          <div className={cn('w-100 h-100', style.bgMasked)}></div>
+          <div className={cn('w-100 px-3 px-md-4')}>
             <h1 className="text-4xl fw-bold">
               {channel.title}
             </h1>
