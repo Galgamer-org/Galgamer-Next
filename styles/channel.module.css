@@ -19,8 +19,8 @@
 }
 
 .gamePostArea {
-    --channel-board-bg-color: rgb(255, 235, 232);
-    --channel-board-bg-color-grad: rgb(239, 189, 189);
+    --channel-board-bg-color: rgb(255, 245, 240);
+    --channel-board-bg-color-grad: rgb(254, 244, 239);
     --channel-board-bg-color-dark: #f5e6e6bb;
 
 }
@@ -33,7 +33,7 @@
 }
 
 .gamePostArea .bgMasked {
-    background-color: #781257;
+    background-color: #861831;
     mask-image: url('/site-assets/for-you.webp');
     mask-repeat: no-repeat;
     mask-size: auto 100%;
