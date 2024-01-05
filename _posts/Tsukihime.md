@@ -70,7 +70,7 @@ date: 2022-02-05 00:30:00
 
 开头绝赞音乐复刻
 放一首最喜欢的<月姫-re>
-<audio preload="metadata" style="width: 100%" src="https://s3static-zone0.galgamer.eu.org/audio-2d35/%E6%9C%88%E5%A7%AB%EF%BC%9Are.mp3" controls="controls">
+<audio preload="metadata" style="width: 100%" src="https://storage-zone0.galgamer.eu.org/audio-2d35/%E6%9C%88%E5%A7%AB%EF%BC%9Are.mp3" controls="controls">
 
 </audio>
 
@@ -239,7 +239,7 @@ date: 2022-02-05 00:30:00
 ### 遊戲 OP
 
 <video controls preload="metadata" width='100%' poster="../image/Tsukihime/op.jpg">
-<source src="https://s3static-zone0.galgamer.eu.org/video-2d35/Tsukihime/Tsukihime-op.mp4" type="video/mp4" />
+<source src="https://storage-zone0.galgamer.eu.org/video-2d35/Tsukihime/Tsukihime-op.mp4" type="video/mp4" />
 </video>
 
 ### CG
@@ -301,7 +301,7 @@ UI界面倒是感觉原版吧,不好也不差.
 不需要阅读文字, 请简单体会意境.
 
 <video controls preload="metadata" width='100%' poster="../image/Tsukihime/movie.webp">
-<source src="https://s3static-zone0.galgamer.eu.org/video-2d35/Tsukihime/13min-know.mp4" type="video/mp4" />
+<source src="https://storage-zone0.galgamer.eu.org/video-2d35/Tsukihime/13min-know.mp4" type="video/mp4" />
 </video>
 
 ## 资源

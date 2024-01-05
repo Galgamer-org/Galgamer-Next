@@ -264,7 +264,7 @@ body {
 ## PV
 
 <video controls preload="metadata" width='100%' poster='../image/imperialharem/op.webp'>
-<source src="https://s3static-zone0.galgamer.eu.org/video-2d35/Imperialharem/pv.mp4" type="video/mp4">
+<source src="https://storage-zone0.galgamer.eu.org/video-2d35/Imperialharem/pv.mp4" type="video/mp4">
 </video>
 
 ## 點評
@@ -334,7 +334,7 @@ Live 2D也很可爱，可用的调教方法在最初的版本比较少。之后�
 ## 试玩视频
 
 <video controls preload="metadata" width='100%' poster='../image/imperialharem/op.webp'>
-<source src="https://s3static-zone0.galgamer.eu.org/video-2d35/Imperialharem/7mins-know.mp4" type="video/mp4">
+<source src="https://storage-zone0.galgamer.eu.org/video-2d35/Imperialharem/7mins-know.mp4" type="video/mp4">
 </video>
 
 

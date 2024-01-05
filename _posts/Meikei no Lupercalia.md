@@ -174,7 +174,7 @@ author: Sacal & ling
 ## 游戏 OP
 
 <video controls preload="metadata" width='100%' poster="../image/MeikeinoLupercalia/op.webp">
-    <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/meikei/op.mp4" type="video/mp4">
+    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/meikei/op.mp4" type="video/mp4">
 </video>
 
 ## 简评(无剧透)
@@ -268,7 +268,7 @@ author: Sacal & ling
 ## 还在犹豫是否下载？来看看游玩录像：
 
 <video controls preload="metadata" width='100%' poster="../image/MeikeinoLupercalia/movie.webp">
-    <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/meikei/17min-know.mp4" type="video/mp4">
+    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/meikei/17min-know.mp4" type="video/mp4">
 </video>
 
 

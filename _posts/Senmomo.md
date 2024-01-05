@@ -382,7 +382,7 @@ date: 2022-09-17 00:30:00
 ## 遊戲 OP
 
 <video controls preload="metadata" width='100%' poster="../image/Senmomo/cover.webp">
-  <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/senmomo/op.mp4" type="video/mp4" />
+  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/senmomo/op.mp4" type="video/mp4" />
   <p> To view this video please enable JavaScript</p>
 </video>
 
@@ -490,7 +490,7 @@ date: 2022-09-17 00:30:00
 ## 還在猶豫是否下載？來看看游玩錄屏吧
 
 <video controls preload="metadata" width='100%' poster="../image/Senmomo/cover.webp">
-  <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/senmomo/senmomo.mp4" type="video/mp4" />
+  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/senmomo/senmomo.mp4" type="video/mp4" />
   <p> To view this video please enable JavaScript</p>
 </video>
 

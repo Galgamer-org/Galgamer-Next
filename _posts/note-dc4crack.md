@@ -116,7 +116,7 @@ DC4 系列現有 4 部作品，前兩部是全年齡，後兩部則是 R-18，�
 然後讓程序繼續，再去點一下那個 OK 試試看。
 
 <video preload='auto' autoplay muted loop width="100%">
-<source src="https://s3static-zone0.galgamer.eu.org/video-2d35/note-dc4crack/3-4.mp4" type="video/mp4">
+<source src="https://storage-zone0.galgamer.eu.org/video-2d35/note-dc4crack/3-4.mp4" type="video/mp4">
 </video>
 <div class="text-center">圖 3-4 把 JL 消除了就無限彈窗</div>
 

@@ -291,7 +291,7 @@ https://whirlpool.co.jp/drapri/
 因此最終我決定錄製一小段extra劇情內容。
 
 <video controls preload="metadata" width='100%' poster="../image/drapri/movie.webp">
-<source src="https://s3static-zone0.galgamer.eu.org/video-2d35/Dorapuri/movie.mp4" type="video/mp4"/>
+<source src="https://storage-zone0.galgamer.eu.org/video-2d35/Dorapuri/movie.mp4" type="video/mp4"/>
 <p> To view this video please enable JavaScript</p>
 </video>
 
