@@ -71,7 +71,7 @@ font-family:serif
 ![](../image/FSN/post.jpg)
 
 先來一段月球聖經詠唱配上エミヤ。
-<audio preload="metadata" style="width: 100%" src="https://s3static-zone0.galgamer.eu.org/audio-2d35/stay+night++%5BUnlimited+Blade+Works%5D+OST+II+++Emiya+UBW+Epic.mp3" controls="controls">
+<audio preload="metadata" style="width: 100%" src="https://storage-zone0.galgamer.eu.org/audio-2d35/stay+night++%5BUnlimited+Blade+Works%5D+OST+II+++Emiya+UBW+Epic.mp3" controls="controls">
 <p class="text-center" style="font-size: 150%">
   <span style="color:red;"   ><i>I am the bone of my sword.</i></span><br>
   <span style="color:red;"   ><i>Steel is my body, and fire is my blood.</i></span><br>

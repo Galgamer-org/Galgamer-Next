@@ -364,7 +364,7 @@ Asphodelus 意爲 阿福花，其詞源為希臘詞匯 "ἀσφόδελος"。�
 在希臘傳説中，阿福花生長在冥府，與死者相關連。荷馬在《奧德賽》中將阿福花塑造為悔憾之花，將長滿了阿福花的草甸描述爲地獄的一部分。<sup>[1]</sup>
 
 <video controls preload="metadata" width='100%' poster="../image/Aiyoku-no-Eustia/op_cover.webp" onloadstart="this.volume=0.4">
-  <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/aiyoku/op.mp4" type="video/mp4" />
+  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/aiyoku/op.mp4" type="video/mp4" />
   <p> To view this video please enable JavaScript</p>
 </video>
 

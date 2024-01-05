@@ -198,7 +198,7 @@ border-radius: 10px;
 世界名曲 ***無法傳達的愛戀*** 通稱 屆不到的戀
 
 <video controls preload="metadata" width='100%' poster="../image/WA2/1/op-1.webp">
-  <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/WA2/op-1.mp4" type="video/mp4" />
+  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/WA2/op-1.mp4" type="video/mp4" />
   <p> To view this video please enable JavaScript</p>
 </video>
 
@@ -388,7 +388,7 @@ Galgame 金曲 <a href="/music/?id=16" target="_blank">🔗️届かない恋</a
 和紗戰歌 ***幸せな記憶***（但是這一章並沒有和紗，我很蒙古）
 
 <video controls preload="metadata" width='100%' poster="../image/WA2/2/op-2.webp">
-  <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/WA2/op-2.mp4" type="video/mp4" />
+  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/WA2/op-2.mp4" type="video/mp4" />
   <p> To view this video please enable JavaScript</p>
 </video>
 
@@ -534,7 +534,7 @@ Galgame 金曲 <a href="/music/?id=15" target="_blank">🔗️幸せな記憶</a
 再放送 ***無法傳達的愛戀*** 終章 version
 
 <video controls preload="metadata" width='100%' poster="../image/WA2/3/op-3.webp">
-  <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/WA2/op-3.mp4" type="video/mp4" />
+  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/WA2/op-3.mp4" type="video/mp4" />
   <p> To view this video please enable JavaScript</p>
 </video>
 
@@ -587,7 +587,7 @@ Galgame 金曲 <a href="/music/?id=15" target="_blank">🔗️幸せな記憶</a
 請看 序章 試玩錄像
 
 <video controls preload="metadata" width='100%' poster="../image/WA2/movie.webp">
-  <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/WA2/14min-know.mp4" type="video/mp4" />
+  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/WA2/14min-know.mp4" type="video/mp4" />
   <p> To view this video please enable JavaScript</p>
 </video>
 

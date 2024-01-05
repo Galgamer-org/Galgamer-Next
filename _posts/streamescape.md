@@ -233,17 +233,17 @@ excerpt: '美少女主播深入靈異鬼宅，遭遇豬頭人偶追杀'
 <br>
 
 <video preload="metadata" width='100%' autoplay loop muted playinline>
-    <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/haishin/scn1.mp4" type="video/mp4"/>
+    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/haishin/scn1.mp4" type="video/mp4"/>
     <p> To view this video please enable JavaScript</p>
 </video>
 
 <video preload="metadata" width='100%' autoplay loop muted playinline>
-    <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/haishin/scn2.mp4" type="video/mp4"/>
+    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/haishin/scn2.mp4" type="video/mp4"/>
     <p> To view this video please enable JavaScript</p>
 </video>
 
 <video preload="metadata" width='100%' autoplay loop muted playinline>
-    <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/haishin/scn3.mp4" type="video/mp4"/>
+    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/haishin/scn3.mp4" type="video/mp4"/>
     <p> To view this video please enable JavaScript</p>
 </video>
 
@@ -262,7 +262,7 @@ excerpt: '美少女主播深入靈異鬼宅，遭遇豬頭人偶追杀'
 全部都是動態cg，效果如下圖：
 
 <video preload="metadata" width='100%' autoplay loop muted playinline>
-    <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/haishin/cg1.mp4" type="video/mp4"/>
+    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/haishin/cg1.mp4" type="video/mp4"/>
     <p> To view this video please enable JavaScript</p>
 </video>
 
@@ -306,7 +306,7 @@ https://qureate.co.jp/haishin/sc/
 這裏有一個 8分鐘的試玩。
 
 <video controls preload="metadata" width='100%' poster="../image/streamescape/movie.webp">
-    <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/haishin/Haishin.mp4" type="video/mp4" />
+    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/haishin/Haishin.mp4" type="video/mp4" />
     <p> To view this video please enable JavaScript</p>
 </video>
 

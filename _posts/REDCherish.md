@@ -311,7 +311,7 @@ rt {
 請觀賞遊戲 OP，很賽博，很帶感，，，
 
 <video controls preload="metadata" width='100%' poster="../image/REDCherish/op.webp">
-    <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/REDCherish/RED-OP.mp4" type="video/mp4">
+    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/REDCherish/RED-OP.mp4" type="video/mp4">
 </video>
 
 Galgame 金曲：
@@ -319,7 +319,7 @@ Galgame 金曲：
 上面的 OP： <a href="/music/?id=49" target="_blank">🔗️BLOOD/ORDER</a>
 遊戲的 ED： <a href="/music/?id=48" target="_blank">🔗️B.SEAB.SKY/DAY</a>
 
-![專輯封面](https://s3static-zone0.galgamer.eu.org/audio-2d35/REDCherish/Cover.jpg)
+![專輯封面](https://storage-zone0.galgamer.eu.org/audio-2d35/REDCherish/Cover.jpg)
 
 這個專輯就是本作的原聲帶。
 
@@ -421,7 +421,7 @@ Galgame 金曲：
 劇情是男主角向德絲下達了「不可以色色！」命令。
 
 <video controls preload="metadata" width='100%' poster="../image/REDCherish/movie.webp">
-    <source src="https://s3static-zone0.galgamer.eu.org/video-2d35/REDCherish/RED-movie.mp4" type="video/mp4">
+    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/REDCherish/RED-movie.mp4" type="video/mp4">
 </video>
 
 ## 遊戲攻略提示
@@ -458,51 +458,51 @@ magnet:?xt=urn:btih:380821e8447a1ad2dd4459e0129508374c698244
   <summary>點此展開</summary>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/00.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/00.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/01.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/01.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/02.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/02.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/03.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/03.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/04.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/04.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/05.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/05.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/06.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/06.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/07.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/07.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/08.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/08.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/09.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/09.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/10.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/10.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 <p>
-  <img src="https://s3static-zone0.galgamer.eu.org/image-2d35/REDCherish/11.webp" loading="lazy" class="img-lazy ar16x9"/>
+  <img src="https://storage-zone0.galgamer.eu.org/image-2d35/REDCherish/11.webp" loading="lazy" class="img-lazy ar16x9"/>
 </p>
 
 </details>

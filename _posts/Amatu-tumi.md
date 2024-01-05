@@ -271,7 +271,7 @@ body {
 動畫來自被牆的 Youtube。
 
 <video controls preload="metadata" width='100%' poster='../image/Amatu-tumi/op.webp'>
-<source src="https://s3static-zone0.galgamer.eu.org/video-2d35/Amatu-tumi/op.mp4" type="video/mp4">
+<source src="https://storage-zone0.galgamer.eu.org/video-2d35/Amatu-tumi/op.mp4" type="video/mp4">
 </video>
 
 本作的音樂非常動聽應景，特此添加兩首 Galgame 金曲：

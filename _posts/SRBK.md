@@ -24,7 +24,7 @@ excerpt: '高中生少年 有地將臣 把老家神社裏的遠古文物寶刀�
 高中生少年 有地將臣 把老家神社裏的遠古文物寶刀給弄斷了，於是他被判處肉償。
 
 <p id="coverimage-warp">
-  <img id="coverimage" src="../image/SRBK/cover.jpg" loading="lazy" class="img-lazy" alt="Cover" originimg="https://s3static-zone0.galgamer.eu.org/video-2d35/SRBK/yoshino.png" style="aspect-ratio: 16 / 10;">
+  <img id="coverimage" src="../image/SRBK/cover.jpg" loading="lazy" class="img-lazy" alt="Cover" originimg="https://storage-zone0.galgamer.eu.org/video-2d35/SRBK/yoshino.png" style="aspect-ratio: 16 / 10;">
 </p>
 <p id="changesrc">
   <a href="javascript:loadbigimg();" id="changebtn" class="btn btn-primary btn-sm" role="button">加載原圖（2560x1600, 3.3M）⬆️️</a>
@@ -347,7 +347,7 @@ Galgame 金曲: <a href="/music/?id=25" target="_blank">🔗️恋ひ恋ふ縁</
 有一個試玩錄像，很短，請欣賞裏面的和風 BGM！
 
 <video controls preload="metadata" width='100%' poster='../image/SRBK/movie.webp'>
-<source src="https://s3static-zone0.galgamer.eu.org/video-2d35/SRBK/4min-know.mp4" type="video/mp4">
+<source src="https://storage-zone0.galgamer.eu.org/video-2d35/SRBK/4min-know.mp4" type="video/mp4">
 </video>
 
 BGM 曲名叫做：***今昔の街***
