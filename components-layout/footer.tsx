@@ -89,12 +89,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li className={cn(style.ourLinksItem)}>
-                <Link href="https://speed.cloudflare.com">
+                <Link href="https://speed.cloudflare.com" target='_blank' rel="noopener noreferrer">
                   網路不正常？
                 </Link>
               </li>
               <li className={cn(style.ourLinksItem)}>
-                <Link href="https://github.com/Galgamer-org/Draw-Guess-Keywords">
+                <Link href="https://github.com/Galgamer-org/Draw-Guess-Keywords" target='_blank' rel="noopener noreferrer">
                   召喚美少女！
                 </Link>
               </li>

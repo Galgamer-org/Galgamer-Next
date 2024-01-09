@@ -1,20 +1,10 @@
-.banner {
-    min-height: 300px;
-    background-color: var(--channel-board-bg-color);
-    position: relative;
-    overflow: hidden;
-}
 
-.banner .bgMasked {
-    position: absolute;
-    z-index: -1;
-}
 
 .techPostArea {
     /* background: transparent; */
     --channel-board-bg-color: #dbe6fbff;
     --channel-board-bg-color-grad: rgb(109, 136, 188);
-    --channel-board-bg-color-dark: colorDark: #c4d2f5bb;
+    --channel-board-bg-color-dark: #c4d2f5bb;
     
 }
 
@@ -26,21 +16,25 @@
 }
 
 .gamePostArea .banner {
-    background-image: 
+    /* background-image: 
         linear-gradient(110deg, var(--channel-board-bg-color) 45% , #00000000 70%),
-        
+        url('/site-assets/for-you2.webp'),
         linear-gradient(110deg, var(--channel-board-bg-color) 50%, var(--channel-board-bg-color-grad) 90%);
+    background-position: 0, bottom 0px right calc(min(0px, 100% * 0.3 - 20px)), 0;
+    background-size: auto, auto 100%, auto; */
 }
 
-.gamePostArea .bgMasked {
-    background-color: #861831;
+/* use global to select the class name in other files */
+.gamePostArea :global(.mainvisualBgMasked) {
+    background-color: #741144;
     mask-image: url('/site-assets/for-you.webp');
     mask-repeat: no-repeat;
-    mask-size: auto 100%;
-    mask-position: bottom 0px right calc(min(0px, 100% * 0.3 - 20px));
+    mask-size: auto 95%;
+    mask-position: bottom 0px right calc(min(20px, 100% * 0.3 - 20px));
 }
 
-.techPostArea > .banner {
+
+.techPostArea > :global(.mainvisualBanner) {
     background-image: 
         linear-gradient(110deg, var(--channel-board-bg-color) 45% , #00000000 70%),
         url('/site-assets/tech-pattern.svg'),

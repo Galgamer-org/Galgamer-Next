@@ -5,6 +5,7 @@ import cn from 'classnames'
 import style from 'styles/channel.module.css'
 import { Col, Row } from 'react-bootstrap'
 import { notFound } from 'next/navigation'
+import MainVisualH1 from '@/components/MainVisualH1'
 
 const channels = [
   {
@@ -48,25 +49,12 @@ export default function Channel({ params }: { params: { name: string } }) {
   const posts = allPosts.filter(post => channel.isTechnicalReport === isTechnicalReport(post));
   return (
     <Container className='px-2'>
-      <section className={cn(style[channel.cssClass])}>
-        <div
-          className={cn(style.banner, 'container-board mx-auto my-4 box-shadow d-flex align-items-center')}
-        >
-          <div className={cn('w-100 h-100', style.bgMasked)}></div>
-          <div className={cn('w-100 px-3 px-md-4')}>
-            <h1 className="text-4xl fw-bold">
-              {channel.title}
-            </h1>
-            <p className="h5 mt-2 text-lg fst-italic">
-              {channel.description}
-            </p>
-            <p className="w-50 mt-2">
-              {channel.details}
-            </p>
-          </div>
-
-        </div>
-      </section>
+      <MainVisualH1
+        title={channel.title}
+        description={channel.description}
+        details={channel.details}
+        cssClass={style[channel.cssClass]}
+      ></MainVisualH1>
       <section>
         <div className={cn(style.postArea, 'container-board', 'my-3 mx-auto p-1 p-md-2 box-shadow')}>
           <Row className={cn('pt-4 pt-md-4 mt-2 mx-0 px-1 px-md-2 px-xl-4 o-hidden')}>

@@ -1,0 +1,11 @@
+.banner {
+    min-height: 300px;
+    background-color: var(--channel-board-bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner .bgMasked {
+    position: absolute;
+    z-index: -1;
+}
