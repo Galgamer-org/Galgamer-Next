@@ -119,3 +119,9 @@
     height: 2px;
     background-color: var(--text-color);;
 }
+
+.linksBody {
+    margin: 0 auto;
+    padding: 25px;
+    /*width : 95%;*/
+}

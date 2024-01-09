@@ -8,11 +8,11 @@ import CoverImage from '../components/cover-image'
 import Link from 'next/link'
 import type Author from '../interfaces/member'
 import cn from 'classnames'
-import Links from '../components/Links'
 import style from 'styles/index.module.css'
 import { Col, Row } from 'react-bootstrap'
-
-
+import { ReactNode } from 'react'
+import FriendLinkUnit from '@/components/FriendLinkUnit'
+import FriendLinks from '@/_feed/friend-links'
 
 
 export default function Index() {
@@ -55,13 +55,13 @@ export default function Index() {
           />
         }
 
-        <Links />
+        <FriendLinkBody />
 
       </Container>
 
     </>
 
-  )
+  );
 }
 
 
@@ -69,8 +69,6 @@ function HeroPost({
   post
 }: { post: Post }) {
   const { title, index_img, date, author, excerpt, abbrlink } = post;
-
-
   return (
     <section className={cn(style.heroContainer, 'mx-auto mt-3 px-2')}>
       {/* <h2 className={cn(style.featuredTitle, 'h1')}><em>Featured.</em></h2> */}
@@ -106,7 +104,7 @@ function HeroPost({
       </div>
 
     </section>
-  )
+  );
 }
 
 function MoreStories({
@@ -124,48 +122,42 @@ function MoreStories({
     icon?: string
   }) {
   return (
-    <section className={style.bookmarkContainer}>
-      <div className={cn(style.bookmark, 'box-shadow p-2 ms-4 ms-md-5')}>
-        <div className={cn('d-flex o-hidden align-items-center h-100', style.sectionTitle)}>
-          <div className={cn('ms-2')}>
-            <h2 className={cn('text-decoration-none fw-bold fst-italic h3')}>
-              <Link className="text-decoration-none" href={jumpUrl || '/article'}>
-                <i className={cn(icon, "me-2")}></i>{title || 'More Stories'}
-              </Link>
-            </h2>
 
-          </div>
+    <BookmarkContainer
+      title={
+        <Link className="text-decoration-none" href={jumpUrl || '/article'}>
+          <i className={cn(icon, "me-2")}></i>{title || 'More Stories'}
+        </Link>
+      }
+    >
+      <Row className={cn('pt-4 pt-md-4 mt-2 mx-0 px-1 px-md-2 px-xl-4 o-hidden')}>
+        {posts.slice(0, limit || posts.length).map((post) => (
+
+          <Col className={cn('col-12 col-md-6 col-xl-4')} key={post.slug}>
+
+            <PostPreview
+              title={post.title}
+              index_img={post.index_img}
+              date={post.date}
+              author={post.author}
+              slug={post.slug}
+              excerpt={post.excerpt}
+              abbr={post.abbrlink}
+            />
+          </Col>
+        ))}
+      </Row>
+      <div className='d-flex p-3 align-items-center'>
+        <div className={cn(style.viewAllHr, 'ms-auto')}>
+        </div>
+        <div className={cn('ms-2')}>
+          <Link className="h4 fw-bold font-serif text-decoration-none" href={jumpUrl || '/article'}>
+            View All
+            <i className="bi-arrow-right-circle-fill ms-2"></i>
+          </Link>
         </div>
       </div>
-      <div className={cn('container-board', 'mx-auto p-1 p-md-2 box-shadow')}>
-        <Row className={cn('pt-4 pt-md-4 mt-2 mx-0 px-1 px-md-2 px-xl-4 o-hidden')}>
-          {posts.slice(0, limit || posts.length).map((post) => (
-
-            <Col className={cn('col-12 col-md-6 col-xl-4')} key={post.slug}>
-
-              <PostPreview
-                title={post.title}
-                index_img={post.index_img}
-                date={post.date}
-                author={post.author}
-                slug={post.slug}
-                excerpt={post.excerpt}
-                abbr={post.abbrlink}
-              />
-            </Col>
-          ))}
-        </Row>
-        <div className='d-flex p-3 align-items-center'>
-          <div className={cn(style.viewAllHr, 'ms-auto')}>
-          </div>
-          <div className={cn('ms-2')}>
-            <Link className="h4 fw-bold font-serif text-decoration-none" href={jumpUrl || '/article'}>
-              View All
-              <i className="bi-arrow-right-circle-fill ms-2"></i>
-            </Link>
-          </div>
-        </div>
-        {/* <Row className='p-3 justify-content-end'>
+      {/* <Row className='p-3 justify-content-end'>
           <div className={cn('col-2 text-end')}>
             <Link className="h4 fw-bold font-serif" href={jumpUrl || '/article'}>
               View all
@@ -173,9 +165,48 @@ function MoreStories({
             </Link>
           </div>
         </Row> */}
+    </BookmarkContainer>
 
-      </div>
-    </section>
-  )
+  );
 }
 
+function FriendLinkBody() {
+  return (
+    <BookmarkContainer
+      title={
+        <Link className="text-decoration-none" href={'/links'}>
+          <i className={cn("bi-link-45deg", "me-2")}></i>友情連結
+        </Link>
+      }>
+        <div className={style.links}>
+           <div className={style.linksBody}>
+             <Row>
+               {FriendLinks.map((link, index) => (
+                 <FriendLinkUnit key={index} {...link} />
+               ))}
+             </Row>
+           </div>
+         </div>
+      </BookmarkContainer>
+  );
+}
+
+
+function BookmarkContainer({ title, children }: { title: ReactNode, children?: ReactNode }) {
+  return (
+    <section className={style.bookmarkContainer}>
+      <div className={cn(style.bookmark, 'box-shadow p-2 ms-4 ms-md-5')}>
+        <div className={cn('d-flex o-hidden align-items-center h-100', style.sectionTitle)}>
+          <div className={cn('ms-2')}>
+            <h2 className={cn('text-decoration-none fw-bold fst-italic h3')}>
+              {title}
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div className={cn('container-board', 'mx-auto p-1 p-md-2 box-shadow')}>
+        {children}
+      </div>
+    </section>
+  );
+}

@@ -1,16 +1,13 @@
-.links{
-    position: relative;
-    z-index: 10;
-}
-
 .linkAvatar {
     width: 3.5rem;
     height: 3.5rem;
-    margin-right: 0.75rem;
+    margin-right: 0.9rem;
     object-fit: cover;
     transition-duration: .2s;
     transition-timing-function: ease-in-out;
+    flex: none;
 }
+
 .linkAvatar img {
     width: 100%;
     height: 100%;
@@ -19,32 +16,36 @@
     object-fit: cover;
 }
 
-.LinksBody{
-    margin : 0 auto;
-    padding : 2.5em;
-    /*width : 95%;*/
+.linkText {
+    flex: 1 1 auto;
+    display: grid;
+    flex-direction: column;
 }
 
-.LinksBodyTitle{
-    font-size: 1.75rem;
-    font-style: italic;
-    margin-left : 0.5rem;
-    margin-top: 0.9rem;
-    min-width: 200px;
-    font-weight: 700!important;
+.linkRow {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 3.5rem;
 }
-.link{
-    /*align-items: center;*/
+
+.link {
+    /* align-items: center; */
     margin: 1rem auto;
     padding: 1rem;
     border-radius: 0.3rem;
     display: block;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     text-decoration: none;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
 }
-.link:hover{
-    color:  black;
+
+.link:hover {
+    color: black;
+    background-color: rgb(226, 234, 234);
+
 }
 
 
@@ -57,39 +58,23 @@
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
 }
-.linkTitle{
-    font-size:1.1em;
-    font-family: 'Noto sans','Noto sans SC','Noto sans TC','Noto sans JP',sans-serif;
-    font-weight: 700!important;
-}
-.linkInfo{
-    font-size:1em;
-}
-.linksBoard{
-    margin-top: 5em;
 
-    color: var(--text-color);
-
-}
-.TitleBox{
-
-    max-width: 50%;
-    width: 300px;
-    height: 60px;
-    background-color: antiquewhite;
-    position: relative;
-    border-radius: var(--small-board-border-radius) var(--small-board-border-radius) 0 0;
-    margin-left: 3rem!important;
-    transition-duration: .3s;
-    transition-timing-function: ease-in-out;
+.linkTitle {
+    font-size: 1.1em;
+    /* font-family: 'Noto sans', 'Noto sans SC', 'Noto sans TC', 'Noto sans JP', sans-serif;
+    font-weight: 700 !important; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
+.linkInfo {
+    font-size: 1em;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 
-
-.linkIcon  {
-    margin-left: 1rem;
-    font-style: italic;
-    font-size: 2.5rem;
-    width: 2em;
-    height: 2em;
 }
+
