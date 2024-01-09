@@ -1,13 +1,18 @@
-import {Row, Col} from "react-bootstrap"
 import style from '@/styles/links.module.css'
 import cn from "classnames";
 import FriendLink from "@/interfaces/friend-link";
+import Link from 'next/link';
 
 
 function FriendLinkUnit({ avatar, href, title, info }: FriendLink) {
     return (
         <div className={cn(`col-xs-12 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 myfont`)}>
-            <a href={href}  className={style.link} >
+            <Link 
+                href={href}  
+                className={style.link} 
+                target={href.startsWith('http') ? '_blank' : '_self'}
+                rel={href.startsWith('http') ? 'noopener noreferrer' : ''}
+                >
                 <div className={cn('align-items-center d-flex', style.linkRow)}>
 
                     <div className={style.linkAvatar}>
@@ -19,7 +24,7 @@ function FriendLinkUnit({ avatar, href, title, info }: FriendLink) {
                         <div className={style.linkInfo}>{info}</div>
                     </div>
                 </div>
-            </a>
+            </Link>
         </div>
     );
 }
