@@ -1,19 +1,20 @@
 import FriendLink from 'interfaces/friend-link';
 
 const FriendLinks: FriendLink[] = [
+    // {
+    //     avatar: "https://galgamer.moe/image/main/galgroup.webp",
+    //     href: "https://t.me/Galgamer",
+    //     title: "Galgame 交流群",
+    //     info: "我們的討論區"
+    // }, {
+    //     avatar: "https://galgamer.moe/image/main/Gdiscord.webp",
+    //     href: "https://discord.gg/6RaztntJ2N",
+    //     title: "Galgamer Discord",
+    //     info: "Discord 上的討論區"
+    // }, 
     {
-        avatar: "https://galgamer.moe/image/main/galgroup.webp",
-        href: "https://t.me/Galgamer",
-        title: "Galgame 交流群",
-        info: "我們的討論區"
-    }, {
-        avatar: "https://galgamer.moe/image/main/Gdiscord.webp",
-        href: "https://discord.gg/6RaztntJ2N",
-        title: "Galgamer Discord",
-        info: "Discord 上的討論區"
-    }, {
         avatar: "https://galgamer.moe/image/main/kiriha2.webp",
-        href: "https://t.me/KiritouKurehar",
+        href: "https://t.me/KiritouKureha",
         title: "桐遠暮羽頻道",
         info: "編輯部的碎碎念（接受文章投稿！）"
     }, {
@@ -46,29 +47,29 @@ const FriendLinks: FriendLink[] = [
         title: "零件's Blog",
         info: "Tech Otakus Save The World"
     }
-    , {
-        avatar: "https://galgamer.moe/image/main/cloudflare.webp",
-        href: "https://www.cloudflare.com/",
-        title: "Cloudflare",
-        info: "❤️️Host on Cloudflare☁️️"
-    }
-    , {
-        avatar: "https://galgamer.moe/image/main/google.webp",
-        href: "https://www.google.com/",
-        title: "谷歌搜索",
-        info: "找資源不求人 上谷歌自己搜"
-    }
-    , {
-        avatar: "https://galgamer.moe/image/main/steam.ico",
-        href: "https://store.steampowered.com/",
-        title: "真・蒸汽平臺",
-        info: "什麼遊戲都能買到的境外勢力商店"
-    }, {
-        avatar: "https://galgamer.moe/image/main/hf.webp",
-        href: "https://store.hikarifield.co.jp/",
-        title: "光之領域",
-        info: "明目張膽往中國賣 Galgame 的商店"
-    }
+    // , {
+    //     avatar: "https://galgamer.moe/image/main/cloudflare.webp",
+    //     href: "https://www.cloudflare.com/",
+    //     title: "Cloudflare",
+    //     info: "❤️️Host on Cloudflare☁️️"
+    // }
+    // , {
+    //     avatar: "https://galgamer.moe/image/main/google.webp",
+    //     href: "https://www.google.com/",
+    //     title: "谷歌搜索",
+    //     info: "找資源不求人 上谷歌自己搜"
+    // }
+    // , {
+    //     avatar: "https://galgamer.moe/image/main/steam.ico",
+    //     href: "https://store.steampowered.com/",
+    //     title: "真・蒸汽平臺",
+    //     info: "什麼遊戲都能買到的境外勢力商店"
+    // }, {
+    //     avatar: "https://galgamer.moe/image/main/hf.webp",
+    //     href: "https://store.hikarifield.co.jp/",
+    //     title: "光之領域",
+    //     info: "明目張膽往中國賣 Galgame 的商店"
+    // }
 
 ];
 
