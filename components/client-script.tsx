@@ -6,7 +6,7 @@ import Script from "next/script";
 // a client side script that will be executed on the client side
 
 type Props = {
-    children: ReactNode & ReactNode[];
+    children: ReactNode | ReactNode[];
     src?: string;
 }
 

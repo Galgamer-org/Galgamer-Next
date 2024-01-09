@@ -8,7 +8,7 @@ import SmartImage from '../components/smart-image'
 import Link from 'next/link'
 import ClientScript from '../components/client-script'
 import { DetailedHTMLProps, ObjectHTMLAttributes } from 'react'
-import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
+// import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import VndbStats from '../components-widget/vndb-stats'
 import BsGallery from '../components-widget/bs-gallery'
 
@@ -131,8 +131,8 @@ export default function markdownToHtml(markdown: string): ReactNode {
         }}></div>;
       },
       a(props) {
-        const { href, ...others } = props;
-        return <Link href={href} {...others} />;
+        const { href, ref, ...others } = props;
+        return <Link href={href || ''} {...others} />;
       },
       style(props) {
         //console.log(props.children);
@@ -149,7 +149,7 @@ export default function markdownToHtml(markdown: string): ReactNode {
 }
 
 
-type TemplateProps = Omit<DetailedHTMLProps<ObjectHTMLAttributes<HTMLObjectElement>, HTMLObjectElement>, "ref"> & ReactMarkdownProps | Omit<DetailedHTMLProps<ObjectHTMLAttributes<HTMLObjectElement>, HTMLObjectElement>, "ref">
+type TemplateProps = Omit<DetailedHTMLProps<ObjectHTMLAttributes<HTMLObjectElement>, HTMLObjectElement>, "ref"> | Omit<DetailedHTMLProps<ObjectHTMLAttributes<HTMLObjectElement>, HTMLObjectElement>, "ref">
 
 function Template(props: TemplateProps): ReactNode {
   const { data, type, ...others } = props;

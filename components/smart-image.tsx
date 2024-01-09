@@ -3,16 +3,15 @@
 
 import Image from 'next/image'
 import { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
-import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
+// import { ReactMarkdownProps } from 'react-markdown/lib/ast-to-react'
 import { join } from 'path'
 import probe from 'probe-image-size'
 import { createReadStream, existsSync } from 'fs'
 import { getNomalizedImagePath } from '../lib/image-loader'
 import imageLoader from '../lib/image-loader'
 import { onlineDirectory, rootDirectory } from '../lib/constants'
-import is from 'date-fns/esm/locale/is/index.js'
 
-type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref"> & ReactMarkdownProps) | Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">
+type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref"> ) | Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">
 
 const blackListDomains = [
     'zhimg.com',
