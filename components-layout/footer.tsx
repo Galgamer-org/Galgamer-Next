@@ -89,8 +89,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li className={cn(style.ourLinksItem)}>
-                <Link href="/status">
+                <Link href="https://speed.cloudflare.com">
                   網路不正常？
+                </Link>
+              </li>
+              <li className={cn(style.ourLinksItem)}>
+                <Link href="https://github.com/Galgamer-org/Draw-Guess-Keywords">
+                  召喚美少女！
                 </Link>
               </li>
             </ul>

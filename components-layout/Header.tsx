@@ -92,6 +92,16 @@ export default function Header() {
                     Music
                   </Nav.Link>
                 </Nav.Item>
+                {/* separator */}
+                <hr className='text-white d-lg-none' />
+                {/* close button */}
+                <Nav.Item onClick={() => setExpanded(false)}>
+                  <Nav.Link className={cn(style.navbarText, 'd-lg-none')}>
+                    <i className="bi-x-lg me-1"></i>
+                    Close
+                  </Nav.Link>
+                </Nav.Item>
+
               </Nav>
 
             </Offcanvas.Body>
