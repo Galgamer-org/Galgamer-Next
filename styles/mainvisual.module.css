@@ -3,6 +3,7 @@
     background-color: var(--channel-board-bg-color);
     position: relative;
     overflow: hidden;
+    color: var(--text-color);
 }
 
 .banner .bgMasked {

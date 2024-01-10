@@ -43,14 +43,14 @@
 }
 
 .link:hover {
-    color: black;
-    background-color: rgb(226, 234, 234);
+    color: var(--text-color);
+    background-color: var(--link-hover-bg-color);
 
 }
 
 
 .link:hover .linkTitle {
-    color: var(--link-hover-color);
+    /* color: var(--link-hover-color); */
 
 }
 

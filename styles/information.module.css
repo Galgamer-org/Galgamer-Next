@@ -1,1 +1,3 @@
- 
+.terms, .legal, .privacy {
+    --channel-board-bg-color: var(--board-bg-color);
+}

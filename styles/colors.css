@@ -7,24 +7,14 @@
 /* light theme */
 
 :root {
-    --text-color: #454545;
-    --holo-text-color: #ffffff;
-    --h2-after-square-color: #999be3;
-    --bg-box-color: #ffffff;
-    --header-bg-color: #ffffff;
-    --nav-link-active-color: #6051bc;
-    --a-link-color: #6051bc;
-    --footer-bg-color: #fcfcfc;
-    --html-bg-color: #ffffff;
-    --bg-circle-color: #9babf3;
-    --modal-bg-color: #ffffff;
-    --link-box-hover-color: #e2e0e8;
-    --footer-bg-color: #fffd;
-
-    --body-bg-color: #eee;
+    /* html body 主背景顏色 */
+    --body-bg-color: #eefcff;
     /* 中央版面背景色: 0; */
     --board-bg-color: #fffd;
-    /* 文字顏色: 0; */
+    /* 底欄背景顏色 */
+    --footer-bg-color: #fcfcfc;
+
+    /* 主文字顏色 */
     --text-color: #405b55;
     /* 二級文字顏色: 0; */
     --sec-text-color: #484646;
@@ -35,33 +25,64 @@
     /* 鼠標指向的文章連結顏色: 0; */
     --post-link-color: #0366d6;
     /* 頁面頂端連結 和文章連結 鼠標指向顏色: 0; */
-    --link-hover-color: #90b44b;
+    --link-hover-color: #4bb2b4;
     --link-hover-bg-color: #f8f9fa88;
     /* 頂欄顏色: 0; */
-    --navbar-bg-color: #66bab7;
+    --navbar-bg-color: #66a3ba;
     /* 頂欄文字顏色: 0; */
     --navbar-text-color: #fff;
-    --scrollbar-color: #c4c6c9;
-    --scrollbar-hover-color: #a6a6a6;
+    /* 首頁小書籤背景顏色 */
+    --bookmark-bg-color: rgb(252, 238, 219);
 }
 
 /* dark theme */
 /* dark wine red style */
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
-        --text-color: #eaeaea;
-        --holo-text-color: #000000;
-        --h2-after-square-color: rgb(74, 77, 118);
-        --bg-box-color: #27272e;
-        --header-bg-color: #383843;
-        --nav-link-active-color: rgb(179, 184, 235);
-        --a-link-color: rgb(179, 184, 235);
-        --footer-bg-color: #2e2e36;
-        --html-bg-color: #000000;
-        --bg-circle-color: rgb(65, 59, 110);
-        --modal-bg-color: #2e2e36;
-        --link-box-hover-color: rgb(122, 120, 135);
-        --footer-bg-color: #fcfcfc;
+        --color-mode: 'dark'
     }
-} */
+
+    :root:not([data-user-color-scheme]) {
+        --body-bg-color: rgb(23, 22, 23);
+        --board-bg-color: #38343a;
+        --footer-bg-color: #2c292d;
+ 
+        --text-color: #f4ecf7;
+        --sec-text-color: #bfbfbf;
+        --post-text-color: #e3e3e3;
+        --post-heading-color: #d1d1d1;
+        --post-link-color: #F4A5AE;
+        --link-hover-color: #dc8dea;
+        --link-hover-bg-color: #7d6e8b;
+        --navbar-bg-color: #423f4a;
+        --navbar-text-color: #f4ecf7;
+        --bookmark-bg-color: #7c6c55;
+    }
+
+    body img {
+        filter: brightness(0.94);
+    }
+}
+
+[data-user-color-scheme=dark] {
+    --body-bg-color: rgb(23, 22, 23);
+    --board-bg-color: #322f33;
+    --footer-bg-color: #2c292d;
+
+    --text-color: #f4ecf7;
+    --sec-text-color: #bfbfbf;
+    --post-text-color: #e3e3e3;
+    --post-heading-color: #d1d1d1;
+    --post-link-color: #F4A5AE;
+    --link-hover-color: #dc8dea;
+    --link-hover-bg-color: #7d6e8b;
+    --navbar-bg-color: #423f4a;
+    --navbar-text-color: #f4ecf7;
+    --bookmark-bg-color: #7c6c55;
+
+    body img {
+        filter: brightness(0.94);
+    }
+}
+

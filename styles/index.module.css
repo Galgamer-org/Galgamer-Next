@@ -96,7 +96,7 @@
     max-width: 50%;
     width: 300px;
     height: 60px;
-    background-color: antiquewhite;
+    background-color: var(--bookmark-bg-color);
     position: relative;
     border-radius: var(--small-board-border-radius) var(--small-board-border-radius) 0 0;
 }

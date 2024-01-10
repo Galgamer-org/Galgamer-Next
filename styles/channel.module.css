@@ -5,23 +5,14 @@
     --channel-board-bg-color: #dbe6fbff;
     --channel-board-bg-color-grad: rgb(109, 136, 188);
     --channel-board-bg-color-dark: #c4d2f5bb;
-    
+    --text-color: #405b55;
 }
 
 .gamePostArea {
     --channel-board-bg-color: rgb(255, 245, 240);
     --channel-board-bg-color-grad: rgb(254, 244, 239);
     --channel-board-bg-color-dark: #f5e6e6bb;
-
-}
-
-.gamePostArea .banner {
-    /* background-image: 
-        linear-gradient(110deg, var(--channel-board-bg-color) 45% , #00000000 70%),
-        url('/site-assets/for-you2.webp'),
-        linear-gradient(110deg, var(--channel-board-bg-color) 50%, var(--channel-board-bg-color-grad) 90%);
-    background-position: 0, bottom 0px right calc(min(0px, 100% * 0.3 - 20px)), 0;
-    background-size: auto, auto 100%, auto; */
+    --text-color: #56405b;
 }
 
 /* use global to select the class name in other files */
