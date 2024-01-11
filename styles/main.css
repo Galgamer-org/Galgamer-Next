@@ -15,7 +15,7 @@
       --sec-text-color: #bfbfbf;
       --post-text-color: #e3e3e3;
       --post-heading-color: #d1d1d1;
-      --post-link-color: #1589e9;
+      --title-link-color: #1589e9;
       --link-hover-color: #a5dee4;
       --link-hover-bg-color: #364151;
       --navbar-bg-color: #fcfaf2;
@@ -33,7 +33,7 @@
   --sec-text-color: #bfbfbf;
   --post-text-color: #e3e3e3;
   --post-heading-color: #d1d1d1;
-  --post-link-color: #1589e9;
+  --title-link-color: #1589e9;
   --link-hover-color: #a5dee4;
   --link-hover-bg-color: #364151;
   --navbar-bg-color: #fcfaf2;
@@ -60,10 +60,20 @@ body {
 
   /* background-image: 
   repeating-radial-gradient( circle at -50% 150%, transparent 0, #e5f7f4 50px ), 
-  repeating-linear-gradient( #44ebf755, var(--navbar-bg-color) );
-  background-attachment: fixed; */
-  background-image: url('/site-assets/confetti-pattern.svg');
+  repeating-linear-gradient( #44ebf755, var(--navbar-bg-color) );*/
+  background-attachment: fixed;
+  /* background-image: url('/site-assets/confetti-pattern.svg'); */
+  background-image:
+  radial-gradient(
+    circle  at 50% -80%,
+    #00000000 80%,
+    var(--body-bg-color-grad) 130%
+  );
   background-color: var(--body-bg-color);
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  color: var(--post-heading-color);
 }
 
 .smart-image {
@@ -85,8 +95,13 @@ header {
 }
 
 body a {
-  color: var(--text-color);
+  /* color: var(--text-color); */
+  color: var(--title-link-color);
   transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.preview-title:not(:hover) {
+  color: var(--title-link-color);
 }
 
 body a:hover {

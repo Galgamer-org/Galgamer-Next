@@ -50,8 +50,7 @@
 
 
 .link:hover .linkTitle {
-    /* color: var(--link-hover-color); */
-
+    color: var(--link-hover-color);
 }
 
 .link:hover .linkAvatar {
@@ -66,6 +65,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: var(--title-link-color);
 }
 
 .linkInfo {
@@ -75,6 +75,6 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-
+    color: var(--text-color);
 }
 

@@ -9,19 +9,25 @@
 }
 
 .gamePostArea {
-    --channel-board-bg-color: rgb(255, 245, 240);
-    --channel-board-bg-color-grad: rgb(254, 244, 239);
+    --channel-board-bg-color: #fff4fb;
+    --channel-board-bg-color-grad: #fff9f4;
     --channel-board-bg-color-dark: #f5e6e6bb;
     --text-color: #56405b;
 }
 
 /* use global to select the class name in other files */
 .gamePostArea :global(.mainvisualBgMasked) {
-    background-color: #741144;
+    background-color: #7e176a;
     mask-image: url('/site-assets/for-you.webp');
     mask-repeat: no-repeat;
     mask-size: auto 95%;
     mask-position: bottom 0px right calc(min(20px, 100% * 0.3 - 20px));
+}
+
+.gamePostArea > :global(.mainvisualBanner) {
+    background-image: 
+    linear-gradient(110deg, var(--channel-board-bg-color) 35%, var(--channel-board-bg-color-grad) 50%);
+
 }
 
 

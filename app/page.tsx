@@ -151,7 +151,7 @@ function MoreStories({
         <div className={cn(style.viewAllHr, 'ms-auto')}>
         </div>
         <div className={cn('ms-2')}>
-          <Link className="h4 fw-bold font-serif text-decoration-none" href={jumpUrl || '/article'}>
+          <Link className="fs-2 fw-bold font-serif text-decoration-none" href={jumpUrl || '/article'}>
             View All
             <i className="bi-arrow-right-circle-fill ms-2"></i>
           </Link>

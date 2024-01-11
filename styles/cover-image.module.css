@@ -1,6 +1,6 @@
 .coverImage {
     overflow: hidden;
-    transition: filter 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     /* max-height: 330px; */
     object-fit: cover;
     aspect-ratio: 16/10;
@@ -14,7 +14,7 @@
     transform: scale(1.1); */
 
     /* become dark when hover, using filter */
-    filter: brightness(0.9);
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 768px) {

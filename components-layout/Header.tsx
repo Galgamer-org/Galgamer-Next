@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header className={style.header}>
-      <Navbar className={cn(style.navbar, 'navbar box-shadow')} expand="lg" expanded={expanded}>
+      <Navbar className={cn(style.navbar, 'fw-bold navbar box-shadow')} expand="lg" expanded={expanded}>
         <Container>
           <div className={cn("d-lg-none", style.navLeftSpace)}></div>
           <Link href='/' className={cn(style.navbarBrand, 'navbar-brand font-serif mx-auto')}>

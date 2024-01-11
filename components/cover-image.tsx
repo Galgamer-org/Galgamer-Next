@@ -18,7 +18,7 @@ export default function CoverImage ({ title, src, slug, abbr, className }: Props
     <SmartImage
       src={src}
       alt={`Cover Image for ${title}`}
-      className={cn('box-shadow w-100', style.coverImage, className)}
+      className={cn(' w-100', style.coverImage, className)}
     />
   )
   return (

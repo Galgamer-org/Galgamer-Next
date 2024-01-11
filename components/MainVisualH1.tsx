@@ -18,7 +18,7 @@ export default function MainVisualH1(
                 className={cn(style.banner, 'container-board mx-auto my-4 box-shadow d-flex align-items-center mainvisualBanner')}
             >
                 <div className={cn('w-100 h-100 mainvisualBgMasked', style.bgMasked)}></div>
-                <div className={cn('w-100 px-3 px-md-4')}>
+                <div className={cn('w-100 px-3 px-lg-5')}>
                     <h1 className="text-4xl fw-bold">
                         {title}
                     </h1>
