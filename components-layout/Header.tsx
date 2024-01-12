@@ -10,6 +10,7 @@ import { useState, useEffect, use } from 'react';
 import cn from 'classnames'
 import style from 'styles/header.module.css'
 import Logo from 'components/logo'
+import  SetTheme  from 'components-widget/theme.util'
 
 const SiteLogo = '/img/logo.png'
 
@@ -92,6 +93,12 @@ export default function Header() {
                     Music
                   </Nav.Link>
                 </Nav.Item>
+
+                {/*主题切换*/}
+                <Nav.Item>
+                  <SetTheme />
+                </Nav.Item>
+
                 {/* separator */}
                 <hr className='text-white d-lg-none' />
                 {/* close button */}

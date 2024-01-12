@@ -75,7 +75,37 @@
     }
 }
 
-[data-user-color-scheme=dark] {
+:root[data-theme='light'] {
+    /* html body 主背景顏色 */
+    --body-bg-color: #eefcff;
+    --body-bg-color-grad: #51a6c0;
+    /* 中央版面背景色: 0; */
+    --board-bg-color: #fffd;
+    /* 底欄背景顏色 */
+    --footer-bg-color: #fcfcfc;
+
+    /* 主文字顏色 */
+    --text-color: #405b55;
+    /* 二級文字顏色: 0; */
+    --sec-text-color: #484646;
+    /* 文章正文顏色: 0; */
+    --post-text-color: #13201f;
+    /* 文章標題顏色: 0; */
+    --post-heading-color: var(--light-secondary-color);
+    /* 鼠標指向的大連結顏色: 0; */
+    --title-link-color: var(--light-secondary-color);
+    /* 頁面頂端連結 和文章連結 鼠標指向顏色: 0; */
+    --link-hover-color: var(--light-primary-color);
+    --link-hover-bg-color: #e4e8eb88;
+    /* 頂欄顏色: 0; */
+    --navbar-bg-color: var(--light-primary-color);
+    /* 頂欄文字顏色: 0; */
+    --navbar-text-color: #fff;
+    /* 首頁小書籤背景顏色 */
+    --bookmark-bg-color: rgb(252, 238, 219);
+}
+
+:root[data-theme='dark'] {
     --body-bg-color: #1c1d27;
     --board-bg-color: #31353f;
     --footer-bg-color: #2c3039;
