@@ -11,6 +11,11 @@
     border: none;
 }
 .upwardIcon {
-    margin-top: -0.5em;
+    margin-top: -.5em;
 }
-
+@media (max-width: 900px) {
+    .upwardIcon {
+        margin-top: 0;
+        margin-left: -.75em;
+    }
+}

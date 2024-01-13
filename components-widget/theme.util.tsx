@@ -52,10 +52,14 @@ const SetTheme: React.FC<SetThemeProps> = () => {
         };
     }, [theme]);
 
+    useEffect(() => {
+        setTheme(localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    }, []);
+
     return (
         <>
             <button key="themeToggle" onClick={toggleTheme} data-theme={theme} className={css.toggle}>
-                <i className={`bi ${theme === 'dark' ? 'bi-moon' : 'bi-sun'} me-1 ${style.navbarText} ${css.upwardIcon}`}></i>
+                <i className={`bi ${theme === 'dark' ? 'bi-moon' : 'bi-sun'}-fill me-1 ${style.navbarText} ${css.upwardIcon}`}></i>
             </button>
         </>
     );
