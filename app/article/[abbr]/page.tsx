@@ -17,7 +17,7 @@ export async function generateStaticParams() {
     }
   })
   //console.log(result)
-  return result;
+  return result.slice(0, 5);
 }
 
 
