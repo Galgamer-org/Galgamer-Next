@@ -54,6 +54,7 @@ export default function RootLayout({
         <main className='main-container'>
           {children}
         </main>
+        <div className='my-3' />
         <Footer />
       </body>
     </html>

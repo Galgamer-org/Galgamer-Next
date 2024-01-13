@@ -8,8 +8,8 @@ import Logo from 'components/logo'
 
 export default function Footer() {
   return (
-    <footer id={style.footer} className={cn('box-shadow')}>
-      <Container className={cn('p-4 mt-5')}>
+    <footer id={style.footer} className={cn('box-shadow mt-auto')}>
+      <Container className={cn('p-4')}>
         <Row className={cn('py-3', style.footerRow)}>
 
           {/* LOGO */}
