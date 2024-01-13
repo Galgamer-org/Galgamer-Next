@@ -3,45 +3,6 @@
   --small-board-border-radius: 10px;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-      --color-mode:'dark'
-  }
-
-  :root:not([data-user-color-scheme]) {
-      --body-bg-color: #1c1c1c;
-      --board-bg-color: #333333;
-      --text-color: #e3e3e3;
-      --sec-text-color: #bfbfbf;
-      --post-text-color: #e3e3e3;
-      --post-heading-color: #d1d1d1;
-      --title-link-color: #1589e9;
-      --link-hover-color: #a5dee4;
-      --link-hover-bg-color: #364151;
-      --navbar-bg-color: #fcfaf2;
-      --navbar-text-color: #9b9a95;
-      --scrollbar-color: #687582;
-      --scrollbar-hover-color: #9da8b3
-  }
-
-}
-
-[data-user-color-scheme=dark] {
-  --body-bg-color: #1c1c1c;
-  --board-bg-color: #333333;
-  --text-color: #e3e3e3;
-  --sec-text-color: #bfbfbf;
-  --post-text-color: #e3e3e3;
-  --post-heading-color: #d1d1d1;
-  --title-link-color: #1589e9;
-  --link-hover-color: #a5dee4;
-  --link-hover-bg-color: #364151;
-  --navbar-bg-color: #fcfaf2;
-  --navbar-text-color: #9b9a95;
-  --scrollbar-color: #687582;
-  --scrollbar-hover-color: #9da8b3
-} */
-
 html {
   width: 100%;
   margin: 0;
@@ -50,7 +11,6 @@ html {
 
 body {
   transition: color .2s ease-in-out, background-color .2s ease-in-out;
-  background-color: var(--body-bg-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -61,15 +21,13 @@ body {
   /* background-image: 
   repeating-radial-gradient( circle at -50% 150%, transparent 0, #e5f7f4 50px ), 
   repeating-linear-gradient( #44ebf755, var(--navbar-bg-color) );*/
-  background-attachment: fixed;
   /* background-image: url('/site-assets/confetti-pattern.svg'); */
-  background-image:
-  radial-gradient(
-    circle  at 50% -80%,
-    #00000000 80%,
-    var(--body-bg-color-grad) 130%
-  );
-  background-color: var(--body-bg-color);
+  background:
+    radial-gradient(
+      circle  at 50% -80%,
+      #00000000 80%,
+      var(--body-bg-color-grad) 130%
+    ) fixed, var(--body-bg-color);
 }
 
 .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {

@@ -1,46 +1,60 @@
 import { useState, useEffect } from "react";
 
 import Script from 'next/script';
+import Nav from 'react-bootstrap/Nav';
+
 
 import css from '../styles/theme.util.module.css';
 import style from 'styles/header.module.css'
+import cn from 'classnames'
+import { set } from "date-fns";
+import { th } from "date-fns/locale";
 
-interface SetThemeProps {}
+interface SetThemeProps { }
 
 const SetTheme: React.FC<SetThemeProps> = () => {
-    const [theme, setTheme] = useState<string | undefined>();
+    const themes: string[] = ['light', 'dark'];
+    const [theme, setTheme] = useState<string>(null);
+    const [followSystem, setFollowSystem] = useState<boolean>(true);
 
     const toggleTheme = () => {
-        const themes: string[] = ['light', 'dark'];
         const currentIndex = themes.indexOf(theme as string);
         const nextTheme = themes[(currentIndex + 1) % themes.length];
         setTheme(nextTheme);
+        setFollowSystem(false);
+        localStorage.setItem('theme', nextTheme);
     };
 
-    const buttonIcon = () => {
-
-        switch (theme) {
-            case 'dark':
-                return 'Dark';
-            case 'light':
-                return 'Light';
-            default:
-                return '';
-        }
-    };
-
-    const maybeTheme = () => {
-        const themeLocalStorage = localStorage.getItem('theme');
-        const themeSystem = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        return themeLocalStorage ?? themeSystem;
-    };
+    // const getThemeNow = () => {
+    //     // const themeSetByHTML = (document.querySelector(':root') as Element & HTMLElement).dataset.theme;
+    //     const themeSystem = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    //     return theme ?? themeSystem;
+    // };
 
     useEffect(() => {
-        (document.querySelector(':root') as Element & HTMLElement).dataset.theme = theme ?? maybeTheme();
-        localStorage.setItem('theme', theme ?? maybeTheme());
+        // setTheme(localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+        // read current theme from DOM and set is if followSystem is true
+        const themeData = localStorage.getItem('theme');
+        if (themeData){
+            setFollowSystem(false);
+            setTheme(themeData);
+        } else {
+            setFollowSystem(true);
+            setTheme((window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+        }
+
+    }, []);
+
+    useEffect(() => {
+        if (theme) {
+            (document.querySelector(':root') as Element & HTMLElement).dataset.theme = theme;
+        }
 
         const useSetTheme = (e: MediaQueryListEvent) => {
             setTheme(e.matches ? 'dark' : 'light');
+            setFollowSystem(true);
+            localStorage.removeItem('theme');
+            //console.log('Sytem theme changed to: ', e.matches ? 'dark' : 'light');
         };
 
         const watchSysTheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -52,15 +66,20 @@ const SetTheme: React.FC<SetThemeProps> = () => {
         };
     }, [theme]);
 
-    useEffect(() => {
-        setTheme(localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-    }, []);
+    let darkmode = '';
+    if (followSystem) {
+        darkmode = 'Follow System';
+    } else {
+        darkmode = theme === 'dark' ? 'On' : 'Off';
+    }
 
     return (
         <>
-            <button key="themeToggle" onClick={toggleTheme} data-theme={theme} className={css.toggle}>
-                <i className={`bi ${theme === 'dark' ? 'bi-moon' : 'bi-sun'}-fill me-1 ${style.navbarText} ${css.upwardIcon}`}></i>
-            </button>
+            <Nav.Link key="themeToggle" onClick={toggleTheme} data-theme={theme} className={cn(style.navbarText)}>
+                <i className={`bi ${css.icon}`}></i> <span 
+                    className="d-lg-none"
+                > Dark mode: {darkmode}</span>
+            </Nav.Link>
         </>
     );
 };

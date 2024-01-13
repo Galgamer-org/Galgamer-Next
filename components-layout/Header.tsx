@@ -10,7 +10,7 @@ import { useState, useEffect, use } from 'react';
 import cn from 'classnames'
 import style from 'styles/header.module.css'
 import Logo from 'components/logo'
-import  SetTheme  from 'components-widget/theme.util'
+import SetTheme from 'components-widget/theme.util'
 
 const SiteLogo = '/img/logo.png'
 
@@ -207,13 +207,13 @@ function useWindowSize() {
         height: window.innerHeight,
       });
     }
-    
+
     // Add event listener
     window.addEventListener("resize", handleResize);
-     
+
     // Call handler right away so state gets updated with initial window size
     handleResize();
-    
+
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount
