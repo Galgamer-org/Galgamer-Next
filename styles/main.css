@@ -27,7 +27,10 @@ body {
       circle  at 50% -80%,
       #00000000 80%,
       var(--body-bg-color-grad) 130%
-    ) fixed, var(--body-bg-color);
+    ) fixed, linear-gradient(
+      var(--body-bg-color),
+      var(--body-bg-color)
+    );
 
   display: flex;
   flex-direction: column;

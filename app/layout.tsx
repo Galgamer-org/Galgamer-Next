@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@/styles/colors.css'
-import '@/styles/main.css'
 import '@/styles/s3fonts-woff-woff2.css'
 import '@/styles/fonts.css'
+import '@/styles/main.css'
 import Footer from '../components-layout/footer'
 import Header from '../components-layout/Header'
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'zh_TW',
-    url: 'https://galgamer.moe',
+    url: 'https://next.galgamer.moe',
     title: 'Galgamer',
     description: 'Galgamer Home Page',
   },
