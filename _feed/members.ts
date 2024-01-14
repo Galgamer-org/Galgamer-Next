@@ -42,7 +42,7 @@ export const staffs: MemberList = {
 
     'Kaminotomodachi': {
         name: "Kaminotomodachi",
-        photo: "/member-icon/staff/Kaminotomodachi.webp",
+        photo: "/member-icon/staff/kaminotomodachi.webp",
         bio: "",
 
     },
@@ -56,7 +56,7 @@ export const staffs: MemberList = {
 
     'Blyatman': {
         name: "Blyatman",
-        photo: "/member-icon/staff/Blyatman.webp",
+        photo: "/member-icon/staff/blyatman.webp",
         bio: "啊嚏",
 
     },
@@ -70,7 +70,7 @@ export const staffs: MemberList = {
 
     'Nori ko': {
         name: "Nori ko",
-        photo: "/member-icon/staff/Nori ko.webp",
+        photo: "/member-icon/staff/nori ko.webp",
         bio: "",
 
     },
@@ -84,14 +84,14 @@ export const staffs: MemberList = {
 
     'Triko 🐾': {
         name: "Triko 🐾",
-        photo: "/member-icon/staff/Triko.webp",
+        photo: "/member-icon/staff/triko.webp",
         bio: "When the death come I will be free. 🫵 Big floppa is watching you.",
 
     },
 
     'X': {
         name: "X",
-        photo: "/member-icon/staff/X.webp",
+        photo: "/member-icon/staff/x.webp",
         bio: "Printf",
 
     },
@@ -105,7 +105,7 @@ export const staffs: MemberList = {
 
     'Hz ❁ HoneyWorks': {
         name: "Hz ❁ HoneyWorks",
-        photo: "/member-icon/staff/HZ.webp",
+        photo: "/member-icon/staff/hz.webp",
         bio: "",
 
     },
@@ -119,7 +119,7 @@ export const members: MemberList = {
     },
     'YUZU': {
         name: "YUZU",
-        photo: "/member-icon/group/YUZU.webp",
+        photo: "/member-icon/group/yuzu.webp",
         bio: "逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱 逢樱",
     },
     '星月草': {
@@ -129,17 +129,17 @@ export const members: MemberList = {
     },
     'RRRRRz': {
         name: "RRRRRz",
-        photo: "/member-icon/group/RRRRRz.webp",
+        photo: "/member-icon/group/rrrrrz.webp",
         bio: "",
     },
     'SeoiSoeng': {
         name: "SeoiSoeng",
-        photo: "/member-icon/group/SeoiSoeng.webp",
+        photo: "/member-icon/group/seoisoeng.webp",
         bio: "幸福的活下去",
     },
     'S-nian': {
         name: "S-nian",
-        photo: "/member-icon/group/S-nian.webp",
+        photo: "/member-icon/group/s-nian.webp",
         bio: "努力提升绘画能力 然后我要让蓝姐姐把自己当成圣诞礼物送给我",
     },
     '千空': {
@@ -174,7 +174,7 @@ export const members: MemberList = {
     },
     'KUN': {
         name: "KUN",
-        photo: "/member-icon/group/KUN.webp",
+        photo: "/member-icon/group/kun.webp",
         bio: "KUN IS THE CUTEST! 鲲最可爱！萌萌 galgame 群：https://t.me/kungalgame",
     }
 

@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 
         return {name: encodeURIComponent(key) }
     });
-    console.log(params);
+
 
     return params;
 }
