@@ -84,7 +84,7 @@ export default function Header() {
                 <Nav.Item onClick={() => setExpanded(false)}>
                   <Nav.Link as={Link} href="/members" className={cn(style.navbarText, '')}>
                     <i className="bi-person-fill me-1"></i>
-                    Members
+                    Characters
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item onClick={() => setExpanded(false)}>

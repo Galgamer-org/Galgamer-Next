@@ -14,8 +14,8 @@ export default function Member() {
         <Container className="px-2">
             <MainVisualH1
                 title="社區成員"
-                description="Our Members"
-                details="这里是编辑部的成员列表页面，点击图片即可进入其个人主页(施工中)"
+                description="Our Characters"
+                details="这里是社区成员列表页面，点击图片即可进入其个人主页(施工中)"
                 cssClass={style.memberMainVisual}
             >
             </MainVisualH1>
