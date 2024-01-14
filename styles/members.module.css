@@ -1,50 +1,10 @@
-.Body{
-    max-width: 1256px;
-    width : 70%;
-    margin: 0 auto;
-    position: relative;
-    background-color: var(--board-bg-color);
-    border-radius: var(--large-board-border-radius);
-    backdrop-filter: blur(10px);
-    z-index: 10;
-    min-height : 65vh;
+.memberMainVisual {
+    --channel-board-bg-color: var(--board-bg-color);
+}
 
 
-}
-.CardAvatar:hover {
-    filter: brightness(0.5);
-}
-.CardAvatar{
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: filter 0.5s ease;
-}
-.Card{
-    padding: 1.5em;
-    border-radius: 0.5em;
-
-}
 .MembersBody{
-    padding: 1.5em;
-    border-radius: 0.5em;
+    padding: 25px;
+    margin: 0 auto;
 }
-.MembersPhoto{
 
-}
-.MembersDetails{
-    font-size: 1rem;
-}
-.MembersName{
-    font-size: 1.2em;
-}
-.InfoText{
-    font-size: 1.5rem;
-    padding: 1.5em;
-}
-.InfoTitle{
-    width: 40%;
-    text-align: center;
-    font-size: 2.0em;
-}

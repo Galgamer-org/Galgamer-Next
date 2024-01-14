@@ -1,81 +1,53 @@
-import Members from "_feed/members";
-import members_css from "styles/members.module.css";
+import { staffs, members } from "_feed/members";
+import style from "styles/members.module.css";
 import cn from 'classnames';
-import {Col, Row} from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import Member from "interfaces/member";
+import Container from 'components-layout/container'
+import MainVisualH1 from "@/components/MainVisualH1";
+import FriendLinkUnit from "@/components/FriendLinkUnit";
+import BookmarkContainer from "@/components/bookmark-container";
 
-function Body() {
-    return (
-        <div className={`${members_css.Body}`}>
-            <Row>
-                <PageInfo/>
-            </Row>
-            <MembersBody/>
-        </div>
-    )
-}
-
-function MembersBody() {
-    return (
-        <div className={members_css.MembersBody}>
-            <Row>
-                {Object.values(Members).map((value: Member, index) => (
-                    <Col key={index} className={cn('col-12 col-md-6 col-xl-3')}>
-                        <MemberCard member={value} />
-                    </Col>
-                ))}
-            </Row>
-        </div>
-    );
-}
-
-
-function MemberCard({ member }: { member: Member }) {
-    return (
-        <div className={members_css.Card}>
-            <Row>
-                <Col md={4} sm={3}>
-                    <div className={members_css.MembersPhoto}>
-                        <a href={`/members/${member.name}`}>
-                            <img src={member.photo} className={members_css.CardAvatar} alt="Member Avatar" />
-                        </a>
-                    </div>
-                </Col>
-                <Col md={8} sm={9}>
-                    <div className={members_css.MembersDetails}>
-                        <p className={members_css.MembersName}>{member.name}</p>
-                        <p>{member.bio}</p>
-                    </div>
-                </Col>
-            </Row>
-        </div>
-    );
-}
-
-
-function PageInfo() {
-    return (
-        <div>
-            <Row >
-                <div className={members_css.InfoTitle}>
-                    Members
-                </div>
-            </Row>
-            <Row>
-                <div className={members_css.InfoText}>
-                    <p>
-                        这里是编辑部的成员列表页面，点击图片即可进入其个人主页(施工中)
-                    </p>
-                </div>
-            </Row>
-        </div>
-    )
-}
 
 export default function Member() {
     return (
-        <div>
-            <Body/>
+        <Container className="px-2">
+            <MainVisualH1
+                title="社區成員"
+                description="Our Members"
+                details="这里是编辑部的成员列表页面，点击图片即可进入其个人主页(施工中)"
+                cssClass={style.memberMainVisual}
+            >
+            </MainVisualH1>
+            <BookmarkContainer title={
+                <><i className="bi bi-wrench me-2"></i>Staff</>
+            }>
+                <MembersBody list={staffs} />
+            </BookmarkContainer>
+            <BookmarkContainer title={
+                 <><i className="bi bi-emoji-wink-fill me-2"></i>一般通過羣友</>
+            }>
+                <MembersBody list={members} />
+            </BookmarkContainer>
+        </Container>
+    );
+}
+
+
+function MembersBody({ list }: { list?: Record<string, Member> }) {
+    return (
+        <div className={style.MembersBody}>
+            <Row>
+                {Object.values(list).map((value: Member, index) => (
+                    <FriendLinkUnit
+                        key={index}
+                        title={value.name}
+                        href={`/members/${value.name}`}
+                        avatar={value.photo}
+                        info={value.bio}
+                    ></FriendLinkUnit>
+                ))}
+            </Row>
         </div>
     );
 }

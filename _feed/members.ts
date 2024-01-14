@@ -10,7 +10,7 @@ import Member from "interfaces/member";
 
 type MemberList = Record<string, Member>;
 
-const Members: MemberList = {
+export const staffs: MemberList = {
     '桐遠暮羽': {
         name: "桐遠暮羽",
         photo: "/member-icon/kiriha.webp",
@@ -31,7 +31,6 @@ const Members: MemberList = {
         name: "Patchouli Knowledge",
         photo: "/member-icon/patchouli.jpg",
         bio: "",
-
     },
 
     'kaban':{
@@ -42,14 +41,20 @@ const Members: MemberList = {
     }
 };
 
-export default Members;
+export const members: MemberList = {
+    '桐遠暮羽': {
+        name: "桐遠暮羽",
+        photo: "/member-icon/kiriha.webp",
+        bio: "弱小可憐",
+    },
+};
 
 export function getMember(name: string): Member {
     let result: Member | undefined;
     if (name === undefined) {
         result = undefined;
     } else {
-        result = Members[name];
+        result = staffs[name] ?? members[name];
     }
     if (result === undefined) {
         //console.error(`Member ${name} not found`);

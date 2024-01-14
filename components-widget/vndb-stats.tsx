@@ -2,10 +2,7 @@ import style from "../styles/vndb-stats.module.css";
 import {getVisualNovelData} from '../data/vndb/d3done'
 import cn from 'classnames';
 import {ScoreVotesHistogramChart, ScoreVotesPieChart} from './vndb-stats-client'
-import members_css from "../styles/members.module.css";
 import vndbData from "../data/vndb/vndbInfo.json";
-import Members from "../_feed/members";
-import Member from "../interfaces/member";
 import {Col, Row} from 'react-bootstrap'
 
 async function basicInfo(id: string) {

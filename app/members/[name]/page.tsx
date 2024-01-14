@@ -1,8 +1,9 @@
-import Members from "_feed/members";
+import { staffs, members } from "_feed/members";
 import { getMember } from "_feed/members";
 import members_css from "styles/members.module.css";
 
 export async function generateStaticParams() {
+    const Members = {...staffs, ...members};
 
     const params = Object.entries(Members).map(([key, value]) => {
 
