@@ -6,13 +6,12 @@ import Avatar from '../components/avatar'
 import DateFormatter from '../components/date-formatter'
 import CoverImage from '../components/cover-image'
 import Link from 'next/link'
-import type Author from '../interfaces/member'
 import cn from 'classnames'
 import style from 'styles/index.module.css'
 import { Col, Row } from 'react-bootstrap'
-import { ReactNode } from 'react'
 import FriendLinkUnit from '@/components/FriendLinkUnit'
 import FriendLinks from '@/_feed/friend-links'
+import BookmarkContainer from '@/components/bookmark-container'
 
 
 export default function Index() {
@@ -192,21 +191,3 @@ function FriendLinkBody() {
 }
 
 
-function BookmarkContainer({ title, children }: { title: ReactNode, children?: ReactNode }) {
-  return (
-    <section className={style.bookmarkContainer}>
-      <div className={cn(style.bookmark, 'box-shadow p-2 ms-4 ms-md-5')}>
-        <div className={cn('d-flex o-hidden align-items-center h-100', style.sectionTitle)}>
-          <div className={cn('ms-2')}>
-            <h2 className={cn('text-decoration-none fw-bold fst-italic h3')}>
-              {title}
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div className={cn('container-board', 'mx-auto p-1 p-md-2 box-shadow')}>
-        {children}
-      </div>
-    </section>
-  );
-}

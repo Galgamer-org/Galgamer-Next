@@ -1,0 +1,35 @@
+.bookmarkContainer {
+    pointer-events: none;
+    position: relative;
+    margin: 1.5rem 0 0 0;
+}
+
+.bookmarkContainer > * {
+    pointer-events: all;
+}
+
+.bookmark {
+    max-width: 60%;
+    width: 300px;
+    height: 60px;
+    background-color: var(--bookmark-bg-color);
+    position: relative;
+    border-radius: var(--small-board-border-radius) var(--small-board-border-radius) 0 0;
+}
+
+.bookmark a {
+    color: var(--title-link-color);
+
+}
+
+.bookmark h2 {
+    margin: 0;
+}
+
+.sectionTitle {
+    margin: 0; 
+}
+
+.sectionTitle h2 {
+   display: inline-block;
+}
