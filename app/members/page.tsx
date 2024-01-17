@@ -59,7 +59,7 @@ function MembersBody({ list }: { list?: Record<string, Member> }) {
                     <FriendLinkUnit
                         key={index}
                         title={value.name}
-                        href={`/members/${value.name}`}
+                        href={`/members/${encodeURIComponent(value.name)}`}
                         avatar={value.photo}
                         info={value.bio}
                     ></FriendLinkUnit>

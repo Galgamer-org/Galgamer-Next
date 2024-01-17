@@ -7,4 +7,29 @@
     padding: 25px;
     margin: 0 auto;
 }
+.defaultText{
+    border-bottom: 1px dashed  var(--text-color);
+    padding: 25px;
 
+}
+
+.linkAvatar img{
+     width: 200px;
+     height: 200px;
+     border-radius: 9%;
+ }
+
+
+.InfoPhoto {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 25px;
+    width : 100%;
+}
+.InfoText{
+    width: 100%;
+    padding-left: 2em
+}
+.InfoBio{
+    font-size: 1.5em;
+}

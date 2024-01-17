@@ -18,7 +18,7 @@ export const staffs: MemberList = {
     },
     'SacalWiki': {
         name: "SacalWiki",
-        photo: "/member-icon/default.webp",
+        photo: "/member-icon/staff/sacal.webp",
         bio: "",
     },
 
@@ -31,7 +31,7 @@ export const staffs: MemberList = {
     'Patchouli Knowledge': {
         name: "Patchouli Knowledge",
         photo: "/member-icon/staff/patchouli.webp",
-        bio: "我的人生夙願就是給1.9m的偽娘塗紫色的腳趾甲。",
+        bio: "來者不拒，口味廣泛",
     },
 
     'かばん':{
@@ -43,7 +43,7 @@ export const staffs: MemberList = {
     'Kaminotomodachi': {
         name: "Kaminotomodachi",
         photo: "/member-icon/staff/kaminotomodachi.webp",
-        bio: "",
+        bio: "本群老東西協會副主席",
 
     },
 
@@ -98,7 +98,7 @@ export const staffs: MemberList = {
 
     'yukino': {
         name: "yukino",
-        photo: "/member-icon/default.webp",
+        photo: "/member-icon/staff/yukino.webp",
         bio: "",
 
     },
