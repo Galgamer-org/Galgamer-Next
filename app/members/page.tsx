@@ -7,15 +7,32 @@ import Container from 'components-layout/container'
 import MainVisualH1 from "@/components/MainVisualH1";
 import FriendLinkUnit from "@/components/FriendLinkUnit";
 import BookmarkContainer from "@/components/bookmark-container";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+    title: '登場人物',
+    description: "Galgamer 群友（美少女）",
+    openGraph: {
+        type: 'website',
+        locale: 'zh_TW',
+        siteName: 'Galgamer',
+        url: '/members',
+        title: '登場人物 ',
+        description: 'Galgamer 群友（美少女）',
+    },
+    twitter: {
+        title: '登場人物',
+        description: 'Galgamer 群友（美少女）',
+    },
+}
 
 export default function Member() {
     return (
         <Container className="px-2">
             <MainVisualH1
-                title="社區成員"
-                description="Our Characters"
-                details="这里是社区成员列表页面，点击图片即可进入其个人主页(施工中)"
+                title="登場人物"
+                description="Characters"
+                details="Galgamer 群友（美少女）"
                 cssClass={style.memberMainVisual}
             >
             </MainVisualH1>

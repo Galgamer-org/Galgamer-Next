@@ -6,6 +6,7 @@ import style from 'styles/channel.module.css'
 import { Col, Row } from 'react-bootstrap'
 import { notFound } from 'next/navigation'
 import MainVisualH1 from '@/components/MainVisualH1'
+import type { Metadata, ResolvingMetadata } from 'next'
 
 const channels = [
   {
@@ -15,6 +16,7 @@ const channels = [
     details: 'Galgamer 群友親自體驗，親自爲你推薦！',
     cssClass: 'gamePostArea',
     isTechnicalReport: false,
+    metaImage: '/site-assets/metadata/recommanded-games.png',
   },
   {
     name: 'technical-report',
@@ -23,20 +25,58 @@ const channels = [
     details: '美少女們不爲人知的幕後。我們在這裏分享一些研究成果☝️',
     cssClass: 'techPostArea',
     isTechnicalReport: true,
+    metaImage: '/site-assets/metadata/technical-report.png',
   }
 ];
+
+type Props = {
+  params: Record<string, string>
+  searchParams: { [key: string]: string | string[] | undefined }
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const channel = channels.find(channel => channel.name === params.name);
+  if (!channel) {
+    notFound();
+  }
+  return {
+    title: channel.title,
+    description: channel.description,
+    keywords: ['Galgame', 'Galgame 推薦', '遊戲'],
+    
+    openGraph: {
+      type: 'website',
+      locale: 'zh_TW',
+      siteName: 'Galgamer',
+      url: '/channel/' + channel.name,
+      title: channel.title,
+      description: channel.description,
+      images: channel.metaImage,
+    },
+    twitter: {
+      title: channel.title,
+      description: channel.description,
+      card: 'summary_large_image',
+      images: channel.metaImage,
+    },
+     
+  }
+};
 
 export async function generateStaticParams() {
   let result = channels.map((channel) => {
     return {
-      name: channel.name,
+      ...channel
     }
   })
   //console.log(result)
   return result
 }
 
-export default function Channel({ params }: { params: { name: string } }) {
+export default function Channel({ params }: { params: Record<string, string> }) {
   //console.log(params);
 
   const channel = channels.find(channel => channel.name === params.name);

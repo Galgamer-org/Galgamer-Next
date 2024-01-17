@@ -14,7 +14,7 @@ export const staffs: MemberList = {
     '桐遠暮羽': {
         name: "桐遠暮羽",
         photo: "/member-icon/staff/kiriha.webp",
-        bio: "專業畫師這天沒事就研究閉源 lib",
+        bio: "專業畫師這天沒事就研究閉源 lib（",
     },
     'SacalWiki': {
         name: "SacalWiki",

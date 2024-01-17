@@ -1,26 +1,45 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import '@/styles/colors.css'
-import '@/styles/s3fonts-woff-woff2.css'
-import '@/styles/fonts.css'
-import '@/styles/main.css'
-import Footer from '../components-layout/footer'
-import Header from '../components-layout/Header'
+import '@/styles/colors.css';
+import '@/styles/s3fonts-woff-woff2.css';
+import '@/styles/fonts.css';
+import '@/styles/main.css';
+import Footer from '../components-layout/footer';
+import Header from '../components-layout/Header';
+import type { Metadata } from 'next';
+
 
 type Props = {
   children: React.ReactNode
-}
-import { Metadata } from 'next';
+};
 
 export const metadata: Metadata = {
-  title: 'Galgamer',
+  title: {
+    template: '%s - Galgamer',
+    default: 'Galgamer',
+  },
   description: 'Galgamer Home Page',
   openGraph: {
     type: 'website',
     locale: 'zh_TW',
+    siteName: 'Galgamer',
     url: 'https://next.galgamer.moe',
     title: 'Galgamer',
     description: 'Galgamer Home Page',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Galgamer',
+    description: 'Galgamer Home Page',
+  },
+  metadataBase: new URL('https://next.galgamer.moe'),
+  generator: 'Next.js',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Galgame', '美少女', '遊戲'],
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
 };
 

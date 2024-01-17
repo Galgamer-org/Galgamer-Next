@@ -26,7 +26,7 @@ const PostPreview = ({
   return (
     <div className="mb-4 w-100">
       <div className="mb-3 o-hidden box-shadow "
-        style={{ 'border-radius': 'var(--small-board-border-radius)' } as React.CSSProperties}
+        style={{ borderRadius: 'var(--small-board-border-radius)' } as React.CSSProperties}
       >
         <CoverImage slug={slug} title={title} src={index_img} abbr={abbr}/>
       </div>
