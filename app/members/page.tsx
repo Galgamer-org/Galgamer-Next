@@ -42,7 +42,7 @@ export default function Member() {
                 <MembersBody list={staffs} />
             </BookmarkContainer>
             <BookmarkContainer title={
-                 <><i className="bi bi-emoji-wink-fill me-2"></i>一般通過羣友</>
+                <><i className="bi bi-emoji-wink-fill me-2"></i>一般通過羣友</>
             }>
                 <MembersBody list={members} />
             </BookmarkContainer>
@@ -55,13 +55,14 @@ function MembersBody({ list }: { list?: Record<string, Member> }) {
     return (
         <div className={style.MembersBody}>
             <Row>
-                {Object.values(list).map((value: Member, index) => (
+                {
+                    Object.entries(list).map(([name, member], index) => (
                     <FriendLinkUnit
                         key={index}
-                        title={value.name}
-                        href={`/members/${encodeURIComponent(value.name)}`}
-                        avatar={value.photo}
-                        info={value.bio}
+                        title={name}
+                        href={`/members/${encodeURIComponent(name)}`}
+                        avatar={member.photo}
+                        info={member.bio}
                     ></FriendLinkUnit>
                 ))}
             </Row>

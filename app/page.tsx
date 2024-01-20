@@ -80,7 +80,7 @@ function HeroPost({
 
             <h2 className={cn(style.featuredTitle, '')}><em>Featured</em><i className="bi-vector-pen ms-2"></i></h2>
             <div className='ms-2'>
-              <Avatar member={author} />
+              <Avatar name={author} />
             </div>
           </div>
           <div>

@@ -4,13 +4,16 @@ import style from "styles/avatar.module.css"
 import cn from 'classnames'
 import { Col } from "react-bootstrap"
 import SmartImage from "./smart-image"
+import { getMember } from "_feed/members";
+
 
 type Props = {
-  member: Member
+  name: string,
 }
 
-export default function Avatar ({ member }: Props) {
-  const { name, photo, bio, } = member;
+export default function Avatar ({ name }: Props) {
+  const member = getMember(name);
+  const { photo, bio, } = member;
   return (
     <div className={cn(style.container ,"d-flex align-items-center")}>
       <div className={cn(style.photoContainer ,"mr-2")}>

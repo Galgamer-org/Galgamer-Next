@@ -9,7 +9,7 @@ type Props = {
   index_img: string
   date: Date
   excerpt: string
-  author: Author
+  author: string
   slug: string
   abbr: number
 }
@@ -31,7 +31,7 @@ const PostPreview = ({
         <CoverImage slug={slug} title={title} src={index_img} abbr={abbr}/>
       </div>
       <div className='my-2'>
-        <Avatar member={author} />
+        <Avatar name={author} />
       </div>
       <h3 className="my-2 h5">
         <Link

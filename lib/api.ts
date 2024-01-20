@@ -56,7 +56,7 @@ export function getPostBySlug(slug: string) {
     slug: items['slug'],
     title: items['title'],
     tags: items['tags'] ? items['tags'] : [],
-    author: getMember(items['author']),
+    author: items['author'],
     date: items['date'],
     index_img: items['index_img'] ? items['index_img'] : '',
     excerpt: items['excerpt'] ? items['excerpt'] : '',

@@ -8,7 +8,7 @@ type Props = {
   title: string
   index_img: string
   date: Date
-  author: Author
+  author: string
 }
 
 const PostHeader = ({ title, index_img, date, author }: Props) => {
@@ -16,14 +16,14 @@ const PostHeader = ({ title, index_img, date, author }: Props) => {
     <>
       <PostTitle>{title}</PostTitle>
       <div className="hidden md:block md:mb-12">
-        <Avatar member={author} />
+        <Avatar name={author} />
       </div>
       {/* <div className="mb-8 md:mb-16 sm:mx-0">
         <CoverImage title={title} src={index_img} />
       </div> */}
       <div className="max-w-2xl mx-auto">
         <div className="block md:hidden mb-6">
-          <Avatar member={author} />
+          <Avatar name={author} />
         </div>
         <div className="mb-6 text-lg">
           <DateFormatter dateObj={date} />

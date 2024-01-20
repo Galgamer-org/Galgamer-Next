@@ -1,10 +1,9 @@
-import type Member from './member'
 
 type PostType = {
   slug: string
   title: string
   date: Date
-  author: Member | null
+  author: string | null
   excerpt: string
   banner_img?: string
   index_img: string
