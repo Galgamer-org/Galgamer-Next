@@ -10,7 +10,7 @@
 
 .bookmark {
     max-width: 60%;
-    width: 300px;
+    width: max-content;
     height: 60px;
     background-color: var(--bookmark-bg-color);
     position: relative;
