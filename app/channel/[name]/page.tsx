@@ -101,13 +101,7 @@ export default function Channel({ params }: { params: Record<string, string> }) 
             {posts.map((post) => (
               <Col className={cn('col-12 col-md-6 col-xl-4')} key={post.slug}>
                 <PostPreview
-                  title={post.title}
-                  index_img={post.index_img}
-                  date={post.date}
-                  author={post.author}
-                  slug={post.slug}
-                  excerpt={post.excerpt}
-                  abbr={post.abbrlink}
+                  post={post}
                 />
               </Col>
             ))}

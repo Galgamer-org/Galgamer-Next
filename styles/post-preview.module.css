@@ -1,0 +1,15 @@
+.postMeta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.metaLink {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.metaLink::after {
+    content: "  ";
+    /* margin: 0 0.2rem; */
+}

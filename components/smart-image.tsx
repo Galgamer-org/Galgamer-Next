@@ -11,7 +11,7 @@ import { getNomalizedImagePath } from '../lib/image-loader'
 import imageLoader from '../lib/image-loader'
 import { onlineDirectory, rootDirectory } from '../lib/constants'
 
-type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref"> ) | Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">
+type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">) | Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">
 
 const blackListDomains = [
     'zhimg.com',
@@ -23,11 +23,11 @@ const useOnlineImage = true;
 // also modify useOnlineImage in image-loader
 
 
-export default async function SmartImage(props:imageProps) {
-    let {src, alt, className, style} = props;
+export default async function SmartImage(props: imageProps) {
+    let { src, alt, className, style } = props;
     // check if src is a local file
     let isLocal = false;
-    if( !(src.startsWith('http')) ) {
+    if (!(src.startsWith('http'))) {
         isLocal = true;
     }
     if (useOnlineImage && src.startsWith('../image/')) {
@@ -41,28 +41,28 @@ export default async function SmartImage(props:imageProps) {
     const probeSrc = getProbePath(src);
     if (!hasSize) {
         // get image size
-        if(isLocal) {
+        if (isLocal) {
             // check file exist
-            
 
-            if(!existsSync(probeSrc)) {
+
+            if (!existsSync(probeSrc)) {
                 console.error(`file ${probeSrc} not exist`);
                 probeResult = null;
             }
-            else{
+            else {
                 probeResult = await probe(createReadStream(probeSrc));
             }
-        }else {
+        } else {
             //probeSrc = encodeURI(probeSrc);
             try {
                 // check black list
                 let blackListed = false;
                 blackListDomains.forEach(domain => {
-                    if(probeSrc.includes(domain)){
+                    if (probeSrc.includes(domain)) {
                         blackListed = true;
                     }
                 });
-                if(blackListed) {
+                if (blackListed) {
                     throw new Error(`black listed domain: ${probeSrc}`);
                 }
 
@@ -71,7 +71,7 @@ export default async function SmartImage(props:imageProps) {
                 console.error(`probe error: ${probeSrc} : ${error.errors || error.message}`);
                 probeResult = null;
             }
-            
+
         }
     } else {
         probeResult = {
@@ -86,20 +86,28 @@ export default async function SmartImage(props:imageProps) {
         }
     }
 
-    if(!className){
+    if (!className) {
         className = '';
     }
 
-    if(!probeResult) {
+    if (!probeResult) {
         return <img src={src} alt={alt} className={`${className} stupid-image`} style={style} />
     }
 
     // use filename as alt if alt is not provided
-    if(!alt) {
+    if (!alt) {
         alt = src.split('/').pop();
     }
 
-    return <Image src={src} alt={alt} width={probeResult.width} height={probeResult.height} className={`${className} smart-image`} style={style} />
+    return <Image
+        src={src}
+        alt={alt}
+        width={probeResult.width}
+        height={probeResult.height}
+        className={`${className} smart-image`}
+        style={style} 
+        // loader={imageLoader}
+        />
 
 }
 
@@ -109,12 +117,12 @@ function getProbePath(path: string) {
     if (!path) {
         return '';
     }
-    
+
     if (path.startsWith('../image/')) {
-        if (useOnlineImage){
+        if (useOnlineImage) {
             let result = new URL(path.replace('../image/', onlineDirectory)).toString();
             return encodeURI(decodeURI(result));
-        }else{
+        } else {
             return path.replace('..', rootDirectory);
         }
 

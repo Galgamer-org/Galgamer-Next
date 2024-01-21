@@ -25,7 +25,8 @@ const fields = [
   'abbrlink',
   'tags',
   'keywords',
-  'hidden'
+  'hidden',
+  'categories',
 ];
 
 export function getPostBySlug(slug: string) {
@@ -52,6 +53,8 @@ export function getPostBySlug(slug: string) {
     }
   })
 
+  console.log(items['categories'])
+
   const result: PostType = {
     slug: items['slug'],
     title: items['title'],
@@ -66,7 +69,8 @@ export function getPostBySlug(slug: string) {
     content: items['content'],
     abbrlink: items['abbrlink'],
     keywords: (items['keywords'] ? items['keywords'] : '').split(',').map((keyword) => keyword.trim()),
-    hidden: items['hidden'] ? items['hidden'] : false
+    hidden: items['hidden'] ? items['hidden'] : false,
+    categories: items['categories'] ? items['categories'] : [],
   };
   //console.log(result)
 

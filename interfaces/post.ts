@@ -13,8 +13,9 @@ type PostType = {
   content: string
   asset_directory?: string | null
   abbrlink: number
-  tags: string[]
-  keywords: string[]
+  tags?: string[]
+  keywords?: string[]
+  categories?: string[]
   hidden?: boolean
 }
 
