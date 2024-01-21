@@ -97,7 +97,7 @@ function HeroPost({
             <div className={style.hr}></div>
             <p className={cn(style.heroExcerpt, "my-2 h5")}>{excerpt}</p>
             <div
-              className={cn('', ppstyle.postMeta)}
+              className={cn('myfont', ppstyle.postMeta)}
               style={{pointerEvents: 'all'} as React.CSSProperties}
             >
               <div className="text-lg my-1 me-3">
@@ -106,7 +106,7 @@ function HeroPost({
               </div>
               {categories.length !== 0 && <div className="text-lg my-1 me-3">
                 {/* category */}
-                <i className="bi-folder-fill me-2"></i>
+                <i className="bi-inboxes-fill me-2"></i>
                 {categories.flat().map((category) => (
                   <Link href={`/categories/${category}`} key={category} className={cn(ppstyle.metaLink)}>
                     {category}

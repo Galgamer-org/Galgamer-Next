@@ -53,7 +53,7 @@ export function getPostBySlug(slug: string) {
     }
   })
 
-  console.log(items['categories'])
+  // console.log(items['categories'])
 
   const result: PostType = {
     slug: items['slug'],

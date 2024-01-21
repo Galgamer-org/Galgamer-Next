@@ -45,7 +45,7 @@ const PostPreview = ({
 
       <p className="text-lg leading-relaxed my-2">{excerpt}</p>
       <div
-        className={cn('', style.postMeta)}
+        className={cn('myfont', style.postMeta)}
       >
         {/* post metadata */}
         <div className="text-lg my-1 me-3">
@@ -56,7 +56,7 @@ const PostPreview = ({
 
         {categories.length !== 0 && <div className="text-lg my-1 me-3">
           {/* category */}
-          <i className="bi-folder-fill me-2"></i>
+          <i className="bi-inboxes-fill me-2"></i>
           {categories.flat().map((category) => (
             <Link href={`/categories/${category}`} key={category} className={cn(style.metaLink)}>
               {category}
