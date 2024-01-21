@@ -11,14 +11,16 @@ type Props = {
   slug?: string
   abbr?: number
   className?: string
+  loading?: 'lazy' | 'eager'
 }
 
-export default function CoverImage ({ title, src, slug, abbr, className }: Props) {
+export default function CoverImage ({ title, src, slug, abbr, className, loading }: Props) {
   const image = (
     <SmartImage
       src={src}
       alt={`Cover Image for ${title}`}
       className={cn(' w-100', style.coverImage, className)}
+      loading={loading}
     />
   )
   return (

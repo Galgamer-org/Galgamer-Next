@@ -75,7 +75,7 @@ function HeroPost({
       {/* <h2 className={cn(style.featuredTitle, 'h1')}><em>Featured.</em></h2> */}
       <div className={cn(style.postContainer, 'box-shadow')}>
         <div className={cn(style.coverImageContainer, '')}>
-          <CoverImage title={title} src={index_img} abbr={abbrlink} />
+          <CoverImage title={title} src={index_img} abbr={abbrlink} loading='eager'/>
         </div>
         <div className={cn(style.postContent, '')}>
           <div className='d-flex align-items-center my-2'>

@@ -24,7 +24,7 @@ const useOnlineImage = true;
 
 
 export default async function SmartImage(props: imageProps) {
-    let { src, alt, className, style } = props;
+    let { src, alt, className, style, loading } = props;
     // check if src is a local file
     let isLocal = false;
     if (!(src.startsWith('http'))) {
@@ -106,6 +106,8 @@ export default async function SmartImage(props: imageProps) {
         height={probeResult.height}
         className={`${className} smart-image`}
         style={style} 
+        // loading={loading}
+        priority={loading === 'eager'}
         // loader={imageLoader}
         />
 
