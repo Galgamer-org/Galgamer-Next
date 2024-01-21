@@ -13,27 +13,31 @@ type Props = {
   children: React.ReactNode
 };
 
+const urlBase = 'https://next.galgamer.moe'; 
+
 export const metadata: Metadata = {
   title: {
     template: '%s - Galgamer',
     default: 'Galgamer',
   },
-  description: 'Galgamer Home Page',
+  description: '因爲你是一個一個一個 <Galgamer/美少女> 啊啊啊啊阿',
   openGraph: {
     type: 'website',
     title: 'Galgamer',
-    url: 'https://next.galgamer.moe',
+    url: urlBase,
     siteName: 'Galgamer',
-    description: 'Galgamer Home Page',
+    description: '因爲你是一個一個一個 <Galgamer/美少女> 啊啊啊啊阿',
+    images: '/site-assets/metadata/homepage.png',
     locale: 'zh_HK',
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Galgamer',
-    description: 'Galgamer Home Page',
+    description: '因爲你是一個一個一個 <Galgamer/美少女> 啊啊啊啊阿',
+    creator: '@Galgame_Channel',
+    images: '/site-assets/metadata/homepage.png',
   },
-  metadataBase: new URL('https://next.galgamer.moe'),
-  generator: 'Next.js',
+  metadataBase: new URL(urlBase),
   referrer: 'origin-when-cross-origin',
   keywords: ['Galgame', '美少女', '遊戲'],
   formatDetection: {

@@ -50,7 +50,7 @@ export async function generateMetadata(
           url: post.index_img,  // need fix
         }
       ],
-      locale: 'zh_TW',
+      locale: 'zh_HK',
       type: 'website',
     },
 

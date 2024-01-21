@@ -49,7 +49,7 @@ export async function generateMetadata(
     
     openGraph: {
       type: 'website',
-      locale: 'zh_TW',
+      locale: 'zh_HK',
       siteName: 'Galgamer',
       url: '/channel/' + channel.name,
       title: channel.title,

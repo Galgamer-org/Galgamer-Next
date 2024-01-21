@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: "Galgamer 群友（美少女）",
     openGraph: {
         type: 'website',
-        locale: 'zh_TW',
+        locale: 'zh_HK',
         siteName: 'Galgamer',
         url: '/members',
         title: '登場人物 ',
