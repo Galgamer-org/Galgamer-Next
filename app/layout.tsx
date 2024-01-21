@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   description: 'Galgamer Home Page',
   openGraph: {
     type: 'website',
-    locale: 'zh_TW',
-    siteName: 'Galgamer',
-    url: 'https://next.galgamer.moe',
     title: 'Galgamer',
+    url: 'https://next.galgamer.moe',
+    siteName: 'Galgamer',
     description: 'Galgamer Home Page',
+    locale: 'zh_HK',
   },
   twitter: {
     card: 'summary_large_image',

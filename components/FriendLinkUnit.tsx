@@ -1,7 +1,8 @@
-import style from '@/styles/links.module.css'
+import style from '@/styles/links.module.css';
 import cn from "classnames";
 import FriendLink from "@/interfaces/friend-link";
 import Link from 'next/link';
+import SmartImage from './smart-image';
 
 
 function FriendLinkUnit({ avatar, href, title, info }: FriendLink) {
@@ -16,7 +17,7 @@ function FriendLinkUnit({ avatar, href, title, info }: FriendLink) {
                 <div className={cn('align-items-center d-flex', style.linkRow)}>
 
                     <div className={style.linkAvatar}>
-                        <img src={avatar} alt={title} />
+                        <SmartImage src={avatar} alt={title} />
                     </div>
 
                     <div className={style.linkText}>
