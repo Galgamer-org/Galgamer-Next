@@ -15,11 +15,11 @@ categories:
   - [R-18]
   - [游戏公司, tone work's]
 abbrlink: 95620
-author: 'Sakura Rain'
+author: '桐遠暮羽'
 excerpt: '25 歲的黑野奏汰，發 LINE 警告高二時那不知道喜歡的人是誰，弄不清楚心意的自己——「你會後悔的」'
 ---
 
-`作者：Sakura Rain`
+`作者：桐遠暮羽`
 
 ## At A Glance
 

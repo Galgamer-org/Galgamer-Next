@@ -12,11 +12,11 @@ categories:
   - [R-18]
   - [游戏公司, SAGA PLANETS]
 abbrlink: 70134
-author: 'Caminal le Pultaia Sortilège Sisua'
+author: '桐遠暮羽'
 excerpt: '輟學的男高中生，央路，劫持了正在逛街的北歐皇家公主，然後被十萬個皇家禁衛軍騎士追殺。'
 ---
 
-`作者：Caminal le Pultaia Sortilège Sisua`
+`作者：桐遠暮羽`
 
 輟學的男高中生，央路，劫持了正在逛街的北歐皇家公主，然後被十萬個皇家禁衛軍騎士追殺。
 

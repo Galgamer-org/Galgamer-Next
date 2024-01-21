@@ -1,6 +1,6 @@
 ---
 title: 'Blog Note 2：簡單好用的排版小技巧'
-date: 2000-12-30 00:30:00
+date: 2000-12-02 00:30:00
 keywords: 'HTML'
 banner_img: ''
 index_img: '../image/note-snipset/index.png'

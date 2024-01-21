@@ -4,6 +4,11 @@ abbrlink: 47510
 date: 2022-09-24 14:09:45
 index_img: ../image/毎日キスしてロリータ/main2.jpg
 excerpt: 使用御坂翻译器，实现自助烤肉，畅玩日本galgame新作
+tags:
+  - 毎日キスしてロリータ
+  - 云翻译
+  - Hook
+author: かばん
 ---
 
 ![封面图](../image/毎日キスしてロリータ/main2.jpg)

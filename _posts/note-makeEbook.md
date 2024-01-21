@@ -1,17 +1,17 @@
 ---
 title: 'Blog Note 7：破解 EPUB 源碼，製作豎排電子書，提高文學素養'
-date: 2000-9-31 00:30:00
+date: 2022-11-16 00:30:00
 keywords: 'e-book, epub, Calibre'
 banner_img: ''
 index_img: '../image/note-makeEbook/index.jpg'
 tags:
   - 笔记
 abbrlink: 20018
-author: 桐羽
+author: 桐遠暮羽
 excerpt: '不是豎排、往左翻頁的電子書，文學素養都不行😁'
 ---
 
-`作者：桐羽`
+`作者：桐遠暮羽`
 
 EPUB 電子書魔改過程記錄
 

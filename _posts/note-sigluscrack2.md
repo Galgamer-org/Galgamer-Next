@@ -1,17 +1,17 @@
 ---
 title: 'Blog Note 5：萌新的第二次 Galgame 破解'
-date: 2000-11-20 00:30:00
+date: 2022-4-1 00:30:00
 keywords: 'SiglusEngine, Crack, IDA, x64dbg'
 banner_img: '../image/note-sigluscrack2/banner.webp'
 index_img: '../image/note-sigluscrack2/index.webp'
 tags:
   - 笔记
 abbrlink: 20013
-author: 'Hikari Field 棺方頻道'
+author: '桐遠暮羽'
 excerpt: '每天的逆向工程水平提高一點點...每天？每年！今年我們來嘗試破解 SiglusEngine 的光盤驗證。'
 ---
 
-`作者：Hikari Field 棺方頻道`
+`作者：桐遠暮羽`
 
 
 ## At A Glance

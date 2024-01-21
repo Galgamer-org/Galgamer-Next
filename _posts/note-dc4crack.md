@@ -1,13 +1,13 @@
 ---
 title: 'Blog Note 6：基於窮舉和盲狙和不破解的 D.C.4 激活碼破解'
-date: 2000-10-20 00:30:00
+date: 2022-6-7 00:30:00
 keywords: 'CIRCUS, D.C.4, ダ・カーポ 4, Crack, IDA, x64dbg, Cheat Engine'
 banner_img: '../image/note-dc4crack/banner.webp'
 index_img: '../image/note-dc4crack/tg-preview.jpg'
 tags:
   - 笔记
 abbrlink: 20015
-author: '冬夜'
+author: '桐遠暮羽'
 excerpt: '做過破解的人都知道，窮舉、無頭蒼蠅和知難而退都是破解的好方法。'
 ---
 
@@ -15,11 +15,11 @@ excerpt: '做過破解的人都知道，窮舉、無頭蒼蠅和知難而退都�
   編寫本文的目的僅侷限於電腦技術的研究和學習。
 </div>
 
-`作者：冬夜`
+`作者：桐遠暮羽`
 <code id="mail"></code>
 <script>
-let a = "eGov@galg";
-let b = 'esuOn';
+let a = "ha@galg";
+let b = 'kiri';
 let c = 'amer.';
 let d = 'eu.org';
 let e = document.getElementById('mail');

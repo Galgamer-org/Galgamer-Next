@@ -1,6 +1,6 @@
 ---
 title: 'Blog Note 1：HTML Video 的編碼方式的研究和測試'
-date: 2000-12-31 00:30:00
+date: 2000-12-01 00:30:00
 keywords: 'Web Video'
 banner_img: ''
 index_img: '../image/note-webvideo/index.svg'

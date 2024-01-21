@@ -1,6 +1,6 @@
 ---
 title: 'Uncover XP3 前篇：認識基本 XP3 封包格式'
-date: 2000-6-20 00:30:00
+date: 2023-5-27 00:30:00
 keywords: 'XP3, 吉里吉里, 解包, Archive File'
 banner_img: '../image/xp3-research-1/banner.webp'
 index_img: '../image/xp3-research-1/cover.jpg'
@@ -8,7 +8,7 @@ tags:
   - UncoverXP3
   - 技術報告
 abbrlink: 20021
-author: 'Galgamer Core'
+author: 'Galgamer 團隊'
 excerpt: '吉里吉里作爲每天都要打交道的親密夥伴，俺們不應該對牠一無所知．'
 ---
 

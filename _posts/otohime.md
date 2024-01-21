@@ -12,7 +12,7 @@ categories:
   - [R-18]
   - [游戏公司, ensemble]
 abbrlink: 47365
-author: PiloAmuy
+author: SacalWiki
 excerpt: ensemble首位双马尾主角，剧情也是相当的炸裂
 date: 2023-09-09 00:30:00
 ---

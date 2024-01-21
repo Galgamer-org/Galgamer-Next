@@ -1,18 +1,18 @@
 ---
 title: 'Blog Note 3：萌新的第一次 Galgame 破解'
-date: 2000-12-20 00:30:00
+date: 2021-12-20 00:30:00
 keywords: 'SiglusEngine, Crack, Cheat Engine'
 banner_img: '../image/note-sigluscrack/banner.webp'
 index_img: '../image/note-sigluscrack/index.webp'
 tags:
   - 笔记
 abbrlink: 20004
-author: BAHAROA
+author: 桐遠暮羽
 excerpt: '[轉載] 使恁的 Galgame 大脳昇級 – 削除 SiglusEngine 引擎的地區限制'
 ---
 
 `原作者：BAHAROA`
-`編輯：Yukina`
+`編輯：桐遠暮羽`
 
 ![銀色、遥か](../image/note-sigluscrack/cover.jpg)
 

@@ -10,12 +10,12 @@ categories:
   - [游戏公司, 工画堂黑猫组]
 abbrlink: 20230429
 excerpt: 然后明天，将会是无限希望
-author: ling
+author: sora
 index_img: '../image/Symphonic_Rain/Cover.jpg'
 date: 2023-04-29 00:30:00
 ---
 
-`作者：ling`
+`作者：sora`
 
 ![Cover](../image/Symphonic_Rain/Cover.jpg)
 

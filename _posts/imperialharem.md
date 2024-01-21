@@ -15,7 +15,7 @@ categories:
   - [R-18]
   - [游戏公司, laplace]
 abbrlink: 38579
-author: '木卫一'
+author: '木衛一'
 excerpt: '攻陷公主随身女侍，最后推倒公主'
 ---
 

@@ -14,10 +14,12 @@ abbrlink: 4847475454
 excerpt: 若是你能变得幸福的话
 index_img: ../image/MeikeinoLupercalia/Cover.webp
 date: 2023-01-07 00:30:00
-author: Sacal & ling
+author: 
+  - SacalWiki
+  - sora
 ---
 
-`作者：Sacal & ling`
+`作者：Sacal & sora`
 
 <img src="../image/MeikeinoLupercalia/tg-preview.jpg" loading="lazy" class="d-none">
 

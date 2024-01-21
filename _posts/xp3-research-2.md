@@ -1,6 +1,6 @@
 ---
 title: 'Uncover XP3 後篇：揭祕 XP3 封包中的的壓縮和加密技術'
-date: 2000-6-10 00:30:00
+date: 2023-6-17 00:30:00
 keywords: 'XP3, 吉里吉里, 解包, Archive File'
 banner_img: '../image/xp3-research-2/banner.webp'
 index_img: '../image/xp3-research-2/cover.jpg'
@@ -8,7 +8,7 @@ tags:
   - UncoverXP3
   - 技術報告
 abbrlink: 20022
-author: 'Galgamer Core'
+author: 'Galgamer 團隊'
 excerpt: '這是 XP3 最後的祕密．'
 ---
 

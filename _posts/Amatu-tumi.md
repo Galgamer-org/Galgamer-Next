@@ -13,7 +13,7 @@ categories:
   - [R-18]
   - [游戏公司, Purple]
 abbrlink: 20017
-author: 'ｷﾐｶ'
+author: '桐遠暮羽'
 excerpt: '能用神力給人洗腦的男主，誠，懷着想和別人平等交往的願望，第一次走出了隱居的山村。'
 ---
 

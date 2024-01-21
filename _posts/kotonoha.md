@@ -11,7 +11,7 @@ tags:
 categories:
   - [全年龄]
   - [游戏公司, sukera sparo]
-author: PiloAmuy
+author: 'SacalWiki'
 excerpt: 花式带你学世界语的异世界百合物语
 date: 2023-09-30 00:30:00
 abbrlink: 13854

@@ -1,6 +1,6 @@
 ---
 title: 'Blog Note 4：面向 Galgamer 的日語學習路線'
-date: 2000-11-30 00:30:00
+date: 2022-1-6 00:30:00
 keywords: '日語, Japanese, Learning'
 banner_img: ''
 index_img: '../image/note-learningJa/index.webp'
