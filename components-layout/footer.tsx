@@ -44,7 +44,7 @@ export default function Footer() {
               </li>
               {/* discord */}
               <li className={cn(style.ourLinksItem)}>
-                <a href="https://discord.gg/7z2P3q8" target="_blank" rel="noopener noreferrer">
+                <a href="https://discord.gg/WFTj7tWgAA" target="_blank" rel="noopener noreferrer">
                   <i className="bi-discord"></i> Discord 聊天室
                 </a>
               </li>
