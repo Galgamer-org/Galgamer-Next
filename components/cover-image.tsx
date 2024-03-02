@@ -26,9 +26,9 @@ export default function CoverImage ({ title, src, slug, abbr, className, loading
   return (
     <>
       {abbr ? (
-        <Link href={`/article/${abbr}`}  aria-label={title}>
+        <a href={`/article/${abbr}`}  aria-label={title}>
           {image}
-        </Link>
+        </a>
       ) : (
         image
       )}
