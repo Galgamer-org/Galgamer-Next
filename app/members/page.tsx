@@ -2,7 +2,7 @@ import { staffs, members } from "_feed/members";
 import style from "styles/members.module.css";
 import cn from 'classnames';
 import { Col, Row } from 'react-bootstrap';
-import Member from "interfaces/member";
+import type Member from "interfaces/member";
 import Container from 'components-layout/container'
 import MainVisualH1 from "@/components/MainVisualH1";
 import FriendLinkUnit from "@/components/FriendLinkUnit";
