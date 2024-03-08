@@ -13,8 +13,8 @@ import { Metadata } from 'next'
 const feedPath = join(process.cwd(), '_feed', 'legal.md');
 
 export const metadata: Metadata = {
-    title: '法律聲明 - Galgamer',
-    description: "Legal Disclaimer (Draft, not yet effective!!)",
+    title: '法律聲明',
+    description: "Legal Disclaimer",
   }
   
 

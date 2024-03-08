@@ -1,11 +1,15 @@
 
-## Privacy Policy (Draft, not yet effective!!)
+## 隱私權
 
-Welcome to Galgamer. Galgamer is a community-driven website that aims to provide news about galgames to readers. By using this website, you agree to be bound by the following terms and conditions:
+歡迎使用 Galgamer 的網站。我們尊重使用者的隱私權，並致力於保護使用者的個人數據。本隱私權政策解釋了我們收集、使用和保護使用者的個人數據的方式。使用本網站即表示您同意遵守本隱私權政策。
 
 ### 1. 數據收集
 
-我們的網站不收集使用者的個人數據，也不使用 cookies（Cloudflare 自帶的 cookies 除外）。我們僅收集使用者提交的文章和相關媒體內容，這些內容可能來自公開的互聯網。
+我們的網站不收集訪客的個人數據，也不使用 Cookies。我們僅收集使用者提交的文章和相關媒體內容，這些內容可能來自公開的互聯網。
+
+我們使用 Cloudflare 的 Web Analytics 功能來收集有關網站訪問量和流量的匿名數據。這些數據僅用於分析網站的使用情況，不會也無法用於識別個人。
+
+Cloudflare 的隱私權政策可在 https://www.cloudflare.com/web-analytics 查看。
 
 ### 2. 數據使用
 
