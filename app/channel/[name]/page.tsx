@@ -96,7 +96,7 @@ export default function Channel({ params }: { params: Record<string, string> }) 
         cssClass={style[channel.cssClass]}
       ></MainVisualH1>
       <section>
-        <div className={cn(style.postArea, 'container-board', 'mx-auto p-1 p-md-2 box-shadow')}>
+        <div className={cn('container-board', 'mx-auto p-1 p-md-2 box-shadow')}>
           <Row className={cn('pt-4 pt-md-4 mt-2 mx-0 px-1 px-md-2 px-xl-4 o-hidden')}>
             {posts.map((post) => (
               <Col className={cn('col-12 col-md-6 col-xl-4')} key={post.slug}>
