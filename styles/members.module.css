@@ -11,27 +11,24 @@
 .defaultText {
     border-bottom: 1px dashed var(--text-color);
     padding: 25px;
-
 }
 
 .linkAvatar img {
-    width: 200px;
-    height: 200px;
+    aspect-ratio: 1/1;
+    max-width: 100%;
+    height: auto;
     border-radius: 9%;
 }
 
 
 .InfoPhoto {
     display: flex;
-    flex-wrap: nowrap;
-    padding: 25px;
+    /* flex-wrap: nowrap; */
+    padding: 25px 15px;
     width: 100%;
 }
 
-.InfoText {
-    padding-left: 2em
-}
 
 .InfoBio {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }

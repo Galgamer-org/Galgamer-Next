@@ -1,7 +1,7 @@
 
-## Legal Disclaimer (Draft, not yet effective!!)
+## 法律聲明
 
-Welcome to Galgamer. Galgamer is a community-driven website that aims to provide news about galgames to readers. By using this website, you agree to be bound by the following terms and conditions:
+歡迎使用 Galgamer 的網站。我們致力於遵守所有適用的法律法規，並尊重所有用戶的權利。
 
 ### 1. 免責聲明
 
@@ -9,7 +9,7 @@ Welcome to Galgamer. Galgamer is a community-driven website that aims to provide
 
 ### 2. 版權聲明
 
-本網站上的所有內容均受版權保護。未經我們的書面許可，您不得複製、修改、分發、傳播、展示或出售本網站上的任何內容。本網站上的所有圖片、視頻和其他媒體均來自公開的互聯網，並且僅供參考。如果您認為本網站上的任何內容侵犯了您的版權，請與我們聯繫，我們將盡快刪除相關內容。
+本網站上的所有內容均受版權保護。未經我們的書面許可，您不得複製、修改、分發或出售本網站上的任何內容。本網站上的所有圖片、視頻和其他媒體均來自公開的互聯網，並且僅供參考。如果您認為本網站上的任何內容侵犯了您的版權，請與我們聯繫，我們將盡快刪除相關內容。
 
 ### 3. 第三方網站
 

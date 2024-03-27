@@ -13,6 +13,7 @@ import FriendLinkUnit from '@/components/FriendLinkUnit'
 import FriendLinks from '@/_feed/friend-links'
 import BookmarkContainer from '@/components/bookmark-container'
 import ppstyle from '@/styles/post-preview.module.css'
+import React from 'react'
 
 
 
@@ -75,30 +76,30 @@ function HeroPost({
       {/* <h2 className={cn(style.featuredTitle, 'h1')}><em>Featured.</em></h2> */}
       <div className={cn(style.postContainer, 'box-shadow')}>
         <div className={cn(style.coverImageContainer, '')}>
-          <CoverImage title={title} src={index_img} abbr={abbrlink} loading='eager'/>
+          <CoverImage title={title} src={index_img} abbr={abbrlink} loading='eager' />
         </div>
         <div className={cn(style.postContent, '')}>
           <div className='d-flex align-items-center my-2'>
 
             <h2 className={cn(style.featuredTitle, '')}><em>Featured</em><i className="bi-vector-pen ms-2"></i></h2>
-            <div className='ms-2' style={{pointerEvents: 'all'} as React.CSSProperties}>
+            <div className='ms-2' style={{ pointerEvents: 'all' } as React.CSSProperties}>
               <Avatar name={author} />
             </div>
           </div>
           <div>
             <h3 className="my-1">
-              <Link
+              <a
                 href={`/article/${abbrlink}`}
                 className="h2 text-light text-decoration-none"
               >
                 <strong>{title}</strong>
-              </Link>
+              </a>
             </h3>
             <div className={style.hr}></div>
             <p className={cn(style.heroExcerpt, "my-2 h5")}>{excerpt}</p>
             <div
               className={cn('myfont', ppstyle.postMeta)}
-              style={{pointerEvents: 'all'} as React.CSSProperties}
+              style={{ pointerEvents: 'all' } as React.CSSProperties}
             >
               <div className="text-lg my-1 me-3">
                 <i className="bi-calendar-week-fill me-2"></i>
@@ -107,20 +108,39 @@ function HeroPost({
               {categories.length !== 0 && <div className="text-lg my-1 me-3">
                 {/* category */}
                 <i className="bi-inboxes-fill me-2"></i>
-                {categories.flat().map((category) => (
-                  <Link href={`/categories/${category}`} key={category} className={cn(ppstyle.metaLink)}>
-                    {category}
-                  </Link>
-                ))}
+                {categories.map(function (category, index) {
+                  // if category is an array, then it is a nested category, should map to /categories/category1/category2/...
+                  // if category is a string, then it is a top level category, should map to /categories/category
+
+                  if (Array.isArray(category)) {
+                    const result: React.ReactNode[] = [];
+                    for (let i = 0; i < category.length; i++) {
+                      const categoryName = category[i];
+                      const categoryPath = (category as Array<string>).slice(0, i + 1).join('/');
+                      result.push(
+                        <a href={`/categories/${categoryPath}`} key={categoryPath} className={cn(ppstyle.metaLink)} >
+                          {categoryName}
+                        </a>
+                      );
+                    }
+                    return result;
+                  } else {
+                    return (
+                      <a href={`/categories/${category}`} key={category} className={cn(ppstyle.metaLink)}>
+                        {category}
+                      </a>
+                    );
+                  }
+                })}
               </div>}
 
               {tags.length !== 0 && <div className="text-lg my-1 me-3">
                 {/* tags */}
                 <i className="bi-tag-fill me-2"></i>
                 {tags.map((tag) => (
-                  <Link href={`/tags/${tag}`} key={tag} className={cn(ppstyle.metaLink)}>
+                  <a href={`/tags/${tag}`} key={tag} className={cn(ppstyle.metaLink)}>
                     {tag}
-                  </Link>
+                  </a>
                 ))}
               </div>}
             </div>

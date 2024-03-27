@@ -13,8 +13,8 @@ import { Metadata } from 'next'
 const feedPath = join(process.cwd(), '_feed', 'privacy.md');
 
 export const metadata: Metadata = {
-    title: '隱私權政策 - Galgamer',
-    description: "Privacy Policy (Draft, not yet effective!!)",
+    title: '隱私權政策',
+    description: "Privacy Policy",
   }
   
 

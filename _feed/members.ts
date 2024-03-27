@@ -69,7 +69,7 @@ export const staffs: MemberList = {
 
     },
 
-    'Triko 🐾': {
+    'Triko': {
         photo: "/member-icon/staff/triko.webp",
         bio: "When the death come I will be free. 🫵 Big floppa is watching you.",
 
@@ -92,6 +92,11 @@ export const staffs: MemberList = {
         bio: "",
 
     },
+
+    'Eriko P': {
+        photo: "/member-icon/group/seoisoeng.webp",
+        bio: "＋852 0721 0831",
+    },
 };
 
 export const members: MemberList = {
@@ -110,10 +115,6 @@ export const members: MemberList = {
     'RRRRRz': {
         photo: "/member-icon/group/rrrrrz.webp",
         bio: "",
-    },
-    'SeoiSoeng': {
-        photo: "/member-icon/group/seoisoeng.webp",
-        bio: "幸福的活下去",
     },
     'S-nian': {
         photo: "/member-icon/group/s-nian.webp",
