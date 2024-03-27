@@ -453,7 +453,7 @@ XOR   00101101
 最後，放一個動畫來幫助第一次聽說 XOR 的羣友加深印象．
 
 <video class='mb-3' playsinline="" autoplay="" muted="" loop="" controls="" width='100%'>
-    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/xp3-2/xor1.mp4" type="video/mp4">
+    <source src="https://storage-zone0.galgamer.moe/video-2d35/xp3-2/xor1.mp4" type="video/mp4">
 </video>
 <p class="image-caption">Fig 8.2.2 使用 XOR 進行加解密</p>
 
@@ -499,7 +499,7 @@ XOR   00101101
 我們關心的是流式加密．流指的是一串很長很長的字節流．想象把一個文件拉成長長的一串字節，然後字節可以繼續拉開成 bit，如下圖所示．
 
 <video class='mb-3' playsinline="" autoplay="" muted="" loop=""  controls="" width='100%'>
-    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/xp3-2/filecontent2.mp4" type="video/mp4">
+    <source src="https://storage-zone0.galgamer.moe/video-2d35/xp3-2/filecontent2.mp4" type="video/mp4">
 </video>
 <p class="image-caption">Fig 8.2.6 文件可以看作字節流</p>
 
@@ -508,14 +508,14 @@ XOR   00101101
 簡單地說，只要知道了密鑰，就可以生成那個唯一的密鑰流．**如同高中數學中的數列一樣**，給定一個確定的生成規律，妳就可以無限地往後遞推；或者直接給定一個通項公式，妳就可以求出數列中的任意一位，如下圖所示．
 
 <video class='mb-3' playsinline="" autoplay="" muted="" loop=""  controls="" width='100%'>
-    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/xp3-2/genstream.mp4" type="video/mp4">
+    <source src="https://storage-zone0.galgamer.moe/video-2d35/xp3-2/genstream.mp4" type="video/mp4">
 </video>
 <p class="image-caption">Fig 8.2.7 生成函數產生密鑰流</p>
 
 最後，將密鑰流和需要加密的原文件進行逐個 bit 的 XOR，完成加密，如圖．
 
 <video class='mb-3' playsinline="" autoplay="" muted="" loop=""  controls="" width='100%'>
-    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/xp3-2/xorenc.mp4" type="video/mp4">
+    <source src="https://storage-zone0.galgamer.moe/video-2d35/xp3-2/xorenc.mp4" type="video/mp4">
 </video>
 <p class="image-caption">Fig 8.2.8 流式加密過程</p>
 
@@ -1079,7 +1079,7 @@ tjs_uint TJS_INTF_METHOD tTVPXP3ArchiveStream::Read(void *buffer, tjs_uint read_
 整個過程，忽略解壓的部分，的執行如下圖所示：
 
 <video class='mb-3' playsinline="" autoplay="" muted="" loop=""  controls="" width='100%'>
-    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/xp3-2/wholeview3.mp4" type="video/mp4">
+    <source src="https://storage-zone0.galgamer.moe/video-2d35/xp3-2/wholeview3.mp4" type="video/mp4">
 </video>
 <p class="image-caption">Fig 8.5.2 解密系統的全景圖</p>
 

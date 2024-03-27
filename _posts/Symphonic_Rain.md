@@ -203,7 +203,7 @@ date: 2023-04-29 00:30:00
 ## 还在犹豫是否下载？
 
 <video controls preload="metadata" width='100%' poster="../image/Symphonic_Rain/Cover.webp">
-    <source src="https://storage-zone0.galgamer.eu.org/video-2d35/symphonicrain/sr.mp4" type="video/mp4">
+    <source src="https://storage-zone0.galgamer.moe/video-2d35/symphonicrain/sr.mp4" type="video/mp4">
 </video>
 
 ## 资源和下载

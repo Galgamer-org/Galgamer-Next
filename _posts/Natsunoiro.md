@@ -79,7 +79,7 @@ rt {
 失去容身之所的少年少女們，會前往只屬於他們的樂園——又或者是前往永遠無法脫出的迷宮。
 
 <p id="coverimage-warp">
-  <img id="coverimage" src="../image/Natsunoiro/cover.webp" loading="lazy" class="img-lazy" alt="Cover" originimg="https://storage-zone0.galgamer.eu.org/video-2d35/Natsunoiro/cover.webp">
+  <img id="coverimage" src="../image/Natsunoiro/cover.webp" loading="lazy" class="img-lazy" alt="Cover" originimg="https://storage-zone0.galgamer.moe/video-2d35/Natsunoiro/cover.webp">
 </p>
 <p id="changesrc">
   <a href="javascript:loadbigimg();" id="changebtn" class="btn btn-primary btn-sm" role="button">加載原圖（9258x12790, 4.0MB）⬆️️</a>

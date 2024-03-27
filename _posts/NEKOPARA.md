@@ -113,11 +113,11 @@ NEKOPARA Vol. 1
 
 {% steam_widget 333600 %}
 
-<a class="btn" href="https://dl.galgamer.eu.org/%E8%8D%89%E7%8C%AB/%E7%8C%AB%E5%A8%98%E4%B9%90%E5%9B%AD0.7z" title="鼠标悬停显示链接"> NEKOPARA vo.0 </a>
+<a class="btn" href="https://dl.galgamer.moe/%E8%8D%89%E7%8C%AB/%E7%8C%AB%E5%A8%98%E4%B9%90%E5%9B%AD0.7z" title="鼠标悬停显示链接"> NEKOPARA vo.0 </a>
 
-<a class="btn" href="https://dl.galgamer.eu.org/%E8%8D%89%E7%8C%AB/%E7%8C%AB%E5%A8%98%E4%B9%90%E5%9B%AD1%20pc.7z" title="鼠标悬停显示链接"> NEKOPARA vo.1 </a>
+<a class="btn" href="https://dl.galgamer.moe/%E8%8D%89%E7%8C%AB/%E7%8C%AB%E5%A8%98%E4%B9%90%E5%9B%AD1%20pc.7z" title="鼠标悬停显示链接"> NEKOPARA vo.1 </a>
 
-<a class="btn" href="https://dl.galgamer.eu.org/%E8%8D%89%E7%8C%AB/%E7%8C%AB%E5%A8%98%E4%B9%90%E5%9B%ADVol.2.7z" title="鼠标悬停显示链接"> NEKOPARA vo.2 </a>
+<a class="btn" href="https://dl.galgamer.moe/%E8%8D%89%E7%8C%AB/%E7%8C%AB%E5%A8%98%E4%B9%90%E5%9B%ADVol.2.7z" title="鼠标悬停显示链接"> NEKOPARA vo.2 </a>
 
 
 NEKOPARA vo.1

@@ -154,7 +154,7 @@ IDA 和 x64dbg 的介面大概都長這樣：
 多次點擊藍色的繼續運行鍵，看看會發生什麼事情。
 
 <video controls preload="metadata" width='100%'>
-  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/note-sigluscrack2/1.mp4" type="video/mp4" >
+  <source src="https://storage-zone0.galgamer.moe/video-2d35/note-sigluscrack2/1.mp4" type="video/mp4" >
 <p> To view this video please enable JavaScript</p>
 </video>
 

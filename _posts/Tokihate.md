@@ -297,7 +297,7 @@ excerpt: '號稱尋人能「活必見人，死必見屍」的女偵探，真澀�
 我覺得這首歌不算特別好聽，但是卻挺帶感的。
 
 <video controls preload="metadata" width='100%' poster="../image/Tokihate/op.webp">
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/Tokihate/op-720.mp4" type="video/mp4" />
+<source src="https://storage-zone0.galgamer.moe/video-2d35/Tokihate/op-720.mp4" type="video/mp4" />
 <track default src="../image/Tokihate/op.vtt" label="日文">
 <p> To view this video please enable JavaScript</p>
 </video>
@@ -349,7 +349,7 @@ excerpt: '號稱尋人能「活必見人，死必見屍」的女偵探，真澀�
 由於手上只有日文版，我嘗試加了翻譯字幕。
 
 <video controls preload="metadata" width='100%' poster="../image/Tokihate/movie.webp">
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/Tokihate/Tokihate-2.mp4" type="video/mp4" />
+<source src="https://storage-zone0.galgamer.moe/video-2d35/Tokihate/Tokihate-2.mp4" type="video/mp4" />
 <track default src="../image/Tokihate/tokihate.vtt" label="繁體中文">
 <track src="../image/Tokihate/tokihate-sc.vtt" label="简体中文">
 <p> To view this video please enable JavaScript</p>

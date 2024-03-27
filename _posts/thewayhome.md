@@ -259,7 +259,7 @@ excerpt: '即使不是在徐州，走夜路也是很危险的。'
 ## 遊戲 PV
 
 <video controls preload="metadata" width='100%' poster='../image/thewayhome/op.webp'>
-  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/thewayhome/thewayhome.mp4" type="video/mp4">
+  <source src="https://storage-zone0.galgamer.moe/video-2d35/thewayhome/thewayhome.mp4" type="video/mp4">
 </video>
 
 ## 遊戲 CG

@@ -552,7 +552,7 @@ Steam 版是英文的，而且翻譯有點怪，另外需要打 R-18 補丁才�
 我手上只有十週年紀念版，因此是日文的。當然你聽一下 BGM 也是極好的。
 
 <video controls preload="metadata" width='100%' poster="../image/subahibi/cover.webp">
-  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/subahibi/subamovie.mp4" type="video/mp4" />
+  <source src="https://storage-zone0.galgamer.moe/video-2d35/subahibi/subamovie.mp4" type="video/mp4" />
   <p> To view this video please enable JavaScript</p>
 </video>
 

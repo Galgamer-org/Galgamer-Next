@@ -168,7 +168,7 @@ excerpt: '胁迫调教名流人妻，释放她的抖M本性'
 ## 遊戲 OP
 
 <video controls preload="metadata" width='100%' poster="../image/trophywife2/op.webp">
-  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/20220319/op.mp4" type="video/mp4"/>
+  <source src="https://storage-zone0.galgamer.moe/video-2d35/20220319/op.mp4" type="video/mp4"/>
   <p> To view this video please enable JavaScript</p>
   </video>
 
@@ -187,32 +187,32 @@ excerpt: '胁迫调教名流人妻，释放她的抖M本性'
 ## CG
 
 <video preload="metadata" width='100%' autoplay loop muted playinline>
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/20220319/1.mp4" type="video/mp4"/>
+<source src="https://storage-zone0.galgamer.moe/video-2d35/20220319/1.mp4" type="video/mp4"/>
 <p> To view this video please enable JavaScript</p>
 </video>
 
 <video preload="metadata" width='100%' autoplay loop muted playinline>
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/20220319/2.mp4" type="video/mp4"/>
+<source src="https://storage-zone0.galgamer.moe/video-2d35/20220319/2.mp4" type="video/mp4"/>
 <p> To view this video please enable JavaScript</p>
 </video>
 
 <video preload="metadata" width='100%' autoplay loop muted playinline>
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/20220319/3.mp4" type="video/mp4"/>
+<source src="https://storage-zone0.galgamer.moe/video-2d35/20220319/3.mp4" type="video/mp4"/>
 <p> To view this video please enable JavaScript</p>
 </video>
 
 <video preload="metadata" width='100%' autoplay loop muted playinline>
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/20220319/4.mp4" type="video/mp4"/>
+<source src="https://storage-zone0.galgamer.moe/video-2d35/20220319/4.mp4" type="video/mp4"/>
 <p> To view this video please enable JavaScript</p>
 </video>
 
 <video preload="metadata" width='100%' autoplay loop muted playinline>
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/20220319/5.mp4" type="video/mp4"/>
+<source src="https://storage-zone0.galgamer.moe/video-2d35/20220319/5.mp4" type="video/mp4"/>
 <p> To view this video please enable JavaScript</p>
 </video>
 
 <video preload="metadata" width='100%' autoplay loop muted playinline>
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/20220319/6.mp4" type="video/mp4"/>
+<source src="https://storage-zone0.galgamer.moe/video-2d35/20220319/6.mp4" type="video/mp4"/>
 <p> To view this video please enable JavaScript</p>
 </video>
 
@@ -244,7 +244,7 @@ http://www.hs-crowd.co.jp/anim/product/pro_pc2/pcl022/
 這裏有一個 11分鐘的試玩。
 
 <video controls preload="metadata" width='100%' poster="../image/trophywife2/movie.webp">
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/20220319/My_Horny_Ex.mp4" type="video/mp4"/>
+<source src="https://storage-zone0.galgamer.moe/video-2d35/20220319/My_Horny_Ex.mp4" type="video/mp4"/>
 <p> To view this video please enable JavaScript</p>
 </video>
 

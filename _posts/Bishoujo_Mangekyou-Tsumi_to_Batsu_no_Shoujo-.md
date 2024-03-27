@@ -287,7 +287,7 @@ BGM选用古典乐变调，章节的衔接、场景的变换引用严肃文学�
 这里有一个试玩录像
 
 <video controls preload="metadata" width='100%' poster='../image/Bishoujo_Mangekyou-Tsumi_to_Batsu_no_Shoujo-/movie.webp'>
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/bishojo4/bishojo4-movie.mp4" type="video/mp4">
+<source src="https://storage-zone0.galgamer.moe/video-2d35/bishojo4/bishojo4-movie.mp4" type="video/mp4">
 </video>
 
 

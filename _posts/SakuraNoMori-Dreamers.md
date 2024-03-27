@@ -217,7 +217,7 @@ excerpt: 擁有能看見即將發生的不幸的能力的男主角，吹上慎�
 這裏有一個來自 Hikari Field 棺方中文版 的試玩錄像。
 
 <video controls preload="metadata" width='100%' poster="../image/SakuraNoMori-Dreamers/movie1.webp">
-  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/SakuraNoMori12/skr1-movie.mp4" type="video/mp4" >
+  <source src="https://storage-zone0.galgamer.moe/video-2d35/SakuraNoMori12/skr1-movie.mp4" type="video/mp4" >
 <p> To view this video please enable JavaScript</p>
 </video>
 

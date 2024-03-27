@@ -812,7 +812,7 @@ ul.closetimg > li.active { /* 抄襲 */
 
 
 <video controls preload="metadata" width='100%' poster="../image/SousakuKanojo/movie-op.webp">
-  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/SousakuKanojo/SousakuKano-OP-1080.mp4" type="video/mp4" >
+  <source src="https://storage-zone0.galgamer.moe/video-2d35/SousakuKanojo/SousakuKano-OP-1080.mp4" type="video/mp4" >
 <p> To view this video please enable JavaScript</p>
 </video>
 
@@ -886,7 +886,7 @@ ul.closetimg > li.active { /* 抄襲 */
 
 
 <video controls preload="metadata" width='100%' poster="../image/SousakuKanojo/movie.webp">
-   <source src="https://storage-zone0.galgamer.eu.org/video-2d35/SousakuKanojo/SousakuKanojo-1080.mp4" type="video/mp4" >
+   <source src="https://storage-zone0.galgamer.moe/video-2d35/SousakuKanojo/SousakuKanojo-1080.mp4" type="video/mp4" >
  <p> To view this video please enable JavaScript</p>
 </video>
 

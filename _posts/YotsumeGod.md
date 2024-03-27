@@ -233,7 +233,7 @@ excerpt: '單親家庭少女真依 跟隨父親回到了位於山中的老家四
 ## 游戏 OP
 
 <video controls preload="metadata" width='100%' poster='../image/YotsumeGod/op.webp'>
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/YotsumeGod/op.mp4" type="video/mp4">
+<source src="https://storage-zone0.galgamer.moe/video-2d35/YotsumeGod/op.mp4" type="video/mp4">
 </video>
 
 Galgame 金曲: <a href="/music/?id=17" target="_blank">🔗️神匿 -カミカクシ-</a>
@@ -300,7 +300,7 @@ Galgame 金曲: <a href="/music/?id=17" target="_blank">🔗️神匿 -カミカ
 这里有一个试玩录像
 
 <video controls preload="metadata" width='100%' poster='../image/YotsumeGod/movie.webp'>
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/YotsumeGod/12min-know.mp4" type="video/mp4">
+<source src="https://storage-zone0.galgamer.moe/video-2d35/YotsumeGod/12min-know.mp4" type="video/mp4">
 </video>
 
 你可能會想找 BGM：<a href="/music/?id=18" target="_blank">🔗️古都に咲く花</a>
@@ -399,7 +399,7 @@ https://apps.apple.com/jp/app/sitsu-mu-shen-mi-jieki-tuo/id1120022246
 
 <div class="col-12 col-md-6">
 <video controls width="100%" preload="metadata" poster='../image/YotsumeGod/old-movie.webp'>
-  <source src="https://storage-zone0.galgamer.eu.org/video-2d35/YotsumeGod/old-game.mp4" type="video/mp4">
+  <source src="https://storage-zone0.galgamer.moe/video-2d35/YotsumeGod/old-game.mp4" type="video/mp4">
 </video>
 </div>
 

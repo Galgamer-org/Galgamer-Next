@@ -408,7 +408,7 @@ Galgame 金曲: <a href="/music/?id=26" target="_blank">🔗️astral ability</a
 序章太長了我就錄了一個日後小故事。
 
 <video controls preload="metadata" width='100%' poster='../image/RIDDLEJOKER/movie.webp'>
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/RIDDLEJOKER/movie.mp4" type="video/mp4">
+<source src="https://storage-zone0.galgamer.moe/video-2d35/RIDDLEJOKER/movie.mp4" type="video/mp4">
 </video>
 
 ## 攻略順序

@@ -204,7 +204,7 @@ date: 2024-1-13 00:30:00
 ## 试玩
 
 <video controls preload="metadata" width='100%' poster="../image/cosplaylove/cover.webp">
-<source src="https://storage-zone0.galgamer.eu.org/video-2d35/cosplay-love/movie.mp4" type="video/mp4"/>
+<source src="https://storage-zone0.galgamer.moe/video-2d35/cosplay-love/movie.mp4" type="video/mp4"/>
 <p> To view this video please enable JavaScript</p>
 </video>
 

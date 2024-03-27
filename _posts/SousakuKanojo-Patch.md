@@ -226,7 +226,7 @@ Galgamer 團隊
  - 修補了一處原遊戲遺留的立繪顯示不正常的 bug
  - 補充了一處漏翻譯的 LINE 手機聊天
 
-[🔗OneDrive 下載](https://storage-zone0.galgamer.eu.org/video-2d35/SousakuKanojo/Galgamer-%E5%89%B5%E4%BD%9C%E5%BD%BC%E5%A5%B3%E7%9A%84%E6%88%80%E6%84%9B%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%BC%A2%E5%8C%96%E8%A3%9C%E4%B8%81-Brisk.zip)
+[🔗OneDrive 下載](https://storage-zone0.galgamer.moe/video-2d35/SousakuKanojo/Galgamer-%E5%89%B5%E4%BD%9C%E5%BD%BC%E5%A5%B3%E7%9A%84%E6%88%80%E6%84%9B%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%BC%A2%E5%8C%96%E8%A3%9C%E4%B8%81-Brisk.zip)
 
 從舊版本的升級方法：直接使用新版本的 patch2.xp3 覆蓋舊版本即可．
 注意：讀取舊版本遊戲存檔後，遊戲標題欄會顯示舊版本的名稱和版本號．
