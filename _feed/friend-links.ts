@@ -47,6 +47,12 @@ const FriendLinks: FriendLink[] = [
         title: "零件's Blog",
         info: "Tech Otakus Save The World"
     }
+    , {
+        title: "鲲 Galgame 论坛",
+        info: "世界上最萌的 Galgame 论坛",
+        href: "https://kungal.com/",
+        avatar: "https://galgamer.moe/image/main/kungal.webp"
+      }
     // , {
     //     avatar: "https://galgamer.moe/image/main/cloudflare.webp",
     //     href: "https://www.cloudflare.com/",
