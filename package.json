@@ -21,6 +21,7 @@
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
+    "react-medium-image-zoom": "^5.2.0",
     "rehype-katex": "^7.0.0",
     "rehype-raw": "^7.0.0",
     "remark": "^15.0.1",

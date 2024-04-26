@@ -8,7 +8,7 @@ import { join } from 'path'
 import probe from 'probe-image-size'
 import { createReadStream, existsSync } from 'fs'
 import { getNomalizedImagePath } from '../lib/image-loader'
-import imageLoader from '../lib/image-loader'
+import imageLoader from '@/lib/image-loader'
 import { onlineDirectory, rootDirectory } from '../lib/constants'
 
 type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">) | Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "ref">
@@ -36,7 +36,7 @@ export default async function SmartImage(props: imageProps) {
 
     let probeResult: probe.ProbeResult;
 
-    let hasSize = probeResult?.width && probeResult?.height;
+    let hasSize = props?.width && props?.height;
 
     const probeSrc = getProbePath(src);
     if (!hasSize) {

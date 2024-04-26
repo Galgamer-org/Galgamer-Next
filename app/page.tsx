@@ -14,7 +14,8 @@ import FriendLinks from '@/_feed/friend-links'
 import BookmarkContainer from '@/components/bookmark-container'
 import ppstyle from '@/styles/post-preview.module.css'
 import React from 'react'
-
+import MainVisualH1 from '@/components/MainVisualH1'
+import dgstyles from '@/styles/draw-guess.module.css';
 
 
 export default function Index() {
@@ -58,6 +59,18 @@ export default function Index() {
         }
 
         <FriendLinkBody />
+        
+        <div className={'my-5'}></div>
+
+        <Link href='/event/draw-guess' className={cn('text-decoration-none', dgstyles.link)}>
+          <MainVisualH1
+            title={`你畫我猜作品集`}
+            description='Draw & Guess Artworks'
+            details='你畫我猜 by Galgamer'
+            cssClass={dgstyles.drawGuessH1}
+          ></MainVisualH1>
+        </Link>
+
 
       </Container>
 

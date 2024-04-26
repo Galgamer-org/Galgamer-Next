@@ -13,7 +13,7 @@ type Props = {
   children: React.ReactNode
 };
 
-const urlBase = 'https://next.galgamer.moe'; 
+const urlBase = 'https://galgamer.moe'; 
 
 export const metadata: Metadata = {
   title: {
