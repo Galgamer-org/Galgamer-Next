@@ -14,7 +14,7 @@ categories:
     - [R-18]
     - [游戏公司, Team Salvato]
 abbrlink: 25665
-author: sym1018
+author: sym 1018
 excerpt: '青梅竹马的邻居纱由理邀请我加入文学俱乐部，在文学部中的日常是什么样呢'
 date: 2022-01-14 00:30:00
 ---
@@ -39,7 +39,7 @@ date: 2022-01-14 00:30:00
 }
 </style>
 
-`作者：sym1018`
+`作者：sym 1018`
 
 ## WARNING!
 

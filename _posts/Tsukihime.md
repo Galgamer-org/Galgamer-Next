@@ -11,7 +11,7 @@ categories:
   - [R-18]
   - [游戏公司, Type Moon]
 abbrlink: 134
-author: sym1018
+author: sym 1018
 excerpt: '重制版<月姬 -A piece of blue glass moon->已经发行,借由此次机会重新整理月姬系列部分内容.'
 date: 2022-02-05 00:30:00
 ---
@@ -62,7 +62,7 @@ date: 2022-02-05 00:30:00
 }
 </style>
 
-`作者：sym1018`
+`作者：sym 1018`
 
 ![Cover](../image/Tsukihime/Cover.jpg)
 

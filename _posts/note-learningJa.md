@@ -258,7 +258,7 @@ excerpt: '不再被語言所束縛，這是成爲自由且無可阻擋的 Galgam
     <li class="bg-dark" data-target="#carouselExampleIndicators-one" data-slide-to="8"></li>
     <li class="bg-dark" data-target="#carouselExampleIndicators-one" data-slide-to="9"></li>
   </ol>
-  <div class="carousel-inner bg-transparent">
+  <div class="carousel-inner bg-transparent" style="aspect-ratio: 1600/1125;">
     <div class="carousel-item active">
       <img class="d-block w-100 img-lazy" loading="lazy" width="1600" height="1125" src="../image/note-learningJa/2-2/0.webp" >
     </div>
@@ -305,7 +305,7 @@ excerpt: '不再被語言所束縛，這是成爲自由且無可阻擋的 Galgam
 
 **終於到了玩 Galgame（學習）的時候了**，那麼我就來講講該怎麼做，，，
 
-爲了確保學習的效果，我們需要一個沒那麼多複雜用語，專有名詞，也不故弄玄虛的 Galgame，首先 [🔗美好的每一天](/article/20008.html) 就被排除了😅；然後，故事劇情應該貼近生活，主題是高中生活之類的最好，這樣日常用語的表達也能更好地熟悉，於是 [🔗來自昏暗的時間盡頭](/article/67843.html) 就不要玩了，，，
+爲了確保學習的效果，我們需要一個沒那麼多複雜用語，專有名詞，也不故弄玄虛的 Galgame，首先 [🔗美好的每一天](/article/20016) 就被排除了😅；然後，故事劇情應該貼近生活，主題是高中生活之類的最好，這樣日常用語的表達也能更好地熟悉，於是 [🔗來自昏暗的時間盡頭](/article/67843) 就不要玩了，，，
 
 最後的結論就是，我覺得我們應該玩 [🔗銀色、遙遠](http://toneworks.product.co.jp/ginharu/index.html)。（如果你有更好的選擇的話請告訴我）
 
@@ -406,7 +406,7 @@ JLPT 考試在 7 月和 12 月舉行，報名時間是 3 月中旬和 8 月中�
 Galgame 玩的越多，在你背後堆成的貝殼之山就越高，
 只要你不停止玩 Galgame，你就永遠不會忘記學過的日語。
 
-作爲最後的練習，我推薦你玩 [🔗在月之彼方再相逢](/article/95620.html)。
+作爲最後的練習，我推薦你玩 [🔗在月之彼方再相逢](/article/95620)。
 
 
 ## 旅程在這裏結束了嗎？
