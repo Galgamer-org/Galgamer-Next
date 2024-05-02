@@ -15,11 +15,11 @@
     "d3": "^7.9.0",
     "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",
-    "next": "14.2.2",
+    "next": "14.2.3",
     "probe-image-size": "^7.2.3",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",
-    "react-dom": "^18.2.0",
+    "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
     "react-medium-image-zoom": "^5.2.0",
     "rehype-katex": "^7.0.0",
@@ -29,14 +29,14 @@
     "remark-gfm": "^4.0.0",
     "remark-html": "^16.0.1",
     "remark-math": "^6.0.0",
-    "serve": "^14.2.2",
+    "serve": "^14.2.3",
     "typescript": "^5.4.5",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.12.7",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
+    "@types/node": "^20.12.8",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38"
   }

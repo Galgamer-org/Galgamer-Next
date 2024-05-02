@@ -6,6 +6,8 @@ import '@/styles/fonts.css';
 import '@/styles/main.css';
 import Footer from '../components-layout/footer';
 import Header from '../components-layout/Header';
+import ReturnTopButton from '@/components/ReturnTop';
+
 import type { Metadata } from 'next';
 
 
@@ -78,6 +80,7 @@ export default function RootLayout({
           {children}
         </main>
         <div className='my-3' />
+        <ReturnTopButton />
         <Footer />
       </body>
     </html>

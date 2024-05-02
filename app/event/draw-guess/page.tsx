@@ -11,25 +11,25 @@ import { Metadata } from 'next'
 const INDEX_URL = "https://storage-zone1.galgamer.moe/draw-guess-index-deadbeef/index.json";
 
 export const metadata: Metadata = {
-    title: "你畫我猜作品集",
-    description: "Draw & Guess Artworks",
-    keywords: ['Galgamer', '你畫我猜', '遊戲'],
-    
-    openGraph: {
-      type: 'website',
-      locale: 'zh_HK',
-      siteName: 'Galgamer',
-      url: '/event/draw-guess',
-      title: '你畫我猜作品集',
-      description: 'Draw & Guess Artworks',
-      images: '/site-assets/metadata/draw-guess.png',
-    },
-    twitter: {
-      title: '你畫我猜作品集',
-      description: 'Draw & Guess Artworks',
-      card: 'summary_large_image',
-      images: '/site-assets/metadata/draw-guess.png',
-    },
+  title: "你畫我猜作品集",
+  description: "Draw & Guess Artworks",
+  keywords: ['Galgamer', '你畫我猜', '遊戲'],
+
+  openGraph: {
+    type: 'website',
+    locale: 'zh_HK',
+    siteName: 'Galgamer',
+    url: '/event/draw-guess',
+    title: '你畫我猜作品集',
+    description: 'Draw & Guess Artworks',
+    images: '/site-assets/metadata/draw-guess.png',
+  },
+  twitter: {
+    title: '你畫我猜作品集',
+    description: 'Draw & Guess Artworks',
+    card: 'summary_large_image',
+    images: '/site-assets/metadata/draw-guess.png',
+  },
 }
 
 
@@ -76,22 +76,39 @@ export default async function DrawGuessGallery() {
               「你畫我猜」是 Galgamer 的羣內活動．每位參與者畫出上一個玩家的描述，並猜出上一個玩家的畫作．遊戲的最後進行鑑賞大會，共同分享奇妙的作品和猜測．
             </p>
             <p>
-              關於參加活動的詳情，請參考頁面底部的「召喚美少女」．
+              如果你想加入我們的遊戲，請關注 Galgame 交流群，管理員會定期在群內發布活動通知．<br />
+              此外，我們的畫猜詞庫和遊戲規則在這個 GitHub 倉庫，<a href='https://github.com/Galgamer-org/Draw-Guess-Keywords' target='_blank'>🔗Draw-Guess-Keywords</a>，請前往查看．
             </p>
 
-            {Object.entries(imagesByDay).map(([date, images]) => {
+            {/* <details>
+              <summary><strong>目錄</strong></summary>
+              <ul>
+                {Object.keys(imagesByDay).map((date) => (
+                  <li key={date}><a href={`#${date} 作品 (${imagesByDay[date].length})`}>{date} 作品 ({imagesByDay[date].length})</a></li>
+                ))}
+              </ul>
+            </details> */}
+
+            {Object.entries(imagesByDay).map(([date, images], index) => {
               return (
                 <div key={date}>
-                  <h2 key={date + 'title'}>
-                    {date} 作品 ({images.length})
-                  </h2>
-                  <div className='d-flex flex-wrap'>
-                    {images.map((image: ImageData) => (
-                      <div key={image._hash} className='col-12 col-md-4 col-lg-3 p-3 '>
-                        <div className='o-hidden rounded box-shadow'>
+                  <details open={index < 2}>
+                    <summary>
+                      <span className="anchor" id={`${date} 作品 (${images.length})`} style={{
+                        position: 'absolute',
+                        transform: 'translateY(-30vh)',
+                      } as React.CSSProperties }></span>
+                      <h2 key={date + 'title'}  className='my-2'>
+                        {date} 作品 ({images.length})
+                      </h2>
+                    </summary>
+                    <div className='d-flex flex-wrap'>
+                      {images.map((image: ImageData) => (
+                        <div key={image._hash} className='col-12 col-md-4 col-lg-3 p-3 '>
+                          <div className='o-hidden rounded box-shadow'>
                             <ZoomImg
                               src={image.getURL()}
-                              alt={image._draw_what ? `${image._draw_what} + ' by ' + ${image._author}` : image._created_time_readable}
+                              alt={image._draw_what ? `${image._draw_what} by ${image._author}` : image._created_time_readable}
                               width={image._width}
                               height={image._height}
                               className='h-auto'
@@ -100,20 +117,22 @@ export default async function DrawGuessGallery() {
                             >
                             </ZoomImg>
 
+                          </div>
+                          {image._draw_what &&
+                            <div className='pt-2'>
+                              <p className='m-0'><span className=' fst-italic fw-bolder'>{image._draw_what}</span><br />@{image._author}</p>
+                            </div>
+                          }
+                          {!image._draw_what &&
+                            <div className='pt-2'>
+                              <p className='m-0'>{new Date(image._created_time * 1000).toLocaleTimeString('zh-CN', { timeZone: 'Asia/Hong_Kong' })}</p>
+                            </div>
+                          }
                         </div>
-                        {image._draw_what &&
-                          <div className='pt-2'>
-                            <p className='m-0'><span className=' fst-italic fw-bolder'>{image._draw_what}</span><br />@{image._author}</p>
-                          </div>
-                        }
-                        {!image._draw_what &&
-                          <div className='pt-2'>
-                            <p className='m-0'>{new Date(image._created_time * 1000).toLocaleTimeString('zh-CN', { timeZone: 'Asia/Hong_Kong' })}</p>
-                          </div>
-                        }
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+
+                  </details>
                 </div>
               );
 
