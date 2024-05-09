@@ -147,7 +147,47 @@ export const members: MemberList = {
     'KUN': {
         photo: "/member-icon/group/kun.webp",
         bio: "KUN IS THE CUTEST! 鲲最可爱！萌萌 galgame 群：https://t.me/kungalgame",
-    }
+    },
+    '半夏残风': {
+        photo: "/member-icon/group/半夏残风.webp",
+        bio: "构成我们的材料也就是构成梦幻的材料，我们短暂的一生，前后都环绕在沉睡之中",
+    },
+    'NagatoCute': {
+        photo: "/member-icon/group/nagatocute.webp",
+        bio: "倦了",
+    },
+    'Lucas Lancaster': {
+        photo: "/member-icon/group/lucas lancaster.webp",
+        bio: "Non sunt multiplicanda entia sine necessitate/如无必要 勿增实体",
+    },
+    'Jump Jump Dance She': {
+        photo: "/member-icon/group/jump jump dance she.webp",
+        bio: "新增一些關於你自己的介紹",
+    },
+    'Gou pe': {
+        photo: "/member-icon/group/gou pe.webp",
+        bio: "我可不是随便一种大便，我是狗大便，你可以说，这是大便里最糟糕的一种。",
+    },
+    '秦心喵 ᶜᵃᵗ': {
+        photo: "/member-icon/group/秦心喵 ᶜᵃᵗ.webp",
+        bio: "地雷系 ‼️⚠️自傷⚠️‼️┊od┊工口❌‼️",
+    },
+    'heyeah': {
+        photo: "/member-icon/group/heyeah.webp",
+        bio: "一只可爱的猫娘喵 https://t.me/nachoneko_like \n总有一天我要收集所有甘城猫画的画",
+    },
+    'lifen': {
+        photo: "/member-icon/group/lifen.webp",
+        bio: "都给我玩原神",
+    },
+    '魏 连殳': {
+        photo: "/member-icon/group/魏 连殳.webp",
+        bio: "落魄死宅 |个人博客。 a.weils.xyz",
+    },
+    '桜雨星河 SakulaRain': {
+        photo: "/member-icon/group/桜雨星河.webp",
+        bio: "空と海と大地をかけぬける，風にのってあなたとであい。个人频道 @SakuraRainChannel",
+    },
 
 };
 
