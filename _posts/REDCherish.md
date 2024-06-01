@@ -1,7 +1,7 @@
 ---
 title: 'RE:D Cherish!：血紅珍寶'
 date: 2023-1-14 00:30:00
-keywords: "RE:D Cherish, 夏の色のノスタルジア, CRYSTALiA" 
+keywords: "RE:D Cherish, CRYSTALiA" 
 banner_img: ''
 index_img: '../image/REDCherish/cover.webp'
 tags:
