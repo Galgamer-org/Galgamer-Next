@@ -97,6 +97,11 @@ export const staffs: MemberList = {
         photo: "/member-icon/group/seoisoeng.webp",
         bio: "＋852 0721 0831",
     },
+
+    'Sayafx': {
+        photo: "/member-icon/staff/sayafx.webp",
+        bio: "",
+    },
 };
 
 export const members: MemberList = {
