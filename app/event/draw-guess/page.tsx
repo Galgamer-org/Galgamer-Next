@@ -6,6 +6,7 @@ import ImageData from '@/interfaces/draw-guess-image';
 import styles from '@/styles/draw-guess.module.css';
 import { ZoomImage, ZoomImg } from '@/components/zoom-image';
 import { Metadata } from 'next'
+import CustomDetails from './pageClient';
 
 
 const INDEX_URL = "https://storage-zone1.galgamer.moe/draw-guess-index-deadbeef/index.json";
@@ -31,8 +32,6 @@ export const metadata: Metadata = {
     images: '/site-assets/metadata/draw-guess.png',
   },
 }
-
-
 
 export default async function DrawGuessGallery() {
 
@@ -92,16 +91,19 @@ export default async function DrawGuessGallery() {
             {Object.entries(imagesByDay).map(([date, images], index) => {
               return (
                 <div key={date}>
-                  <details open={index < 2}>
-                    <summary>
-                      <span className="anchor" id={`${date} 作品 (${images.length})`} style={{
-                        position: 'absolute',
-                        transform: 'translateY(-30vh)',
-                      } as React.CSSProperties }></span>
-                      <h2 key={date + 'title'}  className='my-2'>
-                        {date} 作品 ({images.length})
-                      </h2>
-                    </summary>
+                  <CustomDetails defaultOpen={index < 2} 
+                    title={
+                      <>
+                        <span className="anchor" id={`${date} 作品 (${images.length})`} style={{
+                          position: 'absolute',
+                          transform: 'translateY(-30vh)',
+                        } as React.CSSProperties}></span>
+                        <h2 key={date + 'title'} className='my-2'>
+                          {date} 作品 ({images.length})
+                        </h2>
+                      </>
+                    }
+                    >
                     <div className='d-flex flex-wrap'>
                       {images.map((image: ImageData) => (
                         <div key={image._hash} className='col-12 col-md-4 col-lg-3 p-3 '>
@@ -132,7 +134,7 @@ export default async function DrawGuessGallery() {
                       ))}
                     </div>
 
-                  </details>
+                  </CustomDetails>
                 </div>
               );
 
@@ -144,3 +146,6 @@ export default async function DrawGuessGallery() {
     </Container>
   );
 }
+
+
+
