@@ -1,12 +1,10 @@
 import { getAllPosts, isTechnicalReport } from 'lib/api'
 import Container from 'components-layout/container'
-import PostPreview from 'components/post-preview'
-import cn from 'classnames'
 import style from 'styles/channel.module.css'
-import { Col, Row } from 'react-bootstrap'
 import { notFound } from 'next/navigation'
 import MainVisualH1 from '@/components/MainVisualH1'
 import type { Metadata, ResolvingMetadata } from 'next'
+import PostsByYears from '@/components/posts-by-year'
 
 const channels = [
   {
@@ -76,6 +74,8 @@ export async function generateStaticParams() {
   return result
 }
 
+
+
 export default function Channel({ params }: { params: Record<string, string> }) {
   //console.log(params);
 
@@ -95,7 +95,8 @@ export default function Channel({ params }: { params: Record<string, string> }) 
         details={channel.details}
         cssClass={style[channel.cssClass]}
       ></MainVisualH1>
-      <section>
+      <PostsByYears posts={posts} />
+      {/* <section>
         <div className={cn('container-board', 'mx-auto p-1 p-md-2 box-shadow')}>
           <Row className={cn('pt-4 pt-md-4 mt-2 mx-0 px-1 px-md-2 px-xl-4 o-hidden')}>
             {posts.map((post) => (
@@ -107,31 +108,7 @@ export default function Channel({ params }: { params: Record<string, string> }) 
             ))}
           </Row>
         </div>
-      </section>
+      </section> */}
     </Container>
-    // <Container>
-    //     <div className="flex flex-col items-center justify-center w-full">
-    //         <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100">
-    //             {channel.title}
-    //         </h1>
-    //         <p className="mt-2 text-lg text-center text-gray-600 dark:text-gray-400">
-    //             {channel.description}
-    //         </p>
-    //     </div>
-    //     <div className="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 lg:grid-cols-3">
-    //         {posts.map((post) => (
-    //             <PostPreview
-    //                 key={post.slug}
-    //                 title={post.title}
-    //                 index_img={post.index_img}
-    //                 date={post.date}
-    //                 author={post.author}
-    //                 slug={post.slug}
-    //                 excerpt={post.excerpt}
-    //                 abbr={post.abbrlink}
-    //             />
-    //         ))}
-    //     </div>
-    // </Container>
   )
 }

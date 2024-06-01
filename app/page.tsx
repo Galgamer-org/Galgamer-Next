@@ -58,10 +58,6 @@ export default function Index() {
           />
         }
 
-        <FriendLinkBody />
-        
-        <div className={'my-5'}></div>
-
         <Link href='/event/draw-guess' className={cn('text-decoration-none', dgstyles.link)}>
           <MainVisualH1
             title={`你畫我猜作品集`}
@@ -70,8 +66,9 @@ export default function Index() {
             cssClass={dgstyles.drawGuessH1}
           ></MainVisualH1>
         </Link>
+        <div className={'my-5'}></div>
 
-
+        <FriendLinkBody />
       </Container>
 
     </>

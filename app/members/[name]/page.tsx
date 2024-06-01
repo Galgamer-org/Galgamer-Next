@@ -13,6 +13,7 @@ import { Col, Row } from "react-bootstrap";
 
 import Image from 'next/image';
 import type { Metadata, ResolvingMetadata } from 'next'
+import PostsByYears from "@/components/posts-by-year";
 
 
 type MetadataProps = {
@@ -142,23 +143,7 @@ function CharacterInfo({ name, member }: { name: string, member: member }) {
 function PostFromThisMember({ posts }: { posts: PostType[] }) {
   return (
     <Container className="px-2">
-      <BookmarkContainer title={
-        <><i className="bi bi-vector-pen me-1" />投稿</>
-      }>
-        <section>
-          <div className={cn('container-board', 'mx-auto p-1 p-md-2')}>
-            <Row className={cn('pt-4 pt-md-4 mt-2 mx-0 px-1 px-md-2 px-xl-4 o-hidden')}>
-              {posts.map((post) => (
-                <Col className={cn('col-12 col-md-6 col-xl-4')} key={post.slug}>
-                  <PostPreview
-                    post={post}
-                  />
-                </Col>
-              ))}
-            </Row>
-          </div>
-        </section>
-      </BookmarkContainer>
+      <PostsByYears posts={posts} />  
     </Container>
   );
 }
