@@ -8,6 +8,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "@types/probe-image-size": "^7.2.4",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",

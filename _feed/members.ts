@@ -152,7 +152,7 @@ export const members: MemberList = {
         photo: "/member-icon/group/半夏残风.webp",
         bio: "构成我们的材料也就是构成梦幻的材料，我们短暂的一生，前后都环绕在沉睡之中",
     },
-    'NagatoCute': {
+    'Lux Aeris': {
         photo: "/member-icon/group/nagatocute.webp",
         bio: "倦了",
     },
@@ -187,6 +187,10 @@ export const members: MemberList = {
     '桜雨星河 SakulaRain': {
         photo: "/member-icon/group/桜雨星河.webp",
         bio: "空と海と大地をかけぬける，風にのってあなたとであい。个人频道 @SakuraRainChannel",
+    },
+    '夜墨': {
+        photo: "/member-icon/group/夜墨.webp",
+        bio: "聊天羣 https://t.me/+-xX_p8PR25AxODE1",
     },
 
 };

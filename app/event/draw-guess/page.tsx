@@ -7,6 +7,7 @@ import styles from '@/styles/draw-guess.module.css';
 import { ZoomImage, ZoomImg } from '@/components/zoom-image';
 import { Metadata } from 'next'
 import CustomDetails from './pageClient';
+import { FancyboxImage } from '@/components/fancybox';
 
 
 const INDEX_URL = "https://storage-zone1.galgamer.moe/draw-guess-index-deadbeef/index.json";
@@ -108,16 +109,17 @@ export default async function DrawGuessGallery() {
                       {images.map((image: ImageData) => (
                         <div key={image._hash} className='col-12 col-md-4 col-lg-3 p-3 '>
                           <div className='o-hidden rounded box-shadow'>
-                            <ZoomImg
+                            <FancyboxImage
                               src={image.getURL()}
-                              alt={image._draw_what ? `${image._draw_what} by ${image._author}` : image._created_time_readable}
+                              alt={image._draw_what ? `${image._draw_what} by ${image._author} ${date.toString()}` : image._created_time_readable}
                               width={image._width}
                               height={image._height}
                               className='h-auto'
                               loading='lazy'
                               decoding='async'
+                              groupid={date.toString()}
                             >
-                            </ZoomImg>
+                            </FancyboxImage>
 
                           </div>
                           {image._draw_what &&

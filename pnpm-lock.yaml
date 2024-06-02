@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fancyapps/ui':
+    specifier: ^5.0.36
+    version: 5.0.36
   '@types/probe-image-size':
     specifier: ^7.2.4
     version: 7.2.4
@@ -102,6 +105,10 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.1
+    dev: false
+
+  /@fancyapps/ui@5.0.36:
+    resolution: {integrity: sha512-GMygQzp1MBTFNTT6AzpbL6pXTD6bTxwjmmpI1fe8Ozmmiseu8/g82Sudl1YhcbZmS4bJgaBOF5THDFGpXQ1fDw==}
     dev: false
 
   /@next/env@14.2.3:
