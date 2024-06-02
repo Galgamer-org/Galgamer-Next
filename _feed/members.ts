@@ -97,6 +97,11 @@ export const staffs: MemberList = {
         photo: "/member-icon/group/seoisoeng.webp",
         bio: "＋852 0721 0831",
     },
+
+    'Sayafx': {
+        photo: "/member-icon/staff/sayafx.webp",
+        bio: "",
+    },
 };
 
 export const members: MemberList = {
@@ -186,7 +191,7 @@ export const members: MemberList = {
     },
     '桜雨星河 SakulaRain': {
         photo: "/member-icon/group/桜雨星河.webp",
-        bio: "空と海と大地をかけぬける，風にのってあなたとであい。个人频道 @SakuraRainChannel",
+        bio: "我喜欢sena啊啊啊啊啊啊啊啊啊啊吗",
     },
     '夜墨': {
         photo: "/member-icon/group/夜墨.webp",

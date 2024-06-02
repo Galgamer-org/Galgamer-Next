@@ -10,7 +10,7 @@ import CustomDetails from './pageClient';
 import { FancyboxImage } from '@/components/fancybox';
 
 
-const INDEX_URL = "https://storage-zone1.galgamer.moe/draw-guess-index-deadbeef/index.json";
+const INDEX_URL = "https://storage-zone1.galgamer.eu.org/draw-guess-index-deadbeef%2Findex.json";
 
 export const metadata: Metadata = {
   title: "你畫我猜作品集",
