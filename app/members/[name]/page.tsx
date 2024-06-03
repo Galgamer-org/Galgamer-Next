@@ -5,11 +5,9 @@ import Container from "@/components-layout/container";
 import style from "@/styles/members.module.css";
 import BookmarkContainer from "@/components/bookmark-container";
 import cn from "classnames";
-import { ReactNode } from "react";
 import type PostType from "@/interfaces/post";
 import { getAllPosts } from "@/lib/api";
-import PostPreview from "@/components/post-preview";
-import { Col, Row } from "react-bootstrap";
+import Link from 'next/link';
 
 import Image from 'next/image';
 import type { Metadata, ResolvingMetadata } from 'next'
@@ -118,7 +116,10 @@ function CharacterInfo({ name, member }: { name: string, member: member }) {
   return (
     <Container className="px-2">
       <BookmarkContainer title={
-        <><i className="bi bi-person-heart me-1" />{name}</>
+        <Link
+          href="/members"
+          className={cn(style.tagLink, 'd-inline-block px-2 py-1 text-decoration-none')}
+        ><i className="bi bi-arrow-left-circle-fill me-1" />所有登場人物</Link>
       }>
         <div className="container myfont">
           {/* <p className={style.defaultText}>
@@ -129,8 +130,9 @@ function CharacterInfo({ name, member }: { name: string, member: member }) {
               <Image className='box-shadow' src={member.photo} alt={name} width={512} height={512} />
             </div>
             <div className={cn(`${style.InfoText} col-8 col-md-9`)}>
-              <div className={cn(`${style.InfoBio} font-serif fw-bolder fst-italic`)}>
-                <q>{member.bio ? member.bio : "这是一个默认 Bio (这个家伙懒爆了，Bio 都不提供)"}</q>
+              <h1 className={cn(`${style.InfoName} text-4xl fw-bold`)}>{name}</h1>
+              <div className={cn(`${style.InfoBio} fst-italic mt-3`)}>
+                {member.bio ? member.bio : "这是一个默认 Bio (这个家伙懒爆了，Bio 都不提供)"}
               </div>
             </div>
           </div>
@@ -143,7 +145,7 @@ function CharacterInfo({ name, member }: { name: string, member: member }) {
 function PostFromThisMember({ posts }: { posts: PostType[] }) {
   return (
     <Container className="px-2">
-      <PostsByYears posts={posts} />  
+      <PostsByYears posts={posts} />
     </Container>
   );
 }

@@ -71,7 +71,7 @@ export default function Header() {
                 </Nav.Item>
                 <Nav.Item onClick={() => setExpanded(false)}>
                   <Nav.Link as={Link} href="/tags" className={cn(style.navbarText, '')}>
-                    <i className="bi-tag-fill me-1"></i>
+                    <i className="bi-tags-fill me-1"></i>
                     Tags
                   </Nav.Link>
                 </Nav.Item>

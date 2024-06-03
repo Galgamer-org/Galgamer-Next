@@ -86,6 +86,21 @@ export function getAllPosts() {
   return posts;
 }
 
+export function getAllTags(): Record<string, PostType[]> {
+  const posts = getAllPosts();
+  const tags = {};
+  posts.forEach((post) => {
+    post.tags.forEach((tag) => {
+      if (tags[tag]) {
+        tags[tag].push(post);
+      } else {
+        tags[tag] = [post];
+      }
+    });
+  });
+  return tags;
+}
+
 export function isTechnicalReport(post: PostType) {
   let result = false;
   const technicalKeywords = ['技術報告', '技术报告', '笔记', '筆記', '漢化'];
