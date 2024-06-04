@@ -53,6 +53,12 @@ const FriendLinks: FriendLink[] = [
         href: "https://kungal.com/",
         avatar: "https://galgamer.moe/image/main/kungal.webp"
       }
+    , {
+        title: "Galgame 月谣",
+        info: "群友的视觉小说汉化分流仓库",
+        href: "https://www.sayafx.top/",
+        avatar: "/site-assets/moonpsalms.jpg"
+      }
     // , {
     //     avatar: "https://galgamer.moe/image/main/cloudflare.webp",
     //     href: "https://www.cloudflare.com/",
