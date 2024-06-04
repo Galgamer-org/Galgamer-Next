@@ -55,9 +55,9 @@ const FriendLinks: FriendLink[] = [
       }
     , {
         title: "Galgame 月谣",
-        info: "视觉小说汉化分流仓库",
+        info: "群友的视觉小说汉化分流仓库",
         href: "https://www.sayafx.top/",
-        avatar: "https://www.sayafx.top/favicon.ico"
+        avatar: "/site-assets/moonpsalms.jpg"
       }
     // , {
     //     avatar: "https://galgamer.moe/image/main/cloudflare.webp",
