@@ -148,9 +148,9 @@ function HeroPost({
                 {/* tags */}
                 <i className="bi-tag-fill me-2"></i>
                 {tags.map((tag) => (
-                  <a href={`/tags/${tag}`} key={tag} className={cn(ppstyle.metaLink)}>
+                  <Link href={`/tags/${tag}`} key={tag} className={cn(ppstyle.metaLink)}>
                     {tag}
-                  </a>
+                  </Link>
                 ))}
               </div>}
             </div>

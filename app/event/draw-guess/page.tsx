@@ -108,7 +108,7 @@ export default async function DrawGuessGallery() {
                     <div className='d-flex flex-wrap'>
                       {images.map((image: ImageData) => (
                         <div key={image._hash} className='col-12 col-md-4 col-lg-3 p-3 '>
-                          <div className='o-hidden rounded box-shadow'>
+                          <div className={cn(styles.imgWrap ,'o-hidden rounded box-shadow')}>
                             <FancyboxImage
                               src={image.getURL()}
                               alt={image._draw_what ? `${image._draw_what} by ${image._author} ${date.toString()}` : image._created_time_readable}

@@ -68,7 +68,7 @@ export function generateStaticParams() {
     }
   });
   params.push(...temp);
-
+  //console.log(params);
   return params;
 }
 
@@ -118,8 +118,9 @@ function CharacterInfo({ name, member }: { name: string, member: member }) {
       <BookmarkContainer title={
         <Link
           href="/members"
+          scroll={false}
           className={cn(style.tagLink, 'd-inline-block px-2 py-1 text-decoration-none')}
-        ><i className="bi bi-arrow-left-circle-fill me-1" />所有登場人物</Link>
+        ><i className="bi bi-arrow-left-circle-fill me-1" />登場人物</Link>
       }>
         <div className="container myfont">
           {/* <p className={style.defaultText}>

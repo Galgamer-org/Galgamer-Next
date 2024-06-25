@@ -31,11 +31,30 @@ const SetTheme: React.FC<SetThemeProps> = () => {
     //     return theme ?? themeSystem;
     // };
 
+    const getMainColor = function () : string {
+        const rootElement = document.documentElement;
+        const result = getComputedStyle(rootElement).getPropertyValue('--navbar-bg-color').trim();
+        //console.log('Main color: ', result);
+        return result;
+    };
+
+    const setMetaThemeColor = function (color: string) {
+        const metaThemeColor = document.querySelector('meta[name=theme-color]');
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute('content', color);
+        } else {
+            const meta = document.createElement('meta');
+            meta.name = 'theme-color';
+            meta.content = color;
+            document.head.appendChild(meta);
+        }
+    };
+
     useEffect(() => {
         // setTheme(localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
         // read current theme from DOM and set is if followSystem is true
         const themeData = localStorage.getItem('theme');
-        if (themeData){
+        if (themeData) {
             setFollowSystem(false);
             setTheme(themeData);
         } else {
@@ -48,6 +67,7 @@ const SetTheme: React.FC<SetThemeProps> = () => {
     useEffect(() => {
         if (theme) {
             (document.querySelector(':root') as Element & HTMLElement).dataset.theme = theme;
+            setMetaThemeColor(getMainColor());
         }
 
         const useSetTheme = (e: MediaQueryListEvent) => {
@@ -76,7 +96,7 @@ const SetTheme: React.FC<SetThemeProps> = () => {
     return (
         <>
             <Nav.Link key="themeToggle" onClick={toggleTheme} data-theme={theme} className={cn(style.navbarText)}>
-                <i className={`bi ${css.icon}`}></i> <span 
+                <i className={`bi ${css.icon}`}></i> <span
                     className="d-lg-none"
                 > Dark mode: {darkmode}</span>
             </Nav.Link>

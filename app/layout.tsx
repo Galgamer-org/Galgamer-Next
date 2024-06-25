@@ -64,7 +64,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={
           {
             __html: `
-            let _themeLocalStorage = localStorage.getItem('theme');
+            const _themeLocalStorage = localStorage.getItem('theme');
             // console.log('themeSystem: ', _themeLocalStorage);
             if (_themeLocalStorage) {
               document.querySelector(':root').dataset.theme = _themeLocalStorage;

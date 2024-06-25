@@ -87,9 +87,9 @@ const PostPreview = ({
           {/* tags */}
           <i className="bi-tag-fill me-2"></i>
           {tags.map((tag) => (
-            <a href={`/tags/${tag}`} key={tag} className={cn(style.metaLink)}>
+            <Link href={`/tags/${tag}`} key={tag} className={cn(style.metaLink)}>
               {tag}
-            </a>
+            </Link>
           ))}
         </div>}
 

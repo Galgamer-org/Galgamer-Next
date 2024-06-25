@@ -49,6 +49,10 @@ export async function generateMetadata(
   }
 }
 
+const env = process.env.NODE_ENV
+
+
+
 export function generateStaticParams() {
   const params = Object.keys(getAllTags()).map((tagName) => {
     return { tag: tagName };
@@ -58,11 +62,15 @@ export function generateStaticParams() {
   params.forEach((param) => {
     const encoded = encodeURIComponent(param.tag);
     if (encoded !== param.tag) {
+      //console.log(`Tag ${param.tag} is encoded to ${encoded}`);
       temp.push({ tag: encoded });
     }
   });
-  //params.push(...temp);
+  if (env == "development") {
+    params.push(...temp);
+  }
 
+  //console.log(params);
   return params;
 }
 
@@ -71,7 +79,7 @@ export function generateStaticParams() {
 export default function TagPostList({ params }: { params: { tag: string } }) {
   const tag = decodeURIComponent(params.tag);
   const posts = getAllTags()[tag];
-  if(!posts) {
+  if (!posts) {
     throw Error(`Tag ${tag} not found, and original tag is ${params.tag}`);
   }
 
@@ -88,6 +96,7 @@ function TagInfo({ tag, length }: { tag: string, length?: number }) {
     <Container className="px-2">
       <BookmarkContainer title={
         <Link
+          scroll={false}
           href="/tags"
           className={cn(style.tagLink, 'd-inline-block px-2 py-1 text-decoration-none')}
         ><i className="bi bi-arrow-left-circle-fill me-1" />所有 Tags</Link>
