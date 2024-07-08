@@ -29,7 +29,7 @@ export const staffs: MemberList = {
         bio: "來者不拒，口味廣泛",
     },
 
-    'かばん':{
+    'かばん': {
         photo: "/member-icon/staff/kaban.webp",
         bio: "お絵描きしてます。イラストのお仕事募集中⇒http://ginirokarasuf.wixsite.com/chocosuki/cont",
     },
@@ -101,6 +101,10 @@ export const staffs: MemberList = {
     'Sayafx': {
         photo: "/member-icon/staff/sayafx.webp",
         bio: "",
+    },
+    'Serika': {
+        photo: "/member-icon/staff/serika.webp",
+        bio: "可以赋予新的意义吗？",
     },
 };
 
@@ -187,7 +191,7 @@ export const members: MemberList = {
     },
     '魏 连殳': {
         photo: "/member-icon/group/魏 连殳.webp",
-        bio: "落魄死宅 |个人博客。 a.weils.xyz",
+        bio: "落魄死宅 | weils.xyz",
     },
     '桜雨星河 SakulaRain': {
         photo: "/member-icon/group/桜雨星河.webp",
