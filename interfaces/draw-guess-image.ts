@@ -14,7 +14,9 @@ class ImageData  {
     _width: number
   
     getURL = () => {
-      const path = encodeURIComponent(this._filename.split('.')[0]);
+      const extention = this._filename.split('.').pop();
+      const filename = this._filename.replace(`.${extention}`, '');
+      const path = encodeURIComponent(filename);
       return `${IMAGE_PREFIX}${path}.${IMAGE_FORMAT}`;
     }
   };
