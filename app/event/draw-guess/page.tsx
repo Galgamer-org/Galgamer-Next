@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     url: '/event/draw-guess',
     title: '你畫我猜作品集',
     description: 'Draw & Guess Artworks',
-    images: '/site-assets/metadata/draw-guess.png',
+    images: '/site-assets/metadata/draw-guess-2.png',
   },
   twitter: {
     title: '你畫我猜作品集',
     description: 'Draw & Guess Artworks',
     card: 'summary_large_image',
-    images: '/site-assets/metadata/draw-guess.png',
+    images: '/site-assets/metadata/draw-guess-2.png',
   },
 }
 
