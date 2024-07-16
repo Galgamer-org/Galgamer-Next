@@ -17,7 +17,6 @@ import React from 'react'
 import MainVisualH1 from '@/components/MainVisualH1'
 import dgstyles from '@/styles/draw-guess.module.css';
 
-
 export default function Index() {
   const allPosts = getAllPosts();
 
@@ -62,7 +61,9 @@ export default function Index() {
           <MainVisualH1
             title={`你畫我猜作品集`}
             description='Draw & Guess Artworks'
-            details='你畫我猜 by Galgamer'
+            details={
+              <div className='d-flex align-items-center'><b className='me-2'>主席</b><Avatar name="Kaminotomodachi" /></div>
+            }
             cssClass={dgstyles.drawGuessH1}
           ></MainVisualH1>
         </Link>

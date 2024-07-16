@@ -8,6 +8,7 @@ import { ZoomImage, ZoomImg } from '@/components/zoom-image';
 import { Metadata } from 'next'
 import CustomDetails from './pageClient';
 import { FancyboxImage } from '@/components/fancybox';
+import Avatar from '@/components/avatar';
 
 
 const INDEX_URL = "https://storage-zone1.galgamer.eu.org/draw-guess-index-deadbeef%2Findex.json";
@@ -60,7 +61,9 @@ export default async function DrawGuessGallery() {
       <MainVisualH1
         title={`你畫我猜作品集 (${images.length})`}
         description='Draw & Guess Artworks'
-        details='你畫我猜 by Galgamer'
+        details={
+          <div className='d-flex align-items-center'><b className='me-2'>主席</b><Avatar name="Kaminotomodachi" /></div>
+        }
         cssClass={styles.drawGuessH1}
       ></MainVisualH1>
       <section>
