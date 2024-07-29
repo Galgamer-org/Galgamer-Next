@@ -57,16 +57,18 @@ export default function Index() {
           />
         }
 
-        <Link href='/event/draw-guess' className={cn('text-decoration-none', dgstyles.link)}>
+        {/* <Link href='/event/draw-guess' className={cn('text-decoration-none', dgstyles.link)}> */}
           <MainVisualH1
-            title={`你畫我猜作品集`}
+            title={<Link href='/event/draw-guess' className={cn('text-decoration-none', dgstyles.link)}>
+              <h1><b>你畫我猜作品集</b></h1>
+              </Link>}
             description='Draw & Guess Artworks'
             details={
               <div className='d-flex align-items-center'><b className='me-2'>主席</b><Avatar name="Kaminotomodachi" /></div>
             }
             cssClass={dgstyles.drawGuessH1}
           ></MainVisualH1>
-        </Link>
+        {/* </Link> */}
         <div className={'my-5'}></div>
 
         <FriendLinkBody />

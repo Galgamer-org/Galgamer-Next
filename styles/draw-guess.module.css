@@ -29,6 +29,11 @@
 
 }
 
+.link {
+    color: var(--text-color);
+
+}
+
 .link h1::after {
     content: "\f133";
     display: inline-block;
