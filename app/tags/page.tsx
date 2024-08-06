@@ -1,28 +1,25 @@
 import style from "styles/tags.module.css";
 import cn from 'classnames';
-import { Col, Row } from 'react-bootstrap';
 import Container from 'components-layout/container'
 import MainVisualH1 from "@/components/MainVisualH1";
-import FriendLinkUnit from "@/components/FriendLinkUnit";
-import BookmarkContainer from "@/components/bookmark-container";
 import type { Metadata } from "next";
 import { getAllTags } from "lib/api";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: '標籤',
-  description: "文章標籤分類",
+  description: "文章標籤",
   openGraph: {
     type: 'website',
     locale: 'zh_HK',
     siteName: 'Galgamer',
     url: '/tags',
     title: '標籤',
-    description: '文章標籤分類',
+    description: '文章標籤',
   },
   twitter: {
     title: '標籤',
-    description: '文章標籤分類',
+    description: '文章標籤',
   },
 }
 
@@ -35,7 +32,7 @@ export default async function Tags() {
       <MainVisualH1
         title={'標籤' + ' (' + tagsSortByCount.length + ')'}
         description="Tags"
-        details="文章標籤分類"
+        details="文章標籤"
         cssClass={style.tagsMainVisual}
       >
       </MainVisualH1>

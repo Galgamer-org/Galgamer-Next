@@ -2,10 +2,8 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 import PostType from '../interfaces/post'
-import { el } from 'date-fns/locale'
-
+import CategoryTree from '@/interfaces/category-tree'
 import { getMember } from '_feed/members'
-import { get } from 'http'
 
 const postsDirectory = join(process.cwd(), '_posts');
 
@@ -33,7 +31,7 @@ export function getPostBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
+  const { data, content } = matter(fileContents, { excerpt: true });
 
   type Items = Record<string, any>
   //console.log(data)
@@ -72,7 +70,8 @@ export function getPostBySlug(slug: string) {
     hidden: items['hidden'] ? items['hidden'] : false,
     categories: items['categories'] ? items['categories'] : [],
   };
-  //console.log(result)
+  //if(result.categories === undefined || !result.categories[0]) debugger;
+  // console.log(result)
 
   return result;
 }
@@ -99,6 +98,80 @@ export function getAllTags(): Record<string, PostType[]> {
     });
   });
   return tags;
+}
+
+function checkUndefined(obj: any) {
+  if (obj === undefined) {
+    debugger;
+  }
+}
+
+export function getCategoryTree(): CategoryTree {
+  const posts = getAllPosts();
+  const categories: CategoryTree = posts.reduce<CategoryTree>((acc, post) => {
+    const postCategories = post.categories.slice();
+    // categories can be [string, string], or [string, [string, string]]
+    if (typeof postCategories === 'string') {
+      if (acc[postCategories]) {
+        acc[postCategories].posts.push(post.slug);
+      } else {
+        acc[postCategories] = { posts: [post.slug] };
+      }
+    } else if (Array.isArray(postCategories)) {
+      postCategories.forEach((category: string | Array<string>) => {
+        if (typeof category === 'string') {
+          if (acc[category]) {
+            acc[category].posts.push(post.slug);
+          } else {
+            acc[category] = { posts: [post.slug] };
+          }
+        } else if (Array.isArray(category)) {
+          // 有多個 category 的，其中第一個是放在 root 下的
+          acc = walkCategoryArray(acc, category, post);
+        }
+      });
+    }
+    return acc;
+  }, {});
+  return categories;
+}
+
+function walkCategoryArray(
+  subTree: CategoryTree,
+  categoryArray: string[],
+  thisPost: PostType
+): CategoryTree {
+  const category = categoryArray.shift();
+  if (category === undefined) {
+    // the article has no category, push it to 未分類
+    if (subTree['未分類']) {
+      subTree['未分類'].posts.push(thisPost.slug);
+    } else {
+      subTree['未分類'] = { posts: [thisPost.slug] };
+    }
+    return subTree;
+  }
+  // checkUndefined(category);
+  if (categoryArray.length === 0) { // it is a leaf
+    checkUndefined(subTree);
+    if (subTree[category]) {
+      subTree[category].posts.push(thisPost.slug);
+    } else {
+      subTree[category] = { children: {}, posts: [thisPost.slug] };
+    }
+    return subTree;
+  }
+
+  if (subTree[category]) {
+    subTree[category].children =
+      walkCategoryArray(subTree[category].children, categoryArray, thisPost);
+  } else {
+    subTree[category] = {
+      posts: [],
+      children: walkCategoryArray({}, categoryArray, thisPost)
+    };
+  }
+  return subTree;
 }
 
 export function isTechnicalReport(post: PostType) {

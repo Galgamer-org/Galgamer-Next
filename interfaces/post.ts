@@ -1,4 +1,24 @@
 
+// category can be a string:
+// categories:
+//   - notes
+// should return ['notes']
+
+// or an array of strings:
+// categories:
+//   - notes
+//   - translation
+// should return ['notes', 'translation']
+
+// or an array of objects:
+// categories:
+//   - ['company', 'moonstone']
+//   - ['reviews']
+// should return [['company', 'moonstone'], ['reviews']]
+
+type Category = string | string[] | [string, string][]
+
+
 type PostType = {
   slug: string
   title: string
@@ -15,7 +35,7 @@ type PostType = {
   abbrlink: number
   tags?: string[]
   keywords?: string[]
-  categories?: string[]
+  categories?: Category
   hidden?: boolean
 }
 

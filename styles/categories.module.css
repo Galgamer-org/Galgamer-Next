@@ -1,0 +1,16 @@
+.categorysMainVisual {
+    --channel-board-bg-color: var(--board-bg-color);
+}
+
+.tree ul {
+    list-style-type: none;
+}
+
+.tree a {
+    text-decoration: none;
+}
+
+.tree summary {
+    cursor: pointer;
+    /* list-style-type: disc; */
+}

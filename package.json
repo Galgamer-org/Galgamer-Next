@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
-    "@types/probe-image-size": "^7.2.4",
+    "@types/probe-image-size": "^7.2.5",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "classnames": "^2.5.1",
@@ -31,14 +31,14 @@
     "remark-html": "^16.0.1",
     "remark-math": "^6.0.0",
     "serve": "^14.2.3",
-    "typescript": "^5.5.3",
+    "typescript": "^5.5.4",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.14.10",
+    "@types/node": "^22.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.39"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41"
   }
 }
