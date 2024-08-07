@@ -11,6 +11,37 @@
 }
 
 .tree summary {
-    cursor: pointer;
+    cursor: default;
+    pointer-events: none;
     /* list-style-type: disc; */
+}
+
+.tree details .categoryIcon {
+    cursor: pointer;
+    pointer-events: all;
+    font-size: 1.1rem;
+    margin-right: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tree > details[open] > summary > .categoryIcon {
+    transform: rotate(90deg);
+}
+
+.categoryTitle {
+    cursor: pointer;
+    font-size: 1.2rem;
+    pointer-events: all;
+}
+
+.categoryCount {
+    font-size: 1.1rem;
+}
+
+.treeUl {
+    padding-left: 20px;
+}
+
+.treeWrap > ul {
+    padding-left: 0;
 }

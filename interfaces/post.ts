@@ -16,7 +16,7 @@
 //   - ['reviews']
 // should return [['company', 'moonstone'], ['reviews']]
 
-type Category = string | string[] | [string, string][]
+type Category = any[]
 
 
 type PostType = {

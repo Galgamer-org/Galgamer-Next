@@ -3,11 +3,8 @@ import style from "styles/categories.module.css";
 import cn from 'classnames';
 import Container from 'components-layout/container'
 import MainVisualH1 from "@/components/MainVisualH1";
-import FriendLinkUnit from "@/components/FriendLinkUnit";
-import BookmarkContainer from "@/components/bookmark-container";
 import type { Metadata } from "next";
 import { getCategoryTree, getPostBySlug } from "lib/api";
-import Link from "next/link";
 import CategoryTree from "@/interfaces/category-tree";
 import { ReactNode } from "react";
 
@@ -28,33 +25,61 @@ export const metadata: Metadata = {
   },
 }
 
-function panic() {
-  debugger;
-  return '6';
+function countSubTreeLeaves(tree: CategoryTree): number {
+  return Object.values(tree).reduce((acc, { posts, children }) => {
+    if (posts) {
+      acc += posts.length;
+    }
+    if (children) {
+      acc += countSubTreeLeaves(children);
+    }
+    return acc;
+  }, 0);
 }
 
 function WalkCategoryTree(tree: CategoryTree): ReactNode {
   return (
-    <ul>
-      {Object.entries(tree).map(([categoryName, categoryData]) => (
-        <div className={cn(style.tree)} key={categoryName}>
-          <details className="my-3">
-            <summary className="h5 fw-bold">{categoryName}</summary>
-            {categoryData.posts &&
-              <ul>
-                {categoryData.posts.map((post) => (
-                  <li key={categoryName + post} className="my-3 fw-bold">
-                    <Link href={`/article/${getPostBySlug(post).abbrlink}`}>
-                      {getPostBySlug(post).title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            }
-            {categoryData.children && WalkCategoryTree(categoryData.children)}
-          </details>
-        </div>
-      ))}
+    <ul className={cn(style.treeUl)}>
+      {Object.entries(tree)
+        .sort(([aName, aData], [bName, bData]) => {
+          const aLeaves = countSubTreeLeaves(
+            { [aName]: aData }
+          );
+          const bLeaves = countSubTreeLeaves(
+            { [bName]: bData }
+          );
+          return bLeaves - aLeaves;
+        })
+        .map(([categoryName, categoryData]) => (
+          <div className={cn(style.tree)} key={categoryName}>
+            <details className="my-4">
+              <summary className="d-flex align-items-center">
+                <div className={cn(style.categoryIcon)}>
+                  <i className="bi bi-caret-right-fill"></i>
+                </div>
+                <div className={cn('fw-bold', style.categoryTitle)}>{categoryName}</div>
+                <div className={cn('ms-auto fw-bold', style.categoryCount)}>
+                  {countSubTreeLeaves(
+                    { [categoryName]: categoryData }
+                  )}<i className="bi bi-file-earmark-text-fill ms-1"></i>
+
+                </div>
+              </summary>
+              {categoryData.posts &&
+                <ul>
+                  {categoryData.posts.map((post) => (
+                    <li key={categoryName + post} className="my-3 fw-bold">
+                      <a href={`/article/${getPostBySlug(post).abbrlink}`}>
+                        {getPostBySlug(post).title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              }
+              {categoryData.children && WalkCategoryTree(categoryData.children)}
+            </details>
+          </div>
+        ))}
     </ul>
   );
 }
@@ -73,7 +98,7 @@ export default async function Categories() {
       </MainVisualH1>
       <section>
         <div className={cn('container-board', 'mx-auto box-shadow')}>
-          <div className={cn('', 'p-3 p-lg-5 justify-contents-center')}>
+          <div className={cn(style.treeWrap, 'px-3 px-lg-5 py-3 py-lg-5 justify-contents-center')}>
             {WalkCategoryTree(categoryTree)}
 
           </div>

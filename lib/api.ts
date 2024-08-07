@@ -45,6 +45,11 @@ export function getPostBySlug(slug: string) {
     if (field === 'content') {
       items[field] = content;
     }
+    if (field === 'categories') {
+      if(typeof data[field] === 'string') {
+        items[field] = [data[field]];
+      }
+    }
 
     if (typeof data[field] !== 'undefined') {
       items[field] = data[field];
@@ -72,7 +77,6 @@ export function getPostBySlug(slug: string) {
   };
   //if(result.categories === undefined || !result.categories[0]) debugger;
   // console.log(result)
-
   return result;
 }
 
@@ -109,15 +113,10 @@ function checkUndefined(obj: any) {
 export function getCategoryTree(): CategoryTree {
   const posts = getAllPosts();
   const categories: CategoryTree = posts.reduce<CategoryTree>((acc, post) => {
-    const postCategories = post.categories.slice();
+    const postCategories = post.categories;
     // categories can be [string, string], or [string, [string, string]]
-    if (typeof postCategories === 'string') {
-      if (acc[postCategories]) {
-        acc[postCategories].posts.push(post.slug);
-      } else {
-        acc[postCategories] = { posts: [post.slug] };
-      }
-    } else if (Array.isArray(postCategories)) {
+
+      if(postCategories.length === 0) postCategories.push('未分類');
       postCategories.forEach((category: string | Array<string>) => {
         if (typeof category === 'string') {
           if (acc[category]) {
@@ -130,7 +129,7 @@ export function getCategoryTree(): CategoryTree {
           acc = walkCategoryArray(acc, category, post);
         }
       });
-    }
+    
     return acc;
   }, {});
   return categories;
@@ -142,7 +141,7 @@ function walkCategoryArray(
   thisPost: PostType
 ): CategoryTree {
   const category = categoryArray.shift();
-  if (category === undefined) {
+  if (!category) {
     // the article has no category, push it to 未分類
     if (subTree['未分類']) {
       subTree['未分類'].posts.push(thisPost.slug);
