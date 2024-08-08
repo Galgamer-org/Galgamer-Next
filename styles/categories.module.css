@@ -24,7 +24,7 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.tree > details[open] > summary > .categoryIcon {
+.tree>details[open]>summary>.categoryIcon {
     transform: rotate(90deg);
 }
 
@@ -36,12 +36,28 @@
 
 .categoryCount {
     font-size: 1.1rem;
+    pointer-events: all;
+    cursor: pointer;
 }
 
 .treeUl {
     padding-left: 20px;
 }
 
-.treeWrap > ul {
+.treeWrap>ul {
     padding-left: 0;
+}
+
+.tree summary {
+    /* color: var(--text-color); */
+    /* color: var(--title-link-color); */
+    transition: color .1s ease-in-out, background-color .1s ease-in-out;
+}
+
+.preview-title:not(:hover) {
+    color: var(--title-link-color);
+}
+
+.tree summary:hover {
+    color: var(--link-hover-color);
 }

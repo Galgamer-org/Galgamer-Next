@@ -131,17 +131,17 @@ function HeroPost({
                       const categoryName = category[i];
                       const categoryPath = (category as Array<string>).slice(0, i + 1).join('/');
                       result.push(
-                        <a href={`/categories/${categoryPath}`} key={categoryPath} className={cn(ppstyle.metaLink)} >
+                        <Link href={`/categories/${categoryPath}`} key={categoryPath} className={cn(ppstyle.metaLink)} >
                           {categoryName}
-                        </a>
+                        </Link>
                       );
                     }
                     return result;
                   } else {
                     return (
-                      <a href={`/categories/${category}`} key={category} className={cn(ppstyle.metaLink)}>
+                      <Link href={`/categories/${category}`} key={category} className={cn(ppstyle.metaLink)}>
                         {category}
-                      </a>
+                      </Link>
                     );
                   }
                 })}

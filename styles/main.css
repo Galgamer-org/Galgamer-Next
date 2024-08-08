@@ -37,6 +37,11 @@ body {
   min-height: 100vh;
 }
 
+::selection {
+  color: var(--selection-color);
+  background-color: var(--selection-bg-color);
+}
+
 .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
   color: var(--post-heading-color);
 }

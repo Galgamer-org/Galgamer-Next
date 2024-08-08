@@ -67,17 +67,17 @@ const PostPreview = ({
                 const categoryName = category[i];
                 const categoryPath = (category as Array<string>).slice(0, i + 1).join('/');
                 result.push(
-                  <a href={`/categories/${categoryPath}`} key={categoryPath} className={cn(style.metaLink)} >
+                  <Link href={`/categories/${categoryPath}`} key={categoryPath} className={cn(style.metaLink)} >
                     {categoryName}
-                  </a>
+                  </Link>
                 );
               }
               return result;
             } else {
               return (
-                <a href={`/categories/${category}`} key={category} className={cn(style.metaLink)}>
+                <Link href={`/categories/${category}`} key={category} className={cn(style.metaLink)}>
                   {category}
-                </a>
+                </Link>
               );
             }
           })}

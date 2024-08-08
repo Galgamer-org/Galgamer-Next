@@ -4,7 +4,7 @@
     color-scheme: light dark;
     /* --light-primary-color: #4bb2b4; */
     --light-primary-color: #66a3ba;
-    --light-secondary-color: rgb(47, 100, 121);
+    --light-secondary-color: rgb(60, 129, 157);
     --dark-primary-color: #c0e6fb;
     --dark-secondary-color: #dbeffc;
     --light-theme-icon: '\f5a1';
@@ -42,6 +42,10 @@
     /* 首頁小書籤背景顏色 */
     --bookmark-bg-color: rgb(252, 238, 219);
     --theme-toggle-icon: var(--light-theme-icon);
+
+    /* 文字被選中後的顏色 */
+    --selection-color: var(--dark-secondary-color);
+    --selection-bg-color: #37679e;
 }
 
 /* dark theme */
@@ -68,6 +72,8 @@
         --navbar-text-color: #fcfbff;
         --bookmark-bg-color: #3e555f;
         --theme-toggle-icon: var(--dark-theme-icon);
+
+        --selection-color: var(--light-secondary-color);
     }
 
     :root:not([data-theme]) body img {
