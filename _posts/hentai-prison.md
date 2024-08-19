@@ -259,20 +259,20 @@ h3 {
   }
 </style>
 
-{% template sp-character name no yomi uid html %}
-<div class={`row sp-character ${uid} mx-0`} style={`--this-bg: url(../image/hentai-prison/chars/bg.webp)`}>
-  <div class="col-12 char-overlay row" style={`--right-bg: url(../image/hentai-prison/chars/${no}.webp)`}>
-    <div class="pc-left col-12 col-md-8">
-      <div class="namearea col-12 pt-2">
-        <div class="charname font-weight-bold ">
+{% template sp-character name no yomi uid children %}
+<div className={`row sp-character ${uid} mx-0`} style={{"--this-bg": `url(../image/hentai-prison/chars/bg.webp)`}}>
+  <div className="col-12 char-overlay row" style={{"--right-bg": `url(../image/hentai-prison/chars/${no}.webp)`}}>
+    <div className="pc-left col-12 col-md-8">
+      <div className="namearea col-12 pt-2">
+        <div className="charname font-weight-bold ">
           {name}
         </div>
-        <div class="yomi font-italic">
+        <div className="yomi font-italic">
           {yomi}
         </div>
         <hr />
       </div>
-      <div class="infoarea col-12" html={html}>
+      <div className="infoarea col-12" children={children}>
       </div>  
     </div>
   </div>  

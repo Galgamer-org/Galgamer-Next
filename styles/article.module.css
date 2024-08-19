@@ -1,0 +1,5 @@
+.asideContent {
+    /* width: 300px; */
+    position: sticky;
+    top: 80px;
+}

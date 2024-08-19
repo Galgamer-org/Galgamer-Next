@@ -67,7 +67,7 @@ export default function RootLayout({
             const _themeLocalStorage = localStorage.getItem('theme');
             // console.log('themeSystem: ', _themeLocalStorage);
             if (_themeLocalStorage) {
-              document.querySelector(':root').dataset.theme = _themeLocalStorage;
+              document.querySelector(':root').dataset.userColorScheme = _themeLocalStorage;
             }
             `
           }
