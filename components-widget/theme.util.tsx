@@ -66,7 +66,7 @@ const SetTheme: React.FC<SetThemeProps> = () => {
 
     useEffect(() => {
         if (theme) {
-            (document.querySelector(':root') as Element & HTMLElement).dataset.theme = theme;
+            (document.querySelector(':root') as Element & HTMLElement).dataset.userColorScheme = theme;
             setMetaThemeColor(getMainColor());
         }
 
@@ -95,7 +95,7 @@ const SetTheme: React.FC<SetThemeProps> = () => {
 
     return (
         <>
-            <Nav.Link key="themeToggle" onClick={toggleTheme} data-theme={theme} className={cn(style.navbarText)}>
+            <Nav.Link key="themeToggle" onClick={toggleTheme} data-user-color-scheme={theme} className={cn(style.navbarText)}>
                 <i className={`bi ${css.icon}`}></i> <span
                     className="d-lg-none"
                 > Dark mode: {darkmode}</span>

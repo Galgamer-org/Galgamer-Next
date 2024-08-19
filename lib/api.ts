@@ -8,7 +8,7 @@ import { getMember } from '_feed/members'
 const postsDirectory = join(process.cwd(), '_posts');
 
 export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory).filter((file) => file.endsWith('.md'));
+  return fs.readdirSync(postsDirectory).filter((file) => file.endsWith('.md') || file.endsWith('.mdx'));
 }
 
 const fields = [
@@ -28,8 +28,12 @@ const fields = [
 ];
 
 export function getPostBySlug(slug: string) {
-  const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
+  if(!slug.endsWith('.md')) { slug += '.md'; }
+
+  const extention = slug.split('.').pop();
+  const realSlug = slug.replace(new RegExp(`.${extention}$`), '');
+  const fullPath = join(postsDirectory, `${realSlug}.${extention}`);
+
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents, { excerpt: true });
 
