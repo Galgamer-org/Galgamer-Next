@@ -15,6 +15,7 @@ abbrlink: 47365
 author: SacalWiki
 excerpt: ensemble首位双马尾主角，剧情也是相当的炸裂
 date: 2023-09-09 00:30:00
+og_img: "../image/otohime/cover.png"
 ---
 
 ![Cover](../image/otohime/cover.png)
@@ -300,7 +301,7 @@ details[open] summary {
 </style>
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function(){
     let pclefts = document.querySelectorAll('.pc-left');
     pclefts.forEach((el) => {
@@ -311,6 +312,6 @@ details[open] summary {
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

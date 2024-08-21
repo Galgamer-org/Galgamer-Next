@@ -14,6 +14,7 @@ categories:
 abbrlink: 19351
 author: '木衛一'
 excerpt: '吸血鬼情侶園原由奈和七瀨靜羽逃入人工島，在吸血鬼獵人和生化兵的追獵下艱難求存。'
+og_img: "../image/SadisticBlood/cover.jpg"
 ---
 
 `作者：木衛一`

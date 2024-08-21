@@ -15,6 +15,7 @@ abbrlink: 61048
 author: SacalWiki
 excerpt: 女装就算了，而且还是女学生&女教师的双重身份！
 date: 2023-07-17 00:30:00
+og_img: "../image/otomelo/cover.png"
 ---
 
 <img src="../image/otomelo/cover.png" class="d-none"/>
@@ -290,7 +291,7 @@ details[open] summary {
 </style>
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function(){
     let pclefts = document.querySelectorAll('.pc-left');
     pclefts.forEach((el) => {
@@ -301,6 +302,6 @@ details[open] summary {
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

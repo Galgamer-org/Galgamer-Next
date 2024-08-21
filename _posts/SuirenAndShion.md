@@ -15,6 +15,7 @@ categories:
 abbrlink: 20007
 author: '桐遠暮羽'
 excerpt: '因为自己的表姐和表妹太过漂亮而产生了 身体上 精神上 难以言喻的烦恼。'
+og_img: "../image/SuirenAndShion/cover.jpg"
 ---
 
 `作者：桐遠暮羽`

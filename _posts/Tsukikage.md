@@ -15,6 +15,7 @@ categories:
 abbrlink: 50030
 author: 桐遠暮羽
 excerpt: '被表妹如月零邀請，回到故鄉如月老宅參加「儀式」的男主角，卯月誠一，在儀式上遭遇了一個看上去和如月零長得一模一樣的活人偶。'
+og_img: "../image/Tsukikage/title.jpg"
 ---
 
 `作者：桐遠暮羽`

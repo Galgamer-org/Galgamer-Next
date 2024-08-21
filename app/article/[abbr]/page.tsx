@@ -8,6 +8,7 @@ import cn from "classnames";
 import "@/styles/github-markdown.css";
 import style from "@/styles/article.module.css";
 import SmartImage from "@/components/smart-image";
+import BookmarkContainer from "@/components/bookmark-container";
 
 //export const dynamicParams = false;
 export async function generateStaticParams() {
@@ -18,7 +19,7 @@ export async function generateStaticParams() {
     };
   });
   //console.log(result)
-  return result.slice(0, 10);
+  return result//.slice(0, 10);
 }
 
 
@@ -42,7 +43,7 @@ export async function generateMetadata(
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: "https://nextjs.org",
+      url: `article/${post.abbrlink}`,
       siteName: "Galgamer",
       images: [
         {
@@ -76,16 +77,12 @@ export default async function Article(
       <CustomCss />
       <Container className="px-2">
         <PostHeader
-          title={post.title}
-          index_img={post.index_img}
-          date={post.date}
-          author={post.author}
-          excerpt={post.excerpt}
+          post={post}
         />
       </Container>
 
       <HeroImage src={post.index_img} />
-      <Container className="px-2 mt-4">
+      <Container className="px-2 mt-5">
         <section className="d-flex">
           <PostBody content={content} />
           <Aside />
@@ -124,6 +121,7 @@ function Aside() {
   return (
     <div className={cn("d-lg-block d-none col-3")}>
       <aside className={cn("ps-3", style.asideContent)}>
+
         <div className={cn("container-board p-3 mb-3 box-shadow o-hidden")}>
           <div className="fw-bolder">目錄</div>
           <div className="">

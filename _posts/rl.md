@@ -15,6 +15,7 @@ categories:
 abbrlink: 10024
 author: 'Patchouli Knowledge'
 excerpt: '狼人殺和Galgame的巧妙融合，本格推理佳作。'
+og_img: "../image/rl/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`
@@ -183,7 +184,7 @@ font-family:serif
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>
 

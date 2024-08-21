@@ -16,6 +16,7 @@ categories:
 abbrlink: 10009
 author: 'Patchouli Knowledge'
 excerpt: '讓我們一起前往樂園吧。'
+og_img: "../image/euphoria/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`

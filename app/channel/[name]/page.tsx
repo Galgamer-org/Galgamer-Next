@@ -1,31 +1,12 @@
-import { getAllPosts, isTechnicalReport } from 'lib/api'
+import { getAllPosts, getPostChannel } from 'lib/api'
 import Container from 'components-layout/container'
 import style from 'styles/channel.module.css'
 import { notFound } from 'next/navigation'
 import MainVisualH1 from '@/components/MainVisualH1'
 import type { Metadata, ResolvingMetadata } from 'next'
 import PostsByYears from '@/components/posts-by-year'
+import { channels } from '@/_feed/channels'
 
-const channels = [
-  {
-    name: 'recommanded-games',
-    title: '遊戲推薦',
-    description: 'Picked for you',
-    details: 'Galgamer 群友親自體驗，親自爲你推薦！',
-    cssClass: 'gamePostArea',
-    isTechnicalReport: false,
-    metaImage: '/site-assets/metadata/recommanded-games.png',
-  },
-  {
-    name: 'technical-report',
-    title: '技術報告',
-    description: 'Dive Deep',
-    details: '美少女們不爲人知的幕後。我們在這裏分享一些研究成果☝️',
-    cssClass: 'techPostArea',
-    isTechnicalReport: true,
-    metaImage: '/site-assets/metadata/technical-report.png',
-  }
-];
 
 
 type Params = Promise<{ name: string }>;
@@ -35,7 +16,9 @@ export async function generateMetadata(
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const params = await props.params;
-  const channel = channels.find(channel => channel.name === params.name);
+  const channel = channels[params.name];
+
+
   if (!channel) {
     notFound();
   }
@@ -48,7 +31,7 @@ export async function generateMetadata(
       type: 'website',
       locale: 'zh_HK',
       siteName: 'Galgamer',
-      url: '/channel/' + channel.name,
+      url: '/channel/' + params.name,
       title: channel.title,
       description: channel.description,
       images: channel.metaImage,
@@ -64,9 +47,9 @@ export async function generateMetadata(
 };
 
 export async function generateStaticParams() {
-  let result = channels.map((channel) => {
+  const result = Object.keys(channels).map((name) => {
     return {
-      ...channel
+      name: name,
     }
   })
   //console.log(result)
@@ -80,14 +63,14 @@ export default async function Channel(
 ) {
   const params = await props.params;
 
-  const channel = channels.find(channel => channel.name === params.name);
+  const channel = channels[params.name];
   if (!channel) {
     notFound();
   }
 
   //console.log(channel);
   const allPosts = getAllPosts();
-  const posts = allPosts.filter(post => channel.isTechnicalReport === isTechnicalReport(post));
+  const posts = allPosts.filter(post => params.name === getPostChannel(post));
   return (
     <Container className='px-2'>
       <MainVisualH1

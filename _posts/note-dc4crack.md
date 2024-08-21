@@ -9,6 +9,7 @@ tags:
 abbrlink: 20015
 author: '桐遠暮羽'
 excerpt: '做過破解的人都知道，窮舉、無頭蒼蠅和知難而退都是破解的好方法。'
+og_img: "../image/note-dc4crack/tg-preview.jpg"
 ---
 
 <div class="alert alert-warning" role="alert">
@@ -610,7 +611,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;
@@ -626,7 +627,7 @@ body {
 ::selection {
     /*background-color: #f00;*/
 }
-.page-header .mt-1 span.post-meta {
+.banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
 }

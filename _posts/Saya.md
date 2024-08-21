@@ -16,6 +16,7 @@ categories:
 abbrlink: 10023
 author: 'Patchouli Knowledge'
 excerpt: '隨風飄蕩的蒲公英，什麽時候才能決定自己的歸宿呢？'
+og_img: "../image/Saya/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`
@@ -227,6 +228,6 @@ font-family:serif
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

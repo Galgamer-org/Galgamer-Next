@@ -14,6 +14,7 @@ categories:
 abbrlink: 76351
 author: '木衛一'
 excerpt: '不賣座漫畫家被迫獵殺怪異為黑髮美人回復力量'
+og_img: "../image/kurokamisama/cover.jpg"
 ---
 
 `作者：木衛一`

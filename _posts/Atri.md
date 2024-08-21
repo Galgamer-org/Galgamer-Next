@@ -15,6 +15,7 @@ categories:
 abbrlink: 10003
 author: 'Patchouli Knowledge'
 excerpt: '誰不想擁有一個高性能超級機器人呢？'
+og_img: "../image/Atri/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`
@@ -201,6 +202,6 @@ body {
 </style>
 <script>
 window.addEventListener('DOMContentLoaded', function() {
-setInterval(() => document.documentElement.setAttribute('data-user-color-scheme', 'dark'), 500);
+setInterval(() => Fluid.utils.setTheme('dark'), 500);
 });
 </script>

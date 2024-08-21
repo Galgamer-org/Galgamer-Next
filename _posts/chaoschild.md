@@ -16,6 +16,7 @@ categories:
 abbrlink: 10016
 author: 'Patchouli Knowledge'
 excerpt: '日本高中生破解澀谷獵奇懸案'
+og_img: "../image/chaoschild/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`

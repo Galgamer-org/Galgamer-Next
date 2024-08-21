@@ -10,6 +10,7 @@ tags:
 abbrlink: 20021
 author: 'Galgamer 團隊'
 excerpt: '吉里吉里作爲每天都要打交道的親密夥伴，俺們不應該對牠一無所知．'
+og_img: "../image/xp3-research-1/cover.jpg"
 ---
 
 <style>
@@ -30,12 +31,12 @@ excerpt: '吉里吉里作爲每天都要打交道的親密夥伴，俺們不應�
       background-size: unset;
     }
   }
-  .page-header  {
+  .banner-text  {
     background-color: rgba(0,0,0,0.5);
     padding: 3px;
     border-radius: 5px;
   }
-  .page-header .mt-1 span.post-meta {
+  .banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
   }

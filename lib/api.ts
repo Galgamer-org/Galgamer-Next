@@ -177,6 +177,9 @@ function walkCategoryArray(
   return subTree;
 }
 
+/*
+  Deprecated
+*/
 export function isTechnicalReport(post: PostType) {
   let result = false;
   const technicalKeywords = ['技術報告', '技术报告', '笔记', '筆記', '漢化'];
@@ -197,6 +200,32 @@ export function isTechnicalReport(post: PostType) {
   }
 
   return result;
+}
+
+export function getPostChannel(post: PostType): string {
+  const channels = [
+    'recommanded-games',
+    'technical-report',
+  ];
+  let result = false;
+  const technicalKeywords = ['技術報告', '技术报告', '笔记', '筆記', '漢化'];
+  // check against keywords and tags
+  // keywords is separated by comma
+  const keywords = post.keywords;
+  for (let i = 0; i < keywords.length; i++) {
+    if (technicalKeywords.includes(keywords[i])) {
+      result = true;
+      break;
+    }
+  }
+  for (let i = 0; i < post.tags.length; i++) {
+    if (technicalKeywords.includes(post.tags[i])) {
+      result = true;
+      break;
+    }
+  }
+
+  return result ? 'technical-report' : 'recommanded-games';
 }
 
 export function getPostByAbbrlink(abbrlink: number) {

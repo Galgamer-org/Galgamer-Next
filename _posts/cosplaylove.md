@@ -15,6 +15,7 @@ abbrlink: 55879
 author: 木衛一
 excerpt: Galgame版恋上换装娃娃
 date: 2024-1-13 00:30:00
+og_img: "../image/cosplaylove/cover.png"
 ---
 
 `作者：木衛一`
@@ -258,7 +259,7 @@ details[open] summary {
 </style>
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function(){
     let pclefts = document.querySelectorAll('.pc-left');
     pclefts.forEach((el) => {
@@ -269,6 +270,6 @@ details[open] summary {
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

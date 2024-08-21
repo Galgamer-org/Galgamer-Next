@@ -16,6 +16,7 @@ categories:
 abbrlink: 10022
 author: 'Patchouli Knowledge'
 excerpt: '是啊，即使我的人生充滿僞善，我還是要堅持成爲正義的夥伴！'
+og_img: "../image/FSN/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`
@@ -325,6 +326,6 @@ Fate 系列的開端，批評空間90點守門員，你可以説只接觸過 Fat
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

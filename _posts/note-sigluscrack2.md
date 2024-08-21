@@ -9,6 +9,7 @@ tags:
 abbrlink: 20013
 author: '桐遠暮羽'
 excerpt: '每天的逆向工程水平提高一點點...每天？每年！今年我們來嘗試破解 SiglusEngine 的光盤驗證。'
+og_img: "../image/note-sigluscrack2/cover.jpg"
 ---
 
 `作者：桐遠暮羽`

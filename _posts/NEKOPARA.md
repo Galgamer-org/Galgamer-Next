@@ -15,6 +15,7 @@ abbrlink: 36313
 date: 2021-12-31 10:56:28
 banner_img:
 hidden: true
+og_img: "https://cdn.jsdelivr.net/npm/galgame-oss@1.0.18/c%E7%8C%AB1/main.jpg.webp"
 ---
 
 <!--- 涉嫌抄襲，在修改之前先暫時 hidden --->

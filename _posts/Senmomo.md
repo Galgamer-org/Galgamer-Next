@@ -17,6 +17,7 @@ banner_img: ''
 index_img: ../image/Senmomo/cover.webp
 abbrlink: 53635
 date: 2022-09-17 00:30:00
+og_img: "../image/Senmomo/tg-preview.jpg"
 ---
 
 <script defer src="../js/Senmomo/velocity.js"></script>
@@ -677,7 +678,7 @@ magnet:?xt=urn:btih:406fa9b40857064f5b1c35395ae017ad733a3eb9
 </script>
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function () {
     let pcrights = document.querySelectorAll('.pc-right');
     pcrights.forEach((el) => {
@@ -688,7 +689,7 @@ magnet:?xt=urn:btih:406fa9b40857064f5b1c35395ae017ad733a3eb9
         el.classList.remove('touch');
       })
     });
-    setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 500);
+    setTimeout(() => Fluid.utils.setTheme('light'), 500);
     setTimeout(function () {
       document.documentElement.style.setProperty('--delayed-opacity', 1);
     }, 2000);
@@ -728,7 +729,7 @@ magnet:?xt=urn:btih:406fa9b40857064f5b1c35395ae017ad733a3eb9
     -webkit-backdrop-filter: blur(5px);
   }
 
-  .page-header {
+  .banner-text {
     /* 设置文章标题文字区域的淡黑色半透明底板 */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 3px;
@@ -747,7 +748,7 @@ magnet:?xt=urn:btih:406fa9b40857064f5b1c35395ae017ad733a3eb9
     --bg-url: url('../image/Senmomo/momo.webp')
   }
 
-  .page-header .mt-1 span.post-meta {
+  .banner-text .mt-1 span.post-meta {
     /* 因爲加了很多代碼，所以字數很膨脹，隱藏嚇人的字數統計 */
     display: none;
   }
@@ -757,7 +758,7 @@ magnet:?xt=urn:btih:406fa9b40857064f5b1c35395ae017ad733a3eb9
   }
 
   /* show later */
-  .page-header,
+  .banner-text,
   #board,
   .scroll-down-bar,
   #toc {

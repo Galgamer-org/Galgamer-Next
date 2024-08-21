@@ -15,6 +15,7 @@ author: 'SacalWiki'
 excerpt: 花式带你学世界语的异世界百合物语
 date: 2023-09-30 00:30:00
 abbrlink: 13854
+og_img: "../image/kotonoha/cover.png"
 ---
 
 ![Cover](../image/kotonoha/cover.png)
@@ -295,7 +296,7 @@ details[open] summary {
 </style>
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function(){
     let pclefts = document.querySelectorAll('.pc-left');
     pclefts.forEach((el) => {
@@ -306,6 +307,6 @@ details[open] summary {
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

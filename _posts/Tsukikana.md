@@ -17,6 +17,7 @@ categories:
 abbrlink: 95620
 author: '桐遠暮羽'
 excerpt: '25 歲的黑野奏汰，發 LINE 警告高二時那不知道喜歡的人是誰，弄不清楚心意的自己——「你會後悔的」'
+og_img: "../image/Tsukikana/cover.jpg"
 ---
 
 `作者：桐遠暮羽`

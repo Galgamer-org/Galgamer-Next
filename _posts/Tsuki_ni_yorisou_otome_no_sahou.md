@@ -17,6 +17,7 @@ author: SacalWiki
 excerpt: 跨过阴郁的过去，迎接闪闪发光的未来吧
 abbrlink: 55677
 date: 2022-09-10 00:30:00
+og_img: "../image/Tsuki_ni_yorisou_otome_no_sahou/tg-preview.jpg"
 ---
 
 `作者：SacalWiki`

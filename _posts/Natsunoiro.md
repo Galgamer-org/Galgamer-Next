@@ -16,6 +16,7 @@ categories:
 abbrlink: 20019
 author: '桐遠暮羽'
 excerpt: '失去容身之所的少年少女們，會前往只屬於他們的樂園——又或者是前往永遠無法脫出的迷宮。'
+og_img: "../image/Natsunoiro/tg-preview.jpg"
 ---
 
 <style>
@@ -44,7 +45,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;
@@ -60,7 +61,7 @@ body {
 ::selection {
     background-color: #fc0;
 }
-.page-header .mt-1 span.post-meta {
+.banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
 }
@@ -421,7 +422,7 @@ ExHIBIT 的 WINE 兼容性很爛，不僅 OP 播放不了不說，一點存檔/�
 ![](../image/Natsunoiro/wine.webp)
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   function loadbigimg(){
     let cover = document.getElementById('coverimage');
     let btn =  document.getElementById('changesrc');
@@ -441,6 +442,6 @@ ExHIBIT 的 WINE 兼容性很爛，不僅 OP 播放不了不說，一點存檔/�
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

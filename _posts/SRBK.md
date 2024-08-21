@@ -15,6 +15,7 @@ categories:
 abbrlink: 20012
 author: '桐遠暮羽'
 excerpt: '高中生少年 有地將臣 把老家神社裏的遠古文物寶刀給弄斷了，於是他被判處肉償。'
+og_img: "../image/SRBK/cover.jpg"
 ---
 
 `作者：和風少女桐遠暮羽`
@@ -617,7 +618,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;
@@ -633,14 +634,14 @@ body {
 ::selection {
     /*background-color: #f00;*/
 }
-.page-header .mt-1 span.post-meta {
+.banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
 }
 </style>
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   function loadbigimg(){
     let cover = document.getElementById('coverimage');
     let btn =  document.getElementById('changesrc');
@@ -660,6 +661,6 @@ body {
         el.classList.remove('touch');
       })
     });
-    setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

@@ -9,7 +9,7 @@
 }
 
 .cardContainer {
-    aspect-ratio: 16/6;
+    aspect-ratio: 16/7;
     overflow: hidden;
     border-radius: var(--large-board-border-radius);
 }
@@ -20,3 +20,43 @@
     object-fit: cover;
     object-position: center;
 }
+
+.headerContainer {
+    --text-color: white;
+    background-color: #00000099;
+    /* color: white; */
+    margin: 5rem 0;
+    padding: 2rem;
+    overflow: hidden;
+    border-radius: var(--large-board-border-radius);
+    color: var(--text-color);
+    /* text-align: center; */
+}
+
+.headerContainer a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-right: 5px;
+}
+
+.separator {
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+.excerpt {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.hr {
+    border: 0;
+    height: 1.5px;
+    background: var(--text-color);
+}
+
+.headerContainer h1, .headerContainer hr, .headerContainer  p {
+    color: var(--text-color);
+}
+

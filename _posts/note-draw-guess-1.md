@@ -5,60 +5,61 @@ keywords: 'Draw & Guess, 技術報告, 你畫我猜, 繪畫'
 banner_img: '../image/draw-guess-1/banner.jpg'
 index_img: '../image/draw-guess-1/cover.jpg'
 tags:
-  - 筆記
+  - 笔记
 abbrlink: 20027
 author: '桐遠暮羽'
 excerpt: '繼承 sora 的遺志，決勝你畫我猜（誤（逃（嗚（許多羣友認爲自己的繪畫水平不足以參加畫猜而放棄遊戲，這是非常可惜的．事實上只要掌握了技巧畫猜並沒有那麼難．'
+og_img: "../image/draw-guess-1/cover.jpg"
 ---
 
 <style>
-  .ar8x3{
-    aspect-ratio: 8/3;
-  }
-  :root {
-    --my-bg-url: url('../image/draw-guess-1/bg.webp');
-  }
+.ar8x3{
+  aspect-ratio: 8/3;
+}
+:root {
+  --my-bg-url: url('../image/draw-guess-1/bg.webp');
+}
+body {
+  background-image: var(--my-bg-url);
+  background-repeat: no-repeat ;
+  background-attachment: fixed;
+  background-position: right;
+  background-size: cover;
+}
+#toc {
+    background-color: var(--board-bg-color);
+    padding: 20px 10px 20px 20px;
+    border-radius: 10px;
+    top: 4rem;
+}
+@media screen and (max-width: 767px) { /* 手機版佈局 */
   body {
-    background-image: var(--my-bg-url);
-    background-repeat: no-repeat ;
-    background-attachment: fixed;
-    background-position: right;
-    background-size: cover;
-  }
-  #toc {
-     background-color: var(--board-bg-color);
-     padding: 20px 10px 20px 20px;
-     border-radius: 10px;
-     top: 4rem;
-  }
-  @media screen and (max-width: 767px) { /* 手機版佈局 */
-    body {
-      background-position: right -50px bottom 0px;
+    background-position: right -50px bottom 0px;
 
-    }
   }
-  .page-header  {
-    background-color: rgba(0,0,0,0.5);
-    padding: 3px;
-    border-radius: 5px;
-  }
-  .page-header .mt-1 span.post-meta {
-    /* 隱藏嚇人的字數統計 */
-    display: none;
-  }
-  .full-bg-img > .mask {
-    background-color: rgba(0,0,0,0) !important;
-  }
-  :root {
-  --color-mode: 'light';
+}
+.banner-text  {
+  background-color: rgba(0,0,0,0.5);
+  padding: 3px;
+  border-radius: 5px;
+}
+.banner-text .mt-1 span.post-meta {
+  /* 隱藏嚇人的字數統計 */
+  display: none;
+}
+.full-bg-img > .mask {
+  background-color: rgba(0,0,0,0) !important;
+}
+:root {
+  /* --color-mode: 'light'; */
   --body-bg-color: #fff4d5;
   --board-bg-color: rgba(255,255,255,0.8);
   --text-color: #361b14;
   --sec-text-color: #5b4b43;
   --post-text-color: #3d2220;
   --post-heading-color: #2c201a;
-  --post-link-color: #010000;
-  --link-hover-color: #d47147;
+  --post-link-color: #b13e10;
+  --link-hover-color: #e4835a;
   --link-hover-bg-color: #f8f9fa;
   --navbar-bg-color: #d18b28;
   --navbar-text-color: #ffffff;
@@ -70,8 +71,8 @@ excerpt: '繼承 sora 的遺志，決勝你畫我猜（誤（逃（嗚（許多�
   --sec-text-color: #e1e2e3;
   --post-text-color: #ededed;
   --post-heading-color: #c9c8c4;
-  --post-link-color: #ef8e2c;
-  --link-hover-color: #d78e45;
+  --post-link-color: #fa8c1e;
+  --link-hover-color: #f9b36e;
   --link-hover-bg-color: #513f36;
   --navbar-bg-color: #b37955;
   --navbar-text-color: #ebebeb;
@@ -103,19 +104,146 @@ excerpt: '繼承 sora 的遺志，決勝你畫我猜（誤（逃（嗚（許多�
 
 下面介紹一些在這一年多的遊戲中湧現的技巧和策略．牠們分別是：
 
-  1. **僅僅繪製頭髮和衣服顏色**
-  2. **繪製色塊形狀**
-  3. **繪製標誌性物品**
+  1. **繪製色塊形狀**
+  2. **繪製標誌性物品**
+  3. **僅僅繪製頭髮和衣服顏色**
   4. **繪製背景**
   5. **精準臨摹（先畫眼睛）**
 
-接下來逐個詳細說明．
+至於該用哪個，你可以在拿到題目（或者拿到參考圖）之後思考：
+
+ - 我應該畫人物還是場景？哪個比較有辨識度？
+    - 如果我要畫一個名場景：使用塗色塊的方法會更加有效
+
+    - 如果我要畫一個角色：
+      - 這個人物是怎樣的？適合用色塊塗塗還是用線條描繪？
+      - 我要在畫面中畫甚麼內容？這個人物有甚麼標誌物？頭髮和衣服有甚麼特點？
+
+    - 如果我要畫一點遊戲內的標誌性物品：
+      - 這個物品的形狀是怎樣的？顏色是怎樣的？
+      - 適合用色塊塗塗還是用線條描繪？
+
+帶着這些考慮，我會在下面詳細說明每一個技巧和策略，並且通過一個例子來展示操作，希望能幫到你．
+
 
 **數位板篇：使用板子畫畫**
 
 使用數位板和電子畫筆會比使用鼠標作畫更加直覺，學習起來也更加有效，因此推薦準備一塊數位板來參加遊戲，不用太高級的就可以．
 
-### 1. 僅僅繪製頭髮和衣服顏色
+### 1. 繪製色塊形狀
+
+繪製色塊形狀是一個羣友們常用的技巧．原理是使用大尺寸的畫筆來塗出角色的各部位的形狀，而不糾結臉上的五官或者人體，衣服的細節．
+
+這個方法需要熟練地操作顏色和形狀，所以需要稍微練習．下面通過一個例子來講解操作．
+
+假設上一位玩家給出的關鍵詞是「莲华」，並且上網查詢後拿到的參考圖如下：
+
+<div class="row align-items-center">
+<div class="col-6">
+
+![莲华](../image/draw-guess-1/02/reference.webp)
+
+</div>
+<div class="col-6">
+
+**觀察 1: 色塊的前後關係**
+
+然後對自己輸出自我催眠指令：
+  - 順序從後往前分別為：
+    頭髮，臉部，黃色的腰帶，粉紅色的腰帶，和服
+  - 頭髮的顏色是偏藍色的黑色，形狀是一個高的梯形
+  - 衣服的顏色是偏紅色的黑色，其他部位的形狀全部抽象成矩形
+  - 同時注意上述形狀的長度，尺寸和位置相對關係
+
+</div>
+</div>
+
+由於我們將塗大量的色塊，因此要從後往前塗，這樣可以避免前面的色塊被後面的色塊遮擋．
+在開始之前向上滾動鼠標滾輪，把畫筆直徑調大，然後開始作畫如下：
+
+畫畫 1: 將上述指令全部發送到手
+
+![畫畫 1](../image/draw-guess-1/02/p1.webp)
+
+---
+
+<div class="row align-items-center">
+<div class="col-6">
+
+![莲华](../image/draw-guess-1/02/reference.webp)
+
+</div>
+<div class="col-6">
+
+**觀察 2: 爲了增強辨識度，畫一點細節**
+
+自我催眠：
+  - 有紅色的蝴蝶結在頭髮上
+  - 有紅色的腰帶在腰部
+  - 有紅色的花在胸部
+  - 有黃色的髮箍在頭髮上
+  - 把袖子的顏色稍微塗淺
+   （素描原則：不同深度以及不同朝向的平面應具有不同的顏色，以便營造立體感）
+
+
+</div>
+</div>
+
+畫畫 2: 將上述指令全部發送到手
+
+![畫畫 2](../image/draw-guess-1/02/p2.webp)
+
+完成！雖然很抽象，但是應該足夠讓羣友猜出來了．可以發現這個技巧在操作上並不困難，，，
+
+你可以注意到，我在上面對自己使用了大量的自我催眠指令，這是一種非常有效的方法，能讓我快速抓住畫面的特徵，彷彿我就是 Stable Diffusion 附身，，，
+
+---
+
+### 2. 繪製標誌性物品
+
+你不一定要畫角色，如果一個遊戲具有很有名的標誌性場景或者物品，那麼畫這個物品也是一個不錯的選擇．
+
+繪製這個物品可以使用上面的繪製大面積色塊的方法．下面通過一個例子來講解操作．
+
+假設上上個玩家畫了原神的刻晴，然後上一個玩家猜測的關鍵詞是「我去，初音未來」．雖然你很不想畫初音未來，但是還是不情願地上網拿到了參考圖如下：
+
+![初音未來](../image/draw-guess-1/03/reference.webp)
+
+**觀察 1: 初音未來的標誌性物品**
+
+自我催眠：
+  - 大蔥，下面是白色，上面是綠色
+  - 劉海和側髮：蔥綠色，約等於半個圓環
+  - 雙馬尾：蔥綠色，又長又大
+  - 紅色的耳機/髮夾
+  - 紅色的數字 01
+  - 蔥綠色的領帶
+
+畫畫 1: 逐個把上述的物件畫上去，注意顏色的選取
+
+![畫畫 1](../image/draw-guess-1/03/p1.webp)
+
+但是這麼一通操作之後，你只用了兩分鐘，還剩下三分鐘，就這麼交卷的話就太敷衍了，因此要增加一點畫面的細節．
+
+---
+
+**觀察 2: 繪製陰影色，增加立體感**
+
+自我催眠：
+  - 大蔥的陰影在圓柱形的一側
+  - 劉海和側髮的陰影在髮梢的位置上
+  - 把雙馬尾想象成幾個交錯的圓柱體，陰影在圓柱的一側
+  - 多畫一個灰色的裙子進去
+
+畫畫 2: 使用取色器（快捷鍵 D）取各部分的顏色，然後把亮度滑塊拉低一點，作爲陰影顏色
+
+![畫畫 2](../image/draw-guess-1/03/p2.webp)
+
+完成！簡直太他媽敷衍了，，，但是應該足夠讓羣友猜出來了．
+
+---
+
+### 3. 僅僅繪製頭髮和衣服顏色
 
 這是一個非常有效的技巧，因爲頭髮和衣服顏色是角色的明顯特徵．而且和繪製臉部和人體相比，簡單塗一下這些顏色不需要太高的精確度．
 
@@ -331,118 +459,6 @@ excerpt: '繼承 sora 的遺志，決勝你畫我猜（誤（逃（嗚（許多�
   <p>Your browser does not support the video tag.</p>
 </video> -->
 
-你可以注意到，我在上面對自己使用了大量的自我催眠提示詞，這是一種非常有效的方法，能讓我快速抓住畫面的特徵，彷彿我就是 Stable Diffusion 附身，，，
-
----
-
-### 2. 繪製色塊形狀
-
-繪製色塊形狀是另一個羣友們常用的技巧．原理是使用大尺寸的畫筆來塗出角色的各部位的形狀，而不糾結臉上的五官或者人體，衣服的細節．
-
-這個方法需要熟練地操作顏色和形狀，所以需要稍微練習．下面通過一個例子來講解操作．
-
-假設上一位玩家給出的關鍵詞是「莲华」，並且上網查詢後拿到的參考圖如下：
-
-<div class="row align-items-center">
-<div class="col-6">
-
-![莲华](../image/draw-guess-1/02/reference.webp)
-
-</div>
-<div class="col-6">
-
-**觀察 1: 色塊的前後關係**
-
-自我催眠：
-  - 順序從後往前分別為：
-    頭髮，臉部，黃色的腰帶，粉紅色的腰帶，和服
-  - 頭髮的顏色是偏藍色的黑色，形狀是一個高的梯形
-  - 衣服的顏色是偏紅色的黑色，其他部位的形狀全部抽象成矩形
-  - 同時注意上述形狀的長度，尺寸和位置相對關係
-
-</div>
-</div>
-
-由於我們將塗大量的色塊，因此要從後往前塗，這樣可以避免前面的色塊被後面的色塊遮擋．
-在開始之前向上滾動鼠標滾輪，把畫筆直徑調大，然後開始作畫如下：
-
-畫畫 1: 將上述指令全部發送到手
-
-![畫畫 1](../image/draw-guess-1/02/p1.webp)
-
----
-
-<div class="row align-items-center">
-<div class="col-6">
-
-![莲华](../image/draw-guess-1/02/reference.webp)
-
-</div>
-<div class="col-6">
-
-**觀察 2: 爲了增強辨識度，畫一點細節**
-
-自我催眠：
-  - 有紅色的蝴蝶結在頭髮上
-  - 有紅色的腰帶在腰部
-  - 有紅色的花在胸部
-  - 有黃色的髮箍在頭髮上
-  - 把袖子的顏色稍微塗淺
-   （素描原則：不同深度以及不同朝向的平面應具有不同的顏色，以便營造立體感）
-
-
-</div>
-</div>
-
-畫畫 2: 將上述指令全部發送到手
-
-![畫畫 2](../image/draw-guess-1/02/p2.webp)
-
-完成！雖然還是很抽象，但是應該足夠讓羣友猜出來了．可以發現這個技巧比第一個在操作上簡單了許多，，，
-
----
-
-### 3. 繪製標誌性物品
-
-你不一定要畫角色，如果一個遊戲具有很有名的標誌性場景或者物品，那麼畫這個物品也是一個不錯的選擇．
-
-繪製這個物品可以使用上面的繪製大面積色塊的方法．下面通過一個例子來講解操作．
-
-假設上上個玩家畫了原神的刻晴，然後上一個玩家猜測的關鍵詞是「我去，初音未來」．雖然你很不想畫初音未來，但是還是不情願地上網拿到了參考圖如下：
-
-![初音未來](../image/draw-guess-1/03/reference.webp)
-
-**觀察 1: 初音未來的標誌性物品**
-
-自我催眠：
-  - 大蔥，下面是白色，上面是綠色
-  - 劉海和側髮：蔥綠色，約等於半個圓環
-  - 雙馬尾：蔥綠色，又長又大
-  - 紅色的耳機/髮夾
-  - 紅色的數字 01
-  - 蔥綠色的領帶
-
-畫畫 1: 逐個把上述的物件畫上去，注意顏色的選取
-
-![畫畫 1](../image/draw-guess-1/03/p1.webp)
-
-但是這麼一通操作之後，你只用了兩分鐘，還剩下三分鐘，就這麼交卷的話就太敷衍了，因此要增加一點畫面的細節．
-
----
-
-**觀察 2: 繪製陰影色，增加立體感**
-
-自我催眠：
-  - 大蔥的陰影在圓柱形的一側
-  - 劉海和側髮的陰影在髮梢的位置上
-  - 把雙馬尾想象成幾個交錯的圓柱體，陰影在圓柱的一側
-  - 多畫一個灰色的裙子進去
-
-畫畫 2: 使用取色器（快捷鍵 D）取各部分的顏色，然後把亮度滑塊拉低一點，作爲陰影顏色
-
-![畫畫 2](../image/draw-guess-1/03/p2.webp)
-
-完成！簡直太他媽敷衍了，，，但是應該足夠讓羣友猜出來了．
 
 ---
 
@@ -952,6 +968,8 @@ excerpt: '繼承 sora 的遺志，決勝你畫我猜（誤（逃（嗚（許多�
 **鼠標篇：使用鼠標參加遊戲**
 
 在技巧上說，使用鼠標和使用數位板的作畫思路都是一樣的，在有限的時間下儘量減少操作數並且畫出特徵．但是由於鼠標更難操作，所以不建議使用．我建議所有的繪畫新手使用數位板，哪怕是便宜貨，能夠避免你在鼠標作畫的過程中被困難澆滅了遊戲熱情．
+
+由於精確地繪製細節過於困難，如果你非得用鼠標參加遊戲，我會建議你使用「塗色塊」的方法，來注重還原畫面的色彩．
 
 這裏插一張羣友使用鼠標畫的色塊圖作品，希望你能猜出來：
 

@@ -9,6 +9,7 @@ tags:
 abbrlink: 20004
 author: 桐遠暮羽
 excerpt: '[轉載] 使恁的 Galgame 大脳昇級 – 削除 SiglusEngine 引擎的地區限制'
+og_img: "../image/note-sigluscrack/cover.jpg"
 ---
 
 `原作者：BAHAROA`

@@ -17,6 +17,7 @@ abbrlink: 25665
 author: sym 1018
 excerpt: '青梅竹马的邻居纱由理邀请我加入文学俱乐部，在文学部中的日常是什么样呢'
 date: 2022-01-14 00:30:00
+og_img: "../image/ddlc_plus/cover.jpg"
 ---
 
 <style>

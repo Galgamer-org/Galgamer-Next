@@ -12,6 +12,7 @@ abbrlink: 23509
 date: 2021-11-22 13:11:43
 author: かばん
 excerpt: 'Brain-machine Interface，这项技术让人类的记忆得以数据化，同时，也创造出了“他”，他的人格由许许多多的记忆拼凑而成。'
+og_img: "https://cdn.akamai.steamstatic.com/steam/apps/1662840/header.jpg"
 ---
 
 ![PARQUET](https://cdn.akamai.steamstatic.com/steam/apps/1662840/header.jpg)

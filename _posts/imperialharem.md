@@ -17,6 +17,7 @@ categories:
 abbrlink: 38579
 author: '木衛一'
 excerpt: '攻陷公主随身女侍，最后推倒公主'
+og_img: "../image/imperialharem/tg-preview2.jpg"
 ---
 
 <style>
@@ -45,7 +46,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;
@@ -61,7 +62,7 @@ body {
 ::selection {
     /*background-color: #f00;*/
 }
-.page-header .mt-1 span.post-meta {
+.banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
 }
@@ -346,7 +347,7 @@ Live 2D也很可爱，可用的调教方法在最初的版本比较少。之后�
 
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function(){
     let pclefts = document.querySelectorAll('.pc-left');
     pclefts.forEach((el) => {
@@ -357,6 +358,6 @@ Live 2D也很可爱，可用的调教方法在最初的版本比较少。之后�
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>
