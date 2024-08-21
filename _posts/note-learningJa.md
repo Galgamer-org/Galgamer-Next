@@ -9,6 +9,7 @@ tags:
 abbrlink: 20006
 author: '桐遠暮羽'
 excerpt: '不再被語言所束縛，這是成爲自由且無可阻擋的 Galgamer 之路。'
+og_img: "../image/note-learningJa/cover.jpg"
 ---
 
 `作者: 桐遠暮羽`

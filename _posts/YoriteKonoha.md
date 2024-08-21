@@ -15,6 +15,7 @@ categories:
 abbrlink: 20005
 author: '桐遠暮羽'
 excerpt: '在紅葉紛飛之地 和有尾巴，有耳朵的少女們 展開的 超越種族的 和風戀愛故事，，，'
+og_img: "../image/YoriteKonoha/cover.jpg"
 ---
 
 ## At A Glance

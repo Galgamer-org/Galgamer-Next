@@ -14,6 +14,7 @@ categories:
 abbrlink: 20010
 author: 桐遠暮羽
 excerpt: '奉行完美主義的高中生 北原春希，企圖完美地同時照顧兩位女生的感情，於是就被完美地捲進了長達六年的超級三角戀之中。'
+og_img: "../image/WA2/cover.jpg"
 ---
 
 `作者：桐遠暮羽`
@@ -653,7 +654,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;

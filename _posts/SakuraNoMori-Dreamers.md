@@ -17,6 +17,7 @@ abbrlink: 56863
 author: 桐遠暮羽
 date: 2021-10-29 22:08:44
 excerpt: 擁有能看見即將發生的不幸的能力的男主角，吹上慎司，發誓要找出至愛的青梅竹馬慘遭殺害的真相。
+og_img: "../image/SakuraNoMori-Dreamers/banner.jpg"
 ---
 <!--- excerpt 是用來顯示在網站首頁上的本文摘要 -->
 

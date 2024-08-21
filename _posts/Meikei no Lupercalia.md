@@ -17,6 +17,7 @@ date: 2023-01-07 00:30:00
 author: 
   - SacalWiki
   - sora
+og_img: "../image/MeikeinoLupercalia/tg-preview.jpg"
 ---
 
 `作者：Sacal & sora`
@@ -322,7 +323,7 @@ Kirikiri 模拟器移植版本：{% telegram_channel 9526 RhineLibrary %}
     -webkit-backdrop-filter: blur(5px);
   }
 
-  .page-header {
+  .banner-text {
     /* 设置文章标题文字区域的淡黑色半透明底板 */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 3px;
@@ -338,7 +339,7 @@ Kirikiri 模拟器移植版本：{% telegram_channel 9526 RhineLibrary %}
     --board-bg-color: rgba(0, 0, 0, 0.8);
     --bg-url: url('../image/MeikeinoLupercalia/Cover.webp')
   }
-  .page-header .mt-1 span.post-meta {
+  .banner-text .mt-1 span.post-meta {
     /* 因爲加了很多代碼，所以字數很膨脹，隱藏嚇人的字數統計 */
     display: none;
 }

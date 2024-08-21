@@ -15,6 +15,7 @@ author: SacalWiki
 abbrlink: 21466
 excerpt: 漫长的孤独后，我终于等到了幸福
 date: 2022-12-24 00:30:00
+og_img: "../image/12eve/tg-preview.jpg"
 ---
 
 <img src="../image/12eve/tg-preview.jpg" class="d-none"/>
@@ -296,7 +297,7 @@ details[open] summary {
 </style>
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function(){
     let pclefts = document.querySelectorAll('.pc-left');
     pclefts.forEach((el) => {
@@ -307,7 +308,7 @@ details[open] summary {
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>
 

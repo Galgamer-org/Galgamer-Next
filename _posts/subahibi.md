@@ -29,6 +29,7 @@ categories:
 abbrlink: 20016
 author: '桐遠暮羽'
 excerpt: '這是武道少女 Yuki 解開發生在學校、世界和自己身上的謎團，迎接美好的每一天的故事。'
+og_img: "../image/subahibi/tg-preview.jpg"
 ---
 
 <style>
@@ -60,7 +61,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;
@@ -79,7 +80,7 @@ body {
 ::selection {
     /*background-color: #f00;*/
 }
-.page-header .mt-1 span.post-meta {
+.banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
 }
@@ -87,7 +88,7 @@ body {
   aspect-ratio: 100/71;
 }
 /* show later */
-.page-header, #board, .scroll-down-bar, #toc  {
+.banner-text, #board, .scroll-down-bar, #toc  {
   opacity: var(--delayed-opacity);
   transition: opacity 0.3s;
 }
@@ -605,7 +606,7 @@ magnet:?xt=urn:btih:b65a3001ff57d54a660536dbb3dd2d818ed73e96
 
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function(){
     let pcrights = document.querySelectorAll('.pc-right');
     pcrights.forEach((el) => {
@@ -627,7 +628,7 @@ magnet:?xt=urn:btih:b65a3001ff57d54a660536dbb3dd2d818ed73e96
         wakatsuki.classList.add('left');
       }
     })
-    setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 500);
+    setTimeout(() => Fluid.utils.setTheme('light'), 500);
     setTimeout(function(){
       document.documentElement.style.setProperty('--delayed-opacity', 1);
     }, 2000);

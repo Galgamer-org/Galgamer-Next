@@ -5,10 +5,11 @@ keywords: 'Summer Pockets, 聖地, 旅遊'
 banner_img: '../image/sprb-trip-1/banner.webp'
 index_img: '../image/sprb-trip-1/cover.jpg'
 tags:
-  - 筆記
+  - 笔记
 abbrlink: 20024
 author: '桐遠暮羽'
 excerpt: '明年夏天，讓我們去尋找四散的回憶吧！'
+og_img: "../image/sprb-trip-1/cover.jpg"
 ---
 
 <style>
@@ -37,12 +38,12 @@ excerpt: '明年夏天，讓我們去尋找四散的回憶吧！'
 
     }
   }
-  .page-header  {
+  .banner-text  {
     background-color: rgba(0,0,0,0.5);
     padding: 3px;
     border-radius: 5px;
   }
-  .page-header .mt-1 span.post-meta {
+  .banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
   }

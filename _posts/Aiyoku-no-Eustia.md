@@ -14,6 +14,7 @@ banner_img: ''
 index_img: ../image/Aiyoku-no-Eustia/cover.webp
 abbrlink: 41617
 date: 2023-12-24 00:30:00
+og_img: "../image/Aiyoku-no-Eustia/tg-preview.jpg"
 ---
 
 <script defer src="../js/Eustia/page_to.js"></script>
@@ -539,7 +540,7 @@ magnet:?xt=urn:btih:73885716761427846726cdd26f996c39cea55b36
 </style>
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function () {
     let pcrights = document.querySelectorAll('.pc-right');
     pcrights.forEach((el) => {
@@ -550,7 +551,7 @@ magnet:?xt=urn:btih:73885716761427846726cdd26f996c39cea55b36
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 500);
+    //setTimeout(() => Fluid.utils.setTheme('light'), 500);
     setTimeout(function () {
       document.documentElement.style.setProperty('--delayed-opacity', 1);
     }, 2000);
@@ -590,7 +591,7 @@ magnet:?xt=urn:btih:73885716761427846726cdd26f996c39cea55b36
     -webkit-backdrop-filter: blur(5px);
   }
 
-  .page-header {
+  .banner-text {
     /* 设置文章标题文字区域的淡黑色半透明底板 */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 3px;
@@ -608,7 +609,7 @@ magnet:?xt=urn:btih:73885716761427846726cdd26f996c39cea55b36
     --board-bg-color: rgba(0, 0, 0, 0.8);
   }
 
-  .page-header .mt-1 span.post-meta {
+  .banner-text .mt-1 span.post-meta {
     /* 因爲加了很多代碼，所以字數很膨脹，隱藏嚇人的字數統計 */
     display: none;
   }
@@ -618,7 +619,7 @@ magnet:?xt=urn:btih:73885716761427846726cdd26f996c39cea55b36
   }
 
   /* show later */
-  .page-header,
+  .banner-text,
   #board,
   .scroll-down-bar,
   #toc {

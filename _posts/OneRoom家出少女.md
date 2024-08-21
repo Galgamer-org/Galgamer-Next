@@ -17,6 +17,7 @@ categories:
 abbrlink: 65530
 author: '木衛一'
 excerpt: '恭喜你，這次撿到的似乎不是精子博物館.'
+og_img: "../image/1room/1.jpg"
 ---
 
 `作者：木衛一`

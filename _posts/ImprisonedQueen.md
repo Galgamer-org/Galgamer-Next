@@ -16,6 +16,7 @@ categories:
 abbrlink: 19031
 author: '木衛一'
 excerpt: '調教亡國女王莎恩‧凱特成爲戰勝國諾恩的公用性奴隸'
+og_img: "../image/ImprisonedQueen/cover.jpg"
 ---
 
 `作者：木衛一`

@@ -9,6 +9,7 @@ tags:
   - 云翻译
   - Hook
 author: かばん
+og_img: "../image/毎日キスしてロリータ/main2.jpg"
 ---
 
 ![封面图](../image/毎日キスしてロリータ/main2.jpg)

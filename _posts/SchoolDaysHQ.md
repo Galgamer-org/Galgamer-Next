@@ -14,6 +14,7 @@ categories:
 abbrlink: 20001
 author: '桐遠暮羽'
 excerpt: '甜蜜，溫暖，感人肺腑，令人嚮往的 三角戀 愛情故事.'
+og_img: "../image/SchoolDaysHQ/homebg.jpg"
 ---
 
 Galgamer 聖誕節特別篇，聖誕節快樂！

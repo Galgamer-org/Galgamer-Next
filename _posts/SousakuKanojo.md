@@ -16,6 +16,7 @@ categories:
 abbrlink: 20009
 author: '桐遠暮羽'
 excerpt: '普通的 JK 普通地魅力四射，但是魅力能射殺人的 才華橫溢創作 JK 找上你，要和你 譜寫創作、戀情和青春的樂章。'
+og_img: "../image/SousakuKanojo/tg_preview.jpg"
 ---
 
 <style>
@@ -36,12 +37,12 @@ excerpt: '普通的 JK 普通地魅力四射，但是魅力能射殺人的 才�
       background-size: unset;
     }
   }
-  .page-header  {
+  .banner-text  {
     background-color: rgba(0,0,0,0.5);
     padding: 3px;
     border-radius: 5px;
   }
-  .page-header .mt-1 span.post-meta {
+  .banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
   }

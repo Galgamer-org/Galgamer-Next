@@ -15,6 +15,7 @@ categories:
 abbrlink: 20017
 author: '桐遠暮羽'
 excerpt: '能用神力給人洗腦的男主，誠，懷着想和別人平等交往的願望，第一次走出了隱居的山村。'
+og_img: "../image/Amatu-tumi/tg-preview.jpg"
 ---
 
 <style>
@@ -43,7 +44,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;
@@ -59,7 +60,7 @@ body {
 ::selection {
     /*background-color: #f00;*/
 }
-.page-header .mt-1 span.post-meta {
+.banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
 }
@@ -399,7 +400,7 @@ magnet:?xt=urn:btih:286226e279576da7555b57a83f3e4aa9f5ac0048
 文件名：アマツツミ + 予約特典 +同梱特典
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function(){
     let pclefts = document.querySelectorAll('.pc-left');
     pclefts.forEach((el) => {
@@ -410,6 +411,6 @@ magnet:?xt=urn:btih:286226e279576da7555b57a83f3e4aa9f5ac0048
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

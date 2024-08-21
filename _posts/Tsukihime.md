@@ -14,6 +14,7 @@ abbrlink: 134
 author: sym 1018
 excerpt: '重制版<月姬 -A piece of blue glass moon->已经发行,借由此次机会重新整理月姬系列部分内容.'
 date: 2022-02-05 00:30:00
+og_img: "../image/Tsukihime/Cover.jpg"
 ---
 
 <style>
@@ -362,6 +363,6 @@ body {
 </style>
 <script>
 window.addEventListener('DOMContentLoaded', function() {
-setInterval(() => document.documentElement.setAttribute('data-user-color-scheme', 'dark'), 500);
+setInterval(() => Fluid.utils.setTheme('dark'), 500);
 });
 </script>

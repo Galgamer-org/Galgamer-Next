@@ -17,6 +17,7 @@ categories:
 abbrlink: 20020
 author: '桐遠暮羽'
 excerpt: '賽博朋克美少女的人生夙願就是拿反器材狙擊步槍和火箭發射器 把城市黑幫、電腦中級嗨客和電子吸血鬼全部 #繩之以法！'
+og_img: "../image/REDCherish/tg-preview.jpg"
 ---
 
 <style>
@@ -45,7 +46,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;
@@ -61,7 +62,7 @@ body {
 ::selection {
     background-color: #f99;
 }
-.page-header .mt-1 span.post-meta {
+.banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
 }
@@ -512,7 +513,7 @@ magnet:?xt=urn:btih:380821e8447a1ad2dd4459e0129508374c698244
 Mac 上的 wine-crossover 瘋狂亂碼，改地區沒用，然後 OP 播放不了，我覺得可以不用試了。
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   // function loadbigimg(){
   //   let cover = document.getElementById('coverimage');
   //   let btn =  document.getElementById('changesrc');
@@ -532,6 +533,6 @@ Mac 上的 wine-crossover 瘋狂亂碼，改地區沒用，然後 OP 播放不�
         el.classList.remove('touch');
       })
     });
-    setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'dark'), 1000)
+    setTimeout(() => Fluid.utils.setTheme('dark'), 1000)
   })
 </script>

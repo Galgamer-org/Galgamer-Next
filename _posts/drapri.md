@@ -14,6 +14,7 @@ categories:
 abbrlink: 15436
 author: '木衛一'
 excerpt: '躺平尼特和龍姬和青梅竹馬的三人后宮生活'
+og_img: "../image/drapri/cover.jpg"
 ---
 
 `作者：木衛一`
@@ -350,7 +351,7 @@ body {
 .full-bg-img > .mask, #banner {
   background: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;

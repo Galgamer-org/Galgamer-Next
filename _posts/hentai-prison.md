@@ -16,6 +16,7 @@ categories:
 abbrlink: 20025
 author: '桐遠暮羽'
 excerpt: '這裏是，無可救藥的變態們被社會掃地出門后的葬身之地……'
+og_img: "../image/hentai-prison/cover.jpg"
 ---
 
 <style>
@@ -47,7 +48,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   box-shadow: 10px 10px #ff0;
@@ -64,7 +65,7 @@ body {
     background-color: #ff0;
     color: #00f;
 }
-.page-header .mt-1 span.post-meta {
+.banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
 }
@@ -259,20 +260,20 @@ h3 {
   }
 </style>
 
-{% template sp-character name no yomi uid children %}
-<div className={`row sp-character ${uid} mx-0`} style={{"--this-bg": `url(../image/hentai-prison/chars/bg.webp)`}}>
-  <div className="col-12 char-overlay row" style={{"--right-bg": `url(../image/hentai-prison/chars/${no}.webp)`}}>
-    <div className="pc-left col-12 col-md-8">
-      <div className="namearea col-12 pt-2">
-        <div className="charname font-weight-bold ">
+{% template sp-character name no yomi uid html %}
+<div class={`row sp-character ${uid} mx-0`} style={`--this-bg: url(../image/hentai-prison/chars/bg.webp)`}>
+  <div class="col-12 char-overlay row" style={`--right-bg: url(../image/hentai-prison/chars/${no}.webp)`}>
+    <div class="pc-left col-12 col-md-8">
+      <div class="namearea col-12 pt-2">
+        <div class="charname font-weight-bold ">
           {name}
         </div>
-        <div className="yomi font-italic">
+        <div class="yomi font-italic">
           {yomi}
         </div>
         <hr />
       </div>
-      <div className="infoarea col-12" children={children}>
+      <div class="infoarea col-12" html={html}>
       </div>  
     </div>
   </div>  
@@ -572,7 +573,7 @@ MacOS 上的 Gcenx Wine 9.0 運行良好．
 
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   // function loadbigimg(){
   //   let cover = document.getElementById('coverimage');
   //   let btn =  document.getElementById('changesrc');
@@ -592,6 +593,6 @@ MacOS 上的 Gcenx Wine 9.0 運行良好．
         el.classList.remove('touch');
       })
     });
-    setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'dark'), 1000)
+    setTimeout(() => Fluid.utils.setTheme('dark'), 1000)
   })
 </script>

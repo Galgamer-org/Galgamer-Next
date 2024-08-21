@@ -16,6 +16,7 @@ categories:
 abbrlink: 10019
 author: 'Patchouli Knowledge'
 excerpt: '"Muv-Luv"的意思就是真愛————製作人吉田博彥'
+og_img: "../image/Muv/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`
@@ -421,6 +422,6 @@ Muv 最大的問題就是前期非常勸退，EXTRA 篇校園日常纯纯的白�
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

@@ -9,6 +9,7 @@ tags:
 abbrlink: 20003
 author: 桐遠暮羽
 excerpt: '你可以對這篇文章進行隨意抄襲'
+og_img: "../image/note-snipset/index.png"
 ---
 
 爲了讓文章更加的豐富多彩，我將用過的一些代碼片段，步驟等放在這裏，需要時可隨意 CV，，，

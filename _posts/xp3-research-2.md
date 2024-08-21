@@ -10,6 +10,7 @@ tags:
 abbrlink: 20022
 author: 'Galgamer 團隊'
 excerpt: '這是 XP3 最後的祕密．'
+og_img: "../image/xp3-research-2/cover.jpg"
 ---
 
 <style>
@@ -33,12 +34,12 @@ excerpt: '這是 XP3 最後的祕密．'
       background-size: unset;
     }
   }
-  .page-header  {
+  .banner-text  {
     background-color: rgba(0,0,0,0.5);
     padding: 3px;
     border-radius: 5px;
   }
-  .page-header .mt-1 span.post-meta {
+  .banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
   }

@@ -14,6 +14,7 @@ categories:
 abbrlink: 24763
 author: 桐遠暮羽
 excerpt: '幼時的一場大火將四人玩伴的關係燒得四分五裂。多年後，身處事件中心的男主角成爲了交換生，玩伴四人組即將再會。'
+og_img: "../image/MO8/mo8.jpg"
 ---
 
 <p style="background-color: transparent; border:3px; border-style:solid;border-color:orange; padding: 10px">

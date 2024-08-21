@@ -13,6 +13,7 @@ categories:
 abbrlink: 16729
 author: 桐遠暮羽
 excerpt: '玩太多沉痛的 Galgame，大腦要降級啦。今天玩點輕鬆愉快的，歡迎來到死神咖啡店！'
+og_img: "../image/CafeStella/cover.jpg"
 ---
 
 `作者：桐遠暮羽`

@@ -16,6 +16,7 @@ categories:
 abbrlink: 10020
 author: 'Patchouli Knowledge'
 excerpt: '居然能追查到這裏，果然你也是“機關”的人嗎！？'
+og_img: "../image/SG/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`
@@ -416,6 +417,6 @@ body {
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

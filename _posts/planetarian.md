@@ -14,6 +14,7 @@ categories:
 abbrlink: 10002
 author: 'Patchouli Knowledge'
 excerpt: '在世界的廢墟中，滿天的繁星仍在等待大家的到來……'
+og_img: "../image/planetarian/title.jpg"
 ---
 
 `作者: Patchouli Knowledge`
@@ -147,6 +148,6 @@ body {
 </style>
 <script>
 window.addEventListener('DOMContentLoaded', function() {
-setInterval(() => document.documentElement.setAttribute('data-user-color-scheme', 'dark'), 500);
+setInterval(() => Fluid.utils.setTheme('dark'), 500);
 });
 </script>

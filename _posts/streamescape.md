@@ -14,6 +14,7 @@ categories:
 abbrlink: 30001
 author: '木衛一'
 excerpt: '美少女主播深入靈異鬼宅，遭遇豬頭人偶追杀'
+og_img: "../image/streamescape/cover.jpg"
 ---
 
 `作者：木衛一`
@@ -369,7 +370,7 @@ https://www.ryuugames.com/eng-livestream-escape-from-hotel-izanami-free-download
         background-color: rgba(0, 0, 0, 0) !important;
     }
 
-    .page-header {
+    .banner-text {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 3px;
         border-radius: 5px;

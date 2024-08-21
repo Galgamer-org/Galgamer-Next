@@ -16,6 +16,7 @@ categories:
 abbrlink: 30018
 author: '木衛一'
 excerpt: '即使不是在徐州，走夜路也是很危险的。'
+og_img: "../image/thewayhome/tg-preview.jpg"
 ---
 
 <style>
@@ -50,7 +51,7 @@ excerpt: '即使不是在徐州，走夜路也是很危险的。'
     background-color: rgba(0, 0, 0, 0) !important;
   }
 
-  .page-header {
+  .banner-text {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 3px;
     border-radius: 5px;
@@ -70,7 +71,7 @@ excerpt: '即使不是在徐州，走夜路也是很危险的。'
     /*background-color: #f00;*/
   }
 
-  .page-header .mt-1 span.post-meta {
+  .banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
   }
@@ -349,7 +350,7 @@ https://twitter.com/kuronerinka/status/1420662750783578114?s=21
 {% telegram_channel 8049 RhineLibrary %}
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function () {
     let pclefts = document.querySelectorAll('.pc-left');
     pclefts.forEach((el) => {
@@ -360,6 +361,6 @@ https://twitter.com/kuronerinka/status/1420662750783578114?s=21
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

@@ -14,6 +14,7 @@ categories:
 abbrlink: 70134
 author: '桐遠暮羽'
 excerpt: '輟學的男高中生，央路，劫持了正在逛街的北歐皇家公主，然後被十萬個皇家禁衛軍騎士追殺。'
+og_img: "../image/Kinkoi/cover.jpg"
 ---
 
 `作者：桐遠暮羽`

@@ -16,6 +16,7 @@ categories:
 author: 'SacalWiki'
 abbrlink: 20861
 excerpt: '业界清流，透着伦理味儿的拔作'
+og_img: "../image/Bishoujo_Mangekyou-Tsumi_to_Batsu_no_Shoujo-/tg-preview.jpg"
 ---
 
 <img src="../image/Bishoujo_Mangekyou-Tsumi_to_Batsu_no_Shoujo-/tg-preview.jpg" class="d-none"/>
@@ -334,7 +335,7 @@ details[open] summary {
 </style>
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function(){
     let pclefts = document.querySelectorAll('.pc-left');
     pclefts.forEach((el) => {
@@ -345,6 +346,6 @@ details[open] summary {
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

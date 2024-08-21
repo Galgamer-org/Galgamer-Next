@@ -9,6 +9,7 @@ tags:
 abbrlink: 20018
 author: 桐遠暮羽
 excerpt: '不是豎排、往左翻頁的電子書，文學素養都不行😁'
+og_img: "../image/note-makeEbook/index.jpg"
 ---
 
 `作者：桐遠暮羽`

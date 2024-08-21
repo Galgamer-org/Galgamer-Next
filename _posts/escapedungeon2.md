@@ -16,6 +16,7 @@ categories:
 abbrlink: 79357
 author: '木衛一'
 excerpt: '精灵女弓手苏拉尔为逆转败局，救出魔族俘虏莎莉丝，只身潜入魔王城'
+og_img: "../image/escapedungeon2/cover.jpg"
 ---
 
 `作者：木衛一`

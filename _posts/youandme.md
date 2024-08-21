@@ -17,6 +17,7 @@ categories:
 abbrlink: 10017
 author: 'Patchouli Knowledge'
 excerpt: '我想要的————只是“你”'
+og_img: "../image/youandme/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`

@@ -14,6 +14,7 @@ categories:
 abbrlink: 20011
 author: '桐遠暮羽'
 excerpt: '單親家庭少女真依 跟隨父親回到了位於山中的老家四津村，在那裏有她所一直探求着的家庭和身世之謎的真相。'
+og_img: "../image/YotsumeGod/cover.jpg"
 ---
 
 `作者：和風少女桐遠暮羽`
@@ -437,7 +438,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;
@@ -451,12 +452,12 @@ body {
 ::selection {
     background-color: #f00;
 }
-.page-header .mt-1 span.post-meta {
+.banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
   }
 </style>
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
 </script>

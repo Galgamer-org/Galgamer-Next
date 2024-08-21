@@ -16,6 +16,7 @@ categories:
 abbrlink: 10021
 author: 'Patchouli Knowledge'
 excerpt: '世界是可以欺騙的，去欺騙世界吧'
+og_img: "../image/SG0/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`
@@ -323,6 +324,6 @@ body {
         el.classList.remove('touch');
       })
     });
-    //setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    //setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

@@ -9,6 +9,7 @@ tags:
 abbrlink: 35475
 author: 桐遠暮羽
 excerpt: '我不是視頻創作者。但是在準備嵌入文章的視頻文件，對嵌入式 HTML Video 的編碼方式，參數進行調整的時候有一些發現。'
+og_img: "../image/note-webvideo/index.svg"
 ---
 
 我不是視頻創作者。但是在準備嵌入文章的視頻文件，對嵌入式 HTML Video 的編碼方式，參數進行調整的時候有一些發現。

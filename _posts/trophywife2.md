@@ -15,6 +15,7 @@ categories:
 abbrlink: 49531
 author: '木衛一'
 excerpt: '胁迫调教名流人妻，释放她的抖M本性'
+og_img: "../image/trophywife2/cover.jpg"
 ---
 
 `作者：木衛一`

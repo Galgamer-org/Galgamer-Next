@@ -14,6 +14,7 @@ categories:
 abbrlink: 20014
 author: '桐遠暮羽'
 excerpt: '王牌特務男主角和妹妹搭檔 潛入超能力學院，調查學院不可告人的迫真驚天祕密。'
+og_img: "../image/RIDDLEJOKER/tg-preview.jpg"
 ---
 
 <style>
@@ -42,7 +43,7 @@ body {
 .full-bg-img > .mask {
   background-color: rgba(0,0,0,0) !important;
 }
-.page-header  {
+.banner-text  {
   background-color: rgba(0,0,0,0.5);
   padding: 3px;
   border-radius: 5px;
@@ -58,7 +59,7 @@ body {
 ::selection {
     /*background-color: #f00;*/
 }
-.page-header .mt-1 span.post-meta {
+.banner-text .mt-1 span.post-meta {
     /* 隱藏嚇人的字數統計 */
     display: none;
 }
@@ -539,7 +540,7 @@ magnet:?xt=urn:btih:7321dffe0c35fa04ecbb03063d3b38ce43084083
 ![Poster](../image/RIDDLEJOKER/slider05.webp)
 
 <script>
-  //document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+  //Fluid.utils.setTheme('dark');
   document.addEventListener("DOMContentLoaded", function(){
     let pclefts = document.querySelectorAll('.pc-left');
     pclefts.forEach((el) => {
@@ -550,6 +551,6 @@ magnet:?xt=urn:btih:7321dffe0c35fa04ecbb03063d3b38ce43084083
         el.classList.remove('touch');
       })
     });
-    setTimeout(() => document.documentElement.setAttribute('data-user-color-scheme', 'light'), 1000)
+    setTimeout(() => Fluid.utils.setTheme('light'), 1000)
   })
 </script>

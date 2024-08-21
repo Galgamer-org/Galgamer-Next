@@ -16,6 +16,7 @@ categories:
 abbrlink: 10018
 author: 'Patchouli Knowledge'
 excerpt: '一段長長的坡道，一段人生的旅程'
+og_img: "../image/CLANNAD/post.jpg"
 ---
 
 `作者: Patchouli Knowledge`
