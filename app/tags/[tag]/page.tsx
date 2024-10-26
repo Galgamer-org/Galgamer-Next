@@ -8,14 +8,14 @@ import PostsByYears from '@/components/posts-by-year';
 import PostType from '@/interfaces/post';
 import Link from 'next/link';
 
-type MetadataProps = {
-  params: { tag: string }
-}
+type Params = Promise<{ tag: string }>;
+
 
 export async function generateMetadata(
-  { params }: MetadataProps,
+  props: { params: Params },  
   parent: ResolvingMetadata
 ): Promise<Metadata> {
+  const params = await props.params;
   const tag = decodeURIComponent(params.tag);
   const posts = getAllTags()[tag];
 
@@ -76,7 +76,10 @@ export function generateStaticParams() {
 
 
 
-export default function TagPostList({ params }: { params: { tag: string } }) {
+export default async function TagPostList(
+  props: { params: Params }
+) {
+  const params = await props.params;
   const tag = decodeURIComponent(params.tag);
   const posts = getAllTags()[tag];
   if (!posts) {

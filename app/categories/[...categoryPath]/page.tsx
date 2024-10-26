@@ -10,12 +10,8 @@ import style from "styles/categories.module.css";
 import { countSubTreeLeaves, WalkCategoryTree } from '../tree';
 import React from 'react';
 
-type MetadataProps = {
-  params: { categoryPath: string[] }
-}
 
-type Params = { categoryPath: string[] }
-
+type Params = Promise<{ categoryPath: string[] }>;
 
 type CategoryData = {
   posts?: string[],
@@ -23,9 +19,10 @@ type CategoryData = {
 }
 
 export async function generateMetadata(
-  { params }: MetadataProps,
+  props: { params: Params },
   _parent: ResolvingMetadata
 ): Promise<Metadata> {
+  const params = await props.params;
   const categoryPath = params.categoryPath.map(decodeURIComponent);
   const categoryTree = getCategoryTree();
 
@@ -89,7 +86,7 @@ function walkAllPaths(
   return result;
 }
 
-export function generateStaticParams(): Params[] {
+export async function generateStaticParams() {
   const categoryTree = getCategoryTree();
   const paths = walkAllPaths(categoryTree, []);
   const params = paths.map(path => {
@@ -108,7 +105,10 @@ export function generateStaticParams(): Params[] {
   return params;
 }
 
-export default function CategoryPage({ params }: { params: Params }) {
+export default async function CategoryPage(
+  props: { params: Params }
+) {
+  const params = await props.params;
   const categoryPath = params.categoryPath.map(decodeURIComponent);
   return (
     <>

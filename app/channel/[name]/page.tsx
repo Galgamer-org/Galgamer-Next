@@ -27,15 +27,14 @@ const channels = [
   }
 ];
 
-type Props = {
-  params: Record<string, string>
-  searchParams: { [key: string]: string | string[] | undefined }
-};
+
+type Params = Promise<{ name: string }>;
 
 export async function generateMetadata(
-  { params, searchParams }: Props,
+  props: { params: Params },
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
+  const params = await props.params;
   const channel = channels.find(channel => channel.name === params.name);
   if (!channel) {
     notFound();
@@ -76,8 +75,10 @@ export async function generateStaticParams() {
 
 
 
-export default function Channel({ params }: { params: Record<string, string> }) {
-  //console.log(params);
+export default async function Channel(
+  props: { params: Params }
+) {
+  const params = await props.params;
 
   const channel = channels.find(channel => channel.name === params.name);
   if (!channel) {

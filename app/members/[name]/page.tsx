@@ -14,15 +14,14 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import PostsByYears from "@/components/posts-by-year";
 
 
-type MetadataProps = {
-  params: { name: string }
-}
+type Params = Promise<{ name: string }>;
+
 
 export async function generateMetadata(
-  { params }: MetadataProps,
+  props: { params: Params },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-
+  const params = await props.params;
   const name = decodeURIComponent(params.name);
   const thisMember = getMember(name);
 
@@ -74,7 +73,10 @@ export function generateStaticParams() {
 
 
 
-export default function MemberProfile({ params }: { params: { name: string } }) {
+export default async function MemberProfile(
+  props: { params: Params }
+) {
+  const params = await props.params;
   const name = decodeURIComponent(params.name);
   // console.log(name);
 

@@ -21,15 +21,13 @@ export async function generateStaticParams() {
 }
 
 
-type MetadataProps = {
-  params: { abbr: string }
-}
+type Params = Promise<{ abbr: string }>;
  
 export async function generateMetadata(
-  { params }: MetadataProps,
+  props: { params: Params },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-
+  const params = await props.params;
   const abbr = params.abbr
 
   const post = getPostByAbbrlink(parseInt(abbr));
@@ -65,8 +63,11 @@ export async function generateMetadata(
 
 
 
-export default async function Article({ params }) {
-  const post = getPostByAbbrlink(params.abbr)
+export default async function Article(
+  props: { params: Params }
+) {
+  const params = await props.params;
+  const post = getPostByAbbrlink(parseInt(params.abbr));
   const content = markdownToHtml(post.content)
 
   return <div className={cn('container-xl')}>
