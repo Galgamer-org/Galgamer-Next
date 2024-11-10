@@ -18,7 +18,7 @@ export default function MainVisualH1(
         </h1>
     }
     if (typeof description === 'string') {
-        description = <p className="h5 mt-2 text-lg fst-italic">
+        description = <p className="h5 mt-2 text-lg fst-italic font-serif">
             {description}
         </p>
     }

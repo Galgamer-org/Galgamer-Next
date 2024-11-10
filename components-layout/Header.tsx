@@ -49,7 +49,7 @@ export default function Header() {
           >
             <Offcanvas.Header>
               <Offcanvas.Title className={style.offcanvasTitle} id={`navbarNavLabel`}>
-                <span className={cn(style.navbarText, 'font-serif')}><Logo /><em>Galgamer</em></span>
+                <span className={cn(style.navbarText, 'font-serif fw-bold')}><Logo /><em>Galgamer</em></span>
               </Offcanvas.Title>
             </Offcanvas.Header>
             {/* <hr className='text-white d-lg-none' /> */}
@@ -58,7 +58,7 @@ export default function Header() {
                 defaultActiveKey='/'
                 activeKey={pathname}
                 //as="ul"
-                className={cn('ms-auto font-serif', style.navbarNav)}
+                className={cn('ms-auto', style.navbarNav)}
 
               //onSelect={(selectedKey) => {setSelection(selectedKey ? selectedKey : "/")}}
               // onSelect={(selectedKey) => {alert(selectedKey)}}
