@@ -16,6 +16,7 @@
     "d3": "^7.9.0",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
+    "jsx-transform": "^2.4.1",
     "next": "15.0.3",
     "next-view-transitions": "^0.3.2",
     "probe-image-size": "^7.2.3",
