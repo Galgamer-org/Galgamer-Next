@@ -65,6 +65,7 @@ export default async function DrawGuessGallery() {
           <div className='d-flex align-items-center'><b className='me-2'>主席</b><Avatar name="Kaminotomodachi" /></div>
         }
         cssClass={styles.drawGuessH1}
+        viewTransitionName='draw-guess-mv'
       ></MainVisualH1>
       <section>
         <div className={cn('container-board', 'mx-auto p-1 p-md-2 box-shadow')}>

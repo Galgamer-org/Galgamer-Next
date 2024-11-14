@@ -3,7 +3,7 @@ import bmstyle from '@/styles/bookmark-container.module.css';
 
 import cn from 'classnames';
 import Container from "@/components-layout/container";
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { ReactNode } from 'react';
 
 export default function NotFoundPage() {

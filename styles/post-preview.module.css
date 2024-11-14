@@ -5,7 +5,7 @@
 }
 
 .metaLink {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: var(--text-color);
 }
 

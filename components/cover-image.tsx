@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import SmartImage from './smart-image'
 import Image from 'next/image'
 import style from '../styles/cover-image.module.css'

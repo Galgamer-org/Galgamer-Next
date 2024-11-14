@@ -7,6 +7,7 @@ import '@/styles/main.css';
 import Footer from '../components-layout/footer';
 import Header from '../components-layout/Header';
 import ReturnTopButton from '@/components/ReturnTop';
+import { ViewTransitions } from 'next-view-transitions'
 
 import type { Metadata } from 'next';
 
@@ -58,31 +59,33 @@ export default function RootLayout({
 
 
   return (
-    <html lang="zh-Hant">
-      <head>
+    <ViewTransitions>
+      <html lang="zh-Hant">
+        <head>
 
-        <script dangerouslySetInnerHTML={
-          {
-            __html: `
-            const _themeLocalStorage = localStorage.getItem('theme');
-            // console.log('themeSystem: ', _themeLocalStorage);
-            if (_themeLocalStorage) {
-              document.querySelector(':root').dataset.theme = _themeLocalStorage;
+          <script dangerouslySetInnerHTML={
+            {
+              __html: `
+              const _themeLocalStorage = localStorage.getItem('theme');
+              // console.log('themeSystem: ', _themeLocalStorage);
+              if (_themeLocalStorage) {
+                document.querySelector(':root').dataset.theme = _themeLocalStorage;
+              }
+              `
             }
-            `
-          }
-        }></script>
+          }></script>
 
-      </head>
-      <body>
-        <Header />
-        <main className='main-container'>
-          {children}
-        </main>
-        <div className='my-3' />
-        <ReturnTopButton />
-        <Footer />
-      </body>
-    </html>
+        </head>
+        <body>
+          <Header />
+          <main className='main-container'>
+            {children}
+          </main>
+          <div className='my-3' />
+          <ReturnTopButton />
+          <Footer />
+        </body>
+      </html>
+    </ViewTransitions>
   )
 }

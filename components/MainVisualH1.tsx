@@ -5,11 +5,12 @@ import React from 'react';
 
 
 export default function MainVisualH1(
-    { title, description, details, cssClass }: {
+    { title, description, details, cssClass, viewTransitionName = 'h1-mv' }: {
         title: string | React.ReactNode,
         description: string | React.ReactNode,
         details?: string | React.ReactNode,
-        cssClass?: string
+        cssClass?: string,
+        viewTransitionName?: string,
     }
 ) {
     if (typeof title === 'string') {
@@ -34,6 +35,7 @@ export default function MainVisualH1(
         <section className={cn(cssClass ? cssClass : '')}>
             <div
                 className={cn(style.banner, 'container-board mx-auto my-4 box-shadow d-flex align-items-center mainvisualBanner')}
+                style={{ 'viewTransitionName': viewTransitionName } as React.CSSProperties }
             >
                 <div className={cn('w-100 h-100 mainvisualBgMasked', style.bgMasked)}></div>
                 <div className={cn('w-100 px-3 px-lg-5')}>

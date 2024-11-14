@@ -1,9 +1,9 @@
 import style from '@/styles/links.module.css';
 import cn from "classnames";
 import FriendLink from "@/interfaces/friend-link";
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import SmartImage from './smart-image';
-
+import slugify from '@/lib/sluglify';
 
 function FriendLinkUnit({ avatar, href, title, info }: FriendLink) {
     return (
@@ -17,7 +17,7 @@ function FriendLinkUnit({ avatar, href, title, info }: FriendLink) {
                 <div className={cn('align-items-center d-flex', style.linkRow)}>
 
                     <div className={style.linkAvatar}>
-                        <SmartImage src={avatar} alt={title} />
+                        <SmartImage src={avatar} alt={title} style={{ viewTransitionName: 'profile-photo-' + slugify(title) }} />
                     </div>
 
                     <div className={style.linkText}>

@@ -4,7 +4,8 @@ import Container from 'components-layout/container'
 import MainVisualH1 from "@/components/MainVisualH1";
 import type { Metadata } from "next";
 import { getAllTags } from "lib/api";
-import Link from "next/link";
+import { Link } from 'next-view-transitions';
+import slugify from "@/lib/sluglify";
 
 export const metadata: Metadata = {
   title: '標籤',
@@ -67,7 +68,9 @@ function TagCell({ tag, length, size = 38 }: { tag: string, length?: number, siz
     >
       <div className={cn(style.name, "font-weight-bold ms-3 me-2 myfont")}>
         <i className="bi bi-tag-fill me-1"></i>
+        <span style={{ viewTransitionName: 'tag-name-' + slugify(tag) }}>
         {tag}
+        </span>
       </div>
       <div className={cn(style.count, "")}>
         {length}

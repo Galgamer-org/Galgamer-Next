@@ -7,7 +7,8 @@ import BookmarkContainer from "@/components/bookmark-container";
 import cn from "classnames";
 import type PostType from "@/interfaces/post";
 import { getAllPosts } from "@/lib/api";
-import Link from 'next/link';
+import { Link } from "next-view-transitions";
+import slugify from "@/lib/sluglify";
 
 import Image from 'next/image';
 import type { Metadata, ResolvingMetadata } from 'next'
@@ -130,7 +131,7 @@ function CharacterInfo({ name, member }: { name: string, member: member }) {
                     </p> */}
           <div className={cn(`${style.InfoPhoto} row justify-content-center align-items-center`)}>
             <div className={cn(`${style.linkAvatar} col-4 col-md-3`)}>
-              <Image className='box-shadow' src={member.photo} alt={name} width={512} height={512} />
+              <Image className='box-shadow' src={member.photo} alt={name} width={512} height={512}  style={{ viewTransitionName: 'profile-photo-' + slugify(name) }} />
             </div>
             <div className={cn(`${style.InfoText} col-8 col-md-9`)}>
               <h1 className={cn(`${style.InfoName} text-4xl fw-bold`)}>{name}</h1>

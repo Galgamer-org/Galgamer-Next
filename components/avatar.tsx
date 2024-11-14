@@ -2,7 +2,7 @@ import style from "styles/avatar.module.css"
 import cn from 'classnames'
 import SmartImage from "./smart-image"
 import { getMember } from "_feed/members";
-import Link from "next/link";
+import { Link } from 'next-view-transitions';
 
 
 type Props = {

@@ -1,7 +1,7 @@
 import Avatar from './avatar'
 import DateFormatter from './date-formatter'
 import CoverImage from './cover-image'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import cn from 'classnames'
 import type PostType from '@/interfaces/post'
 import style from '@/styles/post-preview.module.css'
@@ -25,7 +25,7 @@ const PostPreview = ({
 }: Props) => {
 
   return (
-    <div className="mb-4 w-100">
+    <div className="mb-4 w-100" style={{ viewTransitionName: 'post-preview-' + slug }}>
       <div className="mb-3 o-hidden box-shadow "
         style={{ borderRadius: 'var(--small-board-border-radius)' } as React.CSSProperties}
       >
@@ -67,7 +67,8 @@ const PostPreview = ({
                 const categoryName = category[i];
                 const categoryPath = (category as Array<string>).slice(0, i + 1).join('/');
                 result.push(
-                  <Link href={`/categories/${categoryPath}`} key={categoryPath} className={cn(style.metaLink)} >
+                  <Link href={`/categories/${categoryPath}`} key={categoryPath}
+                    className={cn(style.metaLink, 'd-inline-block me-2')}>
                     {categoryName}
                   </Link>
                 );
@@ -75,7 +76,8 @@ const PostPreview = ({
               return result;
             } else {
               return (
-                <Link href={`/categories/${category}`} key={category} className={cn(style.metaLink)}>
+                <Link href={`/categories/${category}`} key={category}
+                  className={cn(style.metaLink, 'd-inline-block me-2')}>
                   {category}
                 </Link>
               );
@@ -87,7 +89,8 @@ const PostPreview = ({
           {/* tags */}
           <i className="bi-tag-fill me-2"></i>
           {tags.map((tag) => (
-            <Link href={`/tags/${tag}`} key={tag} className={cn(style.metaLink)}>
+            <Link href={`/tags/${tag}`} key={tag}
+              className={cn(style.metaLink, 'd-inline-block me-2')}>
               {tag}
             </Link>
           ))}
