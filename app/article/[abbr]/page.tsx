@@ -75,18 +75,16 @@ export default async function Article(
   return (
     <>
       <CustomCss />
-      <Container className="px-2">
+      <Container className="px-2 px-md-5 ">
         <PostHeader
           post={post}
         />
       </Container>
 
-      <HeroImage src={post.index_img} />
-      <Container className="px-2 mt-5">
-        <section className="d-flex">
+      {/* <HeroImage src={post.index_img} /> */}
+      <Container className="px-2 px-md-5 mt-5">
           <PostBody content={content} />
-          <Aside />
-        </section>
+          {/* <Aside /> */}
       </Container>
     </>
   );
@@ -141,9 +139,9 @@ function Aside() {
 
 function PostBody({ content }: { content: ReactNode }) {
   return (
-    <article className="col-12 col-lg-9">
-      <div className={cn("container-board", "mx-auto p-3 box-shadow")}>
-        <div className={cn("markdown-body", "p-3")} children={content} />
+    <article className="">
+      <div className={cn("container-board", "mx-auto p-3 p-xl-5 box-shadow")}>
+        <div className={cn("markdown-body", "py-3 px-2 px-md-5")} children={content} />
       </div>
     </article>
   );
