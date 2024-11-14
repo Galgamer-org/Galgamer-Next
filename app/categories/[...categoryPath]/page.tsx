@@ -4,7 +4,7 @@ import Container from "@/components-layout/container";
 import BookmarkContainer from "@/components/bookmark-container";
 import cn from "classnames";
 import PostsByYears from '@/components/posts-by-year';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import CategoryTree from "@/interfaces/category-tree";
 import style from "styles/categories.module.css";
 import { countSubTreeLeaves, WalkCategoryTree } from '../tree';

@@ -5,7 +5,7 @@ import PostPreview from '../components/post-preview'
 import Avatar from '../components/avatar'
 import DateFormatter from '../components/date-formatter'
 import CoverImage from '../components/cover-image'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import cn from 'classnames'
 import style from 'styles/index.module.css'
 import { Col, Row } from 'react-bootstrap'
@@ -67,6 +67,7 @@ export default function Index() {
               <div className='d-flex align-items-center'><b className='me-2'>主席</b><Avatar name="Kaminotomodachi" /></div>
             }
             cssClass={dgstyles.drawGuessH1}
+            viewTransitionName='draw-guess-mv'
           ></MainVisualH1>
         {/* </Link> */}
         <div className={'my-5'}></div>
@@ -85,7 +86,7 @@ function HeroPost({
 }: { post: Post }) {
   const { title, index_img, date, author, excerpt, abbrlink, tags, categories } = post;
   return (
-    <section className={cn(style.heroContainer, 'mx-auto mt-3 px-2')}>
+    <section className={cn(style.heroContainer, 'mx-auto mt-3 px-2')} style={{'viewTransitionName': 'h1-mv'}}>
       {/* <h2 className={cn(style.featuredTitle, 'h1')}><em>Featured.</em></h2> */}
       <div className={cn(style.postContainer, 'box-shadow')}>
         <div className={cn(style.coverImageContainer, '')}>

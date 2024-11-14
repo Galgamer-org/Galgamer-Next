@@ -1,10 +1,11 @@
 import CategoryTree from "@/interfaces/category-tree";
 import { ReactNode } from "react";
-import Link from "next/link";
+import { Link } from 'next-view-transitions';
 import { getCategoryTree, getPostBySlug } from "lib/api";
 
 import style from "styles/categories.module.css";
 import cn from 'classnames';
+import slugify from "@/lib/sluglify";
 
 export function countSubTreeLeaves(tree: CategoryTree): number {
   return Object.values(tree).reduce((acc, data) => {
@@ -41,7 +42,9 @@ export function WalkCategoryTree(
         .map(([categoryName, categoryData]) => (
           <div className={cn(style.tree)} key={categoryName}>
             <details className="my-4" open={defaultOpenLevel > 0}>
-              <summary className="d-flex align-items-center">
+              <summary className="d-flex align-items-center"
+                style={{ viewTransitionName: 'category-tree-' + slugify(categoryName) }}
+              >
                 <div className={cn(style.categoryIcon)}>
                   <i className="bi bi-caret-right-fill"></i>
                 </div>

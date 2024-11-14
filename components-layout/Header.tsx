@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { Offcanvas } from 'react-bootstrap';
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, use } from 'react';
 import cn from 'classnames'

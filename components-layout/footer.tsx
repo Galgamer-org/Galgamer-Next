@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container'
 import style from 'styles/footer.module.css'
 import cn from 'classnames'
 import { Row, Col } from 'react-bootstrap'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import Logo from 'components/logo'
 
 

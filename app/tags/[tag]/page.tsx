@@ -6,7 +6,8 @@ import BookmarkContainer from "@/components/bookmark-container";
 import cn from "classnames";
 import PostsByYears from '@/components/posts-by-year';
 import PostType from '@/interfaces/post';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
+import slugify from '@/lib/sluglify';
 
 type Params = Promise<{ tag: string }>;
 
@@ -107,7 +108,9 @@ function TagInfo({ tag, length }: { tag: string, length?: number }) {
         <div className="container myfont py-5">
           <div className={cn('w-100 px-3 px-lg-5')}>
             <h1 className="text-4xl fw-bold">
-              Tag: {tag}
+              Tag: <span style={{ viewTransitionName: 'tag-name-' + slugify(tag) }}>
+              {tag}
+              </span>
             </h1>
             <p className="h5 mt-2 text-lg">
               共 {length} 篇文章

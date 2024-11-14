@@ -68,6 +68,9 @@ body a {
   /* color: var(--text-color); */
   color: var(--title-link-color);
   transition: color .2s ease-in-out, background-color .2s ease-in-out;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 4px;
 }
 
 .preview-title:not(:hover) {
@@ -83,7 +86,7 @@ body a:hover {
   background-color: var(--board-bg-color);
   /* overflow: hidden; */
   border-radius: var(--large-board-border-radius);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   z-index: 10;
 }
 
