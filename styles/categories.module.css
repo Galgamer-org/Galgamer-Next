@@ -16,6 +16,10 @@
     /* list-style-type: disc; */
 }
 
+.tree summary::-webkit-details-marker {
+    display: none;
+}
+
 .tree details .categoryIcon {
     cursor: pointer;
     pointer-events: all;

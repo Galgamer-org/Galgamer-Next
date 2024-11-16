@@ -84,6 +84,7 @@ export default function RootLayout({
           <div className='my-3' />
           <ReturnTopButton />
           <Footer />
+          <div className='background-layer-😁👍🏻' />
         </body>
       </html>
     </ViewTransitions>

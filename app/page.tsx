@@ -132,7 +132,7 @@ function HeroPost({
                       const categoryName = category[i];
                       const categoryPath = (category as Array<string>).slice(0, i + 1).join('/');
                       result.push(
-                        <Link href={`/categories/${categoryPath}`} key={categoryPath} className={cn(ppstyle.metaLink)} >
+                        <Link href={`/categories/${categoryPath}`} key={categoryPath} className={cn(ppstyle.metaLink, 'd-inline-block me-2')} >
                           {categoryName}
                         </Link>
                       );
@@ -140,7 +140,7 @@ function HeroPost({
                     return result;
                   } else {
                     return (
-                      <Link href={`/categories/${category}`} key={category} className={cn(ppstyle.metaLink)}>
+                      <Link href={`/categories/${category}`} key={category} className={cn(ppstyle.metaLink, 'd-inline-block me-2')}>
                         {category}
                       </Link>
                     );
