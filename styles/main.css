@@ -33,13 +33,17 @@ body {
   transition: color .2s ease-in-out, background-color .2s ease-in-out;
   position: fixed;
   z-index: -1;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* fix mobile viewport height */
+  height: 100lvh;
   background:
     radial-gradient(
       circle  at 50% -80%,
       #00000000 80%,
       var(--body-bg-color-grad) 130%
-    ) fixed, linear-gradient(
+    ), linear-gradient(
       var(--body-bg-color),
       var(--body-bg-color)
     );
