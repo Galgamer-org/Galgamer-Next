@@ -24,8 +24,9 @@ function Fancybox(props: FancyboxProps) {
     NativeFancybox.bind(delegate, options);
 
     return () => {
-      NativeFancybox.unbind(delegate);
-      NativeFancybox.close();
+      // NativeFancybox.unbind(delegate);
+      // NativeFancybox.close();
+      NativeFancybox.destroy();
     };
   });
 
@@ -36,15 +37,33 @@ type imageProps = (Omit<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, H
 
 type FancyboxImageProps = imageProps & {
   groupid?: string;
+  dataMedia?: string;
+  dataCaption?: string;
+  dataSources?: string;
+  dataHref?: string;
 };
 
 function FancyboxImage(props: FancyboxImageProps) {
+  let { groupid, dataMedia, dataCaption, dataSources, dataHref, ...rest } = props;
+  dataCaption = props.dataCaption || props.alt || props.title || "";
+  const href = props.dataHref || props.src || "";
+
   return (
     <Fancybox options={{
       "wheel": "slide",
+      "animated": true,
     }}>
-      <a data-fancybox={props.groupid || "gallery"} href={props.src} data-caption={props.alt || props.title || ""}>
-        <img {...props} />
+      <a 
+        // no more groupid, because it will add to url's #hash
+        // when the hash change, it will trigger popstate and interfere 
+        // with view transitions component to cause severe lag
+        data-fancybox//</Fancybox>={props.groupid || "gallery"} 
+        href={href} 
+        data-caption={dataCaption}
+        data-media={props.dataMedia}
+        data-sources={props.dataSources}
+      >
+        <img {...rest} />
       </a>
     </Fancybox>
   );

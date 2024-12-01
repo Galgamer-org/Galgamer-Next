@@ -11,7 +11,7 @@ import { FancyboxImage } from '@/components/fancybox';
 import Avatar from '@/components/avatar';
 
 
-const INDEX_URL = "https://storage-zone1.galgamer.eu.org/draw-guess-index-deadbeef%2Findex.json";
+const INDEX_URL = "https://storage-zone1.galgamer.eu.org/draw-guess-index-deadbeef/index.json";
 
 export const metadata: Metadata = {
   title: "你畫我猜作品集",
@@ -114,7 +114,7 @@ export default async function DrawGuessGallery() {
                         <div key={image._hash} className='col-12 col-md-4 col-lg-3 p-3 '>
                           <div className={cn(styles.imgWrap ,'o-hidden rounded box-shadow')}>
                             <FancyboxImage
-                              src={image.getURL()}
+                              src={image.getURL()._480url}
                               alt={image._draw_what ? `${image._draw_what} by ${image._author} ${date.toString()}` : image._created_time_readable}
                               width={image._width}
                               height={image._height}
@@ -122,6 +122,10 @@ export default async function DrawGuessGallery() {
                               loading='lazy'
                               decoding='async'
                               groupid={date.toString()}
+                              dataHref={image.getURL()._1280url}
+                              // this may not work, not sure why 👇🏻
+                              dataSources={`${image.getURL()._1280url};${image.getURL()._2560url}`}
+                              dataMedia={`(max-width: 1279px);(min-width: 1280px)`}
                             >
                             </FancyboxImage>
 

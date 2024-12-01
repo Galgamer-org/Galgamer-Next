@@ -56,15 +56,16 @@
     align-items: center; */
     height: 100%;
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 16/10;
 }
 
 .drawGuessContents img {
     /* width: var(--draw-guess-img-width, 30%) !important; */
     /* aspect-ratio: 1; */
-    height: 100% !important;
+    /* height: 100% !important;
+    width: 100% !important; */
     object-fit: cover;
-    margin: 0;
+    margin: 0 !important;
     box-shadow: none;
     transform: scale(1.2);
 }
